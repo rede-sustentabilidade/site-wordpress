@@ -1,0 +1,227 @@
+@import ../variables
+//@import compass
+
+@media screen and (max-width: 480px)
+  #wrap
+    padding: 0 20px
+
+  .hmo
+    display: none
+
+  h2.title
+    margin: 0 0 20px 0 !important
+
+
+div.icheckbox_square, div.iradio_square
+  display: inline-block
+
+.box-aviso
+  background-color: #d56337
+  padding: 1em
+  margin: 0 auto
+  width: 32em
+  text-align: center
+  border-radius: .5em
+  @media screen and (max-width: 480px)
+    width: 100%
+    padding: 10px 0
+    margin-bottom: 20px
+
+  p
+    color: #fff
+    font-size: 1.4em
+    line-height: 1em
+
+  a.button
+    background-color: #fff
+    border-radius: .3me
+    color: #d56337
+    padding: .5em
+    width: 5.5em
+    font-family: 'League Gothic'
+    font-size: 2em
+    text-decoration: none
+    display: inline-block
+    @media screen and (max-width: 480px)
+      margin: 10px auto
+      display: block
+
+.container-filiacao
+  width: 72em
+  @media screen and (max-width: 480px)
+    width: 100%
+    margin: 0
+    padding: 1.5em 1em
+    //+box-sizing(border-box)
+
+  background: white
+  margin: 3em
+  padding: 2.5em 2em
+  float: left
+  box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.33)
+  overflow: hidden
+
+  .vmo
+    display: none
+  @media screen and (max-width: 480px)
+    .vmo
+      display: block
+      img
+        width: 100%
+        height: 100%
+
+  ol.progtrckr
+    margin: 0
+    padding: 0
+    list-style-type: none
+    float: left
+  ol.progtrckr li
+    float: left
+    text-align: center
+    font-size: 2.2em
+    font-family: "League Gothic"
+    line-height: 1.25em
+    color: #333333
+    padding: 0.5em 0 0 0
+    margin: 0
+    background: -1px -1px url("../assets/images/filiacao-passos.png") no-repeat transparent
+    @media screen and (max-width: 480px)
+      background: none
+      width: 40px
+      height: 40px
+      margin-left: 10px
+      padding: 0
+      line-height: 1.5em
+      //+border-radius(20px)
+    width: 172px
+    height: 68px
+    strong
+      display: block
+
+  ol.progtrckr li.done
+    background-color: #444444
+    color: white
+  ol.progtrckr li.doing
+    background-color: #DF5B34
+    color: white
+  ol.progtrckr li.todo
+    background-color: #c6c6c6
+  p
+    float: left
+    padding: 1em 0
+  button
+    margin: 1em 0 0 0
+    font-family: "PT Sans"
+    font-size: 1.3em
+    line-height: 1.3em
+    border-radius: 0.5em
+    padding: 0.6em 1.2em
+    &.proximo
+      float: right
+      background: #333
+      &:disabled
+        background: #c6c6c6
+
+  .slide-frame
+    display: block
+    clear: both
+
+  .pure-form-stacked input[type=text],
+  .pure-form-stacked input[type=password],
+  .pure-form-stacked input[type=email],
+  .pure-form-stacked input[type=url],
+  .pure-form-stacked input[type=date],
+  .pure-form-stacked input[type=month],
+  .pure-form-stacked input[type=time],
+  .pure-form-stacked input[type=datetime],
+  .pure-form-stacked input[type=datetime-local],
+  .pure-form-stacked input[type=week],
+  .pure-form-stacked input[type=number],
+  .pure-form-stacked input[type=search],
+  .pure-form-stacked input[type=tel],
+  .pure-form-stacked input[type=color],
+  .pure-form-stacked select,
+  .pure-form-stacked textarea
+    box-shadow: 0px 0px 5px 0px rgba(157, 157, 156, 0.8)
+    margin: 0
+    font-family: "PT Sans"
+    font-size: 1.3em
+    line-height: 1.3em
+    @media screen and (max-width: 480px)
+      width: 100%
+    &.ng-invalid.ng-dirty
+      box-shadow: 0px 0px 5px 0px rgba(208, 53, 0, 0.8)
+      color: #319d8b
+  .pure-form-stacked label
+    font-family: "PT Sans"
+    font-size: 1.3em
+    line-height: 1.6em
+    margin: 2em 0 0.3em 0
+    span
+      font-size: .9em
+    &.inner-label
+      margin: 0.5em 0 0.5em 0
+      display: inline-block
+      min-width: 10em
+      font-size: 1.2em
+    a
+      font-weight: bold
+      text-decoration: none
+  .chosen-container
+    a
+      background: none
+      box-shadow: 0px 0px 5px 0px rgba(157, 157, 156, 0.8)
+      margin: 0
+      font-family: "PT Sans"
+      font-size: 1.3em
+      line-height: 1.3em
+      padding: 0.5em
+  .chosen-container-single
+    .chosen-single
+      background: white
+    .chosen-single div b
+      background-position: 0px 10px
+    .chosen-search input[type="text"]
+      //background-position: 10px 2px
+    .chosen-drop
+      background: white
+  .mensagem
+    font-family: "PT Sans"
+    font-size: 1.3em
+    line-height: 1.6em
+    margin: 0.5em 0
+    padding: 0.7em
+    border-radius: 0.5em
+    &.duvida
+      width: 100%
+      padding-left: 0
+      color: #319D8B
+      a
+        color: #319D8B
+    &.ajuda
+      color: #999999
+      border: 2px dotted #319d8b
+      float: none
+    &.erro
+      float: none
+      padding: 0
+      margin: 0.5em 0
+      color: #d03500
+  .pure-form legend
+    border: 0
+    font-family: "PT Sans"
+    padding: 2em 0 0
+    margin: 0
+    font-size: 1.3em
+    line-height: 1.3em
+  .box-aviso-resultado
+    padding: 5em 0
+
+    p
+      padding: 0
+
+// .ng-pristine { border:1px solid Gold; }
+// .ng-dirty.ng-valid { border:1px solid Green; }
+// .ng-dirty.ng-invalid { border:1px solid Red; }
+// .ng-dirty.ng-valid ~ span.ok { color:green; display:inline; }
+// .ng-dirty.ng-invalid ~ span.ko { color:red; display:inline; }

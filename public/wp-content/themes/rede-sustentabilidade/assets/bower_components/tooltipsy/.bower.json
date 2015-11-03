@@ -1,0 +1,13 @@
+{
+  "name": "tooltipsy",
+  "homepage": "https://github.com/briancray/tooltipsy",
+  "_release": "4ebe05e336",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4ebe05e3360357a72e83b65e5e3c239d8ba685ac"
+  },
+  "_source": "git://github.com/briancray/tooltipsy.git",
+  "_target": "*",
+  "_originalSource": "briancray/tooltipsy"
+}

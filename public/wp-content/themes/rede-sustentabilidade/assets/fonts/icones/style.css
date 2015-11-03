@@ -1,0 +1,196 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?wl819p');
+	src:url('fonts/icomoon.eot?#iefixwl819p') format('embedded-opentype'),
+		url('fonts/icomoon.woff?wl819p') format('woff'),
+		url('fonts/icomoon.ttf?wl819p') format('truetype'),
+		url('fonts/icomoon.svg?wl819p#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-comment:before {
+	content: "\e625";
+}
+.icon-comments:before {
+	content: "\e626";
+}
+.icon-comment-alt:before {
+	content: "\e627";
+}
+.icon-comments-alt:before {
+	content: "\e628";
+}
+.icon-play-sign:before {
+	content: "\e629";
+}
+.icon-refresh:before {
+	content: "\e62a";
+}
+.icon-user:before {
+	content: "\e62b";
+}
+.icon-group:before {
+	content: "\e62c";
+}
+.icon-ok-sign:before {
+	content: "\e600";
+}
+.icon-ban-circle:before {
+	content: "\e601";
+}
+.icon-youtube:before {
+	content: "\e002";
+}
+.icon-twitter:before {
+	content: "\e010";
+}
+.icon-software-livre:before {
+	content: "\e011";
+}
+.icon-seta-em-frente:before {
+	content: "\e012";
+}
+.icon-flickr:before {
+	content: "\e013";
+}
+.icon-fechar:before {
+	content: "\e014";
+}
+.icon-facebook:before {
+	content: "\e015";
+}
+.icon-desktop:before {
+	content: "\e016";
+}
+.icon-celular:before {
+	content: "\e017";
+}
+.icon-apple:before {
+	content: "\e018";
+}
+.icon-seta-para-tras:before {
+	content: "\e019";
+}
+.icon-seta-para-baixo:before {
+	content: "\e01a";
+}
+.icon-uniF001:before {
+	content: "\f001";
+}
+.icon-user-comment:before {
+	content: "\e62d";
+}
+.icon-user-add:before {
+	content: "\e62e";
+}
+.icon-seta-participe:before {
+	content: "\e62f";
+}
+.icon-outline-user-comment:before {
+	content: "\e630";
+}
+.icon-google-plus:before {
+	content: "\e631";
+}
+.icon-gostei:before {
+	content: "\e632";
+}
+.icon-citacao:before {
+	content: "\e633";
+}
+.icon-calendario:before {
+	content: "\e634";
+}
+.icon-citacao-fecha:before {
+	content: "\e635";
+}
+.icon-warning:before {
+	content: "\e636";
+}
+.icon-tipo-perfil:before {
+	content: "\e637";
+}
+.icon-novo-rede-participe:before {
+	content: "\e638";
+}
+.icon-novo-rede-noticias:before {
+	content: "\e639";
+}
+.icon-novo-rede-doacao:before {
+	content: "\e63a";
+}
+.icon-quadros-participe:before {
+	content: "\e63b";
+}
+.icon-lista-participe:before {
+	content: "\e63c";
+}
+.icon-valorizacao-biodiversidade:before {
+	content: "\e63d";
+}
+.icon-seguranca-publica:before {
+	content: "\e63e";
+}
+.icon-reducao-desigualdade:before {
+	content: "\e63f";
+}
+.icon-politica-saude:before {
+	content: "\e640";
+}
+.icon-politica-industrial:before {
+	content: "\e641";
+}
+.icon-planejamento-estrategico:before {
+	content: "\e642";
+}
+.icon-novo-federalismo:before {
+	content: "\e643";
+}
+.icon-educacao-conhecimento:before {
+	content: "\e644";
+}
+.icon-desenvolvimento-tecnologico:before {
+	content: "\e645";
+}
+.icon-mais-um:before {
+	content: "\e646";
+}
+.icon-reforma-urbana:before {
+	content: "\e647";
+}
+.icon-reforma-estado:before {
+	content: "\e648";
+}
+.icon-nao-gostei:before {
+	content: "\e649";
+}
+.icon-creative-commons:before {
+	content: "\e01b";
+}
+.icon-google-play:before {
+	content: "\e01c";
+}
+.icon-porquinho:before {
+	content: "\e01d";
+}
+.icon-seta-para-cima:before {
+	content: "\e00f";
+}
+.icon-download:before {
+	content: "\e602";
+}

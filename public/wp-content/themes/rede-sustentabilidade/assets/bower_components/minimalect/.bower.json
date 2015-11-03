@@ -1,0 +1,18 @@
+{
+  "name": "minimalect",
+  "main": "jquery.minimalect.js",
+  "ignore": [
+    "Gruntfile.js",
+    "*.md"
+  ],
+  "homepage": "https://github.com/groenroos/minimalect",
+  "_release": "d9c4d9680f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d9c4d9680f9eaf474ae88cd8929df3bdcb6ef45f"
+  },
+  "_source": "git://github.com/groenroos/minimalect.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/groenroos/minimalect.git"
+}

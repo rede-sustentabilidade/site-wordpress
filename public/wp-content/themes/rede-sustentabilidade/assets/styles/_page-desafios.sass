@@ -1,0 +1,698 @@
+$main_desafio: #533B8C
+$sec_desafio: #E3C492
+
+#desafios
+  background: #f2f2f2
+
+  .header
+    background: $main_desafio
+    overflow: hidden
+    font-family: 'PT Sans', sans-serif
+    text-align: center
+    padding: 0 0 10px
+
+    .partido
+      background: #FFF
+      border-radius: 60px
+      width: 60px
+      height: 60px
+      margin-right: 10px
+      display: inline-block
+      // vertical-align: bottom
+
+      &.psb
+        background: url('assets/images/psb.png') no-repeat 8px 15px #FFF
+
+      &.rede
+        background: url('assets/images/rede.png') no-repeat 6px 17px #FFF
+
+    h1, .social, .menu a
+      font-family: 'League Gothic'
+      text-decoration: none
+
+    .social, .social span, .menu a, .login a
+      color: #A99DC6
+
+    .sub-header
+      line-height: 1.2em
+
+      > a
+        display: block
+
+      h1
+        font-weight: normal
+        color: white
+        display: inline-block
+        text-transform: uppercase
+        margin: 0 auto
+        padding: 0
+
+        span
+          display: block
+          width: 100%
+          text-align: left
+
+          &.title
+            font-size: 0.5em
+            line-height: 0.8em
+            letter-spacing: 0.04em
+
+          &.sub
+            font-size: 1.35em
+            line-height: 1em
+
+    .social, .login
+      float: right
+      margin-right: 20px
+
+    .login
+      margin-bottom: 20px
+
+    .social
+      margin-top: 20px
+      color: white
+      font-size: 1.6em
+      a
+        margin-right: 10px
+        font-size: 1.2em
+        text-decoration: none
+
+    .menu a, .login a
+      opacity: .5
+      &:hover
+        opacity: 1
+
+    .menu
+      float: left
+      text-transform: uppercase
+      margin: 0
+
+      li
+        list-style: none
+        display: inline-block
+        margin: 0 -7px
+
+      a
+        display: block
+        padding: 18px 20px
+        font-size: 1.6em
+        line-height: 15px
+        color: #FFF
+        &.active
+          color: #FFF
+          opacity: 1
+        &.muda:hover
+          background: #E3C492
+        &.minuta:hover
+          background: #7FA31A
+        &.desafio:hover
+          background: #533B8C
+
+    .rede, .psb
+      .share
+        background: #FFF
+        width: 30px
+        height: 30px
+        display: inline-block
+        border-radius: 20px
+
+    .content
+      margin: 70px auto 0
+      width: 45%
+
+      p
+        color: white
+        font-size: 1.4em
+
+    .login
+      a
+        margin-left: 20px
+        text-decoration: none
+        font-size: 1.4em
+        &:hover
+          color: #FFF
+
+  .categories
+    overflow: hidden
+    .category
+      background: $sec_desafio
+      color: white
+      text-align: center
+      font-weight: bold
+      text-decoration: none
+      width: 20%
+      min-width: 230px
+
+      @media  (max-width: 810px)
+        width: 33.3333333%
+
+      height: 100px
+      float: left
+      border-right: 1px solid #b9b1a4
+      border-bottom: 1px solid #b9b1a4
+      display: table-cell
+      vertical-align: middle
+      padding: 15px
+      box-sizing: border-box
+
+      &:hover, &.active
+        background: #FFF
+        color: $main_desafio
+
+        i
+          background: $main_desafio
+          color: white
+
+        p
+          color: $main_desafio
+
+
+      &:last-child
+        background: #EBD6B3
+
+      i
+        background: #FFF
+        color: $sec_desafio
+        font-size: 3em
+        width: 60px
+        height: 60px
+        float: left
+        vertical-align: middle
+        margin-right: 20px
+        text-align: center
+        line-height: 60px
+        border-radius: 60px
+
+      p
+        color: white
+        text-align: left
+        padding: 0
+        line-height: 17px
+
+  .question
+    font-family: 'PT Sans', sans-serif
+    padding: 20px 30px
+    margin-top: 10px
+    overflow: hidden
+    min-height: 435px
+
+    h2
+      color: $main_desafio
+      font-size: 3.7em
+      margin-bottom: 20px
+
+      i
+        color: $main_desafio
+        margin-right: 10px
+
+    .stage
+      .text-intro, .form-publish-post
+        width: 48%
+        vertical-align: top
+
+      .text-intro
+        float: left
+        font-size: 1.4em
+        font-weight: bold
+        color: $main_desafio
+        margin-right: 20px
+
+      .form-publish-post
+        float: right
+        height: 335px
+
+        fieldset
+          legend
+            color: #333
+            border-top: 0
+            border-bottom: 0
+          label
+            color: #fff
+
+        input, textarea, select
+          background: #FFF
+          border: 0
+          font-size: 1.2em
+          color: #999
+          box-shadow: none
+
+        #btn_desafio
+          background: none
+          font-family: 'League Gothic'
+          color: #E3C492
+          text-transform: uppercase
+          text-decoration: none
+          font-size: 4em
+          display: block
+          opacity: 0.7
+
+          &:hover
+            opacity: 1
+
+          span
+            background: url('assets/images/enviar_comentario.png') no-repeat
+            display: inline-block
+            width: 37px
+            height: 37px
+            margin-right: 10px
+    p
+      color: #fff
+      margin: 0
+      padding-top: 0
+      font-size: 16px
+      font-weight: normal
+    ol
+      li
+        font-family: 'PT Sans', sans-serif
+        color: #fff
+        font-size: 18px
+        cursor: pointer
+        p
+          display: none
+
+  .box-controles
+    background: #FFF
+    padding: 0 30px
+    text-align: right
+    border: 1px solid #EBEBEB
+    border-left: 0
+    border-right: 0
+    box-sizing: border-box
+    margin-top: 20px
+
+    .title
+      float: left
+
+    .box-visualizacao
+      border-right: 1px solid #EBEBEB
+      margin-right: 10px
+      padding-right: 10px
+
+    div
+      display: inline-block
+
+    h3
+      color: $main_desafio
+      font-size: 4em
+      padding-top: 10px
+
+    h4
+      display: inline-block
+      font-size: 2em
+      line-height: 1em
+      padding: 20px 0
+      color: #444
+      vertical-align: top
+    a
+      display: inline-block
+      color: #999
+      padding: 20px 10px
+      font-size: 1.2em
+      text-decoration: none
+      margin: 0 0 0 10px
+      position: relative
+      i
+        font-size: 1.7em
+        margin: 0 10px 0 0
+        vertical-align: middle
+      &:hover,
+      &.active
+        color: $main_desafio
+
+  #post-area.lista
+    margin: 0px 30px 15px
+    .post
+      width: 100%
+      padding: 0
+      height: 130px
+      overflow: hidden
+      display: inline-block
+
+      h2, .meta-user, .category, .excerpt, .box-like-dislike, .social, .more
+        display: table-cell
+        overflow: hidden
+        height: 130px
+        vertical-align: middle
+
+      h2
+        margin: 0
+        width: 50%
+        min-width: 50%
+        padding: 0 20px
+        font-size: 36px
+
+      .meta-user
+        width: 20%
+        padding-left: 20px
+
+        i
+          float: left
+          color: $main_desafio
+        .author
+          font-size: 1.1em
+
+        .author, .date
+          line-height: 1em
+          margin: 0.2em 0px 0.2em 0.5em
+          padding: 0px
+          float: left
+          width: 13em
+
+      .separador
+        display: none
+
+      .category
+        a
+          color: $main_desafio
+          background-color: #FFF
+          margin-right: 10px
+          font-size: 1.2em
+
+  .post-participacao.masonry-brick
+    h2
+      margin: 25px 15px 15px 30px
+
+
+    .box-like-dislike
+      margin: 0 0 .5em 2.5em
+      p
+        display: inline-block
+        font-size: 2em
+        margin: 0 0.5em 0 0
+        padding: 0
+        a
+          text-decoration: none
+        i
+          color: #ccc
+        span
+          vertical-align: top
+          color: #666
+          font-size: .6em
+        &.like-button
+          a:hover
+            i
+              color: #029019
+        &.dislike-button
+          a:hover
+            i
+              color: #ff0000
+
+  #post-area.masonry.blocos
+    .post
+      .meta-user
+        i
+          margin: 0 0 0 .5em
+          color: $main_desafio
+
+      .separador
+        border-bottom: 1px dotted #999
+        margin: 10px 0
+
+      .category
+        margin: 0
+        float: right
+        background: #FFF
+        a
+          color: $main_desafio
+          background: #FFF
+
+
+    .post,
+    .type-participacao
+      .meta-user
+        display: inline-block
+        margin: 0 0 0 2.4em
+        .icon-user-comment
+          color: $main_desafio
+          font-size: 3em
+          float: left
+        .author,
+        .date
+          line-height: 1em
+          margin: .2em 0 .2em .5em
+          padding: 0
+          float: left
+          width: 13em
+        .author
+          color: #444
+          font-size: 1.2em
+          font-weight: bold
+        .date
+          color: #444
+          font-size: 1em
+      .category
+        margin: 0
+        a
+          padding: 5px 20px 5px 10px
+          font-size: 13px
+          color: $main_desafio
+          display: inline-block
+          background-color: #FFF
+          text-decoration: none
+          font-family: 'PT Sans', sans-serif
+
+    .type-post
+      .category,
+      .pinbin-category
+        a
+          color: #2e758d
+
+    .type-participacao
+      .meta-user
+        margin-left: 0
+        margin-top: 1.5em
+        .author,
+        .date
+          width: 80%
+      .category
+        margin-left: -3.5em
+        a
+          color: #D89200
+      .box-like-dislike
+        margin: 2em auto 0
+        text-align: center
+        p
+          display: inline-block
+          font-size: 2.5em
+          margin: 0 1em 0 0
+          padding: 5px 10px
+          //width: 90px;
+          //height: 50px;
+          border-style: solid
+          border-width: 8px
+          border-radius: 10px
+          background-color: #fff
+          a
+            text-decoration: none
+          i
+            color: #ccc
+          span
+            vertical-align: top
+            color: #666
+            font-size: .8em
+            margin-top: 4px
+            display: inline-block
+            font-weight: bold
+          &.like-button
+            border-color: #029019
+            i
+              color: #029019
+          &.dislike-button
+            border-color: #ff0000
+            i
+              color: #ff0000
+
+      /**************************
+      /**  interna de participe *
+      /**************************/
+
+      .participacao
+        h1
+          font-family: 'League Gothic'
+          font-size: 4em
+        .pinbin-meta
+          font-size: 1.2em
+          color: #333
+          margin-top: 0
+        .disclaimer-participe
+          margin: 0
+          font-weight: bold
+
+      .tooltipsy-login,
+      .tooltipsy
+        padding: 10px 20px
+        max-width: 320px
+        color: #333
+        border-radius: 10px
+        background-color: #d8d8d4
+        position: relative
+        p
+          line-height: 16px
+          line-height: 16px
+          margin: 0 0 .5em
+
+      .tooltipsy-login
+        border: 1px solid #333
+
+      .tooltipsy:after
+        right: 100%
+        border: solid transparent
+        content: " "
+        height: 0
+        width: 0
+        position: absolute
+        pointer-events: none
+
+      .tooltipsy:after
+        border-color: rgba(0, 0, 0, 0)
+        border-right-color: #d8d8d4
+        border-width: 10px
+        top: 50%
+        margin-top: -10px
+
+    .aviso-autor-participe
+      margin-left: 3em
+      margin-bottom: 2.5em
+      width: 56em
+      background: #267e6e
+      background: #267e6e
+      background: -moz-linear-gradient(top, #267e6e 0%, #38af9b 100%)
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #267e6e), color-stop(100%, #38af9b))
+      background: -webkit-linear-gradient(top, #267e6e 0%, #38af9b 100%)
+      background: -o-linear-gradient(top, #267e6e 0%, #38af9b 100%)
+      background: -ms-linear-gradient(top, #267e6e 0%, #38af9b 100%)
+      background: linear-gradient(to bottom, #267e6e 0%, #38af9b 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#267e6e', endColorstr='#38af9b',GradientType=0 )
+      border-radius: 0 10px 10px 10px
+      p
+        font-family: 'League Gothic'
+        font-size: 4em
+        line-height: 1em
+        padding: 0.4em
+        margin: 0
+        color: #fff
+        display: inline-block
+      a.conexao-opcoes
+        display: inline-block
+        float: right
+        margin: 8px 10px 0 0
+        width: auto
+        height: auto
+        border: 5px solid #d55626
+        background-color: #fff
+        color: #d55626
+        font-family: 'League Gothic'
+        font-size: 2.5em
+        line-height: 1em
+        padding: .5em
+        text-transform: capitalize
+        border-radius: 15px
+        text-decoration: none
+        &:hover
+          box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.33)
+        i
+          font-size: 24px
+          line-height: 24px
+          margin: 0 10px 0 0
+
+      /******************************************
+      /*              MEDIA QUERY
+      /******************************************/
+
+      @media only screen and (max-width: 810px)
+        #post-area .post
+          width: 30em
+          margin-right: 2.3em
+
+      @media only screen and (max-width: 767px)
+        .main-nav select
+          width: 90%
+        .extra-content
+          width: 315px
+          height: 155px
+
+      @media only screen and (max-width: 480px)
+        #header
+          padding-bottom: 200px
+        nav .banner-featured
+          margin-top: 160px
+        #logo a.logo-animado
+          margin: 10px 10px 0
+        .extra-content
+          max-width: 100%
+          height: auto
+          .compartilhar-na-rede
+            float: none
+            padding: 0 10px 10px
+          .fazer
+            float: none
+            height: 150px
+          .fazer-participacao,
+          .fazer-conexao,
+          .fazer-doacao
+            float: none
+            width: 275px
+            margin: 5px auto 0
+        .banner-featured
+          &.fixed
+            &.ao-vivo
+              padding: 0
+              .intro
+                width: 100%
+                margin: 4em 0
+        .box-call-to-action
+          margin: 1%
+          .text-intro,
+          .form-publish-post
+            padding: 1em
+            h1,h2
+              line-height: 1.5em
+            width: 100%
+            border: 0
+
+        #post-area
+          margin-left: 1em
+          .post
+            width: 100%
+            margin: 0 0 1em
+
+      @-webkit-keyframes "cf4FadeInOut"
+        0%
+          opacity: 1
+        16.6%
+          opacity: 1
+        33.3%
+          opacity: 0
+        83.3%
+          opacity: 0
+        100%
+          opacity: 1
+
+  .desafio-post
+    overflow: hidden
+
+    .aviso-autor-desafio
+      width: 675px
+      margin: 20px 32px 20px
+      a
+        color: #e3c492
+        font-size: 2.5em
+        font-family: 'League Gothic'
+        text-decoration: none
+        line-height: 25pt
+        display: block
+        width: 100%
+        height: 100%
+
+        &:hover
+          color: #533b8c
+
+    .type-participacao
+      .meta-user
+        i
+          color: $main_desafio
+
+      .category
+        a
+          background: none
+          color: $main_desafio

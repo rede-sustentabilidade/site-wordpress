@@ -1,0 +1,36 @@
+.form-doacao .pure-input-1
+  width: 97%
+
+.form-doacao
+  .forma-pagamento
+    text-align: center
+    label
+      margin: 0
+    img
+      display: block
+      margin: 0 auto
+  .total-contribuicao
+    p
+      margin: 0
+      padding: 0
+  input.error
+    border: 1px solid red
+  label.error
+    color: red
+    font-weight: bold
+  div.container-errors
+    background-color: #eee
+    border: 1px solid red
+    margin: 5px
+    padding: 5px
+  div.container-errors ol li
+    list-style-type: disc
+    margin-left: 20px
+  div.container-errors
+    display: none
+
+@media only screen and (max-width: 480px)
+  .form-doacao .formas-pagamento
+    .forma-pagamento
+      img
+        max-width: 40%

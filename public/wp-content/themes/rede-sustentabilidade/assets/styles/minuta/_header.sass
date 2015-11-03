@@ -1,0 +1,117 @@
+/***** HEADER *****/
+
+$main_desafio: #533B8C
+$sec_desafio: #E3C492
+
+.menubar
+    background-color: $primary-color
+    overflow: hidden
+    font-family: 'PT Sans', sans-serif
+    text-align: center
+    padding: 0
+
+    .partido
+        background: #FFF
+        border-radius: 60px
+        width: 60px
+        height: 60px
+        margin-right: 10px
+        display: inline-block
+        vertical-align: bottom
+
+        &.psb
+            background: url('../assets/images/psb.png') no-repeat 8px 15px #FFF
+
+        &.rede
+            background: url('../assets/images/rede.png') no-repeat 6px 17px #FFF
+
+        &.pps
+            background: url('../assets/images/pps.png') no-repeat 7px 17px #FFF
+
+    h1, .social, .menu a
+        font-family: 'League Gothic'
+        text-decoration: none
+
+    .social, .social span
+        color: #fff
+        a
+            opacity: .5
+            &:hover
+                opacity: 1
+
+    .menu a, .login a
+        opacity: .5
+        color: #fff
+        font-weight: normal
+        &:hover
+            opacity: 1
+
+    h1
+        font-size: 4em
+        font-weight: normal
+        color: white
+        line-height: 1em
+        display: inline-block
+        text-transform: uppercase
+        margin: 0 auto
+
+    .social, .login
+        float: right
+        margin-right: 20px
+
+    .login
+        margin-bottom: 20px
+
+    .social
+        color: white
+        font-size: 1.6em
+        margin-top: 20px
+        a
+            margin-right: 10px
+            font-size: 1.2em
+            text-decoration: none
+
+    .menu
+        float: left
+        text-transform: uppercase
+        margin: 0
+
+        li
+            list-style: none
+            display: inline-block
+            margin: 0 -7px
+
+        a
+            display: block
+            padding: 18px 20px
+            font-size: 1.6em
+            line-height: 15px
+            color: #FFF
+
+            &.active
+                color: #FFF
+                opacity: 1
+            &.muda:hover
+                background: #E3C492
+            &.minuta:hover
+                background: #7FA31A
+            &.desafio:hover
+                background: #533B8C
+
+    .content
+        margin: 10px auto
+        padding: 70px 20px 0 20px
+        width: 75%
+        background: transparent
+        p
+            color: white
+            font-size: 1.4em
+
+    .login a, .login span
+        margin: 0 0 10px 20px
+        text-decoration: none
+        font-size: 1.4em
+        &:hover
+            color: #FFF
+    .login span
+        color: #FFF
