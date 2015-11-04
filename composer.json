@@ -30,10 +30,7 @@
 		"wpackagist-plugin/wp-permastructure": "1.3",
 		"wpackagist-plugin/link-manager": "dev-trunk",
 		"wpackagist-plugin/simple-share-buttons-adder": "dev-trunk",
-		"wpackagist-plugin/file-away": "dev-trunk",
-		"wpackagist-plugin/keyring": "dev-trunk",
-		"wpackagist-plugin/really-simple-ssl": "dev-trunk",
-		"wpackagist-plugin/wp-db-driver": "dev-trunk"
+		"wpackagist-plugin/file-away": "dev-trunk"
     },
     "repositories": [
         {
