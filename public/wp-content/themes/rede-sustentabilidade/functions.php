@@ -6,11 +6,12 @@ require_once("utilidades/ApiRede.php");
 function wpr_remove_custom_actions() {
 
 	global $wpdb;
-	// if (!$wpdb->set_charset($wpdb->dbh, 'utf8')) {
-	//     printf("Error loading character set utf8: %s\n", $wpdb->error);
-	// } else {
+	
+	//$results = $wpdb->get_results( 'SET NAMES utf8;', OBJECT );
+	//$results2 = $wpdb->get_results( 'SET CHARACTER SET utf8;', OBJECT );
+	
 	printf("Current character set: %s\n", $wpdb->get_charset_collate());
-	// }
+
 
     remove_action( 'after_setup_theme', 'pinbin_options_init' );
 

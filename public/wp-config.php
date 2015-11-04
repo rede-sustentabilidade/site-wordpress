@@ -124,7 +124,7 @@ define('DB_USER',     $_dbsettings["user"]          );
 define('DB_PASSWORD', $_dbsettings["pass"]          );
 define('DB_HOST',     $_dbsettings["host"]          );
 define('DB_CHARSET',  'utf8'                        );
-define('DB_COLLATE',  'utf8_general_ci'             );
+define('DB_COLLATE',  'utf8_unicode_ci'             );
 
 unset($_dbsettings);
 
