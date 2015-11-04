@@ -5,7 +5,7 @@ require_once("utilidades/ApiRede.php");
 
 function wpr_remove_custom_actions() {
 
-	// global $wpdb;
+	global $wpdb;
 	// if (!$wpdb->set_charset($wpdb->dbh, 'utf8')) {
 	//     printf("Error loading character set utf8: %s\n", $wpdb->error);
 	// } else {
