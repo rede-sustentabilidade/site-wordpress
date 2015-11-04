@@ -16,7 +16,6 @@
 	],
    "require": {
 	"php": "7.0.0RC5",
-	"ext-mysql": "*",
         "WordPress/WordPress": "*",
         "wpackagist-plugin/jetpack": "~3",
         "wpackagist-plugin/wpro": "~1",
