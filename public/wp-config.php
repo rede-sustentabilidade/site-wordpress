@@ -123,8 +123,8 @@ define('DB_NAME',     trim($_dbsettings["path"],"/"));
 define('DB_USER',     $_dbsettings["user"]          );
 define('DB_PASSWORD', $_dbsettings["pass"]          );
 define('DB_HOST',     $_dbsettings["host"]          );
-define('DB_CHARSET', 'latin1'                       );
-define('DB_COLLATE', 'latin1_swedish_ci'            );
+//define('DB_CHARSET', 'latin1'                       );
+//define('DB_COLLATE', 'latin1_swedish_ci'            );
 
 unset($_dbsettings);
 
