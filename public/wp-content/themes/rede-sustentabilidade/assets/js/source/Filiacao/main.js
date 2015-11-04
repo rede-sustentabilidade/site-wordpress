@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: '/app/themes/rede-sustentabilidade/assets/js/source/',
+    baseUrl: '/wp-content/themes/rede-sustentabilidade/assets/js/source/',
 
     //waitSeconds: 90,
 

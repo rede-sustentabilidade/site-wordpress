@@ -1,7 +1,7 @@
 //main.js contents
 //Pass a config object to require
 require.config({
-  baseUrl: '/app/themes/rede-sustentabilidade/assets/',
+  baseUrl: '/wp-content/themes/rede-sustentabilidade/assets/',
     modules: ["Minuta", "Filiacao", "Site"]
 });
 

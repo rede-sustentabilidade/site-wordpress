@@ -18,6 +18,9 @@
 define('DISALLOW_FILE_EDIT',true);
 define('DISALLOW_FILE_MODS',true);
 
+define('WP_HOME','http://herokuwp.local');
+define('WP_SITEURL','http://herokuwp.local');
+
 // Set SSL'ed domain
 if ( !empty( $_ENV["SSL_DOMAIN"] ) ) {
 	define( 'FORCE_SSL_LOGIN', true );
@@ -66,7 +69,8 @@ define('DB_USER',     $_dbsettings["user"]          );
 define('DB_PASSWORD', $_dbsettings["pass"]          );
 define('DB_HOST',     $_dbsettings["host"]          );
 define('DB_CHARSET', 'utf8'                         );
-define('DB_COLLATE', ''                             );
+//define('DB_COLLATE', ''                             );
+define('DB_COLLATE', 'utf8_general_ci'              );
 
 unset($_dbsettings);
 
