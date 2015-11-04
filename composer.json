@@ -14,7 +14,8 @@
 	"keywords": [
 		"politica", "governo", "partido", "rede", "sustentabilidade", "wp"
 	],
-    "require": {
+   "require": {
+	"php": "~7",
 	"ext-mysql": "*",
         "WordPress/WordPress": "*",
         "wpackagist-plugin/jetpack": "~3",
