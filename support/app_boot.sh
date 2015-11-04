@@ -21,4 +21,4 @@ fi
 
 # Boot up!
 # vendor/bin/heroku-hhvm-nginx -C support/app_nginx.conf -I support/app_php.ini public.built/
-vendor/bin/heroku-php-nginx -C support/app_nginx.conf
+vendor/bin/heroku-php-nginx -C support/app_nginx.conf public.built/
