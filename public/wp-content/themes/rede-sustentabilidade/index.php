@@ -2,12 +2,7 @@
 /**
  * Theme index file
  */
-
-if ((count($_GET) == 0) && (preg_match('/mudando/', $_SERVER['HTTP_HOST'])) && !(preg_match('/timeline-mudando-o-brasil/', $_SERVER['REQUEST_URI']))) {
-  header('Location: ' . '/timeline-mudando-o-brasil/');
-}
-?>
-<?php get_header(); ?>
+get_header(); ?>
 <?php get_sidebar(); ?>
 <?php if (have_posts()) : ?>
 <div id="post-area">

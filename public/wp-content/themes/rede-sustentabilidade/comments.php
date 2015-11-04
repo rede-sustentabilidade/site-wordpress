@@ -3,6 +3,8 @@
  * The template for comments section
  */
 
+
+
 ?>
 
 <?php

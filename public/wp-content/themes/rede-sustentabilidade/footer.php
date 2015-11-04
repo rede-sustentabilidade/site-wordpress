@@ -4,8 +4,6 @@
  */
 
 ?>
-<?php if (!(preg_match('/mudando/', $_SERVER['HTTP_HOST'])) && (!defined('MUDANDOBRASIL') || !MUDANDOBRASIL)) : ?>
-
 <footer class="site-footer" id="footer-linkss">
     <div class="col">
         <div class="notes social-network">
@@ -39,8 +37,6 @@
 
 </div><!-- // close wrap div -->
 
-<?php endif; /* MUDANDOBRASIL */ ?>
-
 <?php wp_footer(); ?>
 
 <script>
@@ -58,39 +54,13 @@ var _gaq = _gaq || [];
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-
-<?php
-$facebookAppId = get_post_meta(get_queried_object_id(), "facebook-psb", true);
-if (empty($facebookAppId)) {
-    echo '<div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=536115646469279";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, \'script\', \'facebook-jssdk\'));</script>';
-}else {
-    echo '<div id="fb-root"></div>
-            <script>
-              window.fbAsyncInit = function() {
-                FB.init({
-                  appId      : \'1464301680461931\',
-                  channelUrl : \'//redesustentabilidade.org.br/psb/channel.php\',
-                  status     : false,
-                  xfbml      : false
-                });
-                FB.Canvas.setAutoGrow();
-              };
-              (function(d, s, id){
-                 var js, fjs = d.getElementsByTagName(s)[0];
-                 if (d.getElementById(id)) {return;}
-                 js = d.createElement(s); js.id = id;
-                 js.src = "//connect.facebook.net/pt_BR/all.js";
-                 fjs.parentNode.insertBefore(js, fjs);
-               }(document, \'script\', \'facebook-jssdk\'));
-            </script>';
-}
-?>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=536115646469279";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, \'script\', \'facebook-jssdk\'));</script>
 </body>
 </html>

@@ -1,34 +1,24 @@
 <?php
-
-
 require_once("utilidades/ApiRede.php");
 
 function wpr_remove_custom_actions() {
-
 	global $wpdb;
-	
+
 	//$results = $wpdb->get_results( 'SET NAMES utf8;', OBJECT );
 	//$results2 = $wpdb->get_results( 'SET CHARACTER SET utf8;', OBJECT );
-	
 	printf("Current character set: %s\n", $wpdb->get_charset_collate());
 
 
     remove_action( 'after_setup_theme', 'pinbin_options_init' );
-
     remove_action( 'admin_init', 'pinbin_options_setup' );
-
     remove_action('admin_menu', 'pinbin_menu_options');
-
     remove_action('admin_print_styles-appearance_page_pinbin-settings', 'pinbin_options_enqueue_scripts');
-
     remove_action( 'admin_init', 'pinbin_options_settings_init' );
-
     remove_theme_support( 'custom-background' );
 
-    if (!is_admin())
-        remove_action( 'wp_enqueue_scripts', 'pinbin_scripts' );
-//add_action( 'wp_enqueue_scripts', 'pinbin_scripts' );
-
+    if (!is_admin()) {
+		remove_action( 'wp_enqueue_scripts', 'pinbin_scripts' );
+	}
 }
 
 // post thumbnails
@@ -40,22 +30,15 @@ add_action('init','wpr_remove_custom_actions');
 
 add_filter('show_admin_bar', '__return_false');
 
-
 function frontend_scripts_method() {
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '20140526' );
+	wp_register_style('rs_rrssb', get_stylesheet_directory_uri() . '/css/rrssb.min.css');
+	wp_enqueue_style('rs_rrssb');
 
 	wp_enqueue_script( 'require', get_stylesheet_directory_uri() . '/assets/bower_components/requirejs/require.js', array( 'jquery' ), '20130609', true );
 	wp_enqueue_script( 'site-main', get_stylesheet_directory_uri() . '/assets/js/source/Site/main.js', array( 'require' ), '20130609', true );
 
-  wp_register_style('rs_rrssb', get_stylesheet_directory_uri() . '/css/rrssb.min.css');
-  wp_enqueue_style('rs_rrssb');
-
 	load_theme_textdomain( 'rede-sustentabilidade', get_template_directory() . '/languages' );
-if ( (count($_GET)==0) && (preg_match('/mudando/', $_SERVER['HTTP_HOST'])) ) {
-if (!is_page()) {
-//header('Location: ' . '/timeline-mudando-o-brasil/');
-}
-}
 }
 
 add_action( 'wp_enqueue_scripts', 'frontend_scripts_method' ); // wp_enqueue_scripts action hook to link only on the front-end
@@ -106,10 +89,8 @@ function custom_post_type() {
 
 }
 
-
 // Hook into the 'init' action
 add_action( 'init', 'custom_post_type', 0 );
-
 
 // Categorias para Participação
 function my_taxonomies_participacao() {
@@ -204,35 +185,6 @@ return home_url();
 }
 add_filter('login_headerurl', 'new_wp_login_url');
 
-
-// TENTATIVA ANTERIOR DE DESABILITAR O EMAIL POR
-// if ( !function_exists( 'wp_new_user_notification' ) ) :
-// function wp_new_user_notification( $user_id, $plaintext_pass = '' ) {
-//     return;
-// }
-// endif;
-
-// prevent admin notification email for new registered users or user password changes
-// function conditional_mail_stop() {
-//     global $phpmailer;
-//     $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
-//     $subject = array(
-//         sprintf(__('[%s] New User Registration'), $blogname)
-//         //sprintf(__('[%s] Password Lost/Changed'), $blogname)
-//     );
-//     if ( in_array( $phpmailer->Subject, $subject ) ) {
-//         // empty $phpmailer class -> email cannot be send
-//         $phpmailer = new PHPMailer( true );
-//     }
-// }
-// add_action( 'phpmailer_init', 'conditional_mail_stop' );
-
-// add_filter( 'template_directory_uri', function( $original ) {
-//     $output = preg_replace( "/^http:/i", "https:", $original );
-//     return $output;
-// });
-
-
 // Auto login and redirect to a page
 function auto_login_new_user( $user_id ) {
   wp_set_current_user($user_id);
@@ -243,11 +195,6 @@ function auto_login_new_user( $user_id ) {
   exit;
 }
 //add_action( 'user_register', 'auto_login_new_user', 10, 1 );
-
-
-
-
-
 /**
  * Sort by custom fields.
  * mt1 refers to meta_1, mt2 to meta_2 and mt3 to meta_3
@@ -299,14 +246,9 @@ function remove_category_consulta( $wp_query ) {
 }
 add_action( 'pre_get_posts', 'remove_category_consulta' );
 
-
 // wp-login inside iframe
 remove_action( 'login_init', 'send_frame_options_header' );
 remove_action( 'admin_init', 'send_frame_options_header' );
-
-
-
-
 
 /// comentario duplicado
 add_filter( 'wp_die_handler', 'my_wp_die_handler_function', 9 ); //9 means you can unhook the default before it fires
@@ -352,24 +294,6 @@ function rs_login_redirect($redirect_to, $request, $user) {
 
 add_filter('login_redirect', 'rs_login_redirect', 10, 3);
 
-
-function rs_url_mudando($value)
-{
-    if (rs_is_mudando()) {
-        $parts = parse_url($value);
-        $value = str_replace($parts['host'], 'mudandobrasil.com.br', $value);
-    }
-    return $value;
-}
-
-add_filter('option_siteurl', 'rs_url_mudando');
-add_filter('option_home', 'rs_url_mudando');
-
-
-function rs_is_mudando()
-{
-    return false !== strpos($_SERVER['HTTP_HOST'], 'mudando');
-}
 
 // Includes
 require get_stylesheet_directory().'/includes/regionalization.php';

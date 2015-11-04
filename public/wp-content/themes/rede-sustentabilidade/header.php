@@ -1,6 +1,4 @@
-<?php
-define('REDETHEME', dirname(__FILE__));
-?><!DOCTYPE html>
+<?php define('REDETHEME', dirname(__FILE__)); ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
@@ -8,16 +6,7 @@ define('REDETHEME', dirname(__FILE__));
         <title><?php wp_title('&#124;', true, 'right'); ?></title>
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         <link rel="profile" href="http://gmpg.org/xfn/11">
-        <?php if (rs_is_mudando()) : ?>
-        <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/facebook-mudandobrasil/16x16.png" type="image/png">
-        <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/facebook-mudandobrasil/16x16.png" type="image/png">
-        <meta property="fb:app_id" content="590792857635324">
-        <?php if (is_page('mudando-o-brasil-embed') || is_home()) : ?>
-        <meta property="og:title" content="Mudando o Brasil">
-        <meta property="og:description" content="Conheça a plataforma colaborativa que vai receber sugestões dos cidadãos para auxiliar na construção do Programa de Governo da Coligação #Rede e PSB">
-        <meta property="og:type" content="<?php echo is_home() ? 'website' : 'article'; ?>">
-        <meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/open-graph.png">
-        <?php elseif (is_single() || is_page()) : if (have_posts()) the_post(); ?>
+        <?php if (is_single() || is_page()) : if (have_posts()) the_post(); ?>
         <meta property="og:url" content="<?php the_permalink(); ?>">
         <meta property="og:title" content="<?php single_post_title(''); ?>">
         <meta name="description" content="<?php the_excerpt_rss(); ?>">
@@ -28,7 +17,6 @@ define('REDETHEME', dirname(__FILE__));
         <meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/open-graph.png">
         <?php endif; ?>
         <?php rewind_posts(); endif; ?>
-        <?php else : /* if (rs_is_mudando()) */ ?>
         <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico" type="image/x-icon">
         <meta property="fb:app_id" content="536115646469279">
@@ -53,7 +41,6 @@ define('REDETHEME', dirname(__FILE__));
         <meta property="og:type" content="website">
         <meta property="og:image" content="<?php echo content_url('uploads/2013/11/rede.png'); ?>">
         <?php endif; ?>
-        <?php endif; /* if (rs_is_mudando()) */ ?>
         <?php global $current_user; get_currentuserinfo(); ?>
         <script>
         var
@@ -64,7 +51,6 @@ define('REDETHEME', dirname(__FILE__));
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-		<?php if (!rs_is_mudando()) : ?>
         <nav id="site-navigation" class="main-nav" role="navigation">
             <div id="main-nav-wrapper">
                 <?php if (has_nav_menu('main_nav')) : ?>
@@ -229,34 +215,14 @@ define('REDETHEME', dirname(__FILE__));
             </div>
         </div>
         <?php endif; ?>
-
-
-        <?php
-        /* ===================================================================
-         *
-         *
-         *                             BANNER
-         *
-         *
-         * ===================================================================
-         */
-        date_default_timezone_set('America/Sao_Paulo');
-        if (is_home()) {
-        ?>
-
+        <?php date_default_timezone_set('America/Sao_Paulo'); if (is_home()) { ?>
         <div id="slider">
             <?php
-            	if (function_exists('putRevSlider')) {
-            		putRevSlider("home");
-            	}
+                if (function_exists('putRevSlider')) {
+                    putRevSlider("home");
+                }
             ?>
         </div>
-
-        <?php }
-        /* === BANNER, FIM === */
-        ?>
-
-
-        <?php endif; ?>
+		<?php } /* === BANNER, FIM === */ ?>
         <div class="clear"></div>
-        <div id="wrap" class="<?php if ('sim' == get_post_meta(get_queried_object_id(), 'remover-rodape', true)) echo 'pagina-sem-header'; ?>">
+        <div id="wrap">

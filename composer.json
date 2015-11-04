@@ -33,7 +33,6 @@
 		"wpackagist-plugin/file-away": "dev-trunk",
 		"wpackagist-plugin/keyring": "dev-trunk",
 		"wpackagist-plugin/query-monitor": "dev-trunk",
-		"wpackagist-plugin/hyperdb": "dev-trunk",
 		"wpackagist-plugin/diagnosis": "dev-trunk"
     },
     "repositories": [

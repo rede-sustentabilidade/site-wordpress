@@ -47,14 +47,17 @@ if (!defined('WP_ENV')) {
     switch ($hostname) {
       case 'herokuwp.local':
         define('WP_ENV', 'development');
+  		define('WP_CACHE', false);
         break;
 
       case 'site-wordpress.staging.redesustentabilidade.org.br':
         define('WP_ENV', 'staging');
+  		define('WP_CACHE', false);
         break;
       case 'redesustentabilidade.org.br':
       default:
         define('WP_ENV', 'production');
+  		define('WP_CACHE', true);
     }
   }
 }
@@ -91,7 +94,6 @@ define( 'JETPACK_SIGNATURE__HTTPS_PORT', 80 );
 if ( !empty( $_ENV["MEMCACHIER_SERVERS"] ) ) {
   $_mcsettings = parse_url($_ENV["MEMCACHIER_SERVERS"]);
 
-  define('WP_CACHE', true);
   $sasl_memcached_config = array(
     'default' => array(
       array(

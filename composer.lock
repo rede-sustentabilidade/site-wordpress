@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "20059191c1dda02bd451b561b6245a64",
-    "content-hash": "28547832a7a6a0d191a26cc8c2059800",
+    "hash": "55dc7aa761ff1df2212fe3d72dd45535",
+    "content-hash": "8dc1838ab31e6f0a7b1c914a18e9b44d",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -271,37 +271,16 @@
             "time": "2015-08-25 17:26:11"
         },
         {
-            "name": "wpackagist-plugin/hyperdb",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/hyperdb/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/hyperdb.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/hyperdb/",
-            "time": "2015-10-01 04:12:41"
-        },
-        {
             "name": "wpackagist-plugin/jetpack",
-            "version": "3.7.2",
+            "version": "3.8.0",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/3.7.2"
+                "reference": "tags/3.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.3.7.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.3.8.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -506,7 +485,6 @@
         "wpackagist-plugin/file-away": 20,
         "wpackagist-plugin/keyring": 20,
         "wpackagist-plugin/query-monitor": 20,
-        "wpackagist-plugin/hyperdb": 20,
         "wpackagist-plugin/diagnosis": 20
     },
     "prefer-stable": false,

@@ -6,7 +6,6 @@
 ?>
 
 <?php get_header(); ?>
-
    		<div class="type-page">
                                 
        			<div class="pinbin-copy">
@@ -23,9 +22,6 @@
 						<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/"><?php _e( 'Volte a página inicial', 'pinbin') ?></a></li> 
 						<li><?php _e( 'Clique no ', 'pinbin') ?> <a href="javascript:history.back()"><?php _e( 'botão para voltar atrás!', 'pinbin') ?></a></li>
 					</ul>
-		      
-         		</div>
-                              
+         		</div>                 
        </div>
-              
 <?php get_footer(); ?>
