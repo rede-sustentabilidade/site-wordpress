@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "88cccd120ef8d4e3fc182f23d883fc8c",
-    "content-hash": "1059ffb6dd2ee3a52c4713c3ba9d22f1",
+    "hash": "20059191c1dda02bd451b561b6245a64",
+    "content-hash": "28547832a7a6a0d191a26cc8c2059800",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -229,6 +229,27 @@
             "homepage": "https://wordpress.org/plugins/contact-form-7/"
         },
         {
+            "name": "wpackagist-plugin/diagnosis",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/diagnosis/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/diagnosis.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/diagnosis/",
+            "time": "2014-08-23 16:11:15"
+        },
+        {
             "name": "wpackagist-plugin/file-away",
             "version": "dev-trunk",
             "source": {
@@ -248,6 +269,27 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/file-away/",
             "time": "2015-08-25 17:26:11"
+        },
+        {
+            "name": "wpackagist-plugin/hyperdb",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/hyperdb/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/hyperdb.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/hyperdb/",
+            "time": "2015-10-01 04:12:41"
         },
         {
             "name": "wpackagist-plugin/jetpack",
@@ -458,18 +500,19 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "php": 5,
         "wpackagist-plugin/baw-moderator-role": 20,
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
         "wpackagist-plugin/file-away": 20,
         "wpackagist-plugin/keyring": 20,
-        "wpackagist-plugin/query-monitor": 20
+        "wpackagist-plugin/query-monitor": 20,
+        "wpackagist-plugin/hyperdb": 20,
+        "wpackagist-plugin/diagnosis": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "7.0.0RC5"
+        "hhvm": "~3.5"
     },
     "platform-dev": []
 }
