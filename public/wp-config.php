@@ -18,13 +18,67 @@
 define('DISALLOW_FILE_EDIT',true);
 define('DISALLOW_FILE_MODS',true);
 
-define('WP_HOME','http://herokuwp.local');
-define('WP_SITEURL','http://herokuwp.local');
+// Try environment variable 'WP_ENV'
+if (getenv('WP_ENV') !== false) {
+    // Filter non-alphabetical characters for security
+    define('WP_ENV', preg_replace('/[^a-z]/', '', getenv('WP_ENV')));
+}
+// Define site host
+if (isset($_SERVER['HTTP_X_FORWARDED_HOST']) && !empty($_SERVER['HTTP_X_FORWARDED_HOST'])) {
+    $hostname = $_SERVER['HTTP_X_FORWARDED_HOST'];
+} else {
+    $hostname = $_SERVER['HTTP_HOST'];
+}
+// If WordPress has been bootstrapped via WP-CLI detect environment from --env=<environment> argument
+if (PHP_SAPI == "cli" && defined('WP_CLI_ROOT')) {
+    foreach ($argv as $arg) {
+        if (preg_match('/--env=(.+)/', $arg, $m)) {
+            define('WP_ENV', $m[1]);
+        }
+    }
+}
+
+// Try server hostname
+if (!defined('WP_ENV')) {
+  // Try server hostname
+  if (!defined('WP_ENV')) {
+    // Set environment based on hostname
+    switch ($hostname) {
+      case 'herokuwp.local':
+        define('WP_ENV', 'development');
+        break;
+
+      case 'site-wordpress.staging.redesustentabilidade.org.br':
+        define('WP_ENV', 'staging');
+        break;
+      case 'redesustentabilidade.org.br':
+      default:
+        define('WP_ENV', 'production');
+    }
+  }
+}
+
+// Are we in SSL mode?
+if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
+    (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')) {
+    $protocol = 'https://';
+} else {
+    $protocol = 'http://';
+}
+// Define WordPress Site URLs if not already set in config files
+if (!defined('WP_SITEURL')) {
+    define('WP_SITEURL', $protocol . rtrim($hostname, '/'));
+}
+if (!defined('WP_HOME')) {
+    define('WP_HOME', $protocol . rtrim($hostname, '/'));
+}
+// Clean up
+unset($hostname, $protocol);
 
 // Set SSL'ed domain
 if ( !empty( $_ENV["SSL_DOMAIN"] ) ) {
-	define( 'FORCE_SSL_LOGIN', true );
-	define( 'FORCE_SSL_ADMIN', true );
+  define( 'FORCE_SSL_LOGIN', true );
+  define( 'FORCE_SSL_ADMIN', true );
 }
 
 // HTTPS port is always 80 because SSL is terminated at Heroku router / CloudFlare
@@ -34,21 +88,21 @@ define( 'JETPACK_SIGNATURE__HTTPS_PORT', 80 );
  * Memcache settings.
  */
 if ( !empty( $_ENV["MEMCACHIER_SERVERS"] ) ) {
-	$_mcsettings = parse_url($_ENV["MEMCACHIER_SERVERS"]);
+  $_mcsettings = parse_url($_ENV["MEMCACHIER_SERVERS"]);
 
-	define('WP_CACHE', true);
-	$sasl_memcached_config = array(
-		'default' => array(
-			array(
-				'host' => $_mcsettings["host"],
-				'port' => $_mcsettings["port"],
-				'user' => $_ENV["MEMCACHIER_USERNAME"],
-				'pass' => $_ENV["MEMCACHIER_PASSWORD"],
-			),
-		),
-	);
+  define('WP_CACHE', true);
+  $sasl_memcached_config = array(
+    'default' => array(
+      array(
+        'host' => $_mcsettings["host"],
+        'port' => $_mcsettings["port"],
+        'user' => $_ENV["MEMCACHIER_USERNAME"],
+        'pass' => $_ENV["MEMCACHIER_PASSWORD"],
+      ),
+    ),
+  );
 
-	unset($_mcsettings);
+  unset($_mcsettings);
 }
 
 /**#@-*/
@@ -59,9 +113,9 @@ if ( !empty( $_ENV["MEMCACHIER_SERVERS"] ) ) {
  * We are getting Heroku ClearDB settings from Heroku Environment Vars
  */
 if ( isset( $_ENV["CLEARDB_DATABASE_URL"] ) ) {
-	$_dbsettings = parse_url($_ENV["CLEARDB_DATABASE_URL"]);
+  $_dbsettings = parse_url($_ENV["CLEARDB_DATABASE_URL"]);
 } else {
-	$_dbsettings = parse_url("mysql://herokuwp:password@127.0.0.1/herokuwp");
+  $_dbsettings = parse_url("mysql://herokuwp:password@127.0.0.1/herokuwp");
 }
 
 define('DB_NAME',     trim($_dbsettings["path"],"/"));
@@ -69,19 +123,18 @@ define('DB_USER',     $_dbsettings["user"]          );
 define('DB_PASSWORD', $_dbsettings["pass"]          );
 define('DB_HOST',     $_dbsettings["host"]          );
 define('DB_CHARSET', 'utf8'                         );
-//define('DB_COLLATE', ''                             );
-define('DB_COLLATE', 'utf8_general_ci'              );
+define('DB_COLLATE', ''                             );
 
 unset($_dbsettings);
 
 // Set SSL settings
 if ( isset( $_ENV["CLEARDB_SSL"] ) && 'ON' == $_ENV["CLEARDB_SSL"] ) {
-	define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_COMPRESS | MYSQLI_CLIENT_SSL);
-	define('MYSQL_SSL_KEY',      $_ENV["CLEARDB_SSL_KEY"]                  );
-	define('MYSQL_SSL_CERT',     $_ENV["CLEARDB_SSL_CERT"]                 );
-	define('MYSQL_SSL_CA',       $_ENV["CLEARDB_SSL_CA"]                   );
+  define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_COMPRESS | MYSQLI_CLIENT_SSL);
+  define('MYSQL_SSL_KEY',      $_ENV["CLEARDB_SSL_KEY"]                  );
+  define('MYSQL_SSL_CERT',     $_ENV["CLEARDB_SSL_CERT"]                 );
+  define('MYSQL_SSL_CA',       $_ENV["CLEARDB_SSL_CA"]                   );
 } else {
-	define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_COMPRESS                    );
+  define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_COMPRESS                    );
 }
 
 /**#@-*/
@@ -96,23 +149,23 @@ if ( isset( $_ENV["CLEARDB_SSL"] ) && 'ON' == $_ENV["CLEARDB_SSL"] ) {
  * @since 2.6.0
  */
 $_saltKeys = array(
-	'AUTH_KEY',
-	'SECURE_AUTH_KEY',
-	'LOGGED_IN_KEY',
-	'NONCE_KEY',
-	'AUTH_SALT',
-	'SECURE_AUTH_SALT',
-	'LOGGED_IN_SALT',
-	'NONCE_SALT',
+  'AUTH_KEY',
+  'SECURE_AUTH_KEY',
+  'LOGGED_IN_KEY',
+  'NONCE_KEY',
+  'AUTH_SALT',
+  'SECURE_AUTH_SALT',
+  'LOGGED_IN_SALT',
+  'NONCE_SALT',
 );
 
 foreach ( $_saltKeys as $_saltKey ) {
-	if ( !defined( $_saltKey ) ) {
-		define(
-			$_saltKey,
-			empty( $_ENV[ $_saltKey ] ) ? 'herokuwp' : $_ENV[ $_saltKey ]
-		);
-	}
+  if ( !defined( $_saltKey ) ) {
+    define(
+      $_saltKey,
+      empty( $_ENV[ $_saltKey ] ) ? 'herokuwp' : $_ENV[ $_saltKey ]
+    );
+  }
 }
 
 unset( $_saltKeys, $_saltKey );
@@ -150,7 +203,7 @@ define('WP_DEBUG', false);
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+  define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
