@@ -1,7 +1,13 @@
 <?php
 
 global $wpdb;
-$results = $wpdb->get_results("SET NAMES 'utf8';");
+if (!$wpdb->set_charset('utf8')) {
+    printf("Error loading character set utf8: %s\n", $wpdb->error);
+} else {
+    printf("Current character set: %s\n", $wpdb->character_set_name());
+}
+
+print_r( $mysqli->get_charset() );
 
 require_once("utilidades/ApiRede.php");
 
