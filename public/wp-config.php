@@ -1,5 +1,5 @@
 <?php
-define( 'WPDB_DRIVER', 'wpdb_driver_pdo_mysql' );
+//define( 'WPDB_DRIVER', 'wpdb_driver_pdo_mysql' );
 /**
  * The base configurations of the WordPress.
  *
