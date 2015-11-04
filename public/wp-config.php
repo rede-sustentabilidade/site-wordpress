@@ -1,5 +1,5 @@
 <?php
-//define( 'WPDB_DRIVER', 'wpdb_driver_pdo_mysql' );
+
 /**
  * The base configurations of the WordPress.
  *
@@ -123,8 +123,8 @@ define('DB_NAME',     trim($_dbsettings["path"],"/"));
 define('DB_USER',     $_dbsettings["user"]          );
 define('DB_PASSWORD', $_dbsettings["pass"]          );
 define('DB_HOST',     $_dbsettings["host"]          );
-define('DB_CHARSET', 'utf8'                       );
-//define('DB_COLLATE', ''            );
+define('DB_CHARSET',  'utf8'                        );
+define('DB_COLLATE',  'utf8_general_ci'             );
 
 unset($_dbsettings);
 
