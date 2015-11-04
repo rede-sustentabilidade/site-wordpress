@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6f13ff9c687bf25e8ab22746a840a021",
-    "content-hash": "b39f24e7c305319243e575725fca021c",
+    "hash": "0d730c89dbbc55228bdfbb48a420c6c7",
+    "content-hash": "0669dec638ed661966f263fd3c7289b8",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -332,6 +332,48 @@
             "time": "2015-10-26 09:53:52"
         },
         {
+            "name": "wpackagist-plugin/wp-db-cleaner",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-db-cleaner/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-db-cleaner.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-db-cleaner/",
+            "time": "2015-11-02 06:26:52"
+        },
+        {
+            "name": "wpackagist-plugin/wp-db-driver",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-db-driver/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-db-driver.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-db-driver/",
+            "time": "2015-09-14 21:10:26"
+        },
+        {
             "name": "wpackagist-plugin/wp-mail-smtp",
             "version": "0.9.5",
             "source": {
@@ -419,7 +461,9 @@
         "wpackagist-plugin/baw-moderator-role": 20,
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
-        "wpackagist-plugin/file-away": 20
+        "wpackagist-plugin/file-away": 20,
+        "wpackagist-plugin/wp-db-driver": 20,
+        "wpackagist-plugin/wp-db-cleaner": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
