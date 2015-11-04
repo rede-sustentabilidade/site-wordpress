@@ -206,5 +206,6 @@ define('WP_DEBUG', false);
 if ( !defined('ABSPATH') )
   define('ABSPATH', dirname(__FILE__) . '/');
 
+define( 'DB_CONFIG_FILE', ABSPATH . 'db-config.php' );
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
