@@ -31,7 +31,8 @@
 		"wpackagist-plugin/link-manager": "dev-trunk",
 		"wpackagist-plugin/simple-share-buttons-adder": "dev-trunk",
 		"wpackagist-plugin/file-away": "dev-trunk",
-		"wpackagist-plugin/keyring": "dev-trunk"
+		"wpackagist-plugin/keyring": "dev-trunk",
+		"wpackagist-plugin/query-monitor": "dev-trunk"
     },
     "repositories": [
         {

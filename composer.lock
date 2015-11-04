@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "98b2ef3d0bea1681c1a287882ffa8c54",
-    "content-hash": "e03bf39416078d4b052de970ddd26f7d",
+    "hash": "2d004771f9bd072a0f4992ef8490c17e",
+    "content-hash": "daa9f9a8c520a38d9f3fb67124562bc0",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -312,6 +312,27 @@
             "time": "2012-08-16 23:57:10"
         },
         {
+            "name": "wpackagist-plugin/query-monitor",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/query-monitor/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/query-monitor/",
+            "time": "2015-10-19 06:15:35"
+        },
+        {
             "name": "wpackagist-plugin/sendgrid-email-delivery-simplified",
             "version": "1.6.5",
             "source": {
@@ -441,7 +462,8 @@
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
         "wpackagist-plugin/file-away": 20,
-        "wpackagist-plugin/keyring": 20
+        "wpackagist-plugin/keyring": 20,
+        "wpackagist-plugin/query-monitor": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
