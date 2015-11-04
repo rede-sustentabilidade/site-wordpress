@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fa7ca0f432c4ee6a3773f7b43a200334",
-    "content-hash": "5939b3a7c8e82abd3297eb6d657db6c5",
+    "hash": "6f13ff9c687bf25e8ab22746a840a021",
+    "content-hash": "b39f24e7c305319243e575725fca021c",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -270,27 +270,6 @@
             "homepage": "https://wordpress.org/plugins/jetpack/"
         },
         {
-            "name": "wpackagist-plugin/keyring",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/keyring/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/keyring.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/keyring/",
-            "time": "2015-06-28 12:58:39"
-        },
-        {
             "name": "wpackagist-plugin/link-manager",
             "version": "dev-trunk",
             "source": {
@@ -310,27 +289,6 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/link-manager/",
             "time": "2012-08-16 23:57:10"
-        },
-        {
-            "name": "wpackagist-plugin/really-simple-ssl",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/really-simple-ssl/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/really-simple-ssl.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/really-simple-ssl/",
-            "time": "2015-08-28 21:24:35"
         },
         {
             "name": "wpackagist-plugin/sendgrid-email-delivery-simplified",
@@ -372,48 +330,6 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/simple-share-buttons-adder/",
             "time": "2015-10-26 09:53:52"
-        },
-        {
-            "name": "wpackagist-plugin/w3-total-cache",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/w3-total-cache/",
-            "time": "2015-08-26 04:42:20"
-        },
-        {
-            "name": "wpackagist-plugin/wp-db-driver",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-db-driver/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-db-driver.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-db-driver/",
-            "time": "2015-09-14 21:10:26"
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
@@ -503,11 +419,7 @@
         "wpackagist-plugin/baw-moderator-role": 20,
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
-        "wpackagist-plugin/file-away": 20,
-        "wpackagist-plugin/w3-total-cache": 20,
-        "wpackagist-plugin/keyring": 20,
-        "wpackagist-plugin/really-simple-ssl": 20,
-        "wpackagist-plugin/wp-db-driver": 20
+        "wpackagist-plugin/file-away": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
