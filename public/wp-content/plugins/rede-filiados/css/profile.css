@@ -1,0 +1,22 @@
+fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+fieldset legend {
+  font-size: 22px;
+}
+
+.input {
+  float:left;
+  clear:left;
+}
+
+
+.input label {
+  float:left;
+  clear:both;
+  width: 150px;
+}
+

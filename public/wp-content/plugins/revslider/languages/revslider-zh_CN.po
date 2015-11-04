@@ -1,0 +1,2133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Revolution Slider v2.3.93\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-01-05 23:51+0800\n"
+"Last-Translator: libertyspy <iamlastme@gmail.com>\n"
+"Language-Team: lastme\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"Language: en_GB\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ revslider
+#: inc_php/revslider_widget.class.php:8
+msgid "Displays a revolution slider on the page"
+msgstr "在此页面显示幻灯片"
+
+# @ revslider
+#: inc_php/revslider_widget.class.php revslider_admin.php
+msgid "Revolution Slider"
+msgstr "革命滑块"
+
+# @ revslider
+#: inc_php/revslider_widget.class.php:22
+msgid "No sliders found, Please create a slider"
+msgstr "没有找到幻灯片，请创建一个幻灯片"
+
+# @ revslider
+#: views/templates/sliders.php:10
+msgid "Revolution Sliders"
+msgstr "革命滑块"
+
+# @ revslider
+#: views/templates/sliders.php:30
+msgid "How To Use"
+msgstr "怎样使用"
+
+# @ revslider
+#: settings/slide_settings.php:44 settings/slider_settings_xml_lang.php:10
+msgid "Delay"
+msgstr "延迟时间"
+
+# @ revslider
+#: settings/slide_settings.php
+msgid "Visible from"
+msgstr "开始时期"
+
+# @ revslider
+#: settings/slide_settings.php
+msgid "Transitions"
+msgstr "过渡"
+
+# @ revslider
+#: settings/slide_settings.php
+msgid "The appearance transitions of this slide."
+msgstr "幻灯片的转换外观。"
+
+# @ revslider
+#: settings/slide_settings.php
+msgid "If set, slide will be visible after the date is reached"
+msgstr "如果设置，幻灯片将设置到此日期间的值"
+
+# @ revslider
+#: settings/slide_settings.php:44 settings/slider_settings_xml_lang.php
+msgid ""
+"To add more google fonts please read <a target=\"_blank\" href=\"http://"
+"codecanyon.net/item/slider-revolution-responsive-wordpress-plugin/2751380/"
+"faqs/15268\"> this tutorial </a> "
+msgstr ""
+"要添加更多谷歌的字体，请阅读<a target=\"_blank\" href=\"http://codecanyon."
+"net/item/slider-revolution-responsive-wordpress-plugin/2751380/faqs/15268\"> "
+"这个教程 </a> "
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:11
+msgid "The time one slide stays on the screen in Milliseconds"
+msgstr "幻灯片停留在屏幕上的时间(毫秒)"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:12
+msgid "Touch Enabled"
+msgstr "启用点触设备"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:13
+msgid "Enable Swipe Function on touch devices"
+msgstr "启用具有滑动功能的触摸设备"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:16
+msgid "Stop On Hover"
+msgstr "鼠标滑过时停止"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:17
+msgid "Stop the Timer when hovering the slider"
+msgstr "鼠标滑过时停止计时器"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:18
+msgid "Shuffle Mode"
+msgstr "随机播放模式"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:19
+msgid ""
+"Turn Shuffle Mode on and off! Will be randomized only once at the start."
+msgstr "打开和关闭随机播放模式！随机模式仅在开始的第一次"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:20
+msgid "Load Google Font"
+msgstr "加载谷歌字体"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:21
+msgid "yes / no to load google font"
+msgstr "是/否 加载谷歌字体"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:24
+msgid "Google Font"
+msgstr "谷歌字体"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:26
+msgid "Stop Slider"
+msgstr "停止幻灯片"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:27
+msgid "On / Off to stop slider after some amount of loops / slides"
+msgstr "开/关 循环幻灯片一定量后停止滑块"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:28
+msgid "Stop After Loops"
+msgstr "循环停止后"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:29
+msgid ""
+"Stop the slider after certain amount of loops. 0 related to the first loop."
+msgstr "一定量的循环后停止滑块,第一次停止后的值为0"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:30
+msgid "Stop At Slide"
+msgstr "鼠标在幻灯片上时停止"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:31
+msgid "Stop the slider at the given slide"
+msgstr "当有指定的幻灯片时候停止"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:32
+msgid "Position on the page"
+msgstr "页面上的位置"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:33
+msgid ""
+"The position of the slider on the page, (float:left, float:right, margin:0px "
+"auto;)"
+msgstr ""
+"滑块在页面上浮子的位置 (左边float:left, 右边float:right, 居中 margin:0px "
+"auto;)"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:37
+msgid "Margin Top"
+msgstr "上边距(Margin Top)"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:38
+msgid "The top margin of the slider wrapper div"
+msgstr "幻灯片距上部div的上边距"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:39
+msgid "px"
+msgstr "像素(px)"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:40
+msgid "Margin Bottom"
+msgstr "下边距(Margin Bottom)"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:41
+msgid "The bottom margin of the slider wrapper div"
+msgstr "幻灯片距下部div的下边距"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:42
+msgid "Margin Left"
+msgstr "左边距"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:43
+msgid "The left margin of the slider wrapper div"
+msgstr "滑块距左部div的左边距"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:44
+msgid "Margin Right"
+msgstr "有边距"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:45
+msgid "The right margin of the slider wrapper div"
+msgstr "幻灯片距右部div的右边距"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:46
+msgid "Shadow Type"
+msgstr "阴影类型"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:47
+msgid ""
+"The Shadow display underneath the banner. The shadow apply to fixed and "
+"responsive modes only, the full width slider don't have a shadow."
+msgstr "横幅下方显示的阴影。阴影只适用于固定和响应模式，全宽幻灯片没有阴影。"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:52
+msgid "Show Timer Line"
+msgstr "显示计时器条"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:53
+msgid "Show the top running timer line"
+msgstr "在上部显示计时器条"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:56
+msgid "Timer Line Position"
+msgstr "显示计时器条位置"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:57
+msgid "Set the timer line position to top or bottom"
+msgstr "设置计时器条位置 顶部/底部"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:60
+msgid "Background color"
+msgstr "背景颜色"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:61
+msgid ""
+"Slider wrapper div background color, for transparent slider, leave empty."
+msgstr "幻灯片块的背景颜色，适用于透明幻灯片，可留空"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:62
+msgid "Padding (border)"
+msgstr "填充（边）"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:63
+msgid ""
+"The wrapper div padding, if it has value, then together with background "
+"color it it will make border around the slider."
+msgstr "如果设置了幻灯片的填充背景值,将会使用此值来设置边框的颜色"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:64
+msgid "Show Background Image"
+msgstr "显示背景图片"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:65
+msgid "yes / no to put background image to the main slider wrapper."
+msgstr "是/否 将背景图片放到主幻灯片的区域"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:66
+msgid "Background Image Url"
+msgstr "背景图片的URL地址"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:67
+msgid ""
+"The background image that will be on the slider wrapper. Will be shown at "
+"slider preloading."
+msgstr "幻灯片块预加载时的背景图片"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:68
+msgid "Navigation Type"
+msgstr "导航类型"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:69
+msgid "Display type of the navigation bar (Default:none"
+msgstr "无导航(默认)"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:74
+msgid "Navigation Arrows"
+msgstr "导航的箭头"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:75
+msgid ""
+"Display position of the Navigation Arrows (** By navigation Type Thumb "
+"arrows always centered or none visible)"
+msgstr "导航箭头的显示位置（**导航缩略图箭头居中或可见可无）"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:78
+msgid "Navigation Style"
+msgstr "导航风格"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:79
+msgid ""
+"Look of the navigation bullets  ** If you choose navbar, we recommend to "
+"choose Navigation Arrows to nexttobullets"
+msgstr "**如果您选择导航控制块，我们建议您选择导航箭头 nexttobullets"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:85
+msgid "Always Show Navigation"
+msgstr "总是显示导航"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:86
+msgid "Always show the navigation and the thumbnails."
+msgstr "总是显示导航和缩略图。"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:87
+msgid "Hide Navitagion After"
+msgstr "隐藏导航后"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:88
+msgid ""
+"Time after that the Navigation and the Thumbs will be hidden(Default: 200 ms)"
+msgstr "滑过控制块后缩略图隐藏的时间(默认200毫秒)"
+
+# @ revslider
+#: settings/layer_settings.php:31 settings/layer_settings.php:41
+#: settings/layer_settings.php:46 settings/slider_settings_xml_lang.php:89
+msgid "ms"
+msgstr "毫秒(ms)"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:90
+msgid "Navigation Horizontal Align"
+msgstr "导航水平对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:91
+msgid "Horizontal Align of Bullets / Thumbnails"
+msgstr "控制块/缩略图水平对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:92
+msgid "Navigation Vertical Align"
+msgstr "导航垂直对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:93
+msgid "Vertical Align of Bullets / Thumbnails"
+msgstr "控制块/缩略图的垂直对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:94
+msgid "Navigation Horizontal Offset"
+msgstr "导航水平偏移"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:95
+msgid ""
+"Offset from current Horizontal position of Bullets / Thumbnails negative and "
+"positive direction"
+msgstr "控制块/缩略图的水平偏移"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:96
+msgid "Navigation Vertical Offset"
+msgstr "导航垂直偏移"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:97
+msgid ""
+"Offset from current Vertical  position of Bullets / Thumbnails negative and "
+"positive direction"
+msgstr "控制块当前垂直位置偏移/缩略图负和正方向"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:98
+msgid "Left Arrow Horizontal Align"
+msgstr "左箭头水平对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:99
+msgid "Horizontal Align of left Arrow (only if arrow is not next to bullets)"
+msgstr "左箭头水平对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:100
+msgid "Left Arrow Vertical Align"
+msgstr "左箭头垂直对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:101
+msgid "Vertical Align of left Arrow (only if arrow is not next to bullets)"
+msgstr "左箭头垂直对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:102
+msgid "Left Arrow Horizontal Offset"
+msgstr "左箭头水平偏移"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:103
+msgid ""
+"Offset from current Horizontal position of of left Arrow  negative and "
+"positive direction"
+msgstr "左箭头的当前水平位置偏移负和正方向"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:104
+msgid "Left Arrow Vertical Offset"
+msgstr "左箭头垂直偏移"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:105
+msgid ""
+"Offset from current Vertical position of of left Arrow negative and positive "
+"direction"
+msgstr "左箭头的当前垂直位置偏移负和正方向"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:106
+msgid "Right Arrow Horizontal Align"
+msgstr "右箭头水平对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:107
+msgid "Horizontal Align of right Arrow (only if arrow is not next to bullets)"
+msgstr "右箭头水平对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:108
+msgid "Right Arrow Vertical Align"
+msgstr "右箭头垂直对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:109
+msgid "Vertical Align of right Arrow (only if arrow is not next to bullets)"
+msgstr "右箭头垂直对齐"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:110
+msgid "Right Arrow Horizontal Offset"
+msgstr "右箭头水平偏移"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:111
+msgid ""
+"Offset from current Horizontal position of of right Arrow negative and "
+"positive direction"
+msgstr "右箭头的当前水平位置偏移负和正方向"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:112
+msgid "Right Arrow Vertical Offset"
+msgstr "右箭头垂直偏移"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:113
+msgid ""
+"Offset from current Vertical position of of right Arrow negative and "
+"positive direction"
+msgstr "右箭头的当前垂直位置偏移负和正方向"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:114
+msgid "Thumb Width"
+msgstr "缩略图宽度"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:115
+msgid "The basic Width of one Thumbnail (only if thumb is selected)"
+msgstr "一个缩略图的基本宽度（仅在选择缩略图后适用）"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:116
+msgid "Thumb Height"
+msgstr "缩略图高度"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:117
+msgid "the basic Height of one Thumbnail (only if thumb is selected)"
+msgstr "一个缩略图的基本高度（仅在选择缩略图情况下）"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:118
+msgid "Thumb Amount"
+msgstr "缩略图数量"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:119
+msgid "the amount of the Thumbs visible same time (only if thumb is selected)"
+msgstr "同一时间缩略图的可见数量（仅在选择缩略图情况下）"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:120
+msgid "Hide Slider Under Width"
+msgstr "根据滑盖宽度隐藏"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:121
+msgid ""
+"Hide the slider under some slider width. Works only in Responsive Style. Not "
+"available for Fullwidth."
+msgstr "隐藏超过幻灯片宽度外的层。仅在响应风格。不适用于全屏"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:122
+msgid "Hide Defined Layers Under Width"
+msgstr "根据图层定义宽度隐藏所有图层"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:123
+msgid ""
+"Hide some defined layers in the layer properties under some slider width."
+msgstr "隐藏一些定义的图层下的一些滑块图层的宽度属性。"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:124
+msgid "Hide All Layers Under Width"
+msgstr "根据宽度隐藏所有图层"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:125
+msgid "Hide all layers under some slider width"
+msgstr "隐藏一些滑块中所有图层的宽度"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:126
+msgid "Start With Slide"
+msgstr "开始用幻灯片"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:127
+msgid "Change it if you want to start from a different slide then 1"
+msgstr "如果你想从让幻灯片开始随机，设置为 1"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:128
+msgid "First Transition Active"
+msgstr "当前的第一个过度"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:129
+msgid ""
+"If active, it will overwrite the first slide transition. Use it when you "
+"want a special transition for the first slide only."
+msgstr ""
+"如果激活，它将覆盖第一张幻灯片过渡后。当您希望只在第一张幻灯片使用一个特殊的"
+"过渡，请使用它。"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:130
+msgid "First Transition Type"
+msgstr "第一个过渡类型"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:131
+msgid "First slide transition type"
+msgstr "第一张幻灯片过渡类型"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:133
+msgid "First Transition Duration"
+msgstr "第一个过渡时间"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:134
+msgid "First slide transition duration (Default:300, min: 100 max 2000)"
+msgstr "第一张幻灯片过渡时间(默认:300, 最小: 100 最大: 2000)单位毫秒(ms)"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:135
+msgid "First Transition Slot Amount"
+msgstr "第一次转折时分片的数量"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:136
+msgid ""
+"The number of slots or boxes the slide is divided into. If you use boxfade, "
+"over 7 slots can be juggy"
+msgstr "分片/盒子的数量。如果您使用boxfade效果，超过7个分片可以使用juggy特效"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:137
+msgid "JQuery No Conflict Mode"
+msgstr "JQuery的无冲突模式"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:138
+msgid ""
+"Turns on / off jquery noconflict mode. You can play with this option when "
+"you have some javascript conflicts."
+msgstr ""
+"开启/关闭的jquery noconflict模式。您测试有一些JavaScript的冲突的时候可以使用"
+"此选项。"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:139
+msgid "Put JS Includes To Body"
+msgstr "把JS包含在body块"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:140
+msgid ""
+"Putting the js to body (in addition to head) is good for fixing some "
+"javascript conflicts of type: TypeError: tpj('#rev_slider_1_1').show()."
+"revolution is not a function"
+msgstr ""
+"把js的身体（除了头部）有利于修复一些JavaScript类型的冲突：TypeError: "
+"tpj('#rev_slider_1_1').show().revolution is not a function"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:143
+msgid "Output Filters Protection"
+msgstr "保护输出滤波器"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:144
+msgid ""
+"Activate a protection against wordpress output filters that adds html blocks "
+"to the shortcode output like P and BR"
+msgstr "启动保护HTML块像P和BR的简码输出，防止WordPress的输出滤波器过滤掉"
+
+# @ revslider
+#: inc_php/settings_product_sidebar.class.php:381
+msgid "text"
+msgstr "文本"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:14
+msgid "On"
+msgstr "打开"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:15
+msgid "Off"
+msgstr "关闭"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:22
+msgid "Yes"
+msgstr "是"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:23
+msgid "No"
+msgstr "否"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:34
+msgid "Left"
+msgstr "左边"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:35
+msgid "Center"
+msgstr "居中"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:36
+msgid "Right"
+msgstr "右边"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:48
+msgid "No Shadow"
+msgstr "无阴影"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:49
+msgid "1"
+msgstr ""
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:50
+msgid "2"
+msgstr ""
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:51
+msgid "3"
+msgstr ""
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:54
+msgid "Show"
+msgstr "显示"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:55
+msgid "Hide"
+msgstr "隐藏"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:58
+msgid "Top"
+msgstr "顶部"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:59
+msgid "Bottom"
+msgstr "下部"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:70
+msgid "None"
+msgstr "空"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:71
+msgid "Bullet"
+msgstr "像子弹射出样"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:72
+msgid "Thumb"
+msgstr "缩略图"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:73
+msgid "Both"
+msgstr "两侧"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:76
+msgid "With Bullets"
+msgstr "使用像子弹射出样的动画"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:77
+msgid "Solo"
+msgstr "只有"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:80
+msgid "Round"
+msgstr "圆圈"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:81
+msgid "Navbar"
+msgstr "导航"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:82
+msgid "Old Round"
+msgstr "老的圆圈"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:83
+msgid "Old Square"
+msgstr ""
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:84
+msgid "Old Navbar"
+msgstr ""
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:132
+msgid "Replace me!"
+msgstr "替换我！"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:141
+msgid "True"
+msgstr "是"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:142
+msgid "False"
+msgstr "否"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:145
+msgid "By Compressing Output"
+msgstr "通过压缩输出"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:146
+msgid "By Echo Output"
+msgstr "由echo打印输出"
+
+# @ revslider
+#: views/master_view.php:39
+msgid "Update Plugin"
+msgstr "更新插件"
+
+# @ revslider
+#: views/system/update_dialog.php:2
+msgid "Update Slider Plugin"
+msgstr "更新滑块插件"
+
+# @ revslider
+#: views/system/update_dialog.php:3
+msgid "Update Revolution Slider Plugin"
+msgstr "更新革命滑块插件"
+
+# @ revslider
+#: views/system/update_dialog.php:5
+msgid ""
+"To update the slider please show the slider install package. The files will "
+"be overwriten."
+msgstr "要更新滑块请列出滑块安装包。该文件将被覆盖"
+
+# @ default
+#: views/system/update_dialog.php:6
+msgid "File example: revslider.zip"
+msgstr "文件例如：revslider.zip"
+
+# @ revslider
+#: views/system/update_dialog.php:18
+msgid "Choose the update file:"
+msgstr "选择更新文件:"
+
+# @ revslider
+#: views/system/update_dialog.php:22 views/templates/slider_edit.php:17
+msgid "Update Slider"
+msgstr "更新幻灯片"
+
+# @ revslider
+#: views/system/video_dialog.php:3
+msgid "Add Youtube Layout"
+msgstr "添加YouTube的布局"
+
+# @ revslider
+#: views/system/video_dialog.php:3
+msgid "Dotted Overlay"
+msgstr "虚线覆盖"
+
+# @ revslider
+#: views/system/video_dialog.php:11
+msgid "Choose video type"
+msgstr "选择视频类型"
+
+# @ revslider
+#: views/system/video_dialog.php:26
+msgid "Enter Vimeo ID or URL"
+msgstr "输入Vimeo ID或网址"
+
+# @ revslider
+#: views/system/video_dialog.php:36
+msgid "example:  30300114"
+msgstr "例如:  30300114"
+
+# @ revslider
+#: views/templates/edit_layers.php:7
+msgid "Image BG"
+msgstr "背景图片"
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Slider Main Image / Background"
+msgstr "滑块主图像/背景"
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Background Source:"
+msgstr "背景来源"
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Change Image"
+msgstr "选择图片"
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "External URL"
+msgstr "外部URL"
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Get External"
+msgstr "外部链接地址"
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Transparent"
+msgstr "透明"
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Solid Colored"
+msgstr "纯色"
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Background Settings:"
+msgstr "背景设定："
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Background Position:"
+msgstr "背景位置："
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Ken Burns / Pan Zoom Settings:"
+msgstr "平移缩放设置："
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Background Fit:"
+msgstr "背景适合："
+
+# @ revslider
+#: views/templates/edit_layers.php
+msgid "Background Repeat:"
+msgstr "背景重复："
+
+# @ revslider
+#: views/templates/edit_layers.php:13
+msgid "Trapsparent BG"
+msgstr "透明的背景"
+
+# @ revslider
+#: views/templates/edit_layers.php:18
+msgid "Solid BG"
+msgstr "固体背景"
+
+# @ revslider
+#: views/templates/edit_layers.php:27
+msgid "Add Layer"
+msgstr "添加图层"
+
+# @ revslider
+#: views/templates/edit_layers.php:28
+msgid "Add Layer: Image"
+msgstr "添加图片图层："
+
+# @ revslider
+#: views/templates/edit_layers.php:29
+msgid "Add Layer: Video"
+msgstr "添加视频图层："
+
+# @ revslider
+#: views/templates/edit_layers.php:31
+msgid "Delete Layer"
+msgstr "删除层"
+
+# @ revslider
+#: views/templates/edit_layers.php:32
+msgid "Delete All Layers"
+msgstr "删除所有幻灯片"
+
+# @ default
+#: views/templates/edit_layers.php:34
+msgid "Duplicate Layer"
+msgstr "复制图层"
+
+# @ revslider
+#: settings/layer_settings.php:19 settings/layer_settings.php:20
+#: views/templates/edit_layers.php:67
+msgid "Layer Params"
+msgstr "层的参数"
+
+# @ revslider
+#: views/templates/edit_layers.php:123
+msgid "Layers Sorting"
+msgstr "图层排序"
+
+# @ revslider
+#: views/templates/edit_layers.php:125
+msgid "By Time"
+msgstr "按时间"
+
+# @ revslider
+#: views/templates/edit_layers.php:126
+msgid "By Depth"
+msgstr "按深度"
+
+# @ revslider
+#: views/templates/slide.php:16 views/templates/slides_list.php:65
+msgid "Edit Slide"
+msgstr "编辑幻灯片"
+
+# @ revslider
+#: views/templates/slide.php:17
+msgid "Hide Slide Options"
+msgstr "隐藏幻灯片选项"
+
+# @ revslider
+#: views/templates/slide.php
+msgid "General Slide Settings"
+msgstr "滑块通用设置"
+
+# @ revslider
+#: views/templates/slide.php:30
+msgid "Slide Image and Layers"
+msgstr "幻灯片图像和图层"
+
+# @ revslider
+#: views/templates/slide.php:40
+msgid "Update Slide"
+msgstr "更新幻灯片"
+
+# @ revslider
+#: views/templates/slide.php:41
+msgid "updating"
+msgstr "更新中"
+
+# @ revslider
+#: views/templates/slide.php:44 views/templates/slider_edit.php:24
+#: views/templates/slider_new.php:19 views/templates/slides.php:17
+msgid "Close"
+msgstr "关闭"
+
+# @ revslider
+#: views/templates/slider_edit.php
+msgid "Can be different based on Theme Style"
+msgstr "可以根据不同的主题风格"
+
+# @ revslider
+#: views/templates/slider_api.php:7
+msgid "API Methods"
+msgstr "API 方法"
+
+# @ revslider
+#: views/templates/slider_api.php
+msgid ""
+"Copy and Paste the Below listed API Functions into your jQuery Functions for "
+"Revslider Event Listening"
+msgstr "复制并粘贴下面列出的API函数到您的jQuery函数用于监听Revslider事件"
+
+# @ revslider
+#: views/templates/slider_api.php:8
+msgid "Please copy / paste those functions into your functions js file"
+msgstr "请复制/粘贴这些集成到你的js函数文件中"
+
+# @ revslider
+#: views/templates/slider_api.php:12
+msgid "Pause Slider"
+msgstr "暂停滑块"
+
+# @ revslider
+#: views/templates/slider_api.php:16
+msgid "Resume Slider"
+msgstr "重命名滑块"
+
+# @ revslider
+#: views/templates/slider_api.php:20
+msgid "Previous Slide"
+msgstr "上一张幻灯片"
+
+# @ revslider
+#: views/templates/slider_api.php:24
+msgid "Next Slide"
+msgstr "下一张幻灯片"
+
+# @ revslider
+#: views/templates/slider_api.php:28
+msgid "Go To Slide"
+msgstr "转到幻灯片"
+
+# @ revslider
+#: views/templates/slider_api.php:32
+msgid "Get Num Slides"
+msgstr "获取幻灯片数"
+
+# @ revslider
+#: views/templates/slider_api.php:36
+msgid "Get Current Slide Number"
+msgstr "获取当前幻灯片编号"
+
+# @ revslider
+#: views/templates/slider_api.php:40
+msgid "Get Last Playing Slide Number"
+msgstr "取得最后播放的幻灯片编号"
+
+# @ revslider
+#: views/templates/slider_api.php:46
+msgid "API Events"
+msgstr "API 事件"
+
+# @ revslider
+#: views/templates/slider_api.php:47
+msgid ""
+"Copy / Paste all the textarea content into functions js file, then use what "
+"you want"
+msgstr "复制/粘贴所有textarea的内容到js文件"
+
+# @ revslider
+#: views/templates/slider_edit.php:6
+msgid "Edit Slider"
+msgstr "编辑滑块"
+
+# @ revslider
+#: views/templates/slider_edit.php:6
+msgid "Save Settings"
+msgstr "保存设置"
+
+# @ revslider
+#: views/templates/slider_edit.php:18
+msgid "updating..."
+msgstr "更新中..."
+
+# @ revslider
+#: views/templates/slider_edit.php:22
+msgid "Delete Slider"
+msgstr "删除滑块"
+
+# @ revslider
+#: views/templates/slider_edit.php:26 views/templates/sliders_list.php:34
+#: views/templates/slides.php:3
+msgid "Edit Slides"
+msgstr "编辑幻灯片"
+
+# @ revslider
+#: views/templates/slider_edit.php:28
+msgid "Preview Slider"
+msgstr "预览滑块"
+
+# @ revslider
+#: views/templates/slider_edit.php:32
+msgid "Show API Functions"
+msgstr "显示API函数"
+
+# @ revslider
+#: views/templates/slider_edit.php:33
+msgid "Show Export / Import"
+msgstr "显示导出/导入"
+
+# @ revslider
+#: views/templates/slider_new.php:5
+msgid "New Slider"
+msgstr "新建滑块"
+
+# @ revslider
+#: views/templates/slider_new.php:15
+msgid "Create Slider"
+msgstr "新建滑块"
+
+# @ revslider
+#: views/templates/slider_toolbox.php:4
+msgid "Export / Import slider"
+msgstr "导出/导入滑块"
+
+# @ revslider
+#: views/templates/slider_toolbox.php views/templates/sliders.php
+msgid "Import slider"
+msgstr "导入滑块"
+
+# @ revslider
+#: views/templates/slider_toolbox.php:5
+msgid ""
+"Note, that when you importing slider, it delete all the current slider "
+"settings and slides, then replace it with the new ones"
+msgstr "请注意，当你导入滑块，它删除所有当前滑块设置和幻灯片，然后用新的替换"
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid "Note: custom styles will be updated if they exist!"
+msgstr "注：自定义样式如果存在将会被更新！"
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid "Custom Animations:"
+msgstr "自定义动画："
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid "overwrite"
+msgstr "覆盖"
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid "append"
+msgstr "附加"
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid "Static Styles:"
+msgstr "静态样式"
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid "Replace Image Url's"
+msgstr "替换图片的URL"
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid "Replace From (example - http://localhost)"
+msgstr "从哪儿替换（例如 - http://localhost）"
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid "Replace To (example - http://yoursite.com)"
+msgstr "替换为（例如 - http://yoursite.com）"
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid "Replace"
+msgstr "替换"
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid "Replacing..."
+msgstr "替换中..."
+
+# @ revslider
+#: views/templates/slider_toolbox.php
+msgid ""
+"Replace all layer and background image url's. Example: http://localhost/ to "
+"http://yourwbsite.com/. <br> Note, the replace is not reversible"
+msgstr ""
+"更换所有层和背景图像的URL。例如：http://localhost/来http://yourwbsite.com/。 "
+"<br>请注意，替换是不可逆的"
+
+# @ revslider
+#: views/templates/slider_toolbox.php:19
+msgid "Choose the import file"
+msgstr "选择导入文件"
+
+# @ revslider
+#: views/templates/sliders.php:15
+msgid "No Sliders Found"
+msgstr "没有找到幻灯片"
+
+# @ revslider
+#: views/templates/sliders.php:24
+msgid "Create New Slider"
+msgstr "新建滑块"
+
+# @ default
+# @ revslider
+#: views/templates/sliders.php:34 views/templates/sliders.php:39
+#: views/templates/sliders.php:40
+msgid "* From the"
+msgstr "*从"
+
+# @ revslider
+#: views/templates/sliders.php:34
+msgid "theme html"
+msgstr "HTML主题"
+
+# @ revslider
+#: views/templates/sliders.php:34
+msgid "use"
+msgstr "使用"
+
+# @ revslider
+#: views/templates/sliders.php:34
+msgid "example"
+msgstr "例如"
+
+# @ revslider
+#: views/templates/sliders.php:36
+msgid "For show only on homepage use"
+msgstr "只在主页显示上使用"
+
+# @ default
+#: views/templates/sliders.php:37
+msgid "For show on certain pages use"
+msgstr "只在某些网页上使用"
+
+# @ revslider
+#: views/templates/sliders.php:39
+msgid "widgets panel"
+msgstr "小工具面板"
+
+# @ revslider
+#: views/templates/sliders.php:39
+msgid "drag the \"Revolution Slider\" widget to the desired sidebar"
+msgstr "拖动革命滑块到所需的侧边栏小部件"
+
+# @ revslider
+#: views/templates/sliders.php:40
+msgid "post editor"
+msgstr "文章编辑器"
+
+# @ revslider
+#: views/templates/sliders.php:40
+msgid "insert the shortcode from the sliders table"
+msgstr "在幻灯片中插入的简码"
+
+# @ revslider
+#: views/templates/sliders.php:44
+msgid "If you have some support issue, don't hesitate to"
+msgstr "如果你有一些问题需要支持，不要犹豫"
+
+# @ revslider
+#: views/templates/sliders.php:45
+msgid "write here"
+msgstr "在这里写"
+
+# @ revslider
+#: views/templates/sliders.php:46
+msgid "The ThemePunch team will be happy to support you on any issue"
+msgstr "您的任何问题ThemePunch团队将很乐意为您提供支持"
+
+# @ revslider
+#: views/templates/sliders_list.php:5
+msgid "ID"
+msgstr "ID"
+
+# @ revslider
+#: views/templates/sliders_list.php
+msgid "Settings"
+msgstr "设置"
+
+# @ revslider
+#: views/templates/sliders_list.php:6
+msgid "Name"
+msgstr "名称"
+
+# @ revslider
+#: views/templates/sliders_list.php:7
+msgid "N. Slides"
+msgstr "幻灯片"
+
+# @ revslider
+#: views/templates/sliders_list.php:8
+msgid "Actions"
+msgstr "操作"
+
+# @ revslider
+#: views/templates/sliders_list.php:9
+msgid "Shortcode"
+msgstr "短代码"
+
+# @ revslider
+#: views/templates/sliders_list.php:10 views/templates/sliders_list.php:42
+msgid "Preview"
+msgstr "预览"
+
+# @ revslider
+#: views/templates/sliders_list.php:36 views/templates/slides_list.php:90
+msgid "Delete"
+msgstr "删除"
+
+# @ revslider
+#: views/templates/sliders_list.php:38 views/templates/slides_list.php:91
+msgid "Duplicate"
+msgstr "复制/备份"
+
+# @ revslider
+#: views/templates/slides.php:7 views/templates/slides.php:15
+msgid "New Slide"
+msgstr "新建幻灯片"
+
+# @ revslider
+#: views/templates/slides.php:20
+msgid "To Slider Settings"
+msgstr "幻灯片设置"
+
+# @ revslider
+#: views/templates/slides.php views/templates/slider_edit.php
+#: views/templates/edit_layers.php
+msgid "Preview Slide"
+msgstr "预览滑块"
+
+# @ revslider
+#: views/templates/slides_list.php:4
+msgid "Slides List"
+msgstr "幻灯片列表"
+
+# @ default
+#: views/templates/slides_list.php:5
+msgid "Saving Order"
+msgstr "保存列表中"
+
+# @ revslider
+#: views/templates/slides_list.php:9
+msgid "No Slides Found"
+msgstr "未找到幻灯片"
+
+# @ revslider
+#: views/templates/slides_list.php:54
+msgid "Unpublish Slide"
+msgstr "取消发布幻灯片"
+
+# @ revslider
+#: views/templates/slides_list.php:56
+msgid "Publish Slide"
+msgstr "发布幻灯片"
+
+# @ revslider
+#: inc_php/revslider_settings_product.class.php:102
+#: inc_php/revslider_settings_product.class.php:116
+#: inc_php/revslider_settings_product.class.php:130
+#: inc_php/revslider_settings_product.class.php:144
+#: inc_php/revslider_settings_product.class.php:158
+#: inc_php/revslider_settings_product.class.php:172
+msgid "Screen Width"
+msgstr "屏幕宽度"
+
+# @ revslider
+#: inc_php/revslider_settings_product.class.php:108
+#: inc_php/revslider_settings_product.class.php:122
+#: inc_php/revslider_settings_product.class.php:136
+#: inc_php/revslider_settings_product.class.php:150
+#: inc_php/revslider_settings_product.class.php:164
+#: inc_php/revslider_settings_product.class.php:178
+msgid "Slider Width"
+msgstr "幻灯片宽度"
+
+# @ revslider
+#: settings/slider_settings.php:5
+msgid "The title of the slider. Example: Slider1"
+msgstr "幻灯片的标题，例如：slider1"
+
+# @ revslider
+#: settings/slider_settings.php:6
+msgid "The alias that will be used for embedding the slider. Example: slider1"
+msgstr "将被用于程序里面调用幻灯片的别名。例如：slider1"
+
+# @ revslider
+#: settings/slider_settings.php:7
+msgid "Slider Shortcode"
+msgstr "幻灯片短代码"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Start Animation"
+msgstr "开始动画"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Start Speed"
+msgstr "启动速度"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Start Easing"
+msgstr "开始缓和"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "End Easing"
+msgstr "结束缓和"
+
+# @ revslider
+#: settings/slider_settings.php:10
+msgid "Fixed"
+msgstr "固定"
+
+# @ revslider
+#: settings/slider_settings.php:11
+msgid "Responsive"
+msgstr "响应式"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Scroll Under Slider Offset"
+msgstr "滑块的滚动偏移量"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Link ID"
+msgstr "链接ID"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Link Classes"
+msgstr "链接样式类名"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Link Rel"
+msgstr "链接属性"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Link Title"
+msgstr "链接标题"
+
+# @ revslider
+#: settings/slider_settings.php:12
+msgid "Full Width"
+msgstr "全宽"
+
+# @ revslider
+#: settings/slider_settings.php:12
+msgid "Slider Type"
+msgstr "幻灯片类型"
+
+# @ revslider
+#: settings/slider_settings.php:15
+msgid "Slider Size"
+msgstr "幻灯片尺寸"
+
+# @ default
+#: settings/slider_settings.php:18
+msgid "Responsive Sizes"
+msgstr "响应页面的尺寸"
+
+# @ revslider
+#: revslider_admin.php:250
+msgid "The slider successfully created"
+msgstr "创建幻灯片成功"
+
+# @ revslider
+#: revslider_admin.php:256
+msgid "Slider updated"
+msgstr "幻灯片已更新"
+
+# @ revslider
+#: revslider_admin.php:264
+msgid "The slider deleted"
+msgstr "幻灯片已删除"
+
+# @ revslider
+#: revslider_admin.php:272
+msgid "The duplicate successfully, refreshing page..."
+msgstr "复制成功，刷新页面中..."
+
+# @ revslider
+#: revslider_admin.php:281
+msgid "Slide Created"
+msgstr "幻灯片已创建"
+
+# @ revslider
+#: revslider_admin.php:286
+msgid "Slide updated"
+msgstr "幻灯片已更新"
+
+# @ revslider
+#: revslider_admin.php:292
+msgid "Slide Deleted Successfully"
+msgstr "幻灯片删除成功"
+
+# @ revslider
+#: revslider_admin.php:298
+msgid "Slide Duplicated Successfully"
+msgstr "幻灯片备份/复制成功"
+
+# @ revslider
+#: revslider_admin.php:307
+msgid "CSS file saved succesfully!"
+msgstr "CSS样式保存成功"
+
+# @ revslider
+#: revslider_admin.php:316
+msgid "Order updated successfully"
+msgstr "顺序列表成功更新"
+
+# @ revslider
+#: revslider_admin.php:322
+msgid "Slide Changed Successfully"
+msgstr "幻灯片更改成功"
+
+# @ revslider
+#: settings/slider_settings.php:5
+msgid "Slider Title"
+msgstr "幻灯片标题"
+
+# @ revslider
+#: settings/slider_settings.php:6
+msgid "Slider Alias"
+msgstr "幻灯片别名"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:2
+msgid "General Settings"
+msgstr "通用设置"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php
+msgid "Alternative First Slide"
+msgstr "替代第一张幻灯片"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:3
+msgid "Position"
+msgstr "位置"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:4
+msgid "Appearance"
+msgstr "外观"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:5
+msgid "Navigation"
+msgstr "导航"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:6
+msgid "Thumbnails"
+msgstr "缩略图"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:7
+msgid "Mobile Visibility"
+msgstr "移动式设备可见"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:8
+msgid "First Slide"
+msgstr "第一张幻灯片"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php:9
+msgid "Troubleshooting"
+msgstr "故障排除"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php
+msgid "Lazy Load"
+msgstr "延迟加载"
+
+# @ revslider
+#: settings/slider_settings_xml_lang.php
+msgid ""
+"The lazy load means that the images will be loaded by demand, it speeds the "
+"loading of the slider."
+msgstr "延迟加载是指将图片按需加载，它加速滑块的显示速度。"
+
+# @ revslider
+# @ default
+#: settings/layer_settings.php:19 settings/layer_settings.php:20
+msgid "layer_params"
+msgstr ""
+
+# @ default
+#: settings/layer_settings.php:21
+msgid "layer_caption"
+msgstr ""
+
+# @ default
+#: settings/layer_settings.php:21
+msgid "caption_green"
+msgstr ""
+
+# @ revslider
+#: settings/layer_settings.php:21
+msgid "Style"
+msgstr "样式"
+
+# @ revslider
+#: settings/layer_settings.php:25
+msgid "Text / Html"
+msgstr "文字/ HTML代码"
+
+# @ revslider
+#: settings/layer_settings.php:26
+msgid "Image Link"
+msgstr "图片链接"
+
+# @ revslider
+#: settings/layer_settings.php:27 settings/slide_settings.php:62
+msgid "Same Window"
+msgstr "同一窗口"
+
+# @ revslider
+# @ default
+#: settings/layer_settings.php:27 settings/slide_settings.php:62
+msgid "New Window"
+msgstr "新窗口"
+
+# @ revslider
+#: settings/layer_settings.php:27 settings/slide_settings.php:62
+msgid "Link Open In"
+msgstr "链接打开方式"
+
+# @ revslider
+#: settings/layer_settings.php:29
+msgid "Animation"
+msgstr "动画"
+
+# @ revslider
+#: settings/layer_settings.php
+msgid "If set, slide will be visible till the date is reached"
+msgstr "如果设置，幻灯片将是显示，直到发布时间为止"
+
+# @ revslider
+#: settings/layer_settings.php:30 settings/layer_settings.php:45
+msgid "Easing"
+msgstr "缓和"
+
+# @ revslider
+#: settings/layer_settings.php:33
+msgid "Hide Under Width"
+msgstr "隐藏宽度"
+
+# @ revslider
+#: settings/layer_settings.php:34
+msgid "X"
+msgstr "X"
+
+# @ revslider
+#: settings/layer_settings.php:35
+msgid "Y"
+msgstr "Y"
+
+# @ revslider
+#: settings/layer_settings.php:36 settings/slide_settings.php:96
+msgid "Video Autoplay"
+msgstr "视频自动播放"
+
+# @ revslider
+#: settings/layer_settings.php:37
+msgid "Link To Slide"
+msgstr "链接到幻灯片"
+
+# @ revslider
+#: settings/layer_settings.php:38
+msgid "Edit Video"
+msgstr "编辑视频"
+
+# @ revslider
+#: settings/layer_settings.php:39
+msgid "Change Image Source"
+msgstr "选择图片来源"
+
+# @ revslider
+#: settings/layer_settings.php:42
+msgid "End Time"
+msgstr "结束时间"
+
+# @ revslider
+#: settings/layer_settings.php:43
+msgid "End Speed"
+msgstr "末速度"
+
+# @ revslider
+#: settings/layer_settings.php:44
+msgid "End Animation"
+msgstr "动画结束"
+
+# @ revslider
+#: settings/slide_settings.php:11
+msgid "The title of the slide, will be shown in the slides list."
+msgstr "幻灯片的标题，将显示在幻灯片列表中。"
+
+# @ revslider
+#: settings/slide_settings.php:12
+msgid "Slide"
+msgstr "幻灯片"
+
+# @ revslider
+#: settings/slide_settings.php:12
+msgid "Slide Title"
+msgstr "幻灯片的标题"
+
+# @ revslider
+#: settings/slide_settings.php:15
+msgid ""
+"The state of the slide. The unpublished slide will be excluded from the "
+"slider."
+msgstr "幻灯片的状态。未发表的幻灯片将不会使用"
+
+# @ revslider
+#: settings/slide_settings.php:16
+msgid "Published"
+msgstr "已发布"
+
+# @ revslider
+#: settings/slide_settings.php:16
+msgid "Unpublished"
+msgstr "未发布"
+
+# @ revslider
+#: settings/slide_settings.php:16
+msgid "State"
+msgstr "状态"
+
+# @ revslider
+#: settings/slide_settings.php:19
+msgid "The appearance transition of this slide."
+msgstr "这张幻灯片的过渡外观。"
+
+# @ revslider
+#: settings/slide_settings.php:20
+msgid "Transition"
+msgstr "过渡"
+
+# @ revslider
+#: settings/slide_settings.php:23
+msgid ""
+"The number of slots or boxes the slide is divided into. If you use boxfade, "
+"over 7 slots can be juggy."
+msgstr ""
+"分片或者盒子的数值，如果您使用boxfade(一种盒子类型的渐入渐出效果),超过7个分片"
+"可以使用juggy(效果)。"
+
+# @ revslider
+#: settings/slide_settings.php:26
+msgid "Slot Amount"
+msgstr "分片数量"
+
+# @ revslider
+#: settings/slide_settings.php:29
+msgid "Rotation (-720 -> 720, 999 = random) Only for Simple Transitions."
+msgstr "旋转值（-720 -720，999=随机）仅适用于简单的旋转。"
+
+# @ revslider
+#: settings/slide_settings.php:32
+msgid "Rotation"
+msgstr "旋转"
+
+# @ revslider
+#: settings/slide_settings.php:35
+msgid "The duration of the transition (Default:300, min: 100 max 2000). "
+msgstr "过渡的持续时间。默认300，最小值100，最大值2000，单位都是ms(毫秒)"
+
+# @ revslider
+#: settings/slide_settings.php:38
+msgid "Transition Duration"
+msgstr "过渡时间"
+
+# @ revslider
+#: settings/slide_settings.php:41
+msgid ""
+"A new delay value for the Slide. If no delay defined per slide, the delay "
+"defined via Options ("
+msgstr ""
+"设置一个新的幻灯片的延迟,如果每张幻灯片没有设置此值,将会使用默认定义的值"
+
+# @ revslider
+#: settings/slide_settings.php:41
+msgid "ms) will be used"
+msgstr "ms) 毫秒"
+
+# @ revslider
+#: settings/slide_settings.php:49
+msgid "Enable Link"
+msgstr "启用链接"
+
+# @ revslider
+#: settings/slide_settings.php:49 settings/slide_settings.php:86
+msgid "Enable"
+msgstr "启用"
+
+# @ revslider
+#: settings/slide_settings.php:49 settings/slide_settings.php:86
+msgid "Disable"
+msgstr "禁用"
+
+# @ revslider
+#: settings/slide_settings.php:54
+msgid "Regular"
+msgstr "正常"
+
+# @ revslider
+#: settings/slide_settings.php:54
+msgid "To Slide"
+msgstr "链接到另一个幻灯片"
+
+# @ revslider
+#: settings/slide_settings.php:54
+msgid "Link Type"
+msgstr "链接类型"
+
+# @ revslider
+#: settings/slide_settings.php:57
+msgid "A link on the whole slide pic"
+msgstr "整个幻灯片图片的链接"
+
+# @ revslider
+#: settings/slide_settings.php:58
+msgid "Slide Link"
+msgstr "幻灯片链接"
+
+# @ revslider
+#: settings/slide_settings.php:61
+msgid "The target of the slide link"
+msgstr "幻灯片链接的打开方式"
+
+# @ revslider
+#: settings/slide_settings.php:65
+msgid "-- Not Chosen --"
+msgstr "-- 未选择 --"
+
+# @ revslider
+#: settings/slide_settings.php:65
+msgid "-- Next Slide --"
+msgstr "-- 下一张滑块 --"
+
+# @ revslider
+#: settings/slide_settings.php:65
+msgid "-- Previous Slide --"
+msgstr "-- 上一张幻灯片 --"
+
+# @ revslider
+#: settings/slide_settings.php:85
+msgid "Put a full width video on the slide"
+msgstr "幻灯片中加入一个全宽的视频"
+
+# @ revslider
+#: settings/slide_settings.php:86
+msgid "Enable Full Width Video"
+msgstr "启用视频全宽"
+
+# @ revslider
+#: settings/slide_settings.php:89
+msgid ""
+"The field can take Youtube ID (example: QohUdrgbD2k) or Vidmeo ID (example: "
+"30300114)"
+msgstr "视频ID,例如 youtube视频的ID QohUdrgbD2k，大陆打不开，别试了"
+
+# @ revslider
+#: settings/slide_settings.php:91
+msgid "Video ID"
+msgstr "视频ID"
+
+# @ revslider
+#: settings/slide_settings.php:94
+msgid "Enable video autoplay on enter slide"
+msgstr "滑块中自动播放视频"
+
+# @ revslider
+#: settings/slide_settings.php:101
+msgid "Slide Thumbnail. If not set - it will be taken from the slide image."
+msgstr "滑块缩略图。如果没有设置，将会选取幻灯片里的图片"
+
+# @ revslider
+#: settings/slide_settings.php:102
+msgid "Thumbnail"
+msgstr "缩略图"
+
+# @ revslider
+#: settings/slide_settings.php:104
+msgid "Apply to full width mode only. Centering vertically slide images."
+msgstr "居中垂直滑动图像。仅适用于全宽模式。"
+
+# @ revslider
+#: settings/slide_settings.php:105
+msgid "Full Width Centering"
+msgstr "全宽居中"
+
+# @ revslider
+#: settings/slide_settings.php:108
+msgid "Background Type"
+msgstr "背景类型"
+
+# @ revslider
+#: settings/slide_settings.php:108
+msgid "Visible until"
+msgstr "可见"
+
+# @ revslider
+#: views/templates/slider_toolbox.php:9
+msgid "Export Slider"
+msgstr "导出滑块"
+
+# @ revslider
+#: views/sliders.php:17
+msgid "Help"
+msgstr "帮助"
+
+# @ revslider
+#: views/sliders.php:19
+msgid "Global Settings"
+msgstr "全局设置"
+
+# @ revslider
+#: views/sliders.php:36
+msgid "Revolution Slider Templates"
+msgstr "革命滑块模板"
+
+# @ revslider
+#: views/sliders.php:47
+msgid "Create New Template Slider"
+msgstr "创建滑块模板"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Source Type"
+msgstr "源类型"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Posts"
+msgstr "文章"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Specific Posts"
+msgstr "特定文章"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Gallery"
+msgstr "图片墙"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Specific Posts List"
+msgstr "特殊文章列表"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Type here the post IDs you want to use separated by coma. ex: 23,24,25"
+msgstr "在这里输入文章的ID，例如23,24,25，中间由逗号分隔"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Post Types"
+msgstr "文章类型"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Post Categories"
+msgstr "文章分类"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Sort Posts By"
+msgstr "文章排序"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Sort Direction"
+msgstr "排序"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Max Posts Per Slider"
+msgstr "每个滑块最多文章数"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Limit The Excerpt To"
+msgstr "限制文章摘要"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Template Slider"
+msgstr "模板滑块"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Slider Layout"
+msgstr "滑块布局"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Custom"
+msgstr "自定义"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Auto Responsive"
+msgstr "自动适应"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Full Screen"
+msgstr "全屏"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid ""
+"Example: #header or .header, .footer, #somecontainer | The height of "
+"fullscreen slider will be decreased with the height of these Containers to "
+"fit perfect in the screen"
+msgstr ""
+"例如#header or .header, .footer, #somecontainer这些容器的高度将自动适应"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Offset Containers"
+msgstr "容器偏移"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Min. Fullscreen Height"
+msgstr "全屏最小高度"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "FullScreen Align"
+msgstr "全屏对齐"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Unlimited Height"
+msgstr "不限制高度"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Force Full Width"
+msgstr "强制全宽"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Grid Settings"
+msgstr "网格设置"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Grid Width"
+msgstr "网格宽度"
+
+# @ revslider
+#: settings/slider_settings.php
+msgid "Grid Height"
+msgstr "网格高度"
+
+# @ revslider
+#: views/templates/slides_gallery.php
+msgid "New Transparent Slide"
+msgstr "新的透明幻灯片"
+
+# @ revslider
+#: views/templates/slides_gallery.php views/templates/slides_posts.php
+msgid "Slider Settings"
+msgstr "滑块设置"
+
+# @ revslider
+#: views/templates/slides_gallery.php
+msgid "Adding Slide..."
+msgstr "正在添加滑块..."
