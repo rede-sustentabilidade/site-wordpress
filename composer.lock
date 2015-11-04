@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3f467ce8d4d96eeb04b4a2386d42647a",
-    "content-hash": "6e3e69d1312a414dd740ab5b128d01c8",
+    "hash": "adba82f910a07a680549a47a1af7fe6f",
+    "content-hash": "1d501996880a84b77651a7d2875c0dbb",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -458,6 +458,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "php": 5,
         "wpackagist-plugin/baw-moderator-role": 20,
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
@@ -468,7 +469,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "~7.0.0",
+        "php": "7.0.0RC5",
         "ext-mysql": "*"
     },
     "platform-dev": []

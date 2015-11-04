@@ -15,7 +15,7 @@
 		"politica", "governo", "partido", "rede", "sustentabilidade", "wp"
 	],
    "require": {
-	"php": "~7.0.0",
+	"php": "7.0.0RC5",
 	"ext-mysql": "*",
         "WordPress/WordPress": "*",
         "wpackagist-plugin/jetpack": "~3",
