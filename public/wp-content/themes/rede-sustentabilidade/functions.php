@@ -9,10 +9,8 @@ function wpr_remove_custom_actions() {
 	// if (!$wpdb->set_charset($wpdb->dbh, 'utf8')) {
 	//     printf("Error loading character set utf8: %s\n", $wpdb->error);
 	// } else {
-	    printf("Current character set: %s\n", $wpdb->character_set_name());
+	printf("Current character set: %s\n", $wpdb->get_charset_collate());
 	// }
-
-	print_r( $wpdb->get_charset() );
 
     remove_action( 'after_setup_theme', 'pinbin_options_init' );
 
