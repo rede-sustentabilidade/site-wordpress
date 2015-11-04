@@ -1,7 +1,7 @@
 <?php
 
 global $wpdb;
-$results = $wpdb->get_results('SET NAMES utf8');
+$results = $wpdb->get_results("SET NAMES 'utf8';");
 
 require_once("utilidades/ApiRede.php");
 
