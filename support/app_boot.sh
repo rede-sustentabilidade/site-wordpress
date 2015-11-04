@@ -20,4 +20,5 @@ else
 fi
 
 # Boot up!
-vendor/bin/heroku-hhvm-nginx -C support/app_nginx.conf public.built/
+vendor/bin/heroku-hhvm-nginx -C support/app_nginx.conf public.built/ -I
+support/app_php.ini
