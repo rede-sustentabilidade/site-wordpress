@@ -2,13 +2,6 @@
 require_once("utilidades/ApiRede.php");
 
 function wpr_remove_custom_actions() {
-	global $wpdb;
-
-	//$results = $wpdb->get_results( 'SET NAMES utf8;', OBJECT );
-	//$results2 = $wpdb->get_results( 'SET CHARACTER SET utf8;', OBJECT );
-	printf("Current character set: %s\n", $wpdb->get_charset_collate());
-
-
     remove_action( 'after_setup_theme', 'pinbin_options_init' );
     remove_action( 'admin_init', 'pinbin_options_setup' );
     remove_action('admin_menu', 'pinbin_menu_options');

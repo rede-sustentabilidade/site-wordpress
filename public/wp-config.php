@@ -41,25 +41,25 @@ if (PHP_SAPI == "cli" && defined('WP_CLI_ROOT')) {
 
 // Try server hostname
 if (!defined('WP_ENV')) {
-  // Try server hostname
-  if (!defined('WP_ENV')) {
     // Set environment based on hostname
     switch ($hostname) {
-      case 'herokuwp.local':
-        define('WP_ENV', 'development');
-  		define('WP_CACHE', false);
+      case 'redesustentabilidade.org.br':
+        define('WP_ENV', 'production');
+  		define('WP_CACHE', true);
+		define('WP_API_PATH', '//rededustentabilidade.org.br/api/v1');
         break;
 
       case 'site-wordpress.staging.redesustentabilidade.org.br':
         define('WP_ENV', 'staging');
   		define('WP_CACHE', false);
+		define('WP_API_PATH', '//api-v1.staging.redesustentabilidade.org.br');
         break;
-      case 'redesustentabilidade.org.br':
+      case 'herokuwp.local':
       default:
-        define('WP_ENV', 'production');
-  		define('WP_CACHE', true);
+        define('WP_ENV', 'development');
+		define('WP_CACHE', false);
+		define('WP_API_PATH', 'http://localhost:9000');
     }
-  }
 }
 
 // Are we in SSL mode?

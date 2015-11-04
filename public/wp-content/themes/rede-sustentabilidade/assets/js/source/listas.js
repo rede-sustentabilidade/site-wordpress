@@ -2,8 +2,7 @@
 /*global jQuery, API_USER_STATUS, WP_USER_ROLE, WP_USER_ID */
 
 var listas = {};
-var isProduction = (location.hostname.indexOf("redesustentabilidade") > -1) ? false : true;
-listas.apiURL = isProduction ? 'http://localhost:9000/' : 'http://redesustentabilidade.org.br/api/v1/';
+listas.apiURL = API_PATH;
 
 jQuery(function ($) {
     'use strict';

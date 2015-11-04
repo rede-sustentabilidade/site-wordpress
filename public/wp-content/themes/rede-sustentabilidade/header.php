@@ -43,7 +43,8 @@
         <?php endif; ?>
         <?php global $current_user; get_currentuserinfo(); ?>
         <script>
-        var
+		var
+		API_PATH = <?php echo json_encode(WP_API_PATH); ?>,
         SERVER_DOMAIN = <?php echo json_encode($_SERVER['SERVER_NAME']); ?>,
         WP_USER_ID = <?php echo json_encode($current_user->ID); ?>,
         THEME_URL = <?php echo json_encode(get_stylesheet_directory_uri()); ?>;
@@ -83,19 +84,19 @@
                             <ul id="rrssb-buttons" class="rrssb-buttons clearfix no-margin fix-line-height tiny-format">
                                 <li class="facebook small">
                                     <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($url); ?>" target="_blank">
-                                        <span class="icon"><?php echo file_get_contents('icons/facebook.svg', true); ?></span>
+										<span class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/facebook.svg" /></span>
                                         <span class="text">facebook</span>
                                     </a>
                                 </li>
                                 <li class="twitter small">
                                     <a href="http://twitter.com/home?status=<?php echo urlencode($title); ?> - <?php echo urlencode($short_url); ?>" target="_blank">
-                                        <span class="icon"><?php echo file_get_contents('icons/twitter.svg', true); ?></span>
+                                        <span class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/twitter.svg" /></span>
                                         <span class="text">twitter</span>
                                     </a>
                                 </li>
                                 <li class="googleplus small">
                                     <a href="https://plus.google.com/share?url=<?php echo urlencode($title); ?> - <?php echo urlencode($url); ?>" target="_blank">
-                                        <span class="icon"><?php echo file_get_contents('icons/google_plus.svg', true); ?></span>
+                                        <span class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/google_plus.svg" /></span>
                                         <span class="text">google+</span>
                                     </a>
                                 </li>
@@ -111,7 +112,6 @@
                           <a href="<?php echo home_url('/faca-sua-doacao/'); ?>"><span class="label">apoie a rede</span></a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </nav>
@@ -215,14 +215,14 @@
             </div>
         </div>
         <?php endif; ?>
-        <?php date_default_timezone_set('America/Sao_Paulo'); if (is_home()) { ?>
-        <div id="slider">
-            <?php
-                if (function_exists('putRevSlider')) {
-                    putRevSlider("home");
-                }
-            ?>
-        </div>
-		<?php } /* === BANNER, FIM === */ ?>
-        <div class="clear"></div>
-        <div id="wrap">
+	<?php date_default_timezone_set('America/Sao_Paulo'); if (is_home()) { ?>
+	<div id="slider">
+		<?php
+			if (function_exists('putRevSlider')) {
+				putRevSlider("home");
+			}
+		?>
+	</div>
+	<?php } /* === BANNER, FIM === */ ?>
+	<div class="clear"></div>
+	<div id="wrap">

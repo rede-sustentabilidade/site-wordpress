@@ -14,8 +14,6 @@ define([
 
     var conexaoRedeApp = ng.module('conexaoRedeApp', ['ui.mask', 'localytics.directives', 'angularLocalStorage']);
 
-    var API_PATH = '/api/v1';
-
     jQuery.support.cors = true;
 
     conexaoRedeApp.directive('gallery', function(){

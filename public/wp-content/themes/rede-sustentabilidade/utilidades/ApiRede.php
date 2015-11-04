@@ -8,7 +8,7 @@ class ApiRede
 
     protected function __construct()
     {
-        $this->apiPath = getenv('API_PATH');
+        $this->apiPath = WP_API_PATH;
     }
 
     public function filiadoFormWasFilled($user_id)
