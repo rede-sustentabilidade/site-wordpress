@@ -10,7 +10,7 @@ class Api
 
     protected function __construct()
     {
-        $this->apiPath = 'http://' . $_SERVER['HTTP_HOST'] . '/api/v1';
+        $this->apiPath = WP_API_PATH;
     }
 
     public function filiadoFormWasFilled($user_id)

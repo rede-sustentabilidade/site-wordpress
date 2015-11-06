@@ -13,7 +13,7 @@ class Filiados
 
     public function __construct($type)
     {
-      $this->apiPath = 'http://' . $_SERVER['HTTP_HOST'] . '/api/v1';
+      $this->apiPath = WP_API_PATH;
 
       if (isset($_GET['export_filiados'])) {
         header("Content-Type: text/csv");

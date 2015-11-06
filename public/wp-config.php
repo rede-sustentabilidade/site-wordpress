@@ -62,6 +62,10 @@ if (!defined('WP_ENV')) {
     }
 }
 
+
+
+
+
 // Are we in SSL mode?
 if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
     (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')) {

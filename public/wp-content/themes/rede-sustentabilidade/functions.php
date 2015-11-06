@@ -3,10 +3,10 @@ require_once("utilidades/ApiRede.php");
 
 function wpr_remove_custom_actions() {
     remove_action( 'after_setup_theme', 'pinbin_options_init' );
-    remove_action( 'admin_init', 'pinbin_options_setup' );
+    /* remove_action( 'admin_init', 'pinbin_options_setup' ); */
     remove_action('admin_menu', 'pinbin_menu_options');
     remove_action('admin_print_styles-appearance_page_pinbin-settings', 'pinbin_options_enqueue_scripts');
-    remove_action( 'admin_init', 'pinbin_options_settings_init' );
+    /* remove_action( 'admin_init', 'pinbin_options_settings_init' ); */
     remove_theme_support( 'custom-background' );
 
     if (!is_admin()) {

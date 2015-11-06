@@ -123,6 +123,30 @@ var ActionCell = Backgrid.ActionCell = Backgrid.Cell.extend({
       cell: "string",
     },
     {
+      name: "email",
+      label: "E-mail",
+      editable: false,
+      cell: "string",
+    },
+    {
+      name: "telefone_residencial",
+      label: "Telefone",
+      editable: false,
+      cell: "string",
+    },
+    {
+      name: "telefone_celular",
+      label: "Celular",
+      editable: false,
+      cell: "string",
+    },
+    {
+      name: "telefone_comercial",
+      label: "Comercial",
+      editable: false,
+      cell: "string",
+    },
+	{
       name: "sexo",
       label: "Sexo",
       editable: false,
