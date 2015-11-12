@@ -111,6 +111,14 @@
 if (isset($_GET['code'])) {
     try {
 
+	$provider = new \League\OAuth2\Client\Provider\GenericProvider([
+		'clientId'                => OAUTH_CLIENT_ID,    // The client ID assigned to you by the provider
+		'clientSecret'            => OAUTH_CLIENT_SECRET,   // The client password assigned to you by the provider
+		'redirectUri'             => OAUTH_REDIRECT_URI,
+		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
+		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
+		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
+	]);
         // Try to get an access token using the authorization code grant.
         $accessToken = $provider->getAccessToken('authorization_code', [
             'code' => $_GET['code']
@@ -152,7 +160,7 @@ if (isset($_GET['code'])) {
 		'clientSecret'            => OAUTH_CLIENT_SECRET,   // The client password assigned to you by the provider
 		'redirectUri'             => OAUTH_REDIRECT_URI,
 		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
-		'urlAccessToken'          => OAUTH_ACCESS_TOKEN,
+		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
 		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
 	]);
 
