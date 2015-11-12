@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The base configurations of the WordPress.
  *
@@ -58,13 +57,15 @@ if (!defined('WP_ENV')) {
       default:
         define('WP_ENV', 'development');
 		define('WP_CACHE', false);
-		define('WP_API_PATH', 'http://localhost:9000');
-    }
+		define('WP_API_PATH',            'http://localhost:9000');
+		define('OAUTH_REDIRECT_URI',     'http://herokuwp.local/');
+		define('OAUTH_CLIENT_ID',        'bK2QZHSg');
+		define('OAUTH_CLIENT_SECRET',    'SYJInKMAfsToiQDtwCvt');
+		define('OAUTH_URL_AUTHORIZE',    'http://192.168.50.1:3000/oauth/authorization');
+		define('OAUTH_URL_ACCESS_TOKEN', 'http://192.168.50.1:3000/oauth/token');
+		define('OAUTH_URL_RESOURCE',     'http://192.168.50.1:3000/oauth/resource');
+	}
 }
-
-
-
-
 
 // Are we in SSL mode?
 if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
@@ -212,6 +213,7 @@ define('WP_DEBUG', false);
 if ( !defined('ABSPATH') )
   define('ABSPATH', dirname(__FILE__) . '/');
 
+require(ABSPATH . "../vendor/autoload.php");
 define( 'DB_CONFIG_FILE', ABSPATH . 'db-config.php' );
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

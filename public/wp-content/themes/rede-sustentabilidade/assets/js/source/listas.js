@@ -32,9 +32,10 @@ jQuery(function ($) {
         if (state) {
             data.filters += 'uf,=,' + state;
         }
-        $.ajax({
+
+		$.ajax({
             dataType: 'json',
-            url: listas.apiURL + 'users',
+            url: listas.apiURL + '/users',
             data: data
         }).done(function (data) {
             listas.data = data || [];
@@ -45,7 +46,7 @@ jQuery(function ($) {
     function makeAbono(filiadoId, userId, cb) {
         $.ajax({
             type: 'POST',
-            url: listas.apiURL + 'usuario/filiado/abono',
+            url: listas.apiURL + '/usuario/filiado/abono',
             data: JSON.stringify({'user_id': filiadoId, 'quem_abonou': userId}),
             dataType: 'json'
         }).always(function () {
@@ -56,7 +57,7 @@ jQuery(function ($) {
     function makeConfirmacao(filiadoId, userId, cb) {
         $.ajax({
             type: 'POST',
-            url: listas.apiURL + 'usuario/filiado/confirmacao',
+            url: listas.apiURL + '/usuario/filiado/confirmacao',
             data: JSON.stringify({'user_id': filiadoId}),
             dataType: 'json'
         }).always(function () {
@@ -67,7 +68,7 @@ jQuery(function ($) {
     function makeImpugnacao(filiadoId, userId, justification, cb) {
         $.ajax({
             type: 'POST',
-            url: listas.apiURL + 'usuario/filiado/impugnacao',
+            url: listas.apiURL + '/usuario/filiado/impugnacao',
             data: JSON.stringify({'impugnado': filiadoId, 'quem_impugnou': userId, 'motivo': justification}),
             dataType: 'json'
         }).always(function () {

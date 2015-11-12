@@ -2,11 +2,6 @@
 /*
 Template Name: Formulário Filiação
 */
-if($_SERVER["HTTPS"] == "on")
-{
-   header("Location: http://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
-   exit();
-}
 
 wp_enqueue_style( 'chosen-jquery', get_stylesheet_directory_uri() . '/assets/bower_components/chosen/chosen.css' );
 wp_enqueue_style( 'page-filiacao', get_stylesheet_directory_uri() . '/css/page-filiacao.css' );
