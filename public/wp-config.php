@@ -52,6 +52,11 @@ if (!defined('WP_ENV')) {
         define('WP_ENV', 'staging');
   		define('WP_CACHE', false);
 		define('WP_API_PATH', '//api-v1.staging.redesustentabilidade.org.br');
+		define('OAUTH_CLIENT_ID',        'XnvqtV7U');
+		define('OAUTH_CLIENT_SECRET',    '00UlvMJicqoY8y3qtFoY');
+		define('OAUTH_URL_AUTHORIZE',    'https://api-usuarios.staging.redesustentabilidade.org.br/oauth/authorization');
+		define('OAUTH_URL_ACCESS_TOKEN', 'https://api-usuarios.staging.redesustentabilidade.org.br/oauth/token');
+		define('OAUTH_URL_RESOURCE',     'https://api-usuarios.staging.redesustentabilidade.org.br/oauth/resource');
         break;
       case 'herokuwp.local':
       default:
