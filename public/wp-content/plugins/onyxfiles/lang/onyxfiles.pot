@@ -1,0 +1,617 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Onyx Files - Download Manager\n"
+"POT-Creation-Date: 2015-06-25 20:44-0500\n"
+"PO-Revision-Date: 2015-06-25 20:44-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-WPHeader: onyxfiles.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: inc/admin/columns.php:10
+msgid "Download Name"
+msgstr ""
+
+#: inc/admin/columns.php:11
+msgid "Shortcode"
+msgstr ""
+
+#: inc/admin/columns.php:12 inc/front/download-page.php:61
+msgid "Downloads"
+msgstr ""
+
+#: inc/admin/columns.php:13
+msgid "Views"
+msgstr ""
+
+#: inc/admin/columns.php:14
+msgid "Earnings"
+msgstr ""
+
+#: inc/admin/columns.php:15
+msgid "Daily Stats"
+msgstr ""
+
+#: inc/admin/columns.php:16
+msgid "Date"
+msgstr ""
+
+#: inc/admin/columns.php:39
+msgid "View Daily Stats"
+msgstr ""
+
+#: inc/admin/create-metaboxes.php:6
+msgid "Upload Files"
+msgstr ""
+
+#: inc/admin/create-metaboxes.php:14
+msgid "Onyx File Center"
+msgstr ""
+
+#: inc/admin/enqueue.php:64
+msgid "Please wait! We are updating your settings."
+msgstr ""
+
+#: inc/admin/enqueue.php:65
+msgid "Update successful!"
+msgstr ""
+
+#: inc/admin/enqueue.php:66
+msgid "Unable to update settings!"
+msgstr ""
+
+#: inc/admin/enqueue.php:76
+msgid "File failed uploading!"
+msgstr ""
+
+#: inc/admin/enqueue.php:77 inc/front/enqueue.php:38
+msgid "Please wait!"
+msgstr ""
+
+#: inc/admin/enqueue.php:78 inc/front/enqueue.php:41
+msgid "Success!"
+msgstr ""
+
+#: inc/admin/enqueue.php:79 inc/front/enqueue.php:40
+msgid "Error!"
+msgstr ""
+
+#: inc/admin/enqueue.php:80
+msgid "Your file has been uploaded."
+msgstr ""
+
+#: inc/admin/enqueue.php:81
+msgid "We are currently adding this file for you."
+msgstr ""
+
+#: inc/admin/enqueue.php:82
+msgid "We are currently adding this URL for you."
+msgstr ""
+
+#: inc/admin/enqueue.php:83
+msgid "We could not add this file for you!"
+msgstr ""
+
+#: inc/admin/enqueue.php:84
+msgid "We have added this file to your package."
+msgstr ""
+
+#: inc/admin/file-center.mb.php:26
+msgid "Files"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:27
+msgid "Basic"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:28
+msgid "Users"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:29
+msgid "Locks"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:30
+msgid "Button"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:61
+msgid "Download Limit"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:65
+msgid "Download Limit Per User"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:69
+msgid "Download Limit Per Day"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:73
+msgid "View Count"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:77
+msgid "Download Count"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:80
+msgid "Individual File Downloads"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:82 inc/admin/file-center.mb.php:89
+msgid "Disable"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:83 inc/admin/file-center.mb.php:90
+msgid "Enable"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:87
+msgid "Audio Player"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:94
+msgid "Download Available On"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:99
+msgid "Download Expires On"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:106
+msgid "Role Access Level"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:108
+msgid "Guests"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:109
+msgid "Subscriber"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:110
+msgid "Contributor"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:111
+msgid "Author"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:112
+msgid "Editor"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:113
+msgid "Administrator"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:117
+msgid "Share with the following usernames (comma separated)"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:122
+msgid "Users disallowed to download (comma separated)"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:257
+msgid "This is what your button will look like"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:263
+msgid "Button Label"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:268
+msgid "Color"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:280
+msgid "Size"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:292
+msgid "Effects"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:294 inc/admin/file-center.mb.php:307
+msgid "None"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:305
+msgid "Enhancements"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:318
+msgid "Shape"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:320
+msgid "Normal"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:331
+msgid "Button Styles"
+msgstr ""
+
+#: inc/admin/file-center.mb.php:343
+msgid "Button Icons"
+msgstr ""
+
+#: inc/admin/footer.php:15
+msgid "Downloads past 7 days"
+msgstr ""
+
+#: inc/admin/tinymce-modal.php:16
+msgid "Insert Onyx File"
+msgstr ""
+
+#: inc/admin/tinymce-modal.php:21
+msgid "Load More Files"
+msgstr ""
+
+#: inc/front/create-modal.php:41 inc/front/create-modal.php:96
+#: inc/front/enqueue.php:50
+msgid "Download File"
+msgstr ""
+
+#: inc/front/create-modal.php:46
+msgid ""
+"If you would like to download this file, then you will have to unlock it by\n"
+"                        clicking one of the options below."
+msgstr ""
+
+#: inc/front/create-modal.php:51
+msgid "Unlock with password"
+msgstr ""
+
+#: inc/front/create-modal.php:55
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: inc/front/create-modal.php:59
+msgid "Share on Facebook"
+msgstr ""
+
+#: inc/front/create-modal.php:63
+msgid "Like us"
+msgstr ""
+
+#: inc/front/create-modal.php:67
+msgid "Follow us on Twitter"
+msgstr ""
+
+#: inc/front/create-modal.php:71
+msgid "Tweet us on Twitter"
+msgstr ""
+
+#: inc/front/create-modal.php:75
+msgid "+1 on Google Plus"
+msgstr ""
+
+#: inc/front/create-modal.php:79
+msgid "Unlock with your e-mail"
+msgstr ""
+
+#: inc/front/create-modal.php:83
+msgid "Purchase with PayPal"
+msgstr ""
+
+#: inc/front/create-modal.php:89
+msgid "Enter the password to download this file."
+msgstr ""
+
+#: inc/front/create-modal.php:92
+msgid "Enter Password"
+msgstr ""
+
+#: inc/front/create-modal.php:101 inc/front/create-modal.php:114
+#: inc/front/create-modal.php:125 inc/front/create-modal.php:136
+#: inc/front/create-modal.php:145 inc/front/create-modal.php:154
+#: inc/front/create-modal.php:163 inc/front/create-modal.php:192
+#: inc/front/create-modal.php:217
+msgid "Go Back"
+msgstr ""
+
+#: inc/front/create-modal.php:106
+msgid "Share a message on LinkedIn to download this file!"
+msgstr ""
+
+#: inc/front/create-modal.php:109 inc/front/create-modal.php:121
+msgid "Share and Download File"
+msgstr ""
+
+#: inc/front/create-modal.php:118
+msgid "Share a message on Facebook to download this file!"
+msgstr ""
+
+#: inc/front/create-modal.php:129
+msgid "Like this page on Facebook to download this file!"
+msgstr ""
+
+#: inc/front/create-modal.php:140
+msgid "Follow us on twitter to download this file!"
+msgstr ""
+
+#: inc/front/create-modal.php:149
+msgid "Tweet on twitter!"
+msgstr ""
+
+#: inc/front/create-modal.php:158
+msgid "+1 us on Google Plus"
+msgstr ""
+
+#: inc/front/create-modal.php:167
+msgid "Enter your email to download this file!"
+msgstr ""
+
+#: inc/front/create-modal.php:171
+msgid "Enter E-mail"
+msgstr ""
+
+#: inc/front/create-modal.php:186
+msgid "Submit & Download File"
+msgstr ""
+
+#: inc/front/create-modal.php:196
+msgid "Purchase with paypal for"
+msgstr ""
+
+#: inc/front/create-modal.php:199
+msgid "The download link will be e-mailed to your paypal e-mail."
+msgstr ""
+
+#: inc/front/download-page.php:59
+msgid "File Size"
+msgstr ""
+
+#: inc/front/download-page.php:60
+msgid "Number of Files"
+msgstr ""
+
+#: inc/front/download-page.php:62
+msgid "Created On"
+msgstr ""
+
+#: inc/front/enqueue.php:39
+msgid "We are checking this password."
+msgstr ""
+
+#: inc/front/enqueue.php:42
+msgid "Access Denied!"
+msgstr ""
+
+#: inc/front/enqueue.php:43
+msgid "Try again later."
+msgstr ""
+
+#: inc/front/enqueue.php:44
+msgid "We will retrieve your download."
+msgstr ""
+
+#: inc/front/enqueue.php:45
+msgid "Unable to download file."
+msgstr ""
+
+#: inc/front/enqueue.php:46
+msgid "We are adding your e-mail."
+msgstr ""
+
+#: inc/front/enqueue.php:47
+msgid "Your download will be e-mailed to you."
+msgstr ""
+
+#: inc/front/enqueue.php:48
+msgid "We are adding this message to your wall."
+msgstr ""
+
+#: inc/front/enqueue.php:49
+msgid "Download All Files"
+msgstr ""
+
+#: inc/front/enqueue.php:51
+msgid "Unable to share on your profile."
+msgstr ""
+
+#: inc/front/shortcodes/file-center.php:13
+msgid "File Center"
+msgstr ""
+
+#: inc/front/shortcodes/file-center.php:14
+msgid "The following files have been shared with you."
+msgstr ""
+
+#: inc/menus.php:6
+msgid "Email Subscribers - Onyx Files"
+msgstr ""
+
+#: inc/menus.php:7
+msgid "Email Subscribers"
+msgstr ""
+
+#: inc/menus.php:15
+msgid "Statistics - Onyx Files"
+msgstr ""
+
+#: inc/menus.php:16
+msgid "Statistics"
+msgstr ""
+
+#: inc/menus.php:24
+msgid "Configuration - Onyx Files"
+msgstr ""
+
+#: inc/menus.php:25
+msgid "Configuration"
+msgstr ""
+
+#: inc/pages/email-list-page.php:16
+msgid "Email List"
+msgstr ""
+
+#: inc/pages/email-list-page.php:19
+msgid "Delete Selected"
+msgstr ""
+
+#: inc/pages/email-list-page.php:20
+msgid "Export Selected"
+msgstr ""
+
+#: inc/pages/email-list-page.php:21
+msgid "Export All"
+msgstr ""
+
+#: inc/pages/email-list-page.php:22
+msgid "Export Unique"
+msgstr ""
+
+#: inc/pages/email-list-page.php:28
+msgid "Fields"
+msgstr ""
+
+#: inc/pages/email-list-page.php:29
+msgid "File"
+msgstr ""
+
+#: inc/pages/email-list-page.php:30
+msgid "Date Inserted"
+msgstr ""
+
+#: inc/pages/settings-page.php:34
+msgid "CONFIGURATION"
+msgstr ""
+
+#: inc/pages/settings-page.php:35
+msgid "General"
+msgstr ""
+
+#: inc/pages/settings-page.php:36
+msgid "Social"
+msgstr ""
+
+#: inc/pages/settings-page.php:37
+msgid "Paypal"
+msgstr ""
+
+#: inc/pages/settings-page.php:38
+msgid "Blocked"
+msgstr ""
+
+#: inc/pages/settings-page.php:39
+msgid "Messages"
+msgstr ""
+
+#: inc/pages/settings-page.php:40
+msgid "Storage"
+msgstr ""
+
+#: inc/pages/settings-page.php:41
+msgid "E-mail Fields"
+msgstr ""
+
+#: inc/pages/stats-page.php:38
+msgid "Basic Download Statistics"
+msgstr ""
+
+#: inc/pages/stats-page.php:43
+msgid "Today"
+msgstr ""
+
+#: inc/pages/stats-page.php:44
+msgid "Yesterday"
+msgstr ""
+
+#: inc/pages/stats-page.php:45
+msgid "Past 30 Days"
+msgstr ""
+
+#: inc/pages/stats-page.php:46
+msgid "Past Year"
+msgstr ""
+
+#: inc/pages/stats-page.php:47
+msgid "All time"
+msgstr ""
+
+#: inc/pages/stats-page.php:48
+msgid "Total Earnings"
+msgstr ""
+
+#: inc/pages/stats-page.php:65
+msgid "Last 14 days"
+msgstr ""
+
+#: inc/register-post-type.php:5 inc/register-post-type.php:17
+msgid "Onyx Files"
+msgstr ""
+
+#: inc/register-post-type.php:6
+msgid "Onyx File"
+msgstr ""
+
+#: inc/register-post-type.php:7
+msgid "Add New"
+msgstr ""
+
+#: inc/register-post-type.php:8
+msgid "Add New Onyx File"
+msgstr ""
+
+#: inc/register-post-type.php:9
+msgid "Edit Onyx File"
+msgstr ""
+
+#: inc/register-post-type.php:10
+msgid "New Onyx File"
+msgstr ""
+
+#: inc/register-post-type.php:11
+msgid "All Onyx Files"
+msgstr ""
+
+#: inc/register-post-type.php:12
+msgid "View Onyx File"
+msgstr ""
+
+#: inc/register-post-type.php:13
+msgid "Search Onyx File"
+msgstr ""
+
+#: inc/register-post-type.php:14
+msgid "No Onyx Files found"
+msgstr ""
+
+#: inc/register-post-type.php:15
+msgid "No Onyx Files found in the Trash"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Onyx Files - Download Manager"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://jaskokoyn.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Onyx Files is a powerful & flexible download manager for all your files."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Jasko Koyn"
+msgstr ""

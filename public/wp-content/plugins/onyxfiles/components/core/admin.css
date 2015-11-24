@@ -1,0 +1,82 @@
+.text-center{ text-align: center; }
+.roboto{ font-family: 'Roboto', sans-serif; }
+.roboto *:not(.fa):not([class^="mdi"]){ font-family: 'Roboto', sans-serif; }
+#wp-content-editor-tools{ z-index: 999 !important; }
+#jkof_fileCenterTabs *, #jkof_settings_page *{ box-sizing: border-box; }
+#jkof_upload_dropzone {
+    min-height: 75px; height: auto; background-color: #f4f4f4; border: 2px dashed #dadada;
+    padding: 25px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    cursor: pointer; margin-bottom: 15px;
+}
+#jkof_upload_dropzone .fa{
+    -webkit-animation: color_change 2s infinite alternate;  -moz-animation: color_change 2s infinite alternate;
+    -o-animation: color_change 2s infinite alternate;  animation: color_change 2s infinite alternate;
+}
+#jkof_upload_dropzone p { padding: 10px 0; margin: 0; }
+#jkof_dropzone_preview{ margin-top: 10px; }
+#jkof_dropzone_preview a{ display: block; margin-top: -15px; }
+.btn-block{ width: 100%; }
+
+#jkof_file_center_mb .hndle, #jkof_upload_mb .hndle{ color: #fff; background-color: #26a69a; }
+#jkof_file_center_mb .handlediv, #jkof_upload_mb .handlediv{ color: #fff; }
+#jkof_file_center_mb .tab a:focus{ box-shadow: none; }
+
+#jkof_file_center_mb .jkof_file_container{
+    position: relative; margin-top: 10px; padding: 10px; word-break: break-word;
+    background-color: #f6f6f6; border-radius: 5px; border: 1px solid #ccc;
+}
+.jkof_file_container > .fa{ display: inline-block; margin-bottom: 10px; }
+.jkof_file_container > .btn{ position: absolute; top: 10px; right: 10px; padding: 0 10px; }
+.jkof_file_btn_group{
+    position: absolute;
+    right: 15px;
+}
+.jkof_file_info{
+    margin-top: 10px;
+    word-break: break-word;
+}
+
+.selectLockOpts {
+    margin: 10px 0;
+}
+
+.selectpicker {
+    max-height: 300px !important;
+}
+
+#jkof_upload_mb .text-center { margin-bottom: 10px; }
+#jkof_upload_mb .ui.button{ min-height: 42px; }
+.input_jkofFileInfo{
+    display: none;
+}
+.modal .progress{ margin-top: 15px; margin-bottom: 0; }
+.select2{ display: block !important; }
+i.mce-i-onyxfile{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 18px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+i.mce-i-onyxfile:before{ content: "\f0ed"; }
+#jkof_tmce_file_list{ height: 250px; overflow-y: scroll; border: 1px solid #ccc; margin-bottom: 10px; }
+.jkof_file_list_item{ cursor: pointer; font-weight: bold; padding: 5px; }
+.jkof_file_list_item:hover{ background-color: #eee; }
+.jkof_modal{ z-index: 999999; }
+@-webkit-keyframes color_change {
+    0% { color: #444; } 50% { color: #26a69a; }
+}
+@-moz-keyframes color_change {
+    0% { color: #444; } 50% { color: #26a69a; }
+}
+@-ms-keyframes color_change {
+    0% { color: #444; } 50% { color: #26a69a; }
+}
+@-o-keyframes color_change {
+    0% { color: #444; } 50% { color: #26a69a; }
+}
+@keyframes color_change {
+    0% { color: #444; } 50% { color: #26a69a; }
+}
