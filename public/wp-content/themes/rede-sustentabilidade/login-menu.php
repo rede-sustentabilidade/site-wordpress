@@ -126,7 +126,7 @@ if (is_user_logged_in()) {
     </div>
     <div class="fazer-conexao">
 		<a href="<?php echo wp_registration_url('/'); ?>" class="label borderd">registre-se</a>
-		<a href="<?php echo site_url('/'); ?>?login=comecar" class="label"><strong>login</strong></a>
+    <a href="<?php echo wp_login_url(); ?>" class="label"><strong>login</strong></a>
     </div>
 <?php } ?>
 <?php

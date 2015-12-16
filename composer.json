@@ -33,6 +33,7 @@
 		"wpackagist-plugin/file-away": "dev-trunk",
 		"wpackagist-plugin/query-monitor": "dev-trunk",
 		"wpackagist-plugin/diagnosis": "dev-trunk",
+    "wpackagist-plugin/download-manager": "dev-trunk",
 		"league/oauth2-client": "^1.0"
     },
     "repositories": [
@@ -40,10 +41,10 @@
             "type": "package",
             "package": {
                 "name": "WordPress/WordPress",
-                "version": "4.3",
+                "version": "4.4",
                 "dist": {
                     "type": "zip",
-                    "url": "https://github.com/WordPress/WordPress/archive/4.3.zip"
+                    "url": "https://github.com/WordPress/WordPress/archive/4.4.zip"
                 }
             }
         },
