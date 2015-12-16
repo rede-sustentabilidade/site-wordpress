@@ -34,6 +34,7 @@
 		"wpackagist-plugin/query-monitor": "dev-trunk",
 		"wpackagist-plugin/diagnosis": "dev-trunk",
     "wpackagist-plugin/download-manager": "dev-trunk",
+    "wpackagist-plugin/wordpress-https": "dev-trunk",
 		"league/oauth2-client": "^1.0"
     },
     "repositories": [
