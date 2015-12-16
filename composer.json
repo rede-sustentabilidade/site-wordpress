@@ -35,9 +35,14 @@
 		"wpackagist-plugin/diagnosis": "dev-trunk",
     "wpackagist-plugin/download-manager": "dev-trunk",
     "wpackagist-plugin/wordpress-https": "dev-trunk",
-		"league/oauth2-client": "^1.0"
+		"league/oauth2-client": "^1.0",
+    "koodimonni-language/core-pt_br": "*"
     },
     "repositories": [
+        {
+            "type": "composer",
+            "url": "http://languages.koodimonni.fi"
+        },
         {
             "type": "package",
             "package": {
@@ -45,7 +50,7 @@
                 "version": "4.4",
                 "dist": {
                     "type": "zip",
-                    "url": "https://github.com/WordPress/WordPress/archive/4.4.zip"
+                    "url": "https://br.wordpress.org/wordpress-4.4-pt_BR.zip"
                 }
             }
         },
@@ -59,6 +64,11 @@
             "vendor/WordPress/WordPress/wp-content/mu-plugins/{$name}/": [ "type:wordpress-muplugin" ],
             "vendor/WordPress/WordPress/wp-content/plugins/{$name}/": [ "type:wordpress-plugin" ],
             "vendor/WordPress/WordPress/wp-content/themes/{$name}/": [ "type:wordpress-theme" ]
+        },
+        "dropin-paths": {
+          "vendor/Wordpress/Wordpress/wp-content/languages/": ["vendor:koodimonni-language"],
+          "vendor/Wordpress/Wordpress/wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+          "vendor/Wordpress/Wordpress/wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
         }
     },
     "scripts": {
