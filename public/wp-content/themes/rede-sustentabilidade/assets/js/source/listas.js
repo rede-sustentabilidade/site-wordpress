@@ -23,7 +23,7 @@ jQuery(function ($) {
         }
         data.filters = '';
         if (name) {
-            data.filters += 'fullname,like,%'  + decodeURIComponent(name) + '%';
+            data.filters += 'fullname,ilike,%'  + decodeURIComponent(name) + '%';
 
             if (state) {
                 data.filters += ':';
@@ -47,7 +47,7 @@ jQuery(function ($) {
         $.ajax({
             type: 'POST',
             url: listas.apiURL + '/usuario/filiado/abono',
-            data: JSON.stringify({'user_id': filiadoId, 'quem_abonou': userId}),
+            data: {'user_id': filiadoId, 'quem_abonou': userId},
             dataType: 'json'
         }).always(function () {
             cb(null);
@@ -58,7 +58,7 @@ jQuery(function ($) {
         $.ajax({
             type: 'POST',
             url: listas.apiURL + '/usuario/filiado/confirmacao',
-            data: JSON.stringify({'user_id': filiadoId}),
+            data: {'user_id': filiadoId},
             dataType: 'json'
         }).always(function () {
             cb(null);
@@ -69,7 +69,7 @@ jQuery(function ($) {
         $.ajax({
             type: 'POST',
             url: listas.apiURL + '/usuario/filiado/impugnacao',
-            data: JSON.stringify({'impugnado': filiadoId, 'quem_impugnou': userId, 'motivo': justification}),
+            data: {'impugnado': filiadoId, 'quem_impugnou': userId, 'motivo': justification},
             dataType: 'json'
         }).always(function () {
             cb(null);

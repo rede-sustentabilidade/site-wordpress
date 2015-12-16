@@ -37,8 +37,9 @@ define([
 
             jQuery.ajax({ type: 'GET', url: API_PATH+'/usuario/filiado/'+WP_USER_ID })
             .done(function (data) {
+				console.log(data);
                 $scope.$apply(function(){
-                    $scope.ja_preencheu = true;
+//                    $scope.ja_preencheu = true;
                 });
             });
 
@@ -304,8 +305,6 @@ define([
             // filiado.areasInteresse = areasInteresse;
             // filiado.atuacoesProfissionais = atuacoesProfissionais;
             //$scope.enviado_sucesso = true;
-            console.log(filiado);
-            var json_string = JSON.stringify(filiado);
             // $http.post( API_PATH+'/usuario/filiado',  filiado).
             // success(function (data, status, headers, config) {
             //     $scope.enviado_sucesso = true;
@@ -313,29 +312,31 @@ define([
             // error(function (data, status, headers, config) {
             //     $scope.enviado_falha = false;
             // });
-
             $scope.enviado_sucesso = true;
             jQuery.ajax({
-                type: 'POST',
-                url : API_PATH+'/usuario/filiado',
-                data: json_string,
-                beforeSend:function () {
+				type: "POST",
+				processData: false,
+				url: API_PATH+'/usuario/filiado',
+				data: JSON.stringify(filiado),
+				contentType: 'application/json',
+				dataType: 'json',
+				crossDomain: true
+			})
+			.fail(function (jqXHR, textStatus, errorThrown) {
+				console.log(jqXHR, textStatus, errorThrown, newModel);
+			})
+			.done(function (data, textStatus) {
+					console.log('filiado:', filiado);
+					console.log('data:', data, textStatus);
+					$scope.$apply(function(){
+						$scope.enviado_sucesso = true;
+					});
                     window.scrollTo(0, 0);
-                    console.log('enviando filiado');
-                }
-            })
-            .always(function(data, textStatus, jqXHR) {
-                var status = true;
-                if (data.status && data.status != 200) {
-                    status = false;
-                }
-                $scope.$apply(function(){
-                    $scope.enviado_sucesso = true;
-                });
-            });
+			});
         }
     }]);
 
     return conexaoRedeApp;
 
 });
+
