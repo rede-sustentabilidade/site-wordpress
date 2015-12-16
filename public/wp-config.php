@@ -51,7 +51,7 @@ if (!defined('WP_ENV')) {
       case 'staging.redesustentabilidade.org.br':
         define('WP_ENV', 'staging');
   		define('WP_CACHE', false);
-		define('WP_API_PATH', '//api-v1.staging.redesustentabilidade.org.br');
+		define('WP_API_PATH', 'https://api-v1.staging.redesustentabilidade.org.br');
 		define('OAUTH_REDIRECT_URI',     'https://staging.redesustentabilidade.org.br/');
 		define('OAUTH_CLIENT_ID',        'XnvqtV7U');
 		define('OAUTH_CLIENT_SECRET',    '00UlvMJicqoY8y3qtFoY');
