@@ -59,6 +59,7 @@
             <option class="level-0" value="5" <?php echo (strtoupper($profile->status) == '5' ? 'selected=selected' : ''); ?>>Em Impugnação</option>
             <option class="level-0" value="6" <?php echo (strtoupper($profile->status) == '6' ? 'selected=selected' : ''); ?>>Impugnado</option>
             <option class="level-0" value="7" <?php echo (strtoupper($profile->status) == '7' ? 'selected=selected' : ''); ?>>Desfiliado</option>
+            <option class="level-0" value="8" <?php echo (strtoupper($profile->status) == '8' ? 'selected=selected' : ''); ?>>Aguardando Confirmação</option>
         </select>
       </div>
 
