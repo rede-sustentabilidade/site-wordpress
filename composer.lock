@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5dd2a2f918ccc253eb782d5d0a9c37b7",
-    "content-hash": "1b93909019d407c85a51c46a28786f67",
+    "hash": "41de2c7f230bd5b6c40dc093c45c76e6",
+    "content-hash": "115f8e6d1adce31dbdc25bf217640c1b",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -773,6 +773,27 @@
             "time": "2015-11-23 09:29:16"
         },
         {
+            "name": "wpackagist-plugin/wordpress-https",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-https/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-https.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-https/",
+            "time": "2013-03-31 23:33:59"
+        },
+        {
             "name": "wpackagist-plugin/wp-mail-smtp",
             "version": "0.9.5",
             "source": {
@@ -863,7 +884,8 @@
         "wpackagist-plugin/file-away": 20,
         "wpackagist-plugin/query-monitor": 20,
         "wpackagist-plugin/diagnosis": 20,
-        "wpackagist-plugin/download-manager": 20
+        "wpackagist-plugin/download-manager": 20,
+        "wpackagist-plugin/wordpress-https": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
