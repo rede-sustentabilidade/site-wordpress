@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d7a21d2798d9b1af65afec2dd0e81fe9",
-    "content-hash": "024c1195fb8b723aa3a7765c8b0e4ff8",
+    "hash": "0a965d20fe345dd27c58dfbcf3f6205d",
+    "content-hash": "1683a761c702ecd8e760794c0ea45c65",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -383,66 +383,6 @@
             "time": "2013-04-30 18:00:34"
         },
         {
-            "name": "koodimonni-language/core-pt_br",
-            "version": "4.4",
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/4.4/pt_BR.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "koodimonni/composer-dropin-installer": ">=0.2.3"
-            },
-            "type": "wordpress-language",
-            "description": "Wordpress core translation for Portuguese (Brazil) - pt_br",
-            "keywords": [
-                "Translation",
-                "Wordpress",
-                "core",
-                "pt_br"
-            ]
-        },
-        {
-            "name": "koodimonni/composer-dropin-installer",
-            "version": "0.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Koodimonni/Composer-Dropin-Installer.git",
-                "reference": "618b96fd3bc8c1532610b7f7baedc4e60736a340"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Koodimonni/Composer-Dropin-Installer/zipball/618b96fd3bc8c1532610b7f7baedc4e60736a340",
-                "reference": "618b96fd3bc8c1532610b7f7baedc4e60736a340",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "1.0.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Koodimonni\\Composer\\Dropin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Koodimonni\\Composer\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "WTFPL"
-            ],
-            "authors": [
-                {
-                    "name": "Onni Hakala",
-                    "email": "onni@koodimonni.fi"
-                }
-            ],
-            "description": "Do what the fuck you want with your composer packages aka. Composer Dropin installer. Install packages or part of packages into custom paths without overwriting existing stuff.",
-            "time": "2015-01-04 10:24:12"
-        },
-        {
             "name": "league/oauth2-client",
             "version": "1.1.0",
             "source": {
@@ -555,57 +495,6 @@
             "time": "2015-05-04 20:22:00"
         },
         {
-            "name": "vlucas/phpdotenv",
-            "version": "v1.0.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "56c252d48dce336da97926591aed71805203815b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/56c252d48dce336da97926591aed71805203815b",
-                "reference": "56c252d48dce336da97926591aed71805203815b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Dotenv": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Vance Lucas",
-                    "email": "vance@vancelucas.com",
-                    "homepage": "http://www.vancelucas.com"
-                }
-            ],
-            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
-            "homepage": "http://github.com/vlucas/phpdotenv",
-            "keywords": [
-                "dotenv",
-                "env",
-                "environment"
-            ],
-            "time": "2014-10-16 14:50:21"
-        },
-        {
             "name": "wpackagist-plugin/amazon-ses-and-dkim-mailer",
             "version": "dev-trunk",
             "source": {
@@ -645,27 +534,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/authy-two-factor-authentication/"
-        },
-        {
-            "name": "wpackagist-plugin/baw-moderator-role",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/baw-moderator-role/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/baw-moderator-role.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/baw-moderator-role/",
-            "time": "2015-08-12 00:00:03"
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
@@ -769,26 +637,6 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/query-monitor/",
             "time": "2015-11-22 02:03:41"
-        },
-        {
-            "name": "wpackagist-plugin/sendgrid-email-delivery-simplified",
-            "version": "1.6.7",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/sendgrid-email-delivery-simplified/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/sendgrid-email-delivery-simplified.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/sendgrid-email-delivery-simplified/"
         },
         {
             "name": "wpackagist-plugin/simple-share-buttons-adder",
@@ -897,7 +745,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "wpackagist-plugin/baw-moderator-role": 20,
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
         "wpackagist-plugin/query-monitor": 20,
