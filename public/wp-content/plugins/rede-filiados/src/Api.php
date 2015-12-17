@@ -22,6 +22,7 @@ class Api
         curl_setopt_array($curl, array(
               CURLOPT_URL            => $service_url,
             CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => false,
             //CURLOPT_HEADER         => true,
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_ENCODING       => "",
@@ -29,6 +30,7 @@ class Api
             CURLOPT_CONNECTTIMEOUT => 120,
             CURLOPT_TIMEOUT        => 120,
             CURLOPT_MAXREDIRS      => 10,
+            CURLOPT_SSL_VERIFYHOST => FALSE
         ));
         // Send the request & save response to $resp
         $curl_response = curl_exec($curl);
@@ -74,6 +76,8 @@ class Api
             CURLOPT_CONNECTTIMEOUT => 120,
             CURLOPT_TIMEOUT        => 120,
             CURLOPT_MAXREDIRS      => 10,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => FALSE
         ));
 
         // Send the request & save response to $resp
@@ -135,6 +139,8 @@ class Api
             CURLOPT_CONNECTTIMEOUT => 120,
             CURLOPT_TIMEOUT        => 120,
             CURLOPT_MAXREDIRS      => 10,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => FALSE
         ));
         switch ($method) {
             case 'GET':
@@ -163,7 +169,6 @@ class Api
             }
             return array('httpCode' => $httpCode);
         }
-        // var_dump($response);exit;
 
         return json_decode($response);
     }

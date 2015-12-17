@@ -143,7 +143,6 @@ class Filiados
       }
 
       $data = $api->getProfile($_GET['user_id']);
-
       $viewData = array('profile'=>$data, 'aviso'=>$aviso);
       echo $this->getTemplatePart($this->profileTemplate, $viewData);
     }

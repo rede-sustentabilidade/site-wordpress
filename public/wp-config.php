@@ -63,7 +63,7 @@ if (!defined('WP_ENV')) {
       default:
         define('WP_ENV', 'development');
 		define('WP_CACHE', false);
-		define('WP_API_PATH',            'http://localhost:9000');
+		define('WP_API_PATH',            'http://rede.api:9000');
 		define('OAUTH_REDIRECT_URI',     'http://herokuwp.local/');
 		define('OAUTH_CLIENT_ID',        'bK2QZHSg');
 		define('OAUTH_CLIENT_SECRET',    'SYJInKMAfsToiQDtwCvt');

@@ -27,6 +27,8 @@ class ApiRede
             CURLOPT_CONNECTTIMEOUT => 120,
             CURLOPT_TIMEOUT        => 120,
             CURLOPT_MAXREDIRS      => 10,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => FALSE
         ));
         // Send the request & save response to $resp
         $curl_response = curl_exec($curl);
@@ -72,6 +74,8 @@ class ApiRede
             CURLOPT_CONNECTTIMEOUT => 120,
             CURLOPT_TIMEOUT        => 120,
             CURLOPT_MAXREDIRS      => 10,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => FALSE
         ));
 
         // Send the request & save response to $resp
@@ -132,6 +136,8 @@ class ApiRede
             CURLOPT_CONNECTTIMEOUT => 120,
             CURLOPT_TIMEOUT        => 120,
             CURLOPT_MAXREDIRS      => 10,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => FALSE
         ));
         switch ($method) {
             case 'GET':
