@@ -214,7 +214,7 @@
         <div class="pure-u-1-5">
           <label for="cartao_validade_mes">Validade</label>
           <select id="cartao_validade_mes" name="cartao_validade_mes" class="pure-input-1">
-              <option value="**">Mês</option>
+              <option value="">Mês</option>
               <?php // Preenche com 12 meses do ano
               for ($x=1; $x<=12; $x++ ){
                   $selected = $x == $profile->dados_contribuicao->cartao_validade_mes ? 'selected="selected"' : '';
@@ -226,7 +226,7 @@
         <div class="pure-u-3-5">
           <label for="cartao_validade_ano">&nbsp;</label>
           <select id="cartao_validade_ano" name="cartao_validade_ano" class="pure-input-1-3">
-              <option value="****">Ano</option>
+              <option value="">Ano</option>
               <?php
               $ano_atual = date("Y");
               for ($x=$ano_atual; $x<=$ano_atual+10; $x++ ){
