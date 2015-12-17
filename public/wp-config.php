@@ -45,7 +45,7 @@ if (!defined('WP_ENV')) {
       case 'redesustentabilidade.org.br':
         define('WP_ENV', 'production');
   		define('WP_CACHE', true);
-		define('WP_API_PATH', '//rededustentabilidade.org.br/api/v1');
+		define('WP_API_PATH', 'https://api-v1.redesustentabilidade.org.br/');
         break;
 
       case 'staging.redesustentabilidade.org.br':
