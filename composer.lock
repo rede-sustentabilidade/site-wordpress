@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2cb63d729960ae58e38ccffae1ce8fad",
-    "content-hash": "93c4b08b345d8d8770a5ea51db33cec2",
+    "hash": "d7a21d2798d9b1af65afec2dd0e81fe9",
+    "content-hash": "024c1195fb8b723aa3a7765c8b0e4ff8",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -606,6 +606,27 @@
             "time": "2014-10-16 14:50:21"
         },
         {
+            "name": "wpackagist-plugin/amazon-ses-and-dkim-mailer",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/amazon-ses-and-dkim-mailer/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-ses-and-dkim-mailer.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/amazon-ses-and-dkim-mailer/",
+            "time": "2014-04-18 02:05:20"
+        },
+        {
             "name": "wpackagist-plugin/authy-two-factor-authentication",
             "version": "2.5.5",
             "source": {
@@ -686,48 +707,6 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/diagnosis/",
             "time": "2015-11-19 12:43:06"
-        },
-        {
-            "name": "wpackagist-plugin/download-manager",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/download-manager/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/download-manager.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/download-manager/",
-            "time": "2015-11-25 21:06:00"
-        },
-        {
-            "name": "wpackagist-plugin/file-away",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/file-away/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/file-away.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/file-away/",
-            "time": "2015-08-25 17:26:11"
         },
         {
             "name": "wpackagist-plugin/jetpack",
@@ -854,26 +833,6 @@
             "time": "2013-03-31 23:33:59"
         },
         {
-            "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "0.9.5",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/0.9.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.0.9.5.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
-        },
-        {
             "name": "wpackagist-plugin/wp-permastructure",
             "version": "1.3",
             "source": {
@@ -941,11 +900,10 @@
         "wpackagist-plugin/baw-moderator-role": 20,
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
-        "wpackagist-plugin/file-away": 20,
         "wpackagist-plugin/query-monitor": 20,
         "wpackagist-plugin/diagnosis": 20,
-        "wpackagist-plugin/download-manager": 20,
-        "wpackagist-plugin/wordpress-https": 20
+        "wpackagist-plugin/wordpress-https": 20,
+        "wpackagist-plugin/amazon-ses-and-dkim-mailer": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

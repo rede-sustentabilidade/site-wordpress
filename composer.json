@@ -26,17 +26,15 @@
 		"wpackagist-theme/pinbin": "1.4.*",
 		"wpackagist-plugin/baw-moderator-role": "dev-trunk",
 		"wpackagist-plugin/contact-form-7": "4.0.2",
-		"wpackagist-plugin/wp-mail-smtp": "0.9.5",
 		"wpackagist-plugin/wp-permastructure": "1.3",
 		"wpackagist-plugin/link-manager": "dev-trunk",
 		"wpackagist-plugin/simple-share-buttons-adder": "dev-trunk",
-		"wpackagist-plugin/file-away": "dev-trunk",
 		"wpackagist-plugin/query-monitor": "dev-trunk",
 		"wpackagist-plugin/diagnosis": "dev-trunk",
-    "wpackagist-plugin/download-manager": "dev-trunk",
-    "wpackagist-plugin/wordpress-https": "dev-trunk",
+    	"wpackagist-plugin/wordpress-https": "dev-trunk",
 		"league/oauth2-client": "^1.0",
-    "koodimonni-language/core-pt_br": "*"
+	    "koodimonni-language/core-pt_br": "*",
+		"wpackagist-plugin/amazon-ses-and-dkim-mailer": "dev-trunk"
     },
     "repositories": [
         {
