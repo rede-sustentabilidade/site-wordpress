@@ -9,7 +9,11 @@ class ApiRede
     protected function __construct()
     {
         $this->apiPath = WP_API_PATH;
-    }
+	}
+
+	public function entrouFiliacao() {
+		return true;
+	}
 
     public function filiadoFormWasFilled($user_id)
     {
