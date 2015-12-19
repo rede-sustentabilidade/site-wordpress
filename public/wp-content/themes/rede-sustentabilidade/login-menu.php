@@ -2,6 +2,7 @@
 
 if ($_GET['logout']) {
 	unset($_COOKIE['access_token']);
+	setcookie('access_token', null, -1);
 }
 
 if (isset($_COOKIE['access_token'])) {
@@ -115,7 +116,7 @@ if (isset($_COOKIE['access_token'])) {
 <?php } else if (isset($_GET['code'])) {
     try {
 
-	$provider = new \League\OAuth2\Client\Provider\GenericProvider([
+	$provider = new RsProvider([
 		'clientId'                => OAUTH_CLIENT_ID,    // The client ID assigned to you by the provider
 		'clientSecret'            => OAUTH_CLIENT_SECRET,   // The client password assigned to you by the provider
 		'redirectUri'             => OAUTH_REDIRECT_URI,
@@ -163,13 +164,14 @@ if (isset($_COOKIE['access_token'])) {
 } else if (isset($_GET['login'])) {
 // If we don't have an authorization code then get one
 //} else if (!isset($_GET['code'])) {
-	$provider = new \League\OAuth2\Client\Provider\GenericProvider([
+	$provider = new RsProvider([
 		'clientId'                => OAUTH_CLIENT_ID,    // The client ID assigned to you by the provider
 		'clientSecret'            => OAUTH_CLIENT_SECRET,   // The client password assigned to you by the provider
 		'redirectUri'             => OAUTH_REDIRECT_URI,
 		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
 		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
-		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
+		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE,
+		'verify'                  => false
 	]);
 
     // Fetch the authorization URL from the provider; this returns the

@@ -1,5 +1,6 @@
 <?php
 require_once("utilidades/ApiRede.php");
+require_once("utilidades/RsProvider.php");
 
 function wpr_remove_custom_actions() {
     remove_action( 'after_setup_theme', 'pinbin_options_init' );
