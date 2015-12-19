@@ -124,7 +124,7 @@ if (isset($_COOKIE['access_token'])) {
 		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
 		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE,
 		'verify'                  => false
-	]);
+	], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
         // Try to get an access token using the authorization code grant.
         $accessToken = $provider->getAccessToken('authorization_code', [
             'code' => $_GET['code']
@@ -172,7 +172,7 @@ if (isset($_COOKIE['access_token'])) {
 		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
 		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE,
 		'verify'                  => false
-	]);
+	], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
 
     // Fetch the authorization URL from the provider; this returns the
     // urlAuthorize option and generates and applies any necessary parameters
