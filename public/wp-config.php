@@ -52,6 +52,7 @@ if (!defined('WP_ENV')) {
         define('WP_ENV', 'staging');
   		define('WP_CACHE', false);
 		define('WP_API_PATH', 'https://api-v1.staging.redesustentabilidade.org.br');
+		define('WP_PASSPORT_PATH',       'https://passaporte.staging.redesustentabilidade.org.br');
 		define('OAUTH_REDIRECT_URI',     'https://staging.redesustentabilidade.org.br/');
 		define('OAUTH_CLIENT_ID',        'XnvqtV7U');
 		define('OAUTH_CLIENT_SECRET',    '00UlvMJicqoY8y3qtFoY');
@@ -64,7 +65,7 @@ if (!defined('WP_ENV')) {
         define('WP_ENV', 'development');
 		define('WP_CACHE', false);
 		define('WP_API_PATH',            'http://rede.api:9000');
-//		define('WP_PASSPORT_PATH',       'http://rede.passaporte:3000');
+		define('WP_PASSPORT_PATH',       'http://rede.passaporte:3000');
 		define('OAUTH_REDIRECT_URI',     'http://rede.site/');
 		define('OAUTH_CLIENT_ID',        'LiwFKQ0b');
 		define('OAUTH_CLIENT_SECRET',    'vEdVSdklM6Y1Vo5HFWkz');
