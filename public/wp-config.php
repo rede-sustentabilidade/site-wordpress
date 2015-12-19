@@ -65,13 +65,20 @@ if (!defined('WP_ENV')) {
         define('WP_ENV', 'development');
 		define('WP_CACHE', false);
 		define('WP_API_PATH',            'http://rede.api:9000');
-		define('WP_PASSPORT_PATH',       'http://rede.passaporte:3000');
+		define('WP_PASSPORT_PATH',       'https://passaporte.staging.redesustentabilidade.org.br');
 		define('OAUTH_REDIRECT_URI',     'http://rede.site/');
-		define('OAUTH_CLIENT_ID',        'LiwFKQ0b');
-		define('OAUTH_CLIENT_SECRET',    'vEdVSdklM6Y1Vo5HFWkz');
-		define('OAUTH_URL_AUTHORIZE',    'http://rede.passaporte:3000/oauth/authorization');
-		define('OAUTH_URL_ACCESS_TOKEN', 'http://rede.passaporte:3000/oauth/token');
-		define('OAUTH_URL_RESOURCE',     'http://rede.passaporte:3000/oauth/resource');
+		define('OAUTH_CLIENT_ID',        'XnvqtV7U');
+		define('OAUTH_CLIENT_SECRET',    '00UlvMJicqoY8y3qtFoY');
+		define('OAUTH_URL_AUTHORIZE',    'https://passaporte.staging.redesustentabilidade.org.br/oauth/authorization');
+		define('OAUTH_URL_ACCESS_TOKEN', 'https://passaporte.staging.redesustentabilidade.org.br/oauth/token');
+		define('OAUTH_URL_RESOURCE',     'https://passaporte.staging.redesustentabilidade.org.br/oauth/resource');
+		/* define('WP_PASSPORT_PATH',       'http://rede.passaporte:3000'); */
+		/* define('OAUTH_REDIRECT_URI',     'http://rede.site/'); */
+		/* define('OAUTH_CLIENT_ID',        'LiwFKQ0b'); */
+		/* define('OAUTH_CLIENT_SECRET',    'vEdVSdklM6Y1Vo5HFWkz'); */
+		/* define('OAUTH_URL_AUTHORIZE',    'http://rede.passaporte:3000/oauth/authorization'); */
+		/* define('OAUTH_URL_ACCESS_TOKEN', 'http://rede.passaporte:3000/oauth/token'); */
+		/* define('OAUTH_URL_RESOURCE',     'http://rede.passaporte:3000/oauth/resource'); */
 	}
 }
 
