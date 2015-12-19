@@ -121,7 +121,8 @@ if (isset($_COOKIE['access_token'])) {
 		'redirectUri'             => OAUTH_REDIRECT_URI,
 		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
 		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
-		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
+		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE,
+		'verify'                  => false
 	]);
         // Try to get an access token using the authorization code grant.
         $accessToken = $provider->getAccessToken('authorization_code', [
