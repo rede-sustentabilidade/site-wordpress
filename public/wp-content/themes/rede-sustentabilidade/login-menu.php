@@ -3,11 +3,41 @@
 if ($_GET['logout']) {
 	unset($_COOKIE['access_token']);
 	setcookie('access_token', null, -1);
+	setcookie('usuario_logado', null, -1);
 }
 
 if (isset($_COOKIE['access_token'])) {
     $ApiRede = ApiRede::getInstance();
     //$filiado = $ApiRede->filiadoFormWasFilled($current_user->ID); // trocar para e-mail
+	$provider = new RsProvider([
+		'clientId'                => OAUTH_CLIENT_ID,    // The client ID assigned to you by the provider
+		'clientSecret'            => OAUTH_CLIENT_SECRET,   // The client password assigned to you by the provider
+		'redirectUri'             => OAUTH_REDIRECT_URI,
+		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
+		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
+		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
+	], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
+	$accessToken = $_COOKIE['access_token'];
+	$request = $provider->getAuthenticatedRequest(
+		'GET',
+		'http://rede.passaporte:3000/user',
+		$accessToken
+	);
+	try {
+		$client = new \GuzzleHttp\Client(['base_uri' => 'http://rede.passaporte:3000/']);
+		$response = $client->send($request);
+		$usuario = $response->getBody()->getContents();
+
+		if (!isset($_COOKIE['usuario'])) {
+			setcookie('usuario', $usuario);
+		}
+		$usuario = json_decode($usuario);
+	} catch (\GuzzleHttp\Exception\ClientException $e) {
+		unset($_COOKIE['access_token']);
+		setcookie('access_token', null, -1);
+		setcookie('usuario', null, -1);
+		header('Location: /?login=1');
+	}
 ?>
 	<script>API_USER_STATUS = '';</script>
 	<script>WP_USER_ROLE = '';</script>
@@ -16,7 +46,7 @@ if (isset($_COOKIE['access_token'])) {
 			<a href="<?php echo site_url(); ?>/entenda-a-filiacao/" class="label">filie-se</a>
 		</div>
 		<div class="fazer-conexao">
-			<a class="welcome-message label">Nome do usuário</a>
+		<a class="welcome-message label"><?php echo $usuario->username; ?></a>
 			<div class="dropdown">
 				<!--<div class="seta"></div>-->
 				<div class="item">
@@ -36,7 +66,7 @@ if (isset($_COOKIE['access_token'])) {
 			<a href="<?php echo site_url(); ?>/entenda-abono-e-impugnacao/" class="label">ajuda</a>
 		</div>
 		<div class="fazer-conexao">
-			<a class="welcome-message label">Nome do filiado</a>
+			<a class="welcome-message label"><?php echo $usuario->username; ?></a>
 			<div class="dropdown">
 				<!--<div class="seta"></div>-->
 				<div class="item">
@@ -122,8 +152,7 @@ if (isset($_COOKIE['access_token'])) {
 		'redirectUri'             => OAUTH_REDIRECT_URI,
 		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
 		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
-		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE,
-		'verify'                  => false
+		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
 	], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
         // Try to get an access token using the authorization code grant.
         $accessToken = $provider->getAccessToken('authorization_code', [
@@ -170,8 +199,7 @@ if (isset($_COOKIE['access_token'])) {
 		'redirectUri'             => OAUTH_REDIRECT_URI,
 		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
 		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
-		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE,
-		'verify'                  => false
+		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
 	], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
 
     // Fetch the authorization URL from the provider; this returns the
