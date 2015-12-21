@@ -7,23 +7,21 @@ if ($_GET['logout']) {
 }
 
 if (isset($_COOKIE['access_token'])) {
-    $ApiRede = ApiRede::getInstance();
-    //$filiado = $ApiRede->filiadoFormWasFilled($current_user->ID); // trocar para e-mail
-	$provider = new RsProvider([
-		'clientId'                => OAUTH_CLIENT_ID,    // The client ID assigned to you by the provider
-		'clientSecret'            => OAUTH_CLIENT_SECRET,   // The client password assigned to you by the provider
-		'redirectUri'             => OAUTH_REDIRECT_URI,
-		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
-		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
-		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
-	], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
-	$accessToken = $_COOKIE['access_token'];
-	$request = $provider->getAuthenticatedRequest(
-		'GET',
-		'http://rede.passaporte:3000/user',
-		$accessToken
-	);
 	try {
+		$provider = new RsProvider([
+			'clientId'                => OAUTH_CLIENT_ID,
+			'clientSecret'            => OAUTH_CLIENT_SECRET,
+			'redirectUri'             => OAUTH_REDIRECT_URI,
+			'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
+			'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
+			'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
+		], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
+		$accessToken = $_COOKIE['access_token'];
+		$request = $provider->getAuthenticatedRequest(
+			'GET',
+			'http://rede.passaporte:3000/user',
+			$accessToken
+		);
 		$client = new \GuzzleHttp\Client(['base_uri' => 'http://rede.passaporte:3000/']);
 		$response = $client->send($request);
 		$usuario = $response->getBody()->getContents();
@@ -32,6 +30,9 @@ if (isset($_COOKIE['access_token'])) {
 			setcookie('usuario', $usuario);
 		}
 		$usuario = json_decode($usuario);
+
+		$ApiRede = ApiRede::getInstance();
+		$filiado = $ApiRede->getProfile($usuario->id); // trocar para e-mail
 	} catch (\GuzzleHttp\Exception\ClientException $e) {
 		unset($_COOKIE['access_token']);
 		setcookie('access_token', null, -1);
@@ -39,150 +40,118 @@ if (isset($_COOKIE['access_token'])) {
 		header('Location: /?login=1');
 	}
 ?>
-	<script>API_USER_STATUS = '';</script>
-	<script>WP_USER_ROLE = '';</script>
-	<?php if (!$ApiRede->entrouFiliacao()) { ?>
-		<div class="filie">
-			<a href="<?php echo site_url(); ?>/entenda-a-filiacao/" class="label">filie-se</a>
-		</div>
-		<div class="fazer-conexao">
+<script>API_USER_STATUS = '';</script>
+<script>WP_USER_ROLE = '';</script>
+<?php if (count($filiado) == 0) { ?>
+	<div class="filie">
+		<a href="<?php echo site_url(); ?>/entenda-a-filiacao/" class="label">filie-se</a>
+	</div>
+	<div class="fazer-conexao">
 		<a class="welcome-message label"><?php echo $usuario->username; ?></a>
-			<div class="dropdown">
-				<!--<div class="seta"></div>-->
-				<div class="item">
-					<i class="icon-user 2x"></i>
-					<p>Meu perfil</p>
-					<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
-				</div>
-				<div class="item">
-					<i class="icon-tipo-perfil"></i>
-					<p>Status: Apoiador</p>
-					<a href="<?php echo site_url(); ?>/entenda-a-filiacao/">filie-se</a>
-				</div>
-			</div>
-		</div>
-	<?php } else { ?>
-		<div class="filie">
-			<a href="<?php echo site_url(); ?>/entenda-abono-e-impugnacao/" class="label">ajuda</a>
-		</div>
-		<div class="fazer-conexao">
-			<a class="welcome-message label"><?php echo $usuario->username; ?></a>
-			<div class="dropdown">
-				<!--<div class="seta"></div>-->
-				<div class="item">
-					<i class="icon-user 2x"></i>
-					<p>Meu perfil</p>
-					<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
-				</div>
-	<?php if ((get_current_user_role() == 'Editor regional') || (get_current_user_role() == 'Administrator')) { ?>
-				<script>var WP_USER_STATE = '<?php echo getStateFromUserId(get_current_user_id()); ?>';</script>
-				<div class="item">
-					<p><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
-				</div>
-	<?php } ?>
-	<?php if (get_current_user_role() == 'Administrator') { ?>
+		<div class="dropdown">
+			<!--<div class="seta"></div>-->
 			<div class="item">
-			  <i class="icon-tipo-perfil"></i>
-			  <p>Status: Super Admin</p>
+				<i class="icon-user 2x"></i>
+				<p>Meu perfil</p>
+				<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
 			</div>
 			<div class="item">
-			  <p><a class="link-master" href="/listas/#/admin/1/50/nome/asc">Filiados para admin</a></p>
+				<i class="icon-tipo-perfil"></i>
+				<p>Status: Apoiador</p>
+				<a href="<?php echo site_url(); ?>/entenda-a-filiacao/">filie-se</a>
 			</div>
-	<?php } ?>
-	<?php if (get_current_user_role() == 'Subscriber' || get_current_user_role() == 'Filiado') {
-		/* if (count($filiado) != 0) { */
-		/*     $status = $filiado->status; */
-		/* } else { */
-		/*     $status = false; */
-		/* } */
-	?>
-			<script>API_USER_STATUS = '<?php echo $status ?>';</script>
-			<?php if ($status == 1) { ?>
-				<div class="item">
+		</div>
+	</div>
+<?php } else { ?>
+	<div class="filie">
+		<a href="<?php echo site_url(); ?>/entenda-abono-e-impugnacao/" class="label">ajuda</a>
+	</div>
+	<div class="fazer-conexao">
+		<a class="welcome-message label"><?php echo $filiado->fullname; ?></a>
+		<div class="dropdown">
+			<!--<div class="seta"></div>-->
+			<div class="item">
+				<i class="icon-user 2x"></i>
+				<p>Meu perfil</p>
+				<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
+			</div>
+<?php if ($filiado->status > 10) { ?>
+			<script>var WP_USER_STATE = '<?php echo $filiado->uf ?>';</script>
+			<div class="item">
+				<p><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
+			</div>
+<?php } ?>
+<?php if ($filiado->status == 99) { ?>
+			<div class="item">
+				<i class="icon-tipo-perfil"></i>
+				<p>Status: Super Admin</p>
+			</div>
+			<div class="item">
+				<p><a class="link-master" href="/listas/#/admin/1/50/nome/asc">Filiados para admin</a></p>
+			</div>
+<?php } ?>
+		<script>API_USER_STATUS = '<?php echo $status ?>';</script>
+		<?php if ($filiado->status == 1) { ?>
+			<div class="item">
 				<i class="icon-tipo-perfil"></i>
 				<p>Status: Pré-filiado</p>
 				<a href="<?php echo site_url(); ?>/entenda-a-filiacao/">entenda</a>
-				</div>
-				<div class="item">
+			</div>
+			<div class="item">
 				<p><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
-				</div>
-			<?php } elseif ($status == 2) { ?>
-				<div class="item">
+			</div>
+		<?php } elseif ($filiado->status == 2) { ?>
+			<div class="item">
 				<i class="icon-tipo-perfil"></i>
 				<p>Status: Abonado</p>
 				<a href="<?php echo site_url(); ?>/entenda-a-filiacao/">entenda</a>
-				</div>
-				<div class="item">
+			</div>
+			<div class="item">
 				<p><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
-				</div>
-			<?php } elseif ($status == 3) { ?>
-				<div class="item">
+			</div>
+		<?php } elseif ($filiado->status == 3) { ?>
+			<div class="item">
 				<i class="icon-tipo-perfil"></i>
 				<p>Status: Filiado</p>
 				<a href="<?php echo site_url(); ?>/entenda-abono-e-impugnacao/">ajuda</a>
-				</div>
-				<div class="item">
+			</div>
+			<div class="item">
 				<i class="icon-download"></i>
 				<p>Arquivos úteis aos filiados</p>
 				<a href="/arquivos-uteis/">baixar</a>
-				</div>
-				<div class="item">
+			</div>
+			<div class="item">
 				<p><a class="link-master" href="/listas/#/abonos/1/50/nome/asc">Pré-filiados aguardando abono</a></p>
-				</div>
-				<div class="item">
+			</div>
+			<div class="item">
 				<p><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-filiados em fase de avaliação</a></p>
-				</div>
-				<div class="item">
+			</div>
+			<div class="item">
 				<p><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
-				</div>
-			<?php } ?>
+			</div>
 		<?php } ?>
 			<div class="item">
-			  <a href="<?php echo site_url(); ?>/?logout=1">sair</a>
+				<a href="<?php echo site_url(); ?>/?logout=1">sair</a>
 			</div>
-		  </div>
 		</div>
-	<?php } ?>
+	</div>
+<?php } ?>
 <?php } else if (isset($_GET['code'])) {
-    try {
-
-	$provider = new RsProvider([
-		'clientId'                => OAUTH_CLIENT_ID,    // The client ID assigned to you by the provider
-		'clientSecret'            => OAUTH_CLIENT_SECRET,   // The client password assigned to you by the provider
-		'redirectUri'             => OAUTH_REDIRECT_URI,
-		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
-		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
-		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
-	], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
+	try {
+		$provider = new RsProvider([
+			'clientId'                => OAUTH_CLIENT_ID,
+			'clientSecret'            => OAUTH_CLIENT_SECRET,
+			'redirectUri'             => OAUTH_REDIRECT_URI,
+			'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
+			'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
+			'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
+		], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
         // Try to get an access token using the authorization code grant.
         $accessToken = $provider->getAccessToken('authorization_code', [
             'code' => $_GET['code']
         ]);
-
 		setcookie('access_token', $accessToken);
-        // We have an access token, which we may use in authenticated
-        // requests against the service provider's API.
-        /* echo $accessToken->getToken() . "\n"; */
-        /* echo $accessToken->getRefreshToken() . "\n"; */
-        /* echo $accessToken->getExpires() . "\n"; */
-        /* echo ($accessToken->hasExpired() ? 'expired' : 'not expired') . "\n"; */
-
-        // Using the access token, we may look up details about the
-        // resource owner.
-        /* $resourceOwner = $provider->getResourceOwner($accessToken); */
-
-        /* var_dump($resourceOwner->toArray()); */
-
-        // The provider provides a way to get an authenticated API request for
-        // the service, using the access token; it returns an object conforming
-        // to Psr\Http\Message\RequestInterface.
-        /* $request = $provider->getAuthenticatedRequest( */
-        /*     'GET', */
-        /*     'http://rede.passporte:3000/restricted', */
-        /*     $accessToken */
-		/* ); */
-		/* var_dump($request); */
-
+		header('Location: /');
     } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
 		// Failed to get the access token or user details.
 		/* var_dump($e); */
@@ -191,11 +160,9 @@ if (isset($_COOKIE['access_token'])) {
     }
 
 } else if (isset($_GET['login'])) {
-// If we don't have an authorization code then get one
-//} else if (!isset($_GET['code'])) {
 	$provider = new RsProvider([
-		'clientId'                => OAUTH_CLIENT_ID,    // The client ID assigned to you by the provider
-		'clientSecret'            => OAUTH_CLIENT_SECRET,   // The client password assigned to you by the provider
+		'clientId'                => OAUTH_CLIENT_ID,
+		'clientSecret'            => OAUTH_CLIENT_SECRET,
 		'redirectUri'             => OAUTH_REDIRECT_URI,
 		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
 		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
