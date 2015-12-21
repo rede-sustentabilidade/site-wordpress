@@ -40,6 +40,7 @@ if (isset($_COOKIE['access_token'])) {
 		header('Location: /?login=1');
 	}
 ?>
+
 <script>API_USER_STATUS = '';</script>
 <script>WP_USER_ROLE = '';</script>
 <?php if (count($filiado) == 0) { ?>
@@ -75,19 +76,33 @@ if (isset($_COOKIE['access_token'])) {
 				<p>Meu perfil</p>
 				<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
 			</div>
-<?php if ($filiado->status > 10) { ?>
-			<script>var WP_USER_STATE = '<?php echo $filiado->uf ?>';</script>
-			<div class="item">
-				<p><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
-			</div>
-<?php } ?>
 <?php if ($filiado->status == 99) { ?>
 			<div class="item">
 				<i class="icon-tipo-perfil"></i>
 				<p>Status: Super Admin</p>
 			</div>
 			<div class="item">
+				<i class="icon-download"></i>
+				<p>Arquivos úteis aos filiados</p>
+				<a href="/arquivos-uteis/">baixar</a>
+			</div>
+			<div class="item">
+				<p><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
+			</div>
+			<div class="item">
 				<p><a class="link-master" href="/listas/#/admin/1/50/nome/asc">Filiados para admin</a></p>
+			</div>
+			<div class="item">
+				<p><a class="link-master" href="/listas/#/abonos/1/50/nome/asc">Pré-filiados aguardando abono</a></p>
+			</div>
+			<div class="item">
+				<p><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-filiados em fase de avaliação</a></p>
+			</div>
+<?php } ?>
+<?php if ($filiado->status > 10) { ?>
+			<script>var WP_USER_STATE = '<?php echo $filiado->uf ?>';</script>
+			<div class="item">
+				<p><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
 			</div>
 <?php } ?>
 		<script>API_USER_STATUS = '<?php echo $status ?>';</script>
