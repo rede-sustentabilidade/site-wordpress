@@ -3,7 +3,7 @@
 if ($_GET['logout']) {
 	unset($_COOKIE['access_token']);
 	setcookie('access_token', null, -1);
-	setcookie('usuario_logado', null, -1);
+	setcookie('usuario', null, -1);
 }
 
 if (isset($_COOKIE['access_token'])) {

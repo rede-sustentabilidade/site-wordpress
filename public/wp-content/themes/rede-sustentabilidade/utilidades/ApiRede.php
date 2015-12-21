@@ -63,7 +63,7 @@ class ApiRede
     }
 
     public function updateProfile(array $profile)
-    {
+	{
         return $this->call('/profile/'.$profile['user_id'], 'POST', $profile);
     }
 
