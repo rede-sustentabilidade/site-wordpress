@@ -41,12 +41,12 @@
         <meta property="og:type" content="website">
         <meta property="og:image" content="<?php echo content_url('uploads/2013/11/rede.png'); ?>">
         <?php endif; ?>
-        <?php global $current_user; get_currentuserinfo(); ?>
+        <?php global $usuario; ?>
         <script>
 		var
 		API_PATH = <?php echo json_encode(WP_API_PATH); ?>,
         SERVER_DOMAIN = <?php echo json_encode($_SERVER['SERVER_NAME']); ?>,
-        WP_USER_ID = <?php echo json_encode($current_user->ID); ?>,
+        WP_USER_ID = <?php echo $usuario->id; ?>,
         THEME_URL = <?php echo json_encode(get_stylesheet_directory_uri()); ?>;
         </script>
         <?php wp_head(); ?>

@@ -65,7 +65,6 @@ if (!defined('WP_ENV')) {
         define('WP_ENV', 'development');
 		define('WP_CACHE', false);
 		define('WP_API_PATH',            'http://rede.api:9000');
-		define('WP_PASSPORT_PATH',       'https://passaporte.staging.redesustentabilidade.org.br');
 		define('WP_PASSPORT_PATH',       'http://rede.passaporte:3000');
 		define('OAUTH_REDIRECT_URI',     'http://rede.site/');
 		define('OAUTH_CLIENT_ID',        'LiwFKQ0b');

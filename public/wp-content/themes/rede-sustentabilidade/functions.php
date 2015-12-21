@@ -170,8 +170,9 @@ function custom_post_type_sugestao() {
 // Hook into the 'init' action
 add_action( 'init', 'custom_post_type_sugestao', 0 );
 
-global $current_user;
-get_currentuserinfo();
+if (isset($_COOKIE['usuario'])) {
+	$usuario = json_decode(stripslashes($_COOKIE['usuario']));
+}
 
 ////////////////////
 function new_wp_login_url() {

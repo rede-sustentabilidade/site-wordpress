@@ -3,8 +3,7 @@
 Template Name: Formulário do Perfil
 */
 
-$usuario = json_decode(stripslashes($_COOKIE['usuario']));
-
+global $usuario;
 function doUserUpdate()
 {
 	global $usuario;
@@ -42,7 +41,7 @@ function doUserUpdate()
 		$response = ApiRede::getInstance()->updateProfile($profile);
         if (!empty($response->errors)) {
             $apiErrors = 'Os seguintes campos contém dados inválidos ou estão vazios: ' . implode(', ', array_keys((array) $response->errors));
-        } else if (!empty($response->httpCode)) {
+        } else if (!empty($response['httpCode'])) {
             $apiErrors = 'Os dados não foram salvos. Por favor, verifique os dados informados e tente novamente.';
         }
     }

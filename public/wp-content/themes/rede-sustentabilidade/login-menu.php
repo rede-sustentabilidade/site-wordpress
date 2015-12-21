@@ -30,7 +30,6 @@ if (isset($_COOKIE['access_token'])) {
 			setcookie('usuario', $usuario);
 		}
 		$usuario = json_decode($usuario);
-
 		$ApiRede = ApiRede::getInstance();
 		$filiado = $ApiRede->getProfile($usuario->id); // trocar para e-mail
 	} catch (\GuzzleHttp\Exception\ClientException $e) {
@@ -41,9 +40,8 @@ if (isset($_COOKIE['access_token'])) {
 	}
 ?>
 
-<script>API_USER_STATUS = '';</script>
-<script>WP_USER_ROLE = '';</script>
-<?php if (count($filiado) == 0) { ?>
+<script>API_USER_STATUS = 0;</script>
+<?php if ($filiado['httpCode'] == 404) { ?>
 	<div class="filie">
 		<a href="<?php echo site_url(); ?>/entenda-a-filiacao/" class="label">filie-se</a>
 	</div>
@@ -57,7 +55,7 @@ if (isset($_COOKIE['access_token'])) {
 				<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
 			</div>
 			<div class="item">
-				<i class="icon-tipo-perfil"></i>
+				<i class="icon-tipo-perfil 2x"></i>
 				<p>Status: Apoiador</p>
 				<a href="<?php echo site_url(); ?>/entenda-a-filiacao/">filie-se</a>
 			</div>
@@ -105,7 +103,7 @@ if (isset($_COOKIE['access_token'])) {
 				<p><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
 			</div>
 <?php } ?>
-		<script>API_USER_STATUS = '<?php echo $status ?>';</script>
+		<script>API_USER_STATUS = '<?php echo $filiado->status ?>';</script>
 		<?php if ($filiado->status == 1) { ?>
 			<div class="item">
 				<i class="icon-tipo-perfil"></i>
@@ -204,8 +202,7 @@ if (isset($_COOKIE['access_token'])) {
 
 /* } */
 } else { ?>
-    <script>API_USER_STATUS = '';</script>
-    <script>WP_USER_ROLE = '';</script>
+    <script>API_USER_STATUS = 0;</script>
     <div class="filie">
       <a href="<?php echo site_url(); ?>/entenda-a-filiacao/" class="label">filie-se</a>
     </div>
