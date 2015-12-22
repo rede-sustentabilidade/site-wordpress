@@ -41,7 +41,7 @@ if (isset($_COOKIE['access_token'])) {
 ?>
 
 <script>API_USER_STATUS = 0;</script>
-<?php if ($filiado['httpCode'] == 404) { ?>
+<?php if ((is_array($filiado)) && ($filiado['httpCode'] == 404)) { ?>
 	<div class="filie">
 		<a href="<?php echo site_url(); ?>/entenda-a-filiacao/" class="label">filie-se</a>
 	</div>

@@ -9,7 +9,7 @@ function doUserUpdate()
 	global $usuario;
     $apiErrors = null;
 	$profile = ApiRede::getInstance()->getProfile($usuario->id);
-    if (count($profile) > 0) {
+	if ((is_array($profile)) && ($profile['httpCode'] == 404)) {
         $contrib = (array) $profile->dados_contribuicao;
         $profile = (array) $profile;
         unset($profile['dados_contribuicao']);
@@ -41,7 +41,7 @@ function doUserUpdate()
 		$response = ApiRede::getInstance()->updateProfile($profile);
         if (!empty($response->errors)) {
             $apiErrors = 'Os seguintes campos contém dados inválidos ou estão vazios: ' . implode(', ', array_keys((array) $response->errors));
-        } else if (!empty($response['httpCode'])) {
+        } else if ((is_array($response)) && (!empty($response['httpCode']))) {
             $apiErrors = 'Os dados não foram salvos. Por favor, verifique os dados informados e tente novamente.';
         }
     }
