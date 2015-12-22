@@ -19,10 +19,10 @@ if (isset($_COOKIE['access_token'])) {
 		$accessToken = $_COOKIE['access_token'];
 		$request = $provider->getAuthenticatedRequest(
 			'GET',
-			'http://rede.passaporte:3000/user',
+			WP_PASSPORT_PATH . '/user',
 			$accessToken
 		);
-		$client = new \GuzzleHttp\Client(['base_uri' => 'http://rede.passaporte:3000/']);
+		$client = new \GuzzleHttp\Client(['base_uri' => WP_PASSPORT_PATH]);
 		$response = $client->send($request);
 		$usuario = $response->getBody()->getContents();
 
