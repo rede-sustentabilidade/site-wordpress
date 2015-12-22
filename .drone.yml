@@ -1,0 +1,20 @@
+build:
+    image: heroku/php
+    commands:
+        - php composer.phar install --no-dev --no-interaction
+cache:
+    mount:
+        - vendor
+deploy:
+    git_push:
+        branch: master
+        remote: dokku@redesustentabilidade.org.br:site-wordpress
+        force: false
+        when:
+            branch: master
+    git_push:
+        branch: master
+        remote: dokku@redesustentabilidade.net:site-wordpress
+        force: false
+        when:
+            branch: develop
