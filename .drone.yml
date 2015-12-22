@@ -1,7 +1,7 @@
 build:
     image: heroku/php
     commands:
-        - php composer.phar install --no-dev --no-interaction
+        - composer install --no-dev --no-interaction
 cache:
     mount:
         - vendor
