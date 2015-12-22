@@ -48,17 +48,17 @@ if (!defined('WP_ENV')) {
 		define('WP_API_PATH', 'https://api-v1.redesustentabilidade.org.br/');
         break;
 
-      case 'staging.redesustentabilidade.org.br':
+      case 'redesustentabilidade.net':
         define('WP_ENV', 'staging');
   		define('WP_CACHE', false);
-		define('WP_API_PATH', 'https://api-v1.staging.redesustentabilidade.org.br');
-		define('WP_PASSPORT_PATH',       'https://passaporte.staging.redesustentabilidade.org.br');
-		define('OAUTH_REDIRECT_URI',     'https://staging.redesustentabilidade.org.br/');
+		define('WP_API_PATH', 'http://api-v1.redesustentabilidade.net');
+		define('WP_PASSPORT_PATH',       'http://passaporte.redesustentabilidade.net');
+		define('OAUTH_REDIRECT_URI',     'http://redesustentabilidade.net/');
 		define('OAUTH_CLIENT_ID',        'XnvqtV7U');
 		define('OAUTH_CLIENT_SECRET',    '00UlvMJicqoY8y3qtFoY');
-		define('OAUTH_URL_AUTHORIZE',    'https://passaporte.staging.redesustentabilidade.org.br/oauth/authorization');
-		define('OAUTH_URL_ACCESS_TOKEN', 'https://passaporte.staging.redesustentabilidade.org.br/oauth/token');
-		define('OAUTH_URL_RESOURCE',     'https://passaporte.staging.redesustentabilidade.org.br/oauth/resource');
+		define('OAUTH_URL_AUTHORIZE',    'http://passaporte.redesustentabilidade.net/oauth/authorization');
+		define('OAUTH_URL_ACCESS_TOKEN', 'http://passaporte.redesustentabilidade.net/oauth/token');
+		define('OAUTH_URL_RESOURCE',     'http://passaporte.redesustentabilidade.net/oauth/resource');
         break;
       case 'rede.site':
       default:

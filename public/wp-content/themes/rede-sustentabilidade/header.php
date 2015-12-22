@@ -1,6 +1,9 @@
 <?php define('REDETHEME', dirname(__FILE__)); ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-    <head>
+	<head>
+		<?php if (WP_ENV !== 'development') { ?>
+			<meta name="robots" CONTENT="noindex, follow">
+		<?php } ?>
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title><?php wp_title('&#124;', true, 'right'); ?></title>
