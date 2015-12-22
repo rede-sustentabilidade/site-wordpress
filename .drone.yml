@@ -1,7 +1,9 @@
 build:
     image: brunoric/hhvm:deb
     commands:
-        - composer install --no-dev --no-interaction
+        - apt-get install -y git
+        - php -r "readfile('https://getcomposer.org/installer');" | php
+        - php composer.phar install --no-dev --no-interaction
 cache:
     mount:
         - vendor
