@@ -43,12 +43,14 @@ if (!defined('WP_ENV')) {
     // Set environment based on hostname
     switch ($hostname) {
       case 'redesustentabilidade.org.br':
+      case 'www.redesustentabilidade.org.br':
         define('WP_ENV', 'production');
   		define('WP_CACHE', true);
 		define('WP_API_PATH', 'https://api-v1.redesustentabilidade.org.br/');
         break;
 
       case 'redesustentabilidade.net':
+      case 'www.redesustentabilidade.net':
         define('WP_ENV', 'staging');
   		define('WP_CACHE', false);
 		define('WP_API_PATH', 'http://api-v1.redesustentabilidade.net');
