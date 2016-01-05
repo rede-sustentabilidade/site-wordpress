@@ -57,7 +57,8 @@ if (!defined('WP_ENV')) {
         break;
 
       case 'redesustentabilidade.net':
-      case 'www.redesustentabilidade.net':
+	  case 'www.redesustentabilidade.net':
+		define('WPHTTPS_RESET', true);
         define('WP_ENV', 'staging');
   		define('WP_CACHE', false);
 		define('WP_API_PATH', 'http://api-v1.redesustentabilidade.net');
