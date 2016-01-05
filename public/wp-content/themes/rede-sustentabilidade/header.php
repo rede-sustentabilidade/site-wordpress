@@ -120,7 +120,7 @@
         </nav>
 
         <?php if (is_home()) : ?>
-        <div class="side-tabs faq-active close">
+        <!--div class="side-tabs faq-active close">
             <div class="content">
                 <div class="faq">
                     <span class="btn-side-tabs">
@@ -216,7 +216,7 @@
                 <div class="tabs-opt tabs-sugestions" data-name="sugestions"></div>
                 <div class="tabs-opt tabs-faq" data-name="faq"></div>
             </div>
-        </div>
+        </div-->
         <?php endif; ?>
 	<?php date_default_timezone_set('America/Sao_Paulo'); if (is_home()) { ?>
 	<div id="slider">
