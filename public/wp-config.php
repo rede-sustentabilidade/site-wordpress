@@ -48,28 +48,30 @@ if (!defined('WP_ENV')) {
 		define('WP_API_PATH', 'https://api-v1.redesustentabilidade.org.br/');
         break;
 
-      case 'staging.redesustentabilidade.org.br':
+      case 'redesustentabilidade.net':
         define('WP_ENV', 'staging');
   		define('WP_CACHE', false);
-		define('WP_API_PATH', 'https://api-v1.staging.redesustentabilidade.org.br');
-		define('OAUTH_REDIRECT_URI',     'https://staging.redesustentabilidade.org.br/');
+		define('WP_API_PATH', 'http://api-v1.redesustentabilidade.net');
+		define('WP_PASSPORT_PATH',       'http://passaporte.redesustentabilidade.net');
+		define('OAUTH_REDIRECT_URI',     'http://redesustentabilidade.net/');
 		define('OAUTH_CLIENT_ID',        'XnvqtV7U');
 		define('OAUTH_CLIENT_SECRET',    '00UlvMJicqoY8y3qtFoY');
-		define('OAUTH_URL_AUTHORIZE',    'https://api-usuarios.staging.redesustentabilidade.org.br/oauth/authorization');
-		define('OAUTH_URL_ACCESS_TOKEN', 'https://api-usuarios.staging.redesustentabilidade.org.br/oauth/token');
-		define('OAUTH_URL_RESOURCE',     'https://api-usuarios.staging.redesustentabilidade.org.br/oauth/resource');
+		define('OAUTH_URL_AUTHORIZE',    'http://passaporte.redesustentabilidade.net/oauth/authorization');
+		define('OAUTH_URL_ACCESS_TOKEN', 'http://passaporte.redesustentabilidade.net/oauth/token');
+		define('OAUTH_URL_RESOURCE',     'http://passaporte.redesustentabilidade.net/oauth/resource');
         break;
-      case 'herokuwp.local':
+      case 'rede.site':
       default:
         define('WP_ENV', 'development');
 		define('WP_CACHE', false);
 		define('WP_API_PATH',            'http://rede.api:9000');
-		define('OAUTH_REDIRECT_URI',     'http://herokuwp.local/');
-		define('OAUTH_CLIENT_ID',        'bK2QZHSg');
-		define('OAUTH_CLIENT_SECRET',    'SYJInKMAfsToiQDtwCvt');
-		define('OAUTH_URL_AUTHORIZE',    'http://192.168.50.1:3000/oauth/authorization');
-		define('OAUTH_URL_ACCESS_TOKEN', 'http://192.168.50.1:3000/oauth/token');
-		define('OAUTH_URL_RESOURCE',     'http://192.168.50.1:3000/oauth/resource');
+		define('WP_PASSPORT_PATH',       'http://rede.passaporte:3000');
+		define('OAUTH_REDIRECT_URI',     'http://rede.site/');
+		define('OAUTH_CLIENT_ID',        'LiwFKQ0b');
+		define('OAUTH_CLIENT_SECRET',    'vEdVSdklM6Y1Vo5HFWkz');
+		define('OAUTH_URL_AUTHORIZE',    'http://rede.passaporte:3000/oauth/authorization');
+		define('OAUTH_URL_ACCESS_TOKEN', 'http://rede.passaporte:3000/oauth/token');
+		define('OAUTH_URL_RESOURCE',     'http://rede.passaporte:3000/oauth/resource');
 	}
 }
 

@@ -1,5 +1,5 @@
 /*jslint browser:true */
-/*global jQuery, API_USER_STATUS, WP_USER_ROLE, WP_USER_ID */
+/*global jQuery, API_USER_STATUS, WP_USER_ID */
 
 var listas = {};
 listas.apiURL = API_PATH;
@@ -85,17 +85,17 @@ jQuery(function ($) {
         var o = '';
         o += '<p>';
         o += '<a href="/listas/#/filiados/1/50/nome/asc">Lista de filiados</a>';
-        if (API_USER_STATUS === '3' || WP_USER_ROLE === 'Administrator') {
+        if (API_USER_STATUS == 99) {
             o += ' | ';
             o += '<a href="/listas/#/abonos/1/50/nome/asc">Pré-filiados aguardando abono</a>';
             o += ' | ';
             o += '<a href="/listas/#/impugnacoes/1/50/nome/asc">Pré-filiados em fase de avaliação</a>';
         }
-        if (WP_USER_ROLE === 'Editor regional' || WP_USER_ROLE === 'Administrator') {
+        if (API_USER_STATUS > 10) {
             o += ' | ';
             o += '<a href="/listas/#/confirmacao/1/50/nome/asc">Filiados aguardando confirmação</a>';
         }
-        if (WP_USER_ROLE === 'Administrator') {
+        if (API_USER_STATUS == 99) {
             o += ' | ';
             o += '<a href="/listas/#/admin/1/50/nome/asc">Lista de filiados para administradores</a>';
         }

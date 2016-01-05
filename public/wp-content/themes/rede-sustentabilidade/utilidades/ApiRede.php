@@ -9,40 +9,7 @@ class ApiRede
     protected function __construct()
     {
         $this->apiPath = WP_API_PATH;
-    }
-
-    public function filiadoFormWasFilled($user_id)
-    {
-        $service_url = $this->apiPath . '/usuario/filiado/'.$user_id;
-
-        $curl = curl_init();
-        // Set some options - we are passing in a useragent too here
-        curl_setopt_array($curl, array(
-              CURLOPT_URL            => $service_url,
-            CURLOPT_RETURNTRANSFER => true,
-            //CURLOPT_HEADER         => true,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_ENCODING       => "",
-            CURLOPT_AUTOREFERER    => true,
-            CURLOPT_CONNECTTIMEOUT => 120,
-            CURLOPT_TIMEOUT        => 120,
-            CURLOPT_MAXREDIRS      => 10,
-            CURLOPT_SSL_VERIFYPEER => false,
-            CURLOPT_SSL_VERIFYHOST => FALSE
-        ));
-        // Send the request & save response to $resp
-        $curl_response = curl_exec($curl);
-        $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
-        // Close request to clear up some resources
-        curl_close($curl);
-
-        if ($httpCode !== 200) {
-            return array();
-        } else {
-            return json_decode($curl_response);
-        }
-    }
+	}
 
     final private function __clone()
     {
@@ -96,7 +63,7 @@ class ApiRede
     }
 
     public function updateProfile(array $profile)
-    {
+	{
         return $this->call('/profile/'.$profile['user_id'], 'POST', $profile);
     }
 

@@ -10,14 +10,12 @@ get_header();
 the_content();
 
 
-if ( is_user_logged_in() ) {
-global $current_user; get_currentuserinfo();
-
+if ( isset($_COOKIE['usuario']) ) {
+global $usuario;
 ?>
 
 <script type="text/javascript">
-	var WP_NOME  = "<?php echo $current_user->display_name;?>";
-	var WP_EMAIL = "<?php echo $current_user->user_email;?>";
+	var WP_EMAIL = "<?php echo $usuario->username;?>";
 </script>
 
 <h2 class="title">Filiação</h2>

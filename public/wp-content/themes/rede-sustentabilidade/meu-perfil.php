@@ -3,34 +3,18 @@
 Template Name: Formulário do Perfil
 */
 
-global $current_user;
-get_currentuserinfo();
-
+global $usuario;
 function doUserUpdate()
 {
-    global $current_user;
-    $userData = array(
-        'ID' => $current_user->ID,
-        'display_name' => $_POST['display_name'],
-        'user_email' => $_POST['user_email'],
-    );
-    if (!empty($_POST['user_pass'])) {
-        if (strlen($_POST['user_pass']) >= 8 && $_POST['user_pass'] == $_POST['repeat_user_pass']) {
-            $userData['user_pass'] = $_POST['user_pass'];
-        } else {
-        	return 'Dados preenchidos incorretamente. Se estiver tentando atualizar sua senha, verifique se ela tem mais de 8 caracteres e está igual ao campo repetir senha.';
-        }
-    }
-    $updateResult = wp_update_user($userData);
+	global $usuario;
     $apiErrors = null;
-    $profile = ApiRede::getInstance()->getProfile($current_user->ID);
-    if (!empty($profile)) {
+	$profile = ApiRede::getInstance()->getProfile($usuario->id);
+	if ((is_array($profile)) && ($profile['httpCode'] == 404)) {
         $contrib = (array) $profile->dados_contribuicao;
         $profile = (array) $profile;
         unset($profile['dados_contribuicao']);
         $profile = array_merge($profile, $contrib);
-        $profile['nome'] = $_POST['display_name'];
-        $profile['email'] = $_POST['user_email'];
+        $profile['fullname'] = $_POST['display_name'];
 
         foreach ($_POST as $k => $v) {
             if (preg_match('/^\*+$/', $v)) {
@@ -54,18 +38,13 @@ function doUserUpdate()
                 unset($profile['cartao_validade_ano']);
             }
         }
-        $response = ApiRede::getInstance()->updateProfile($profile);
+		$response = ApiRede::getInstance()->updateProfile($profile);
         if (!empty($response->errors)) {
             $apiErrors = 'Os seguintes campos contém dados inválidos ou estão vazios: ' . implode(', ', array_keys((array) $response->errors));
-        } else if (!empty($response->httpCode)) {
+        } else if ((is_array($response)) && (!empty($response['httpCode']))) {
             $apiErrors = 'Os dados não foram salvos. Por favor, verifique os dados informados e tente novamente.';
         }
     }
-    if (is_a($updateResult, 'WP_Error')) {
-        return $updateResult->get_error_message();
-    }
-    $current_user->display_name = $userData['display_name'];
-    $current_user->user_email = $userData['user_email'];
     if (null !== $apiErrors) {
         return $apiErrors;
     }
@@ -73,13 +52,18 @@ function doUserUpdate()
 }
 
 $message = null;
-if (is_user_logged_in() && !empty($_POST)) {
+if ((isset($_COOKIE['usuario'])) && !empty($_POST)) {
     $message = doUserUpdate();
 }
 
+get_header();
+
+if (isset($_COOKIE['usuario'])) :
+
+$filiado = ApiRede::getInstance()->getProfile($usuario->id);
+
+if (count($filiado)>0) {
 ?>
-<?php get_header(); ?>
-<?php if (is_user_logged_in()) : ?>
     <h2 class="title">Meu Perfil</h2>
 
     <div class="container-meu-perfil">
@@ -89,43 +73,18 @@ if (is_user_logged_in() && !empty($_POST)) {
 
         <div ng-controller="PerfilForm">
     		<form action="" method="post" class="pure-form pure-form-stacked form-2" name="form_2">
-            <!-- https://code.google.com/p/chromium/issues/detail?id=352347 -->
-            <!-- http://stackoverflow.com/questions/15738259/disabling-chrome-autofill -->
-            <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
-            <input style="display:none" type="text" name="fakeusernameremembered"/>
-            <input style="display:none" type="password" name="fakepasswordremembered"/>
-
     		    <fieldset>
     		        <div class="pure-g-r">
-    		            <?php
-                        $filiado = ApiRede::getInstance()->getProfile($current_user->ID);
-    		            $fullname = !empty($filiado) ? $filiado->fullname : $current_user->display_name;
-    		            ?>
     		            <div class="pure-u-1">
     		                <label for="display_name">Nome Completo</label>
-    		                <input id="display_name" name="display_name" type="text" class="pure-input-1" value="<?php echo $fullname; ?>">
+    		                <input id="display_name" name="display_name" type="text" class="pure-input-1" value="<?php echo $filiado->fullname; ?>">
     		            </div>
     		            <div class="pure-u-1">
     		                <label for="user_email">Meu e-mail</label>
-    		                <input id="user_email" name="user_email" required  type="text" class="pure-input-1" value="<?php echo $current_user->user_email; ?>">
+    		                <input id="user_email" readonly name="user_email" required  type="text" class="pure-input-1" value="<?php echo $filiado->email; ?>">
+    		                <span>Não é possível alterar email</span>
     		            </div>
-    		            <div class="pure-u-1">
-    		                <label for="user_login">Meu nome de usuário</label>
-    		                <input id="user_login" name="user_login" required type="text" class="pure-input-1" value="<?php echo $current_user->user_login; ?>" readonly="readonly">
-    		                <p class="mensagem ajuda">Não é possível alterar nomes de usuário</p>
     		            </div>
-    		            <div class="pure-u-1">
-    		                <label><input type="checkbox" checked="checked" name="passupdate" value="1" onclick="jQuery('.pass-update').toggle(jQuery(this).prop('checked'));"> Editar senha</label>
-    		            </div>
-    		            <div class="pure-u-1 pass-update">
-    		                <label for="user_pass">Senha</label>
-    		                <input id="user_pass" name="user_pass" type="password" class="pure-input-1-2">
-    		            </div>
-    		            <div class="pure-u-1 pass-update">
-    		                <label for="repeat_user_pass">Repetir senha</label>
-    		                <input id="repeat_user_pass" name="repeat_user_pass" type="password" class="pure-input-1-2">
-    		            </div>
-    		            <?php if (!empty($filiado)) : ?>
                         <div style="width:100%;height:1px;margin:20px 0;background:#ccc;"></div>
 
                         <h3 style="width:100%;letter-spacing:0;clear:both;">Dados de contato</h3>
@@ -200,11 +159,9 @@ if (is_user_logged_in() && !empty($_POST)) {
                                 <option value="XX" <?php if ($filiado->uf == 'XX') echo 'selected="selected"'; ?>>Não aplicável</option>
                             </select>
     		            </div>
-    		            <?php endif; ?>
     		        </div>
     		    </fieldset>
 
-	            <?php if (!empty($filiado)) : ?>
     		    <fieldset>
     		        <div class="pure-g-r">
 
@@ -266,7 +223,7 @@ if (is_user_logged_in() && !empty($_POST)) {
         		            <div class="pure-u-1-5">
         		                <label for="cartao_validade_mes">Validade</label>
                                 <select id="cartao_validade_mes" name="cartao_validade_mes" class="pure-input-1">
-                                    <option value="**">Mês</option>
+                                    <option value="">Mês</option>
                                     <?php // Preenche com 12 meses do ano
                                     for ($x=1; $x<=12; $x++ ){
                                         $selected = /*$x == $filiado->dados_contribuicao->cartao_validade_mes ? 'selected="selected"' :*/ '';
@@ -278,7 +235,7 @@ if (is_user_logged_in() && !empty($_POST)) {
         		            <div class="pure-u-3-5">
         		                <label for="cartao_validade_ano">&nbsp;</label>
                                 <select id="cartao_validade_ano" name="cartao_validade_ano" class="pure-input-1-3">
-                                    <option value="****">Ano</option>
+                                    <option value="">Ano</option>
                                     <?php
                                     $ano_atual = date("Y");
                                     for ($x=$ano_atual; $x<=$ano_atual+10; $x++ ){
@@ -291,16 +248,22 @@ if (is_user_logged_in() && !empty($_POST)) {
                         </div>
 		            </div>
 	            </fieldset>
-	            <?php endif; ?>
 
     		    <button type="submit">Salvar <i class="icon-seta-em-frente"></i></button>
     		</form>
         </div>
     </div>
-<?php else : ?>
+<?php } else { ?>
+
 	<h2 class="title">Meu Perfil</h2>
 	<div class="container-meu-perfil">
-		<p>Desculpe, faça seu <a href="<?php echo wp_login_url("/meu-perfil/"); ?>">login</a> para editar o perfil.</p>
+		<p>Preencha sua pré-filiação e habilite esta seção. <a href="<?php echo site_url("/filiacao-redesim/"); ?>">Entenda a filiação.</a></p>
+	</div>
+<?php }
+else : ?>
+	<h2 class="title">Meu Perfil</h2>
+	<div class="container-meu-perfil">
+		<p>Desculpe, faça seu <a href="<?php echo site_url("/?login=1"); ?>">login</a> para editar o perfil.</p>
 	</div>
 <?php endif; ?>
 <?php get_footer(); ?>

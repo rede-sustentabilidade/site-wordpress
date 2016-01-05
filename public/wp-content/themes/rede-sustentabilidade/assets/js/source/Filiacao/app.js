@@ -39,7 +39,7 @@ define([
             .done(function (data) {
 				console.log(data);
                 $scope.$apply(function(){
-//                    $scope.ja_preencheu = true;
+                   $scope.ja_preencheu = true;
                 });
             });
 
@@ -286,7 +286,6 @@ define([
                 atuacoesProfissionais = new Array;
 
             filiado.user_id = WP_USER_ID;
-            filiado.nome = WP_NOME;
             filiado.email = WP_EMAIL;
 
             // jQuery.each(filiado.areasInteresse, function(key, element) {
@@ -323,7 +322,7 @@ define([
 				crossDomain: true
 			})
 			.fail(function (jqXHR, textStatus, errorThrown) {
-				console.log(jqXHR, textStatus, errorThrown, newModel);
+				console.log(jqXHR, textStatus, errorThrown);
 			})
 			.done(function (data, textStatus) {
 					console.log('filiado:', filiado);
