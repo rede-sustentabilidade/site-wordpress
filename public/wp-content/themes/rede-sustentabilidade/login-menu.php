@@ -59,6 +59,9 @@ if (isset($_COOKIE['access_token'])) {
 				<p>Status: Apoiador</p>
 				<a href="<?php echo site_url(); ?>/entenda-a-filiacao/">filie-se</a>
 			</div>
+			<div class="item">
+				<a href="<?php echo site_url(); ?>/?logout=1">sair</a>
+			</div>
 		</div>
 	</div>
 <?php } else { ?>
