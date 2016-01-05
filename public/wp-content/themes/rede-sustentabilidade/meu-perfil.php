@@ -4,6 +4,8 @@ Template Name: Formulário do Perfil
 */
 
 global $usuario;
+//$wp_session = WP_Session::get_instance();
+//$usuario = $wp_session['usuario'];
 function doUserUpdate()
 {
 	global $usuario;
@@ -162,7 +164,7 @@ if (count($filiado)>0) {
     		        </div>
     		    </fieldset>
 
-    		    <fieldset>
+    		    <!--fieldset>
     		        <div class="pure-g-r">
 
                         <div style="width:100%;height:1px;margin:20px 0;background:#ccc;"></div>
@@ -247,7 +249,7 @@ if (count($filiado)>0) {
         		            </div>
                         </div>
 		            </div>
-	            </fieldset>
+	            </fieldset-->
 
     		    <button type="submit">Salvar <i class="icon-seta-em-frente"></i></button>
     		</form>

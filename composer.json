@@ -29,6 +29,7 @@
 		"wpackagist-plugin/query-monitor": "dev-trunk",
 		"wpackagist-plugin/diagnosis": "dev-trunk",
     	"wpackagist-plugin/wordpress-https": "dev-trunk",
+		"wpackagist-plugin/wp-session-manager": "dev-trunk",
 		"league/oauth2-client": "^1.0",
 		"wpackagist-plugin/amazon-ses-and-dkim-mailer": "dev-trunk"
     },
