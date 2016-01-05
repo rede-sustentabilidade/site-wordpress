@@ -47,6 +47,13 @@ if (!defined('WP_ENV')) {
         define('WP_ENV', 'production');
   		define('WP_CACHE', true);
 		define('WP_API_PATH', 'https://api-v1.redesustentabilidade.org.br/');
+		define('WP_PASSPORT_PATH',       'https://passaporte.redesustentabilidade.org.br');
+		define('OAUTH_REDIRECT_URI',     'https://redesustentabilidade.org.br/');
+		define('OAUTH_CLIENT_ID',        getenv('OAUTH_CLIENT_ID'));
+		define('OAUTH_CLIENT_SECRET',    getenv('OAUTH_CLIENT_SECRET'));
+		define('OAUTH_URL_AUTHORIZE',    'https://passaporte.redesustentabilidade.org.br/oauth/authorization');
+		define('OAUTH_URL_ACCESS_TOKEN', 'https://passaporte.redesustentabilidade.org.br/oauth/token');
+		define('OAUTH_URL_RESOURCE',     'https://passaporte.redesustentabilidade.org.br/oauth/resource');
         break;
 
       case 'redesustentabilidade.net':
