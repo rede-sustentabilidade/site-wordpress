@@ -103,7 +103,7 @@ if (isset($_COOKIE['access_token'])) {
 			</div>
 <?php } ?>
 <?php if ($filiado->status > 10) { ?>
-			<script>var WP_USER_STATE = '<?php echo $filiado->uf ?>';</script>
+			<script>var WP_USER_STATE = '';</script>
 			<div class="item">
 				<p><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
 			</div>
