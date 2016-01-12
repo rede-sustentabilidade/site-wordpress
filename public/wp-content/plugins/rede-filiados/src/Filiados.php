@@ -192,9 +192,7 @@ class Filiados
         );
 
         $data = $api->updateProfile($updatedProfile);
-        var_dump($data);
       }
-      exit($_POST);
 
       if ( (isset($data->status)) && ($data->status == 'ok')) {
         $_SESSION['aviso'] = 'Atualizações salvas com sucesso!';
