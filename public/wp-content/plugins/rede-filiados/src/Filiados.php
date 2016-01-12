@@ -177,7 +177,7 @@ class Filiados
           'cidade'                    => $_POST['cidade'],
           'uf'                        => $_POST['uf'],
           'cpf'                       => $_POST['cpf'],
-          'nome'                      => $_POST['fullname'],
+          'fullname'                      => $_POST['fullname'],
           'titulo_eleitoral'          => $_POST['titulo_eleitoral'],
           'zona_eleitoral'            => $_POST['zona_eleitoral'],
           'secao_eleitoral'           => $_POST['secao_eleitoral'],
@@ -188,11 +188,13 @@ class Filiados
           'status'           => $_POST['status'],
 
 
-          'contribupdate' => 1
+          'contribupdate' => ((!empty($_POST['tipo'])) ? 1 : 0)
         );
 
         $data = $api->updateProfile($updatedProfile);
+        var_dump($data);
       }
+      exit($_POST);
 
       if ( (isset($data->status)) && ($data->status == 'ok')) {
         $_SESSION['aviso'] = 'Atualizações salvas com sucesso!';
