@@ -11,11 +11,10 @@ function doUserUpdate()
 	global $usuario;
     $apiErrors = null;
 	$profile = ApiRede::getInstance()->getProfile($usuario->id);
-	if ((is_array($profile)) && ($profile['httpCode'] == 404)) {
-        $contrib = (array) $profile->dados_contribuicao;
+	if ($profile->user_id == $usuario->id) {
         $profile = (array) $profile;
+        var_dump($profile);
         unset($profile['dados_contribuicao']);
-        $profile = array_merge($profile, $contrib);
         $profile['fullname'] = $_POST['display_name'];
 
         foreach ($_POST as $k => $v) {
@@ -164,7 +163,7 @@ if (count($filiado)>0) {
     		        </div>
     		    </fieldset>
 
-    		    <!--fieldset>
+    		    <fieldset>
     		        <div class="pure-g-r">
 
                         <div style="width:100%;height:1px;margin:20px 0;background:#ccc;"></div>
@@ -249,7 +248,7 @@ if (count($filiado)>0) {
         		            </div>
                         </div>
 		            </div>
-	            </fieldset-->
+	            </fieldset>
 
     		    <button type="submit">Salvar <i class="icon-seta-em-frente"></i></button>
     		</form>
