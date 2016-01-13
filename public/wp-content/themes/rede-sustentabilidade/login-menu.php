@@ -39,6 +39,8 @@ if (isset($_COOKIE['access_token'])) {
 		setcookie('access_token', null, -1);
 		setcookie('usuario', null, -1);
 		header('Location: /?login=1');
+	} catch (\GuzzleHttp\Exception\ServerException $e) {
+		// Evita que o wordpress fique fora do ar se o passaporte (oauth2 service) estiver fora do ar
 	}
 ?>
 
