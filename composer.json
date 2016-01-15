@@ -16,10 +16,10 @@
 	],
    "require": {
 		"hhvm": "~3.5",
-        "WordPress/WordPress": "*",
-        "wpackagist-plugin/jetpack": "~3",
-        "wpackagist-plugin/wpro": "~1",
-        "wpackagist-plugin/authy-two-factor-authentication": "~2",
+    "WordPress/WordPress": "*",
+    "wpackagist-plugin/jetpack": "~3",
+    "wpackagist-plugin/wpro": "~1",
+    "wpackagist-plugin/authy-two-factor-authentication": "~2",
 
 		"wpackagist-theme/pinbin": "1.4.*",
 		"wpackagist-plugin/contact-form-7": "4.0.2",
@@ -28,8 +28,7 @@
 		"wpackagist-plugin/simple-share-buttons-adder": "dev-trunk",
 		"wpackagist-plugin/query-monitor": "dev-trunk",
 		"wpackagist-plugin/diagnosis": "dev-trunk",
-    	"wpackagist-plugin/wordpress-https": "dev-trunk",
-		"wpackagist-plugin/wp-session-manager": "dev-trunk",
+    "wpackagist-plugin/wordpress-https": "dev-trunk",
 		"league/oauth2-client": "^1.0",
 		"wpackagist-plugin/amazon-ses-and-dkim-mailer": "dev-trunk"
     },
@@ -38,10 +37,10 @@
             "type": "package",
             "package": {
                 "name": "WordPress/WordPress",
-                "version": "4.4",
+                "version": "4.4.1",
                 "dist": {
                     "type": "zip",
-                    "url": "https://br.wordpress.org/wordpress-4.4-pt_BR.zip"
+                    "url": "https://br.wordpress.org/wordpress-4.4.1-pt_BR.zip"
                 }
             }
         },
