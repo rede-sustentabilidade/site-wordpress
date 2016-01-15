@@ -49,8 +49,8 @@
 		var
 		API_PATH = <?php echo json_encode(WP_API_PATH); ?>,
         SERVER_DOMAIN = <?php echo json_encode($_SERVER['SERVER_NAME']); ?>,
-        WP_USER_ID = <?php echo $usuario->id; ?>,
-        THEME_URL = <?php echo json_encode(get_stylesheet_directory_uri()); ?>;
+        THEME_URL = <?php echo json_encode(get_stylesheet_directory_uri()); ?>,
+        WP_USER_ID = '<?php echo $usuario->id; ?>';
         </script>
         <?php wp_head(); ?>
     </head>
