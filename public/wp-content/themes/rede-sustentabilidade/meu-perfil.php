@@ -11,9 +11,9 @@ function doUserUpdate()
 	global $usuario;
     $apiErrors = null;
 	$profile = ApiRede::getInstance()->getProfile($usuario->id);
+    error_log($profile);
 	if ($profile->user_id == $usuario->id) {
         $profile = (array) $profile;
-        var_dump($profile);
         unset($profile['dados_contribuicao']);
         $profile['fullname'] = $_POST['display_name'];
 
@@ -40,6 +40,7 @@ function doUserUpdate()
             }
         }
 		$response = ApiRede::getInstance()->updateProfile($profile);
+        error_log($response);
         if (!empty($response->errors)) {
             $apiErrors = 'Os seguintes campos contém dados inválidos ou estão vazios: ' . implode(', ', array_keys((array) $response->errors));
         } else if ((is_array($response)) && (!empty($response['httpCode']))) {
