@@ -84,9 +84,6 @@ $base-color: #666666
             font-family: 'League Gothic', sans-serif
         .excerpt
             margin-bottom: 20px
-            p
-                font-size: 14px
-                line-height: 16px
         &.focus
             width: 619px
             width: calc(600px + 1.5em)
@@ -241,6 +238,12 @@ $base-color: #666666
                 white-space: nowrap
                 text-overflow: ellipsis
 
+.single #meta-area
+    & + #post-area,
+    & + #post-area + #nav-below,
+    & + .post
+        margin-right: 300px
+
 // Page nav
 
 #nav-below
@@ -368,7 +371,6 @@ $base-color: #666666
                     li
                         border: 0 none
                         a
-                            font-size: 14px
                             border: 0 none
                             margin: 0
                             color: #319d8b !important

@@ -53,6 +53,7 @@
         WP_USER_ID = '<?php echo $usuario->id; ?>';
         </script>
         <?php wp_head(); ?>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     </head>
     <body <?php body_class(); ?>>
         <nav id="site-navigation" class="main-nav" role="navigation">
