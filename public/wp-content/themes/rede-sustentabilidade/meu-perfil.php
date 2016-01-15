@@ -56,6 +56,7 @@ function doUserUpdate()
 $message = null;
 error_log(print_r($_COOKIE,true));
 error_log(print_r($_POST, true));
+error_log(print_r($HTTP_RAW_POST_DATA, true));
 if ((isset($_COOKIE['usuario'])) && !empty($_POST)) {
     $message = doUserUpdate();
 }
