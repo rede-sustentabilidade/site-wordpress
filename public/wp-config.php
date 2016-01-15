@@ -45,7 +45,7 @@ if (!defined('WP_ENV')) {
       case 'redesustentabilidade.org.br':
       case 'www.redesustentabilidade.org.br':
         define('WP_ENV', 'production');
-  		define('WP_CACHE', true);
+  		define('WP_CACHE', false);
 		define('WP_API_PATH', 'https://api-v1.redesustentabilidade.org.br/');
 		define('WP_PASSPORT_PATH',       'https://passaporte.redesustentabilidade.org.br');
 		define('OAUTH_REDIRECT_URI',     'https://redesustentabilidade.org.br/');
