@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3a68704ea673a2b0f9edbd97401883a2",
-    "content-hash": "50f52583d5a9c9c63bba84c3697d25e2",
+    "hash": "53a51409b569d74f116e610b2cbdbf1c",
+    "content-hash": "5f1baeae949f422118d6417c28afa2df",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -17,6 +17,34 @@
                 "shasum": null
             },
             "type": "library"
+        },
+        {
+            "name": "alfreddatakillen/wpro",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alfreddatakillen/wpro.git",
+                "reference": "1ce135defbbadc0882a057786c420c82cc98472a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alfreddatakillen/wpro/zipball/1ce135defbbadc0882a057786c420c82cc98472a",
+                "reference": "1ce135defbbadc0882a057786c420c82cc98472a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*",
+                "wp-cli/wp-cli": "*",
+                "wpreadme2markdown/wpreadme2markdown": "*"
+            },
+            "type": "wordpress-plugin",
+            "description": "Wordpress Read-Only",
+            "homepage": "http://github.com/alfreddatakillen/wpro",
+            "support": {
+                "source": "https://github.com/alfreddatakillen/wpro/tree/master",
+                "issues": "https://github.com/alfreddatakillen/wpro/issues"
+            },
+            "time": "2015-02-10 07:37:29"
         },
         {
             "name": "composer/installers",
@@ -701,26 +729,6 @@
             "homepage": "https://wordpress.org/plugins/wp-permastructure/"
         },
         {
-            "name": "wpackagist-plugin/wpro",
-            "version": "1.0",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wpro/",
-                "reference": "tags/1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wpro.1.0.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wpro/"
-        },
-        {
             "name": "wpackagist-theme/pinbin",
             "version": "1.4.7",
             "source": {
@@ -745,6 +753,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "alfreddatakillen/wpro": 20,
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
         "wpackagist-plugin/query-monitor": 20,
