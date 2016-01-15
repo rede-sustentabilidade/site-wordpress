@@ -72,7 +72,7 @@ if (count($filiado)>0) {
     <div class="container-meu-perfil">
 
         <h2>Meu Perfil</h2>
-        <form action="" method="post" class="pure-form pure-form-stacked form-2" name="form_2">
+    <form action="<?php echo get_permalink(); ?>" method="post" class="pure-form pure-form-stacked form-2" name="form_2">
     	<?php if (!empty($message)) : ?>
     		<p><?php echo $message; ?></p>
     	<?php endif; ?>
