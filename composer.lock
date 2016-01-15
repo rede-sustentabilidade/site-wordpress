@@ -4,19 +4,47 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0a965d20fe345dd27c58dfbcf3f6205d",
-    "content-hash": "1683a761c702ecd8e760794c0ea45c65",
+    "hash": "4b56be0bc589484b707dd8af44d0f578",
+    "content-hash": "8fd7de534fd0bc3eb4027a0a3f3ffee2",
     "packages": [
         {
             "name": "WordPress/WordPress",
-            "version": "4.4",
+            "version": "4.4.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/4.4.zip",
+                "url": "https://br.wordpress.org/wordpress-4.4.1-pt_BR.zip",
                 "reference": null,
                 "shasum": null
             },
             "type": "library"
+        },
+        {
+            "name": "alfreddatakillen/wpro",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alfreddatakillen/wpro.git",
+                "reference": "1ce135defbbadc0882a057786c420c82cc98472a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alfreddatakillen/wpro/zipball/1ce135defbbadc0882a057786c420c82cc98472a",
+                "reference": "1ce135defbbadc0882a057786c420c82cc98472a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*",
+                "wp-cli/wp-cli": "*",
+                "wpreadme2markdown/wpreadme2markdown": "*"
+            },
+            "type": "wordpress-plugin",
+            "description": "Wordpress Read-Only",
+            "homepage": "http://github.com/alfreddatakillen/wpro",
+            "support": {
+                "source": "https://github.com/alfreddatakillen/wpro/tree/master",
+                "issues": "https://github.com/alfreddatakillen/wpro/issues"
+            },
+            "time": "2015-02-10 07:37:29"
         },
         {
             "name": "composer/installers",
@@ -578,15 +606,15 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "3.8.1",
+            "version": "3.8.2",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/3.8.1"
+                "reference": "tags/3.8.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.3.8.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.3.8.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -701,16 +729,16 @@
             "homepage": "https://wordpress.org/plugins/wp-permastructure/"
         },
         {
-            "name": "wpackagist-plugin/wpro",
-            "version": "1.0",
+            "name": "wpackagist-plugin/wp-session-manager",
+            "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wpro/",
-                "reference": "tags/1.0"
+                "url": "http://plugins.svn.wordpress.org/wp-session-manager/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wpro.1.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-session-manager.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -718,7 +746,8 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wpro/"
+            "homepage": "https://wordpress.org/plugins/wp-session-manager/",
+            "time": "2013-12-18 05:06:36"
         },
         {
             "name": "wpackagist-theme/pinbin",
@@ -745,11 +774,13 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "alfreddatakillen/wpro": 20,
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
         "wpackagist-plugin/query-monitor": 20,
         "wpackagist-plugin/diagnosis": 20,
         "wpackagist-plugin/wordpress-https": 20,
+        "wpackagist-plugin/wp-session-manager": 20,
         "wpackagist-plugin/amazon-ses-and-dkim-mailer": 20
     },
     "prefer-stable": false,
