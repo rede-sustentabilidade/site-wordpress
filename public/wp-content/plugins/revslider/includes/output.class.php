@@ -3590,12 +3590,12 @@ class RevSliderOutput {
 			case '1':
 			case '2':
 				if(!is_admin()) echo '<script>document.write("<style type=\"text/css\">	#'.$this->sliderHtmlID_wrapper.' .tp-loader.spinner'.$use_spinner.'{ background-color: '.$spinner_color.' !important; } </style>");</script>';
-				else echo '<style type="text/css">	#'.$this->sliderHtmlID_wrapper.' .tp-loader.spinner'.$use_spinner.'{ background-color: '.$spinner_color.' !important; } </style>';
+				else echo '<style type="text/css">	#'.$this->sliderHtmlID_wrapper.' .tp-loader.spinner'.$use_spinner.'{ background-color: '.$spinner_color.' !important; } </style>");</script>';
 			break;
 			case '3':
 			case '4':
-				if(!is_admin()) echo '<script>document.write("<style type=\"text/css\"> #'.$this->sliderHtmlID_wrapper.' .tp-loader.spinner'.$use_spinner.' div { background-color: '.$spinner_color.' !important; }</style>);</script>';
-				else echo '<style type="text/css">	#'.$this->sliderHtmlID_wrapper.' .tp-loader.spinner'.$use_spinner.'{ background-color: '.$spinner_color.' !important; } </style>';
+				if(!is_admin()) echo '<script>document.write("<style type=\"text/css\"> #'.$this->sliderHtmlID_wrapper.' .tp-loader.spinner'.$use_spinner.' div { background-color: '.$spinner_color.' !important; }</style>");</script>';
+				else echo '<style type="text/css">	#'.$this->sliderHtmlID_wrapper.' .tp-loader.spinner'.$use_spinner.'{ background-color: '.$spinner_color.' !important; } </style>");</script>';
 			break;
 			case '0':
 			case '5':
