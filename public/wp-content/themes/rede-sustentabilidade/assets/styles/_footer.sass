@@ -64,10 +64,13 @@
   .notes
     display: inline-block
     margin: 25px 0 25px 40px
+    .icon
+      width: 32px
+      height: 32px
+      vertical-align: bottom
     p
       color: #d3d3ce
       display: inline-block
-      font-family: 'PT Sans', sans-serif
       font-size: 14px
       line-height: 16px
       margin: 0 0 0 10px
@@ -86,7 +89,70 @@
       padding: 10px
     &.social-network
       float: right
-      margin-right: 25px
       i
         border: 0
         background: none
+
+//Redesign Footer
+
+.site-footer
+  .col
+    float: left
+    width: 200px
+    height: 150px
+    margin: 15px 0
+    padding: 0 32px
+    border-left: 1px solid #7c7c7a
+    &:first-child
+      width: auto
+      padding-left: 20px
+      border-left: 0 none
+  .notes
+    margin: 15px 0 0
+    &.social-network
+      display: block
+      float: none
+      text-align: center
+      a
+        margin: 0 20px
+        &:hover i
+          color: #fff
+    p a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+    i.icon-creative-commons,
+    i.icon-software-livre
+      display: inline-block
+      width: 25px
+      height: 25px
+      padding: 0
+      background-color: transparent
+      background-repeat: no-repeat
+      border: 0 none
+      border-radius: 0
+      line-height: 1em
+      font-size: 12px
+      &:before
+        content: ''
+    i.icon-creative-commons
+      margin-left: 50px
+      background-image: url(assets/images/redesign/footer_cc.png)
+    i.icon-software-livre
+      background-image: url(assets/images/redesign/footer_livre.png)
+  h4
+    color: #ffffff
+    font-size: 22px
+  ul,
+  li
+    margin: 0
+    padding: 0
+    list-style: none
+  li
+    margin-top: 5px
+    a
+      display: block
+      color: #ffffff
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4b56be0bc589484b707dd8af44d0f578",
-    "content-hash": "8fd7de534fd0bc3eb4027a0a3f3ffee2",
+    "hash": "53a51409b569d74f116e610b2cbdbf1c",
+    "content-hash": "5f1baeae949f422118d6417c28afa2df",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -729,27 +729,6 @@
             "homepage": "https://wordpress.org/plugins/wp-permastructure/"
         },
         {
-            "name": "wpackagist-plugin/wp-session-manager",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-session-manager/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-session-manager.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-session-manager/",
-            "time": "2013-12-18 05:06:36"
-        },
-        {
             "name": "wpackagist-theme/pinbin",
             "version": "1.4.7",
             "source": {
@@ -780,7 +759,6 @@
         "wpackagist-plugin/query-monitor": 20,
         "wpackagist-plugin/diagnosis": 20,
         "wpackagist-plugin/wordpress-https": 20,
-        "wpackagist-plugin/wp-session-manager": 20,
         "wpackagist-plugin/amazon-ses-and-dkim-mailer": 20
     },
     "prefer-stable": false,

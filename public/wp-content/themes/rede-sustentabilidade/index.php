@@ -20,7 +20,9 @@ get_header(); ?>
             <h2><a class="front-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
             <div class="category"><?php the_category(', ') ?></div>
             <p class="author"><?php the_author(); ?></p>
-            <p class="date"><?php the_time(get_option('date_format')); ?></p>
+            <p class="date" title="<?php the_date(); echo " "; the_time(); ?>">
+                <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')); ?> atrás
+            </p>
             <div class="excerpt">
                 <?php the_excerpt(); ?>
             </div>

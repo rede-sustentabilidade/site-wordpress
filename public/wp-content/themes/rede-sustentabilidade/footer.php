@@ -8,13 +8,17 @@
     <div class="col">
         <div class="notes social-network">
           <a target="_blank" href="https://www.facebook.com/BrasilEmRede"><i class="icon-facebook"></i></a>
-          <a target="_blank" href="http://www.flickr.com/photos/brasilemrede/"><i class="icon-flickr"></i></a>
-          <a target="_blank" href="http://www.youtube.com/BrasilEmRede"><i class="icon-youtube"></i></a>
+          <a target="_blank" href="https://www.flickr.com/photos/brasilemrede/"><i class="icon-flickr"></i></a>
+          <a target="_blank" href="https://www.youtube.com/BrasilEmRede"><i class="icon-youtube"></i></a>
           <a target="_blank" href="https://twitter.com/maisumnarede"><i class="icon-twitter"></i></a>
         </div>
-        <div class="notes"><i class="icon-software-livre"></i><p>Este site é um<br>software livre.</p></div>
-        <div class="notes"><i class="icon-creative-commons"></i><p>Todo o conteúdo está disponível <br>
-            sob a licença <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR" target="_blank">Creative Commons.</a></p></div>
+        <div class="notes">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" viewBox="0 0 500 500" version="1.1" x="0px" y="0px"><g stroke="none" stoke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"><g sketch:type="MSArtboardGroup" fill="#dadad5"><path d="M456.5,250 C456.5,135.953199 364.046801,43.5 250,43.5 C135.953199,43.5 43.5,135.953199 43.5,250 C43.5,364.046801 135.953199,456.5 250,456.5 C364.046801,456.5 456.5,364.046801 456.5,250 Z M56.5,250 C56.5,143.132901 143.132901,56.5 250,56.5 C356.867099,56.5 443.5,143.132901 443.5,250 C443.5,356.867099 356.867099,443.5 250,443.5 C143.132901,443.5 56.5,356.867099 56.5,250 Z" sketch:type="MSShapeGroup"/><path d="M309.5,245.973684 L309.5,343.499998 L190.5,343.499998 L190.5,245.973684 L309.5,245.973684 Z M177.5,239.473684 L177.5,350 C177.5,353.589851 180.410149,356.5 184,356.5 L316,356.5 C319.589851,356.5 322.5,353.589851 322.5,350 L322.5,239.473684 C322.5,235.883833 319.589851,232.973684 316,232.973684 L184,232.973684 C180.410149,232.973684 177.5,235.883833 177.5,239.473684 Z" sketch:type="MSShapeGroup"/><path d="M252.64,143.5 C224.480127,143.5 201.643637,166.263646 201.643637,194.354428 L201.643637,234.752264 C201.643637,238.342115 204.553786,241.252264 208.143637,241.252264 C211.733488,241.252264 214.643637,238.342115 214.643637,234.752264 L214.643637,194.354428 C214.643637,173.452662 231.650548,156.5 252.64,156.5 C273.629452,156.5 290.636363,173.452662 290.636363,194.354428 C290.636363,197.944279 293.546512,200.854428 297.136363,200.854428 C300.726214,200.854428 303.636363,197.944279 303.636363,194.354428 C303.636363,166.263646 280.799873,143.5 252.64,143.5 Z" sketch:type="MSShapeGroup"/></g></g></svg>
+    <p>Este site é um software livre.</p></div>
+        <div class="notes">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path fill="#dadad5" d="M38.156,64.088c3.562,0,6.961-1.333,9.573-3.751c0.81-0.75,0.858-2.016,0.108-2.826  c-0.751-0.811-2.016-0.859-2.827-0.108c-1.869,1.732-4.304,2.686-6.854,2.686c-5.563,0-10.088-4.526-10.088-10.088  s4.525-10.088,10.088-10.088c2.548,0,4.98,0.952,6.849,2.681c0.811,0.75,2.076,0.701,2.827-0.11c0.75-0.811,0.701-2.076-0.11-2.826  c-2.61-2.415-6.007-3.745-9.565-3.745c-7.769,0-14.088,6.32-14.088,14.088S30.387,64.088,38.156,64.088z"/><path fill="#dadad5" d="M65.156,64.088c3.562,0,6.961-1.333,9.573-3.751c0.81-0.75,0.858-2.016,0.108-2.826  c-0.751-0.811-2.016-0.859-2.827-0.108c-1.869,1.732-4.304,2.686-6.854,2.686c-5.563,0-10.088-4.526-10.088-10.088  s4.525-10.088,10.088-10.088c2.548,0,4.98,0.952,6.849,2.681c0.811,0.75,2.076,0.701,2.827-0.11c0.75-0.811,0.701-2.076-0.11-2.826  c-2.61-2.415-6.007-3.745-9.565-3.745c-7.769,0-14.088,6.32-14.088,14.088S57.387,64.088,65.156,64.088z"/><path fill="#dadad5" d="M50,92c22.766,0,42-19.233,42-42S72.766,8,50,8S8,27.233,8,50S27.234,92,50,92z M50,12  c20.598,0,38,17.402,38,38S70.598,88,50,88S12,70.598,12,50S29.402,12,50,12z"/></svg>
+         <p>Todo o conteúdo está disponível <br>
+            sob a licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR" target="_blank">Creative Commons.</a></p></div>
     </div>
     <div class="col">
         <h4>Últimas publicações</h4>
