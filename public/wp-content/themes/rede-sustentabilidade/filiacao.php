@@ -52,7 +52,7 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
             </form>
             <form ng-switch-when="Dados Pessoais" novalidate class="pure-form pure-form-stacked form-2" name="form_2">
                 <fieldset>
-                     <div class="pure-g-r">
+                     <div class="pure-g">
                          <div class="pure-u-1">
                      <p class="mensagem duvida">Dúvidas? Escreva para o email <a href="mailto:filiacao@redesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a></p>
                              <label for="birthday">Nome Completo</label>
@@ -84,16 +84,17 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                             </select>
                         </div>
                     </div>
-                    <div class="pure-g-r">
+                    <div class="pure-g">
                         <div class="pure-u-1">
 
                             <label for="cep">CEP</label>
                             <input name="cep" ng-change="$parent.carregaEndereco()" required ng-model="$parent.filiado.cep" id="cep" ui-mask="99999-999" type="text" class="pure-input-1-3">
                             <p>Após preenchimento do CEP, o endereço é completado automaticamente. Apenas insira o número e complemento abaixo.</p>
                         </div>
-
+                    </div>
+                    <div class="pure-g">
                         <div class="pure-u-3-5">
-                            <label for="endereco">Seu Endereço <span>(Se você mora fora do Brasil, informe o país em "complemento")</span> </label>
+                            <label for="endereco">Seu Endereço <!-- span>(Se você mora fora do Brasil, informe o país em "complemento")</span--> </label>
                             <input name="endereco" placeholder="Logradouro" required ng-model="$parent.filiado.endereco" id="endereco" type="text" class="pure-input-1">
                         </div>
                         <div class="pure-u-1-5">
@@ -104,6 +105,8 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                             <label for="complemento">&nbsp;</label>
                             <input name="complemento" placeholder="Complemento" ng-model="$parent.filiado.complemento" id="complemento" type="text" class="pure-input-1">
                         </div>
+                    </div>
+                    <div class="pure-g">
                         <div class="pure-u-1-3">
                             <!--label for="bairro">Bairro</label-->
                             <input name="bairro" placeholder="Bairro" required ng-model="$parent.filiado.bairro" id="bairro" type="text" class="pure-input-1">
@@ -147,21 +150,19 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                                 <option value="XX">Não aplicável</option>
                             </select>
                         </div>
-                        <div class="pure-u-1">
-                            <div class="pure-g-r">
-                                <div class="pure-u-1-3">
-                                    <label for="telefone_residencial">Telefone Residencial</label>
-                                    <input placeholder="Residencial" required ng-model="$parent.filiado.telefone_residencial" name="telefone_residencial" id="telefone_residencial" type="text"  class="pure-input-1">
-                                </div>
-                                <div class="pure-u-1-3">
-                                    <label for="telefone_celular">Celular</label>
-                                    <input placeholder="Celular" ng-model="$parent.filiado.telefone_celular" name="telefone_celular" id="telefone_celular" type="text"  class="pure-input-1">
-                                </div>
-                                <div class="pure-u-1-3">
-                                    <label for="telefone_comercial">Comercial</label>
-                                    <input placeholder="Comercial" ng-model="$parent.filiado.telefone_comercial" name="telefone_comercial" id="telefone_comercial" type="text"  class="pure-input-1">
-                                </div>
-                            </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1-3">
+                            <label for="telefone_residencial">Telefone Residencial</label>
+                            <input placeholder="Residencial" required ng-model="$parent.filiado.telefone_residencial" name="telefone_residencial" id="telefone_residencial" type="text"  class="pure-input-1">
+                        </div>
+                        <div class="pure-u-1-3">
+                            <label for="telefone_celular">Celular</label>
+                            <input placeholder="Celular" ng-model="$parent.filiado.telefone_celular" name="telefone_celular" id="telefone_celular" type="text"  class="pure-input-1">
+                        </div>
+                        <div class="pure-u-1-3">
+                            <label for="telefone_comercial">Comercial</label>
+                            <input placeholder="Comercial" ng-model="$parent.filiado.telefone_comercial" name="telefone_comercial" id="telefone_comercial" type="text"  class="pure-input-1">
                         </div>
                     </div>
                 </fieldset>
@@ -170,11 +171,11 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
             <form ng-switch-when="Dados Eleitorais" novalidate class="pure-form pure-form-stacked form-3" name="form_3">
                 <fieldset>
                     <legend>Por favor, preencha seus dados eleitorais. Assim conseguiremos entender seu histórico político e suas motivações para filiar-se.</legend>
-                    <div class="pure-g-r">
+                    <div class="pure-g">
                         <div class="pure-u-1">
                             <p class="mensagem duvida">Dúvidas? Escreva para o email <a href="mailto:filiacao@redesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a></p>
                         </div>
-                        <div class="pure-g-r">
+                        <div class="pure-g">
                             <div class="pure-u-1-3">
                                 <label for="titulo_eleitoral">Título Eleitoral <span>(complete com 0 a esquerda)</span></label>
                                 <input ng-model="$parent.filiado.titulo_eleitoral" required name="titulo_eleitoral" ui-mask="9999 9999 9999" placeholder="Título Eleitoral" id="titulo_eleitoral" type="text" class="pure-input-1">
@@ -313,7 +314,7 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
             <form ng-switch-when="Doação" novalidate class="pure-form pure-form-stacked form-4" name="form_4">
                 <fieldset>
                     <legend>Visando garantir a sua autonomia e independência política, a #Rede propõe o financiamento de sua estrutura e ações através da contribuição direta de seus filiados. Com qual valor pretende colaborar mensalmente?</legend>
-                    <div class="pure-g-r">
+                    <div class="pure-g">
                         <div class="pure-u-1">
                             <p class="mensagem duvida">Dúvidas? Escreva para o email <a href="mailto:filiacao@redesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a></p>
                         </div>
@@ -356,7 +357,7 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                         <p class="mensagem ajuda"><img width="20" height="20" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/formulario-cadeado.png" />Não se preocupe, você está em uma conexão segura. Você só será cobrado(a) depois que sua filiação for concluída.</p>
                     </div>
 
-                    <div class="pure-g-r dados-do-cc" ng-show="$parent.filiado.forma_pagamento.tipo=='cartao-credito'">
+                    <div class="pure-g dados-do-cc" ng-show="$parent.filiado.forma_pagamento.tipo=='cartao-credito'">
                         <div class="pure-u-1" ng-show="$parent.filiado.forma_pagamento.tipo=='cartao-credito'">
                             <label for="forma_pagamento_bandeira">Bandeira</label>
                             <label class="inner-label" for="forma_pagamento_bandeira_mastercard">

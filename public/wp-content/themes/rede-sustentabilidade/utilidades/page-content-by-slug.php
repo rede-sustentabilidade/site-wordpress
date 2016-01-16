@@ -1,8 +1,8 @@
 <?php
 
-define('ABSPATH', realpath(dirname(__FILE__) . '/../../../../wp') . '/');
+define('ABSPATH', realpath(dirname(__FILE__) . '/../../../../') . '/');
 
-require(ABSPATH . '../wp-config.php');
+require(ABSPATH . 'wp-config.php');
 
 $pagename=$_GET['pagename'];
 
