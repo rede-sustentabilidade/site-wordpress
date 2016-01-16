@@ -139,7 +139,7 @@ define([
             });
           /* Mobile Navigation
 ================================================== */
-jQuery(function(e){e(document).ready(function(){e("<select />").appendTo(".main-nav");e("<option />",{selected:"selected",value:"",text:"Navegue pelo site..."}).appendTo(".main-nav select");e(".main-nav ul.menu li a").each(function(){var t=e(this);var n="";for(var r=0;r<t.parentsUntil("div > ul").length-1;r++)n+="–";e("<option />",{value:t.attr("href"),html:n+t.text()}).appendTo(".main-nav select")});e(".main-nav select").change(function(){window.location=e(this).find("option:selected").val()})})})
+jQuery(function(e){e(document).ready(function(){e("<select />").prependTo(".main-nav");e("<option />",{selected:"selected",value:"",text:"Navegue pelo site..."}).appendTo(".main-nav select");e(".main-nav ul.menu li a").each(function(){var t=e(this);var n="";for(var r=0;r<t.parentsUntil("div > ul").length-1;r++)n+="–";e("<option />",{value:t.attr("href"),html:n+t.text()}).appendTo(".main-nav select")});e(".main-nav select").change(function(){window.location=e(this).find("option:selected").val()})})})
         }
     };
 

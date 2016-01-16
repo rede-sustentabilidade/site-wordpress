@@ -27,7 +27,7 @@ add_filter('show_admin_bar', '__return_false');
 function frontend_scripts_method() {
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '20140526' );
 	wp_register_style('rs_rrssb', get_stylesheet_directory_uri() . '/css/rrssb.min.css');
-	wp_enqueue_style('rs_rrssb');
+    //	wp_enqueue_style('rs_rrssb');
 
 	wp_enqueue_script( 'require', get_stylesheet_directory_uri() . '/assets/bower_components/requirejs/require.js', array( 'jquery' ), '20130609', true );
 	wp_enqueue_script( 'site-main', get_stylesheet_directory_uri() . '/assets/js/source/Site/main.js', array( 'require' ), '20130609', true );

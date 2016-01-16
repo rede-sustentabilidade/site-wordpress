@@ -50,7 +50,7 @@ if (isset($_COOKIE['access_token'])) {
 		<a href="<?php echo site_url(); ?>/entenda-a-filiacao/" class="label">filie-se</a>
 	</div>
 	<div class="fazer-conexao">
-		<a class="welcome-message label"><?php echo $usuario->username; ?></a>
+    <a href="javascript:void(0);" class="welcome-message label"><?php echo $usuario->username; ?></a>
 		<div class="dropdown">
 			<!--<div class="seta"></div>-->
 			<div class="item">
@@ -73,7 +73,7 @@ if (isset($_COOKIE['access_token'])) {
 		<a href="<?php echo site_url(); ?>/entenda-abono-e-impugnacao/" class="label">ajuda</a>
 	</div>
 	<div class="fazer-conexao">
-		<a class="welcome-message label"><?php echo $filiado->fullname; ?></a>
+		<a href="javascript:void(0);" class="welcome-message label"><?php echo $filiado->fullname; ?></a>
 		<div class="dropdown">
 			<!--<div class="seta"></div>-->
 			<div class="item">
