@@ -105,17 +105,17 @@ if (count($filiado)>0) {
                 </div>
                 <div class="pure-u-1">
                     <label for="cep">CEP</label>
-                    <input id="cep" name="cep" type="text" class="pure-input-1-4" ui-mask="99999-999" value="<?php echo $filiado->cep; ?>">
+                    <input id="cep" name="cep" type="text" class="pure-input-1-3" ui-mask="99999-999" value="<?php echo $filiado->cep; ?>">
                 </div>
                 <div class="pure-u-1">
                     <label for="endereco">Endereço</label>
                     <input id="endereco" name="endereco" type="text" class="pure-input-1" value="<?php echo $filiado->endereco; ?>">
                 </div>
-                <div class="pure-u-1-5">
+                <div class="pure-u-1-3">
                     <label for="numero">Número</label>
                     <input id="numero" name="numero" type="text" class="pure-input-1" value="<?php echo $filiado->numero; ?>">
                 </div>
-                <div class="pure-u-4-5">
+                <div class="pure-u-2-3">
                     <label for="complemento">Complemento</label>
                     <input id="complemento" name="complemento" type="text" class="pure-input-1-3" value="<?php echo $filiado->complemento; ?>">
                 </div>
