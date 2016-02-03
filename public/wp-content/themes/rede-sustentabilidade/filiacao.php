@@ -239,10 +239,6 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                             <label for="candidato_antecedentes">Você tem antecedentes criminais, é ou já foi réu em ação criminal, é ou já foi investigado em inquérito policial? Em caso positivo indique o número do processo e a instância judicial (cartório, cidade, tribunal) em curso ou da decisão judicial respectiva (com ou sem trânsito em julgado).</label>
                             <textarea ng-required="$parent.filiado.quer_ser_candidato=='S'" name="candidato_antecedentes" ng-model="$parent.filiado.candidato_antecedentes" id="candidato_antecedentes" rows="3" class="pure-input-1"></textarea>
                         </div>
-
-
-
-
                         <div class="pure-u-1">
                             <label for="filiado_partido">É ou já foi filiado a partido político??</label>
                             <label class="inner-label" for="filiado_partido_N">
@@ -306,7 +302,6 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                             <label for="cargo_confianca_quais">Quais você já foi nomeado?</label>
                             <input ng-model="$parent.filiado.cargo_confianca_quais" ng-required="$parent.filiado.cargo_confianca=='S'" name="cargo_confianca_quais" placeholder="Ex. Atualmente sou prefeito do município X." id="cargo_confianca_quais" type="text" class="pure-input-1">
                         </div>
-
                     </div>
                 </fieldset>
                 <button ng-click="handleNext(dismiss)" ng-disabled="form_3.$invalid" class="proximo"><span class="hmo">{{getNextLabel()}}</span> <i class="icon-seta-em-frente"></i></button>
@@ -402,7 +397,6 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                                 ?>
                             </select>
                         </div>
-
                         <div class="pure-u-1-5">
                             <label class="inner-label" for="cartao_codigo_verificacao">Cód. Segurança</label>
                             <input ng-required="$parent.filiado.forma_pagamento.tipo=='cartao-credito'" ng-maxlength="5" id="cartao_codigo_verificacao" ng-model="$parent.filiado.forma_pagamento.cartao_codigo_verificacao" name="cartao_codigo_verificacao" type="text" class="pure-u-1" />
@@ -504,8 +498,8 @@ Qualquer dúvida, entre em contato através do <a href="mailto:filiacao@redesust
 
 <div class="box-aviso">
     <p>Antes de filiar, faça login ou crie sua conta!</p>
-    <a class="button" href="<?php echo wp_login_url(site_url('/filie-se/')); ?>">Login</a>
-    <a class="button" href="<?php echo wp_registration_url(); ?>&redirect_to=<?php echo site_url('/filie-se/'); ?>">Cadastre-se</a>
+    <a class="button" href="<?php echo site_url() . '/?login=1'; ?>">Login</a>
+    <a class="button" href="<?php echo WP_PASSPORT_PATH . '/registration' ?>">Cadastre-se</a>
 </div>
 
 <h2 class="title">Filiação</h2>

@@ -1,7 +1,7 @@
 <?php define('REDETHEME', dirname(__FILE__)); ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
-		<?php if (WP_ENV !== 'development') { ?>
+		<?php if (WP_ENV == 'staging') { ?>
 			<meta name="robots" CONTENT="noindex, follow">
 		<?php } ?>
         <meta charset="<?php bloginfo('charset'); ?>">
