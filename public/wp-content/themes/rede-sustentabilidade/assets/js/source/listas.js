@@ -360,62 +360,14 @@ jQuery(function ($) {
         processHeaderFixed();
     }
 
-    function listenConfirmacao() {
-        $('.confirmacao-action').on('click', function (e) {
-            var id = e.currentTarget.id;
-            insertLoading();
-            makeConfirmacao(id, WP_USER_ID, function (err, data) {
-                if (!err) {
-                    $.prompt('Confirmação realizada com sucesso! Obrigado.', {
-                        title: 'Rede Sustentabilidade',
-                        top: '35%',
-                        buttons: {'Ok': true},
-                        submit: function () {
-                            location.reload();
-                        }
-                    });
-                } else {
-                    if (data && data.responseJSON) {
-                        $.prompt('Erro ao confirmar filiação. Veja os erros abaixo:\n\n' + data.responseJSON.join('\n\n'), {
-                            title: 'Rede Sustentabilidade',
-                            top: '35%',
-                            buttons: {'Ok': true},
-                            submit: function () {
-                                location.reload();
-                            }
-                        });
-                    } else {
-                        $.prompt('Erro ao confirmar filiação. Tente novamente em alguns instantes.', {
-                            title: 'Rede Sustentabilidade',
-                            top: '35%',
-                            buttons: {'Ok': true},
-                            submit: function () {
-                                location.reload();
-                            }
-                        });
-                    }
-                }
-            });
-        });
-    }
-
-
     function processConfirmacao() {
         var o = '',
         l = '',
             fields =
                 [
                     ['fullname', 'Nome'],
-                    ['email', 'E-mail'],
-                    ['telefone_celular', 'Celular'],
-                    ['telefone_residencial', 'Tel. Residencial'],
                     ['cidade', 'Cidade'],
-                    ['uf', 'Estado'],
-                    ['tipo_Filiacao', 'Filiação'],
-                    ['filiado_partido', 'Já foi filiado?', true],
-                    ['foi_candidato', 'Já foi candidato?', true],
-                    ['atual_anterior_eleito', 'Já foi eleito?', true],
-                    ['cargo_confianca', 'Já foi comissionado?', true]
+                    ['uf', 'Estado']
                 ];
         o += getNavigation();
         o += '<h1>Pré-filiados aguardando confirmação</h1>';
@@ -432,7 +384,6 @@ jQuery(function ($) {
         o += '<table>';
         o += '<thead>';
         o += '<tr>';
-        o += '<th>Abono</th>';
         fields.forEach(function (v) {
             o += '<th>';
             o += v[1];
@@ -443,7 +394,6 @@ jQuery(function ($) {
         o += '<tbody>';
         listas.data.forEach(function (v) {
             l += '<tr>';
-            l += '<td id="' + v.user_id + '" class="confirmacao-action"><span class="icon-ok-sign"></span> Confirmar</td>';
             fields.forEach(function (x) {
                 if (x[2]) {
                     if (v[x[0]] === 'S') {
@@ -478,7 +428,6 @@ jQuery(function ($) {
         o += getControlResultsPerPage();
         o += '<div class="clear"></div>';
         $('#lists').html(o);
-        listenConfirmacao();
         processHeaderFixed();
     }
 
@@ -735,7 +684,7 @@ jQuery(function ($) {
                 break;
                 case 'confirmacao':
                     //getListas(listas.hash[1], listas.hash[2], '2', function () {
-                    getListas(listas.hash[1], listas.hash[2], listas.hash[3] + ':' + listas.hash[4], '8', listas.hash[5], WP_USER_STATE, 1, 1, function () {
+                    getListas(listas.hash[1], listas.hash[2], listas.hash[3] + ':' + listas.hash[4], '8', listas.hash[5], listas.hash[6], 1, 1, function () {
                     processFiliadosAdmin();
                     processConfirmacao();
                     recarregaCampos();
