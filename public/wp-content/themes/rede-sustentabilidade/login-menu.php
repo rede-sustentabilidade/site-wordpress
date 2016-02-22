@@ -104,12 +104,6 @@ if (isset($_COOKIE['access_token'])) {
 				<p><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-filiados em fase de avaliação</a></p>
 			</div>
 <?php } ?>
-<?php if ($filiado->status > 10) { ?>
-			<script>var WP_USER_STATE = '';</script>
-			<div class="item">
-				<p><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
-			</div>
-<?php } ?>
 		<script>API_USER_STATUS = '<?php echo $filiado->status ?>';</script>
 		<?php if ($filiado->status == 1) { ?>
 			<div class="item">
@@ -145,6 +139,9 @@ if (isset($_COOKIE['access_token'])) {
 			</div>
 			<div class="item">
 				<p><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-filiados em fase de avaliação</a></p>
+			</div>
+			<div class="item">
+				<p><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
 			</div>
 			<div class="item">
 				<p><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
