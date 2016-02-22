@@ -378,7 +378,7 @@ jQuery(function ($) {
             $('#listas').html(o);
             return;
         }
-        o += '<p>Abaixo está a lista de novos pré-filiados à Rede Sustentabilidade. Para que se tornem filiados, precisam receber o abono de outro filiado. Se você aprova e abona a filiação de algum deles, clique em "abonar". PS: Movimente a tabela lateralmente para ver todos os dados de cada linha.</p>';
+        o += '<p>Abaixo está a lista de pré-filiados que já passaram pela fase de confirmação sem serem impugnados. Para se tornarem filiados, precisam passar pela formação política promovida pela a Direção Estadual de seu estado. Movimente a tabela lateralmente para ver todos os dados de cada linha.</p>';
         o += getSearch();
         o += '<div id="list">';
         o += '<table>';
