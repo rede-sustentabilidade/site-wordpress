@@ -2,33 +2,37 @@
 
 function is_logged_in() {
     global $usuario;
+
     if (!empty($usuario)) {
-        $ApiRede = ApiRede::getInstance();
-        return $ApiRede->getProfile($usuario->id); // trocar para e-mail
+        return $usuario;
     }
     return false;
 }
 
 function force_logged_in() {
-    $filiado = is_logged_in();
+    $usuario = is_logged_in();
 
-    if ($filiado) {
-        return $filiado;
+    if ($usuario) {
+        return $usuario;
     }
     wp_redirect(site_url() . '/?login=1');
     return false;
 }
 
 function is_filiado() {
-    $filiado = is_logged_in();
-    if (
+    $usuario = is_logged_in();
+    $ApiRede = ApiRede::getInstance();
+    $filiado = $ApiRede->getProfile($usuario->id); // trocar para e-mail
+
+    if ((is_array($filiado)) && ($filiado['httpCode'] == 404)) {
+        return false;
+    } else if (
         ($filiado) && (
             ($filiado->status == 3) ||
             ($filiado->status > 10)
         )) {
         return true;
     }
-
     return false;
 }
 

@@ -2,10 +2,13 @@
 /*
 Template Name: Formulário do Perfil
 */
+$filiado = is_filiado();
 
-global $usuario;
-//$wp_session = WP_Session::get_instance();
-//$usuario = $wp_session['usuario'];
+if (!$filiado) {
+    require_once('page-template-acesso-negado.php');
+    exit;
+}
+
 function doUserUpdate()
 {
 	global $usuario;
@@ -60,11 +63,6 @@ if ((isset($_COOKIE['usuario'])) && !empty($_POST)) {
 
 get_header();
 
-if (isset($_COOKIE['usuario'])) :
-
-$filiado = ApiRede::getInstance()->getProfile($usuario->id);
-
-if (count($filiado)>0) {
 ?>
 
     <div class="container-meu-perfil">
@@ -251,17 +249,4 @@ if (count($filiado)>0) {
     		    <button type="submit">Salvar <i class="icon-seta-em-frente"></i></button>
     		</form>
     </div>
-<?php } else { ?>
-
-	<h2 class="title">Meu Perfil</h2>
-	<div class="container-meu-perfil">
-		<p>Preencha sua pré-filiação e habilite esta seção. <a href="<?php echo site_url("/filiacao-redesim/"); ?>">Entenda a filiação.</a></p>
-	</div>
-<?php }
-else : ?>
-	<h2 class="title">Meu Perfil</h2>
-	<div class="container-meu-perfil">
-		<p>Desculpe, faça seu <a href="<?php echo site_url("/?login=1"); ?>">login</a> para editar o perfil.</p>
-	</div>
-<?php endif; ?>
 <?php get_footer(); ?>

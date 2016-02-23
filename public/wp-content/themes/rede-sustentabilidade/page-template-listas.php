@@ -2,6 +2,12 @@
 /*
 Template Name: Listas
  */
+$filiado = is_filiado();
+
+if (!$filiado) {
+    require_once('page-template-acesso-negado.php');
+    exit;
+}
 
 wp_enqueue_style('listas', get_stylesheet_directory_uri() . '/css/listas.css');
 wp_enqueue_script('underscore', get_stylesheet_directory_uri() . '/assets/js/source/underscore-min.js', array('jquery'), '1.5.2', true);
