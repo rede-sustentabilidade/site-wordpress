@@ -4,7 +4,7 @@
  */
 
 if (!is_filiado()) {
-    echo "<h1>Acesso restrito</h1>";
+    require_once('page-template-acesso-negado.php');
     exit;
 }
 ?>
