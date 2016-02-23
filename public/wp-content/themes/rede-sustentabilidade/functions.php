@@ -10,6 +10,8 @@ require_once get_stylesheet_directory().'/includes/payment.php';
 
 require_once get_stylesheet_directory().'/includes/redesign.php';
 
+require_once get_stylesheet_directory().'/includes/usuario.php';
+
 function wpr_remove_custom_actions() {
     remove_action( 'after_setup_theme', 'pinbin_options_init' );
     /* remove_action( 'admin_init', 'pinbin_options_setup' ); */

@@ -1,6 +1,8 @@
 <?php
 //$wp_session = WP_Session::get_instance();
+
 global $usuario;
+
 if ($_GET['logout']) {
 	unset($_COOKIE['access_token']);
 	setcookie('access_token', null, -1);
@@ -31,7 +33,6 @@ if (isset($_COOKIE['access_token'])) {
 			setcookie('usuario', $usuario);
 		}
 		$usuario = json_decode($usuario);
-		//$wp_session['usuario'] = $usuario;
 		$ApiRede = ApiRede::getInstance();
 		$filiado = $ApiRede->getProfile($usuario->id); // trocar para e-mail
 	} catch (\GuzzleHttp\Exception\ClientException $e) {
