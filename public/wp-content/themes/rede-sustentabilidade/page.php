@@ -3,18 +3,7 @@
  * Single page template
  */
 
-if (is_page('baixe-aqui')) {
-    $current_user = wp_get_current_user();
-    $profile = ApiRede::getInstance()->getProfile($current_user->ID);
-	if (empty($profile) || $profile->status != 3) {
-	    wp_redirect(wp_login_url($_SERVER['REQUEST_URI']));
-	    exit;
-	}
-}
-
-?>
-
-<?php get_header(); ?>
+get_header(); ?>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

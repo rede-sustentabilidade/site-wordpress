@@ -1,6 +1,14 @@
 <?php
-require_once("utilidades/ApiRede.php");
-require_once("utilidades/RsProvider.php");
+
+require_once get_stylesheet_directory().'/utilidades/ApiRede.php';
+
+require_once get_stylesheet_directory().'/utilidades/RsProvider.php';
+
+require_once get_stylesheet_directory().'/includes/regionalization.php';
+
+require_once get_stylesheet_directory().'/includes/payment.php';
+
+require_once get_stylesheet_directory().'/includes/redesign.php';
 
 function wpr_remove_custom_actions() {
     remove_action( 'after_setup_theme', 'pinbin_options_init' );
@@ -176,20 +184,10 @@ if (isset($_COOKIE['usuario'])) {
 
 ////////////////////
 function new_wp_login_url() {
-return home_url();
+    return home_url();
 }
 add_filter('login_headerurl', 'new_wp_login_url');
 
-// Auto login and redirect to a page
-function auto_login_new_user( $user_id ) {
-  wp_set_current_user($user_id);
-  wp_set_auth_cookie($user_id);
-
-  // You can change home_url() to the specific URL,such as wp_redirect( 'http://www.wpcoke.com' );
-  wp_redirect( home_url() );
-  exit;
-}
-//add_action( 'user_register', 'auto_login_new_user', 10, 1 );
 /**
  * Sort by custom fields.
  * mt1 refers to meta_1, mt2 to meta_2 and mt3 to meta_3
@@ -201,32 +199,6 @@ function double_meta_posts_orderby($orderby) {
   global $wpdb;
   return " {$wpdb->postmeta}.meta_value+0 DESC";
 }
-
-/**
- * Returns the translated role of the current user. If that user has
- * no role for the current blog, it returns false.
- *
- * @return string The name of the current role
- **/
-function get_current_user_role() {
-	global $wp_roles;
-	$current_user = wp_get_current_user();
-	$user_info = get_userdata($current_user->ID);
-	$roles = $user_info->roles;
-	$role = array_shift($roles);
-	return isset($wp_roles->role_names[$role]) ? translate_user_role($wp_roles->role_names[$role] ) : false;
-}
-
-//
-
-add_role(
-    'filiado',
-    __( 'Filiado' ),
-    array(
-        'read'         => true,  // true allows this capability
-    )
-);
-
 
 function remove_category_consulta( $wp_query ) {
 
@@ -288,12 +260,6 @@ function rs_login_redirect($redirect_to, $request, $user) {
 }
 
 add_filter('login_redirect', 'rs_login_redirect', 10, 3);
-
-
-// Includes
-require get_stylesheet_directory().'/includes/regionalization.php';
-require get_stylesheet_directory().'/includes/payment.php';
-require get_stylesheet_directory().'/includes/redesign.php';
 
 /*
 Plugin Name: Disable Emojis
