@@ -125,8 +125,8 @@ class ApiRede
                 break;
         }
         $response = curl_exec($curl);
-        error_log(print_r($response, true));
-        error_log(print_r(curl_getinfo($curl), true));
+        //error_log(print_r($response, true));
+        //error_log(print_r(curl_getinfo($curl), true));
         $httpCode = (int) curl_getinfo($curl, CURLINFO_HTTP_CODE);
         curl_close($curl);
         if ($httpCode !== 200) {
