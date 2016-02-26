@@ -1,0 +1,97 @@
+
+/* line 286 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+
+/* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/node_modules/gulp-stylus/node_modules/stylus/lib/functions/index.styl */
+
+/* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing{background:#d8d8d4;padding:0 30px;margin:20px 0;}
+/* line 6 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .header{background:#e3c492;overflow:hidden;text-align:center;padding:0 0 10px;margin-top:20px}
+/* line 13 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .partidos{background:url("assets/images/partidos.png") no-repeat;width:23%;height:auto;display:block;margin:0 auto}
+/* line 20 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing h1,#landing .social,#landing .menu a,#landing .content a,#landing .video a{font-family:'League Gothic';text-decoration:none}
+/* line 24 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu a,#landing .login a,#landing .social a{color:#f1e2c9;}
+/* line 26 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu a:hover,#landing .login a:hover,#landing .social a:hover{color:#fff;opacity:1}
+/* line 30 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu a,#landing .login a{opacity:.5;}
+/* line 32 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu a:hover,#landing .login a:hover{opacity:1}
+/* line 35 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing h1{font-size:6em;font-weight:normal;color:#fff;line-height:1em;display:inline-block;text-transform:uppercase;margin:10px auto}
+/* line 44 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .social,#landing .login{float:right;margin-right:20px}
+/* line 49 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .social{color:#fff;font-size:1.6em;margin-top:10px;}
+/* line 54 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .social a{margin-right:10px;font-size:1.2em;text-decoration:none}
+/* line 59 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu{float:left;text-transform:uppercase;margin:0;}
+/* line 64 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu li{list-style:none;display:inline-block;margin:0 -7px}
+/* line 69 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu a{display:block;padding:18px 20px;font-size:1.6em;line-height:15px;color:#fff;}
+/* line 76 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu a.active{color:#fff;opacity:1}
+/* line 79 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu a.muda:hover{background:#e3c492}
+/* line 81 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu a.minuta:hover{background:#7fa31a}
+/* line 83 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .menu a.desafio:hover{background:#533b8c}
+/* line 86 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+
+/* line 87 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .rede .share,#landing .psb .share{background:#fff;width:30px;height:30px;display:inline-block;border-radius:20px}
+/* line 94 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .video{width:80%}
+/* line 96 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .video,#landing .content{margin:70px auto 20px;}
+/* line 101 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .video p,#landing .content p{color:#fff;font-size:1.6em}
+/* line 105 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .video a,#landing .content a{color:#f1e2c9;text-decoration:none;font-size:2.4em;text-transform:uppercase;display:block;clear:both;}
+/* line 113 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .video a:hover,#landing .content a:hover{color:#fff}
+/* line 116 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .video a span,#landing .content a span{vertical-align:middle;font-size:1.4em}
+/* line 121 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .video{display:none;}
+/* line 124 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .video .texto-home{text-align:left}
+/* line 127 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .main{margin-bottom:20px;position:relative;}
+/* line 131 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .main .icon-seta-em-frente{font-size:22px}
+/* line 134 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .verde,#landing .azul{width:49%;height:370px;margin-top:20px;padding:20px;text-align:center;text-decoration:none;box-sizing:border-box;box-shadow:#999 2px 2px 10px;}
+/* line 144 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .verde:hover,#landing .azul:hover{box-shadow:#333 2px 2px 10px}
+/* line 147 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .verde h2,#landing .azul h2,#landing .verde p,#landing .azul p{color:#fff;text-align:left}
+/* line 151 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .verde h2,#landing .azul h2{font-size:3em}
+/* line 153 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .verde p,#landing .azul p{font-size:1.6em;margin-top:10px}
+/* line 157 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .verde .info,#landing .azul .info{display:block;margin-top:10px}
+/* line 162 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .verde{background:#7fa31a;display:inline-block;}
+/* line 166 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .verde .info{background:url("assets/images/landing-verde.png") no-repeat;background-size:cover;min-width:211px;min-height:95px;max-width:422px;max-height:190px;width:100%;height:100%;margin:0 auto;display:block}
+/* line 178 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .azul{background:#533b8c;display:inline-block;right:0;position:absolute;}
+/* line 184 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .azul .info{background:url("assets/images/landing-azul.png") no-repeat;background-size:cover;max-width:353px;max-height:193px;min-width:177px;min-height:97px;width:100%;height:100%;margin:0 auto}
+/* line 195 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .footer{border-top:1px solid #b5b5b2;padding:10px 0;display:block;clear:both}
+/* line 201 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .disclaimer{float:left;width:36%}
+/* line 204 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .rede{float:right;width:36%;line-height:1.2em;padding:0}
+/* line 210 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .partidos{background:url("assets/images/partidos.png") no-repeat;width:170px;height:60px;margin:0 auto;display:block;background-size:cover;}
+/* line 218 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_landding.styl */
+#landing .partidos a{display:inline-block;width:70px;height:60px;margin-left:13px}
