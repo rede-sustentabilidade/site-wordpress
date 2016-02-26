@@ -7,7 +7,7 @@
 
 // Post list
 
-$base-color: #666666
+base-color = #666666
 
 #post-area
     margin-top: 2.5em
@@ -78,7 +78,7 @@ $base-color: #666666
         .author
             display: none
             margin-top: 0
-            color: lighten($base-color, 20%)
+            color: lighten(base-color, 20%)
             font-size: 22px
             font-family: 'League Gothic', sans-serif
         .excerpt
@@ -88,7 +88,7 @@ $base-color: #666666
             width: calc(600px + 1.5em)
             h2
                 padding-bottom: .5em
-                border-bottom: 1px solid $base-color
+                border-bottom: 1px solid base-color
                 a
                     font-size: 38px
             .image
@@ -111,7 +111,7 @@ $base-color: #666666
         border-width: 0
         box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, .25)
         .post-header
-            background-color: $base-color
+            background-color: base-color
         .pinbin-image,
         .pinbin-category,
         .pinbin-copy
@@ -146,14 +146,14 @@ $base-color: #666666
         h1
             line-height: 48px
             font-size: 44px
-            border-bottom: 1px solid $base-color
+            border-bottom: 1px solid base-color
         .pinbin-meta
             display: block
             border: 0 none
             text-align: right
             strong
                 display: block
-                color: lighten($base-color, 20%)
+                color: lighten(base-color, 20%)
                 font-size: 22px
                 font-family: 'League Gothic', sans-serif
         .wp-caption
@@ -173,7 +173,7 @@ $base-color: #666666
                 margin: 0
                 max-width: 100%
 
-@import "noticia-chapeu"
+@import "_noticia-chapeu"
 
 
 // Sidebar
