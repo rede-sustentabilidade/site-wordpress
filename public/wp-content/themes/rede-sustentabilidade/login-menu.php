@@ -55,14 +55,13 @@ if (isset($_COOKIE['access_token'])) {
 		<div class="dropdown">
 			<!--<div class="seta"></div>-->
 			<div class="item">
-				<i class="icon-user 2x"></i>
-				<p>Meu perfil</p>
+				<p class="title">Meu perfil</p>
+				<p> Ainda estamos em construção! Logo menos, por este link você irá poder editar seus dados pessoais. </p>
 				<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
 			</div>
 			<div class="item">
-				<i class="icon-tipo-perfil 2x"></i>
-				<p>Status: Apoiador</p>
-				<a href="<?php echo site_url(); ?>/entenda-a-filiacao/">filie-se</a>
+				<p class="title">Status: Apoiador</p>
+				<p>Aqui mostra seu status dentro da Rede. Há duas possibilidades APOIADOR ou FILIADO.</p><a href="<?php echo site_url(); ?>/entenda-a-filiacao/">filie-se</a>
 			</div>
 			<div class="item">
 				<a href="<?php echo site_url(); ?>/?logout=1">sair</a>
@@ -78,74 +77,75 @@ if (isset($_COOKIE['access_token'])) {
 		<div class="dropdown">
 			<!--<div class="seta"></div>-->
 			<div class="item">
-				<i class="icon-user 2x"></i>
-				<p>Meu perfil</p>
+				<p class="title">Meu perfil</p>
+				<p> Ainda estamos em construção! Logo menos, por este link você irá poder editar seus dados pessoais. </p>
 				<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
 			</div>
 <?php if ($filiado->status == 99) { ?>
 			<div class="item">
-				<i class="icon-tipo-perfil"></i>
-				<p>Status: Super Admin</p>
+				<p class="title">Status: Super Admin</p>
 			</div>
 			<div class="item">
-				<i class="icon-download"></i>
-				<p>Arquivos úteis aos filiados</p>
+				<p class="title">Arquivos úteis aos filiados</p>
+				<p>Neste link você poderá acessar os principais documentos internos da REDE.</p>
 				<a href="/arquivos-uteis/">baixar</a>
 			</div>
 			<div class="item">
-				<p><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
+				<p class="title"><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
+				<p>Esta é a lista de todos os filiados da REDE. Todas as pessoas que estão nessa lista também estão registradas pelo partido no FiliaWeb do TSE.</p>
 			</div>
 			<div class="item">
-				<p><a class="link-master" href="/listas/#/admin/1/50/nome/asc">Filiados para admin</a></p>
+				<p class="title"><a class="link-master" href="/listas/#/admin/1/50/nome/asc">Filiados para admin</a></p>
 			</div>
 			<div class="item">
-				<p><a class="link-master" href="/listas/#/abonos/1/50/nome/asc">Pré-filiados aguardando abono</a></p>
+				<p class="title"><a class="link-master" href="/listas/#/abonos/1/50/nome/asc">Pré-filiados aguardando abono</a></p>
+				<p>Esta é a lista de pessoas que acabaram de se registrar para ser um filiado à REDE. Qualquer filiado no Brasil pode abonar um pré-filiado à abonar</p>
 			</div>
 			<div class="item">
-				<p><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-filiados em fase de avaliação</a></p>
+				<p class="title"><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-Filiados em fase de Impugnação</a></p>
+				<p>Toda pré-filiação deve estar disponível para contestação por qualquer filiado. A pré-filiação fica nesta lista por 15 dias.</p>
 			</div>
 <?php } ?>
 		<script>API_USER_STATUS = '<?php echo $filiado->status ?>';</script>
 		<?php if ($filiado->status == 1) { ?>
 			<div class="item">
-				<i class="icon-tipo-perfil"></i>
-				<p>Status: Pré-filiado</p>
+				<p class="title">Status: Pré-filiado</p>
 				<a href="<?php echo site_url(); ?>/entenda-a-filiacao/">entenda</a>
 			</div>
 			<div class="item">
-				<p><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
+				<p class="title"><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
+				<p>Esta é a lista de todos os filiados da REDE. Todas as pessoas que estão nessa lista também estão registradas pelo partido no FiliaWeb do TSE.</p>
 			</div>
 		<?php } elseif ($filiado->status == 2) { ?>
 			<div class="item">
-				<i class="icon-tipo-perfil"></i>
-				<p>Status: Abonado</p>
+				<p class="title">Status: Abonado</p>
 				<a href="<?php echo site_url(); ?>/entenda-a-filiacao/">entenda</a>
 			</div>
 			<div class="item">
-				<p><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
+				<p class="title"><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
+				<p>Esta é a lista de todos os filiados da REDE. Todas as pessoas que estão nessa lista também estão registradas pelo partido no FiliaWeb do TSE.</p>
 			</div>
 		<?php } elseif ($filiado->status == 3) { ?>
 			<div class="item">
-				<i class="icon-tipo-perfil"></i>
-				<p>Status: Filiado</p>
-				<a href="<?php echo site_url(); ?>/entenda-abono-e-impugnacao/">ajuda</a>
+				<p class="title">Status: Filiado</p>
+				<p>Aqui mostra seu status dentro da Rede. Há duas possibilidades APOIADOR ou FILIADO. </p><a href="<?php echo site_url(); ?>/entenda-abono-e-impugnacao/">ajuda</a>
 			</div>
 			<div class="item">
-				<i class="icon-download"></i>
-				<p>Arquivos úteis aos filiados</p>
+				<p class="title">Arquivos úteis aos filiados</p>
+				<p>Neste link você poderá acessar os principais documentos internos da REDE.</p>
 				<a href="/arquivos-uteis/">baixar</a>
 			</div>
 			<div class="item">
-				<p><a class="link-master" href="/listas/#/abonos/1/50/nome/asc">Pré-filiados aguardando abono</a></p>
+				<p class="title"><a class="link-master" href="/listas/#/abonos/1/50/nome/asc">Pré-filiados aguardando abono</a></p>
+				<p>Esta é a lista de pessoas que acabaram de se registrar para ser um filiado à REDE. Qualquer filiado no Brasil pode abonar um pré-filiado à abonar</p>
 			</div>
 			<div class="item">
-				<p><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-filiados em fase de avaliação</a></p>
+				<p class="title"><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-Filiados em fase de Impugnação</a></p>
+				<p>Toda pré-filiação deve estar disponível para contestação por qualquer filiado. A pré-filiação fica nesta lista por 15 dias.</p>
 			</div>
 			<div class="item">
-				<p><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
-			</div>
-			<div class="item">
-				<p><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
+				<p class="title"><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
+				<p>Esta é a lista de todos os filiados da REDE. Todas as pessoas que estão nessa lista também estão registradas pelo partido no FiliaWeb do TSE.</p>
 			</div>
 		<?php } ?>
 			<div class="item">
