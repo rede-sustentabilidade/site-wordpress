@@ -38,7 +38,7 @@ define([
             jQuery.ajax({ type: 'GET', url: API_PATH+'/usuario/filiado/'+WP_USER_ID })
             .done(function (data) {
                 $scope.$apply(function(){
-                   $scope.ja_preencheu = true;
+                   //$scope.ja_preencheu = true;
                 });
             });
 
