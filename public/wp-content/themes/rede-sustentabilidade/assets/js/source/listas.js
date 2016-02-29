@@ -89,7 +89,7 @@ jQuery(function ($) {
             o += ' | ';
             o += '<a href="/listas/#/abonos/1/50/nome/asc">Pré-filiados aguardando abono</a>';
             o += ' | ';
-            o += '<a href="/listas/#/impugnacoes/1/50/nome/asc">Pré-filiados em fase de avaliação</a>';
+            o += '<a href="/listas/#/impugnacoes/1/50/nome/asc">Pré-filiados em fase de impugnação</a>';
         }
         if (API_USER_STATUS > 10) {
             o += ' | ';
@@ -510,7 +510,7 @@ jQuery(function ($) {
             ['cargo_confianca', 'Já foi comissionado?', true]
         ];
         o += getNavigation();
-        o += '<h1>Pré-filiados em fase de avaliação</h1>';
+        o += '<h1>Pré-filiados em fase de impugnação</h1>';
         if (!WP_USER_ID) {
             o += '<p>';
             o += 'Você precisa estar logado para ver essas informações. <a href="/wp/wp-login.php?redirect_to=' + encodeURIComponent(document.URL) + '"><strong>Clique aqui para logar</strong></a>';
