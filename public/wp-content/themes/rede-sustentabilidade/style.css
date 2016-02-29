@@ -1683,7 +1683,7 @@ p{font-family:'Open Sans',sans-serif}
 .ie-warning p{color:#fff;margin:.2em;font-size:1.3em;}
 /* line 134 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
 .ie-warning p a{color:#fff}
-/* line 231 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_animation.styl */
+/* line 235 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_animation.styl */
 
 /* line 1 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
 
@@ -1768,7 +1768,7 @@ nav.main-nav{box-shadow:none;-webkit-box-shadow:none;position:relative}
 /* line 178 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
 .fazer-conexao .dropdown .seta{width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px solid #349e8a;margin:-10px 0 0 150px}
 /* line 186 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
-.fazer-conexao .dropdown .item{border-bottom:1px solid #ececea;text-align:left;padding:17px;max-width:400px;}
+.fazer-conexao .dropdown .item{border-bottom:1px solid #ececea;text-align:left;padding:10px 20px;max-width:400px;}
 /* line 192 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
 .fazer-conexao .dropdown .item:last-child{border:0;text-align:right;line-height:30pt}
 /* line 197 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
@@ -1782,10 +1782,10 @@ nav.main-nav{box-shadow:none;-webkit-box-shadow:none;position:relative}
 /* line 211 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
 .fazer-conexao .dropdown .item i{color:#ccc;font-size:14px;margin:0 10px 0 0}
 /* line 216 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
-.fazer-conexao .dropdown .item p{text-align:left;margin:0;padding:0;line-height:1.2;width:205px;display:inline-block;}
-/* line 223 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
-.fazer-conexao .dropdown .item p.title{width:auto;min-width:205px;font-weight:bold}
-/* line 228 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
+.fazer-conexao .dropdown .item p{text-align:left;margin:0;padding:0;line-height:1.2;width:205px;display:inline-block;font-size:12px;color:#808080;letter-spacing:.1px;}
+/* line 226 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
+.fazer-conexao .dropdown .item p.title{width:auto;min-width:70%;font-weight:bold;color:#000}
+/* line 232 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
 .fazer-conexao .borderd{border-right:2px solid #fff;padding:0 5px}
 /* line 102 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
 
@@ -1993,7 +1993,7 @@ h2.title-timeline{font-family:League Gothic;font-size:68px;line-height:45px;marg
 .comments-area{margin-left:0;padding:0 3.5em}
 /* line 10 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_comments.styl */
 
-/* line 232 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_meu-perfil.styl */
+/* line 236 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_meu-perfil.styl */
 
 /* line 4 : /Users/cin_dprates/d/dev/rede-sustentabilidade/public/wp-content/themes/rede-sustentabilidade/assets/styles/_meu-perfil.styl */
 
