@@ -208,9 +208,6 @@ if (isset($_COOKIE['access_token'])) {
 /* } */
 } else { ?>
     <script>API_USER_STATUS = 0;</script>
-    <div class="filie">
-      <a href="<?php echo site_url(); ?>/entenda-a-filiacao/" class="label">filie-se</a>
-    </div>
     <div class="fazer-conexao">
 		<a href="<?php echo WP_PASSPORT_PATH . '/registration' ?>" class="label borderd">registre-se</a>
 		<a href="<?php echo site_url() . '/?login=1'; ?>" class="label"><strong>login</strong></a>
