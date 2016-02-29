@@ -18,7 +18,7 @@ global $usuario;
 	var WP_EMAIL = "<?php echo $usuario->username;?>";
 </script>
 
-<h2 class="title">Filiação</h2>
+
 
 <div class="container-filiacao">
     <div ng-controller="FiliacaoForm">
