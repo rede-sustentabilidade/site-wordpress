@@ -1,5 +1,7 @@
-Heroku WP
+Site Rede
 =========
+
+[![Stories in Ready](https://badge.waffle.io/rede-sustentabilidade/site-wordpress.svg?label=ready&title=Ready)](http://waffle.io/rede-sustentabilidade/site-wordpress)
 
 This is a template for installing and running [WordPress](http://wordpress.org/) on [Heroku](http://www.heroku.com/) with a focus on speed and security while using the official Heroku stack.
 
