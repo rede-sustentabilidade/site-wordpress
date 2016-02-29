@@ -11,19 +11,20 @@
   Tags: pin, board, noticias, desafios, minuta, likes, filiacao, doacao, sugestao, duvidas
   Text Domain: redesustentabilidade*/
 
-@import pure
+@import _pure
 
-@import pinbin
+@import _pinbin
 
-@import ../fonts/stylesheet
+@import "../fonts/_stylesheet"
 
-@import ../fonts/icones/style
+@import "../fonts/icones/_style"
 
-@import animation
+@import _animation
 
-@import ../bower_components/Magnific-Popup/src/css/settings
+// @import ../bower_components/Magnific-Popup/src/css/settings
 
-@import ../bower_components/Magnific-Popup/src/css/main.scss
+// @import ../bower_components/Magnific-Popup/src/css/main.scss
+
 
 html
   box-sizing: border-box
@@ -35,9 +36,9 @@ html, button, input, select, textarea,
   font-family: 'Open sans', sans-serif
   font-size: 14px
 
-$primary-color: #d55626
+primary-color = #d55626
 //#fc6500;
-$secondary-color: #f3a642
+secondary-color = #f3a642
 
 body
   font-family: 'Open sans', sans-serif
@@ -47,6 +48,7 @@ body
 h1,h2,h3,h4,h5,h6
   font-family: 'League Gothic'
   font-weight: normal
+
 
 h2.title
   color: white
@@ -132,29 +134,29 @@ p
     a
       color: #fff
 
-@import menu
+@import _menu
 
 //@import banner-featured
 
-@import posts-and-timeline
+@import _posts-and-timeline
 
-@import footer
+@import _footer
 
-@import viralizacao
+@import _viralizacao
 
 //@import page-doacao
 
-@import comments
+@import _comments
 
-@import meu-perfil
+@import _meu-perfil
 
-@import busca
+@import _busca
 
-@import side-tabs
+@import _side-tabs
 
-@import redesign
+@import _redesign
 
-@import slider
+@import _slider
 
 // .single
 //   .pinbin-image
