@@ -7,14 +7,17 @@ $filiado = is_filiado();
 if (!$filiado) {
     require_once('page-template-acesso-negado.php');
     exit;
+} else {
+    global $usuario;
+    $filiado = ApiRede::getInstance()->getProfile($usuario->id);
 }
 
 function doUserUpdate()
 {
 	global $usuario;
-    $apiErrors = null;
+  $apiErrors = null;
 	$profile = ApiRede::getInstance()->getProfile($usuario->id);
-    error_log(print_r($profile,true));
+
 	if ($profile->user_id == $usuario->id) {
         $profile = (array) $profile;
         unset($profile['dados_contribuicao']);
@@ -32,6 +35,7 @@ function doUserUpdate()
             }
             $profile[$k] = $v;
         }
+
         if ($_POST['contribupdate'] == 1) {
             if ($profile['tipo'] == 'boleto') {
                 unset($profile['bandeira']);
@@ -42,7 +46,8 @@ function doUserUpdate()
                 unset($profile['cartao_validade_ano']);
             }
         }
-		$response = ApiRede::getInstance()->updateProfile($profile);
+
+        $response = ApiRede::getInstance()->updateProfile($profile);
         error_log(print_r($response,true));
         if (!empty($response->errors)) {
             $apiErrors = 'Os seguintes campos contém dados inválidos ou estão vazios: ' . implode(', ', array_keys((array) $response->errors));
