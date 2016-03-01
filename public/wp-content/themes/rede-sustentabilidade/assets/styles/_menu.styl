@@ -1,4 +1,4 @@
-/********** MENU *************
+/********** MENU *************/
 
 .main-nav ul li
   padding: 9px 0 9px 20px
@@ -7,17 +7,6 @@
   a
     font-size: 12px
     color: #444
-  /*padding: 12px 12px 0 0;
-   *a{
-   *    font-family: League Gothic;
-   *    font-size: 28px;
-   *    text-transform: uppercase;
-   *    color: #c2c2c2;
-   *    i {
-   *        font-size: 18px;
-   *        padding: 0 0 0 5px;
-   *    }
-   *}
   &:hover ul
     padding: 0
     margin-top: -1px
@@ -85,7 +74,7 @@ nav.main-nav
   min-height: initial
   max-height: 300px
 
-/********** BOTOES TOPO E COMPARTILHAR *************
+/********** BOTOES TOPO E COMPARTILHAR *************/
 
 .compartilhar-na-rede
   //width: 350px;
@@ -116,7 +105,7 @@ nav.main-nav
     display: inline-block
 
 .fazer-participacao,
-.fazer-doacao,
+.fazer-doacao
   margin: 0
   padding: 7px 20px 5px 0
   float: left
@@ -153,7 +142,6 @@ nav.main-nav
   float: right
 
   a
-    color: #999
     &:hover
       color: #309D89
     &.label
@@ -195,10 +183,10 @@ nav.main-nav
       margin: -10px 0 0 150px
 
     .item
-      height: 40px
-      padding: 0 10px
       border-bottom: 1px solid #ECECEA
       text-align: left
+      padding: 10px 20px
+      max-width: 400px
 
       &:last-child
         border: 0
@@ -212,6 +200,9 @@ nav.main-nav
         float: right
         line-height: 30pt
 
+      .title + a
+          line-height: 1
+
       a.link-master
         float: none
         line-height: 24px
@@ -219,16 +210,27 @@ nav.main-nav
       i
         color: #CCCCCC
         font-size: 14px
-        margin: 0 10px 0 0 
+        margin: 0 10px 0 0
 
       p
         text-align: left
+        margin: 0
+        padding: 0
+        line-height: 1.2
+        width: 75%
+        display: inline-block
+        font-size: 12px
+        color: gray
+        letter-spacing: .1px
+        &.title
+          font-weight: bold
+          color: black
 
   .borderd
     border-right: 2px solid white
     padding: 0 5px
 
-/********* BOX LOGO ************
+/********* BOX LOGO ************/
 .logo-explain
   visibility: hidden
   width: 250px
@@ -267,7 +269,7 @@ nav.main-nav
   left: 20%
   margin-left: -10px
 
-/*********   LOGO ANIMADO *******
+/*********   LOGO ANIMADO *******/
 
 #logo a.logo-animado
   position: relative

@@ -1,0 +1,118 @@
+// Colors
+
+special = #bc4491
+article = #DE5B34
+text    = #1ea6bc
+note    = #FAAB43
+marina  = #1a7e4f
+
+candidatos-da-rede = #319C8A
+vida    = #DF3382
+sustentabilidade = #48AE58
+inovacao = #9D4E9D
+urbanidades = #463956
+democracia = #A1CB3A
+direitos = #6CC9D2
+saude = #EC3536
+educacao = #1BA5BC
+cultura = #B61E4A
+esporte = #374DA0
+perfil = #447DBF
+
+
+chapeu-home(color, image)
+  h2 a
+    color: color
+  .category a
+    background-color: color
+    background-image: url(image)
+  .author
+    color: lighten(color, 20%)
+  &.focus h2
+    border-color: color
+
+
+chapeu-interna(color, image)
+  .post-header
+    background-color: color
+    .pinbin-category a
+      background-image: url(image)
+  h1
+    color: color
+    border-color: color
+  .pinbin-meta strong
+    color: lighten(color, 20%)
+
+#post-area
+  .post
+    &.cat-especial
+      chapeu-home(special, "assets/images/redesign/icone_especial.png")
+    &.cat-artigo
+      chapeu-home(article, "assets/images/redesign/icone_artigo.png")
+    &.cat-materia
+      chapeu-home(text, "assets/images/redesign/icone_materia.png")
+    &.cat-nota
+      chapeu-home(note, "assets/images/redesign/icone_nota.png")
+    &.cat-marina40
+      chapeu-home(marina, "assets/images/redesign/icone_marina40.png")
+    &.cat-candidatos-da-rede
+      chapeu-home(candidatos-da-rede, "assets/images/redesign/icone_candidatos-da-rede.png")
+    &.cat-vida
+      chapeu-home(vida, "assets/images/redesign/icone_vida.png")
+    &.cat-sustentabilidade-2
+      chapeu-home(sustentabilidade, "assets/images/redesign/icone_sustentabilidade.png")
+    &.cat-inovacao
+      chapeu-home(inovacao, "assets/images/redesign/icone_inovacao.png")
+    &.cat-urbanidades
+      chapeu-home(urbanidades, "assets/images/redesign/icone_urbanidades.png")
+    &.cat-democracia-2
+      chapeu-home(democracia, "assets/images/redesign/icone_democracia.png")
+    &.cat-direitos
+      chapeu-home(direitos, "assets/images/redesign/icone_direitos.png")
+    &.cat-saude
+      chapeu-home(saude, "assets/images/redesign/icone_saude.png")
+    &.cat-educacao-2
+      chapeu-home(educacao, "assets/images/redesign/icone_educacao.png")
+    &.cat-cultura-2
+      chapeu-home(cultura, "assets/images/redesign/icone_cultura.png")
+    &.cat-esporte
+      chapeu-home(esporte, "assets/images/redesign/icone_esporte.png")
+    &.cat-perfil
+      chapeu-home(perfil, "assets/images/redesign/icone_perfil.png")
+
+.single
+
+  &.cat-especial
+    chapeu-interna(special, "assets/images/redesign/icone_especial.png")
+  &.cat-artigo
+    chapeu-interna(article, "assets/images/redesign/icone_artigo.png")
+  &.cat-materia
+    chapeu-interna(text, "assets/images/redesign/icone_materia.png")
+  &.cat-nota
+    chapeu-interna(note, "assets/images/redesign/icone_nota.png")
+  &.cat-marina40
+    chapeu-interna(marina, "assets/images/redesign/icone_marina40.png")
+  &.cat-candidatos-da-rede
+    chapeu-interna(candidatos-da-rede, "assets/images/redesign/icone_candidatos-da-rede.png")
+  &.cat-vida
+    chapeu-interna(vida, "assets/images/redesign/icone_vida.png")
+  &.cat-sustentabilidade-2
+    chapeu-interna(sustentabilidade, "assets/images/redesign/icone_sustentabilidade.png")
+  &.cat-inovacao
+    chapeu-interna(inovacao, "assets/images/redesign/icone_inovacao.png")
+  &.cat-urbanidades
+    chapeu-interna(urbanidades, "assets/images/redesign/icone_urbanidades.png")
+  &.cat-democracia-2
+    chapeu-interna(democracia, "assets/images/redesign/icone_democracia.png")
+  &.cat-direitos-2
+    chapeu-interna(direitos, "assets/images/redesign/icone_direitos.png")
+  &.cat-saude
+    chapeu-interna(saude, "assets/images/redesign/icone_saude.png")
+  &.cat-educacao-2
+    chapeu-interna(educacao, "assets/images/redesign/icone_educacao.png")
+  &.cat-cultura-2
+    chapeu-interna(cultura, "assets/images/redesign/icone_cultura.png")
+  &.cat-esporte
+    chapeu-interna(esporte, "assets/images/redesign/icone_esporte.png")
+  &.cat-perfil
+    chapeu-interna(perfil, "assets/images/redesign/icone_perfil.png")
