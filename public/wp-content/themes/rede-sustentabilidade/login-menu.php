@@ -91,19 +91,19 @@ if (isset($_COOKIE['access_token'])) {
 				<a href="/arquivos-uteis/">baixar</a>
 			</div>
 			<div class="item">
+				<p class="title"><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-Filiados em fase de Impugnação</a></p>
+				<p>Toda pré-filiação deve estar disponível para contestação por qualquer filiado. A pré-filiação fica nesta lista por 15 dias.</p>
+			</div>
+			<div class="item">
+				<p class="title"><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
+				<p>Lista dos pré-filiados que ainda precisam passar pela formação política para terem sua filiação confirmada.</p>
+			</div>
+			<div class="item">
 				<p class="title"><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
 				<p>Esta é a lista de todos os filiados da REDE. Todas as pessoas que estão nessa lista também estão registradas pelo partido no FiliaWeb do TSE.</p>
 			</div>
 			<div class="item">
 				<p class="title"><a class="link-master" href="/listas/#/admin/1/50/nome/asc">Filiados para admin</a></p>
-			</div>
-			<div class="item">
-				<p class="title"><a class="link-master" href="/listas/#/abonos/1/50/nome/asc">Pré-filiados aguardando abono</a></p>
-				<p>Esta é a lista de pessoas que acabaram de se registrar para ser um filiado à REDE. Qualquer filiado no Brasil pode abonar um pré-filiado à abonar</p>
-			</div>
-			<div class="item">
-				<p class="title"><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-Filiados em fase de Impugnação</a></p>
-				<p>Toda pré-filiação deve estar disponível para contestação por qualquer filiado. A pré-filiação fica nesta lista por 15 dias.</p>
 			</div>
 <?php } ?>
 		<script>API_USER_STATUS = '<?php echo $filiado->status ?>';</script>
@@ -136,12 +136,12 @@ if (isset($_COOKIE['access_token'])) {
 				<a href="/arquivos-uteis/">baixar</a>
 			</div>
 			<div class="item">
-				<p class="title"><a class="link-master" href="/listas/#/abonos/1/50/nome/asc">Pré-filiados aguardando abono</a></p>
-				<p>Esta é a lista de pessoas que acabaram de se registrar para ser um filiado à REDE. Qualquer filiado no Brasil pode abonar um pré-filiado à abonar</p>
-			</div>
-			<div class="item">
 				<p class="title"><a class="link-master" href="/listas/#/impugnacoes/1/50/nome/asc">Pré-Filiados em fase de Impugnação</a></p>
 				<p>Toda pré-filiação deve estar disponível para contestação por qualquer filiado. A pré-filiação fica nesta lista por 15 dias.</p>
+			</div>
+			<div class="item">
+				<p class="title"><a class="link-master" href="/listas/#/confirmacao/1/50/nome/asc">Pré-filiados à confirmar</a></p>
+				<p>Lista dos pré-filiados que ainda precisam passar pela formação política para terem sua filiação confirmada.</p>
 			</div>
 			<div class="item">
 				<p class="title"><a class="link-master" href="/listas/#/filiados/1/50/nome/asc">Filiados</a></p>
