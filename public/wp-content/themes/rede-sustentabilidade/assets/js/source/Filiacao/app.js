@@ -227,7 +227,7 @@ define([
 
         $scope.moveTopScroll = function () {
             jQuery('html, body').animate({
-                scrollTop: jQuery("h2.title").offset().top
+                scrollTop: jQuery(".container-filiacao").offset().top
             }, 500);
         };
 
