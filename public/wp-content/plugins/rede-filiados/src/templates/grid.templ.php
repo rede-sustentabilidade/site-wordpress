@@ -128,8 +128,8 @@
       <br class="clear">
 
       <input id="limpar" class="button alignright" value="Limpar" type="button">
-      <input name="export_filiados" class="button alignright" value="Exportar .CSV" type="submit">
       <input name="filtrar" class="button alignright" value="Filtrar" type="submit">
+      <input name="export_filiados" class="button alignright" value="Exportar .CSV" type="submit">
 
     </fieldset>
   </form>
