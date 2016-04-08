@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "53a51409b569d74f116e610b2cbdbf1c",
-    "content-hash": "5f1baeae949f422118d6417c28afa2df",
+    "hash": "e600764f387142987a2988014505c306",
+    "content-hash": "f0d16aaa497dc7a4cd1753b44cf54532",
     "packages": [
         {
             "name": "WordPress/WordPress",
-            "version": "4.4.1",
+            "version": "4.4.2",
             "dist": {
                 "type": "zip",
-                "url": "https://br.wordpress.org/wordpress-4.4.1-pt_BR.zip",
+                "url": "https://br.wordpress.org/wordpress-4.4.2-pt_BR.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -48,20 +48,20 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.22",
+            "version": "v1.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046"
+                "reference": "1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/bd9b14f094c89c8b5804a4e41edeb7853bb85046",
-                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046",
+                "url": "https://api.github.com/repos/composer/installers/zipball/1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988",
+                "reference": "1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0.0"
+                "composer-plugin-api": "^1.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -79,8 +79,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Composer\\Installers\\": "src/"
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -95,12 +95,14 @@
                 }
             ],
             "description": "A multi-framework Composer library installer",
-            "homepage": "http://composer.github.com/installers/",
+            "homepage": "https://composer.github.io/installers/",
             "keywords": [
                 "Craft",
                 "Dolibarr",
                 "Hurad",
+                "ImageCMS",
                 "MODX Evo",
+                "Mautic",
                 "OXID",
                 "SMF",
                 "Thelia",
@@ -142,20 +144,20 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-10-29 23:28:48"
+            "time": "2016-04-05 11:42:46"
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.1.1",
+            "version": "6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "c6851d6e48f63b69357cbfa55bca116448140e0c"
+                "reference": "d094e337976dff9d8e2424e8485872194e768662"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/c6851d6e48f63b69357cbfa55bca116448140e0c",
-                "reference": "c6851d6e48f63b69357cbfa55bca116448140e0c",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d094e337976dff9d8e2424e8485872194e768662",
+                "reference": "d094e337976dff9d8e2424e8485872194e768662",
                 "shasum": ""
             },
             "require": {
@@ -171,7 +173,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.1-dev"
+                    "dev-master": "6.2-dev"
                 }
             },
             "autoload": {
@@ -204,20 +206,20 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-11-23 00:47:50"
+            "time": "2016-03-21 20:02:09"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.0.3",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "b1e1c0d55f8083c71eda2c28c12a228d708294ea"
+                "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/b1e1c0d55f8083c71eda2c28c12a228d708294ea",
-                "reference": "b1e1c0d55f8083c71eda2c28c12a228d708294ea",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/bb9024c526b22f3fe6ae55a561fd70653d470aa8",
+                "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8",
                 "shasum": ""
             },
             "require": {
@@ -255,20 +257,20 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2015-10-15 22:28:00"
+            "time": "2016-03-08 01:15:46"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.2.1",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982"
+                "reference": "2e89629ff057ebb49492ba08e6995d3a6a80021b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/4d0bdbe1206df7440219ce14c972aa57cc5e4982",
-                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/2e89629ff057ebb49492ba08e6995d3a6a80021b",
+                "reference": "2e89629ff057ebb49492ba08e6995d3a6a80021b",
                 "shasum": ""
             },
             "require": {
@@ -313,7 +315,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2015-11-03 01:34:55"
+            "time": "2016-02-18 21:54:00"
         },
         {
             "name": "ircmaxell/random-lib",
@@ -412,16 +414,16 @@
         },
         {
             "name": "league/oauth2-client",
-            "version": "1.1.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "b523109adfdab8ec7d45c7fb2ced16ce36138ca9"
+                "reference": "5e5c0bc5bd219515c8d8db8bcb61f19753101b7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/b523109adfdab8ec7d45c7fb2ced16ce36138ca9",
-                "reference": "b523109adfdab8ec7d45c7fb2ced16ce36138ca9",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/5e5c0bc5bd219515c8d8db8bcb61f19753101b7c",
+                "reference": "5e5c0bc5bd219515c8d8db8bcb61f19753101b7c",
                 "shasum": ""
             },
             "require": {
@@ -471,7 +473,7 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2015-11-13 16:55:24"
+            "time": "2016-02-13 20:18:03"
         },
         {
             "name": "psr/http-message",
@@ -527,7 +529,7 @@
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/amazon-ses-and-dkim-mailer/",
+                "url": "https://plugins.svn.wordpress.org/amazon-ses-and-dkim-mailer/",
                 "reference": "trunk"
             },
             "dist": {
@@ -548,7 +550,7 @@
             "version": "2.5.5",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/authy-two-factor-authentication/",
+                "url": "https://plugins.svn.wordpress.org/authy-two-factor-authentication/",
                 "reference": "tags/2.5.5"
             },
             "dist": {
@@ -568,7 +570,7 @@
             "version": "4.0.2",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/contact-form-7/",
+                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
                 "reference": "tags/4.0.2"
             },
             "dist": {
@@ -588,7 +590,7 @@
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/diagnosis/",
+                "url": "https://plugins.svn.wordpress.org/diagnosis/",
                 "reference": "trunk"
             },
             "dist": {
@@ -606,15 +608,15 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "3.8.2",
+            "version": "3.9.6",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/3.8.2"
+                "url": "https://plugins.svn.wordpress.org/jetpack/",
+                "reference": "tags/3.9.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.3.8.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.3.9.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -629,7 +631,7 @@
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/link-manager/",
+                "url": "https://plugins.svn.wordpress.org/link-manager/",
                 "reference": "trunk"
             },
             "dist": {
@@ -650,7 +652,7 @@
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/query-monitor/",
+                "url": "https://plugins.svn.wordpress.org/query-monitor/",
                 "reference": "trunk"
             },
             "dist": {
@@ -667,11 +669,53 @@
             "time": "2015-11-22 02:03:41"
         },
         {
+            "name": "wpackagist-plugin/rest-api",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/rest-api/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/rest-api.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/rest-api/",
+            "time": "2016-03-30 01:05:34"
+        },
+        {
+            "name": "wpackagist-plugin/rest-api-enabler",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/rest-api-enabler/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/rest-api-enabler.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/rest-api-enabler/",
+            "time": "2015-12-24 07:35:43"
+        },
+        {
             "name": "wpackagist-plugin/simple-share-buttons-adder",
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/simple-share-buttons-adder/",
+                "url": "https://plugins.svn.wordpress.org/simple-share-buttons-adder/",
                 "reference": "trunk"
             },
             "dist": {
@@ -692,7 +736,7 @@
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wordpress-https/",
+                "url": "https://plugins.svn.wordpress.org/wordpress-https/",
                 "reference": "trunk"
             },
             "dist": {
@@ -713,7 +757,7 @@
             "version": "1.3",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-permastructure/",
+                "url": "https://plugins.svn.wordpress.org/wp-permastructure/",
                 "reference": "tags/1.3"
             },
             "dist": {
@@ -733,7 +777,7 @@
             "version": "1.4.7",
             "source": {
                 "type": "svn",
-                "url": "http://themes.svn.wordpress.org/pinbin/",
+                "url": "https://themes.svn.wordpress.org/pinbin/",
                 "reference": "1.4.7"
             },
             "dist": {
@@ -759,7 +803,9 @@
         "wpackagist-plugin/query-monitor": 20,
         "wpackagist-plugin/diagnosis": 20,
         "wpackagist-plugin/wordpress-https": 20,
-        "wpackagist-plugin/amazon-ses-and-dkim-mailer": 20
+        "wpackagist-plugin/amazon-ses-and-dkim-mailer": 20,
+        "wpackagist-plugin/rest-api-enabler": 20,
+        "wpackagist-plugin/rest-api": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

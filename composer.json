@@ -30,7 +30,9 @@
 		"wpackagist-plugin/diagnosis": "dev-trunk",
     "wpackagist-plugin/wordpress-https": "dev-trunk",
 		"league/oauth2-client": "^1.0",
-		"wpackagist-plugin/amazon-ses-and-dkim-mailer": "dev-trunk"
+		"wpackagist-plugin/amazon-ses-and-dkim-mailer": "dev-trunk",
+		"wpackagist-plugin/rest-api-enabler": "dev-trunk",
+		"wpackagist-plugin/rest-api": "dev-trunk"
     },
     "repositories": [
         {
@@ -41,10 +43,10 @@
             "type": "package",
             "package": {
                 "name": "WordPress/WordPress",
-                "version": "4.4.1",
+                "version": "4.4.2",
                 "dist": {
                     "type": "zip",
-                    "url": "https://br.wordpress.org/wordpress-4.4.1-pt_BR.zip"
+                    "url": "https://br.wordpress.org/wordpress-4.4.2-pt_BR.zip"
                 }
             }
         },
