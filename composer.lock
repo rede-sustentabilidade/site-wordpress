@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e600764f387142987a2988014505c306",
-    "content-hash": "f0d16aaa497dc7a4cd1753b44cf54532",
+    "hash": "41ea31ba5b20fe2083c47649c3d3c529",
+    "content-hash": "08c377be12a0e1e761ad606121a6aa52",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -732,6 +732,27 @@
             "time": "2015-11-23 09:29:16"
         },
         {
+            "name": "wpackagist-plugin/svg-support",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/svg-support/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/svg-support.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/svg-support/",
+            "time": "2015-08-20 02:04:50"
+        },
+        {
             "name": "wpackagist-plugin/wordpress-https",
             "version": "dev-trunk",
             "source": {
@@ -805,7 +826,8 @@
         "wpackagist-plugin/wordpress-https": 20,
         "wpackagist-plugin/amazon-ses-and-dkim-mailer": 20,
         "wpackagist-plugin/rest-api-enabler": 20,
-        "wpackagist-plugin/rest-api": 20
+        "wpackagist-plugin/rest-api": 20,
+        "wpackagist-plugin/svg-support": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

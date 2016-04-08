@@ -32,7 +32,8 @@
 		"league/oauth2-client": "^1.0",
 		"wpackagist-plugin/amazon-ses-and-dkim-mailer": "dev-trunk",
 		"wpackagist-plugin/rest-api-enabler": "dev-trunk",
-		"wpackagist-plugin/rest-api": "dev-trunk"
+		"wpackagist-plugin/rest-api": "dev-trunk",
+		"wpackagist-plugin/svg-support": "dev-trunk"
     },
     "repositories": [
         {
