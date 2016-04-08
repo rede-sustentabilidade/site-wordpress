@@ -2,7 +2,7 @@ build:
     image: brunoric/hhvm:deb
     commands:
         - apt-get update && apt-get install -fy
-        - apt-get install -y git svn s3cmd
+        - apt-get install -y git subversion s3cmd
         - php -r "readfile('https://getcomposer.org/installer');" | php
         - php composer.phar install --no-dev --no-interaction
 cache:
