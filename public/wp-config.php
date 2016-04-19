@@ -48,12 +48,12 @@ if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
     $protocol = 'http://';
 }
 // Define WordPress Site URLs if not already set in config files
-if (!defined('WP_SITEURL')) {
-    define('WP_SITEURL', $protocol . rtrim($hostname, '/'));
-}
-if (!defined('WP_HOME')) {
-    define('WP_HOME', $protocol . rtrim($hostname, '/'));
-}
+// if (!defined('WP_SITEURL')) {
+//     define('WP_SITEURL', $protocol . rtrim($hostname, '/'));
+// }
+// if (!defined('WP_HOME')) {
+//     define('WP_HOME', $protocol . rtrim($hostname, '/'));
+// }
 // Clean up
 unset($hostname, $protocol);
 
