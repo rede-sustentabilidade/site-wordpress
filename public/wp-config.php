@@ -48,12 +48,12 @@ if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
     $protocol = 'http://';
 }
 // Define WordPress Site URLs if not already set in config files
-// if (!defined('WP_SITEURL')) {
-//     define('WP_SITEURL', $protocol . rtrim($hostname, '/'));
-// }
-// if (!defined('WP_HOME')) {
-//     define('WP_HOME', $protocol . rtrim($hostname, '/'));
-// }
+if (!defined('WP_SITEURL')) {
+    define('WP_SITEURL', $protocol . rtrim($hostname, '/'));
+}
+if (!defined('WP_HOME')) {
+    define('WP_HOME', $protocol . rtrim($hostname, '/'));
+}
 // Clean up
 unset($hostname, $protocol);
 
@@ -199,12 +199,12 @@ if (!defined('WP_ENV')) {
     		define('OAUTH_URL_ACCESS_TOKEN', 'https://passaporte.redesustentabilidade.org.br/oauth/token');
     		define('OAUTH_URL_RESOURCE',     'https://passaporte.redesustentabilidade.org.br/oauth/resource');
 
-        define('MULTISITE', true);
-        define('SUBDOMAIN_INSTALL', true);
-        define('DOMAIN_CURRENT_SITE', 'redesustentabilidade.org.br');
-        define('PATH_CURRENT_SITE', '/');
-        define('SITE_ID_CURRENT_SITE', 1);
-        define('BLOG_ID_CURRENT_SITE', 1);
+        // define('MULTISITE', true);
+        // define('SUBDOMAIN_INSTALL', true);
+        // define('DOMAIN_CURRENT_SITE', 'redesustentabilidade.org.br');
+        // define('PATH_CURRENT_SITE', '/');
+        // define('SITE_ID_CURRENT_SITE', 1);
+        // define('BLOG_ID_CURRENT_SITE', 1);
         break;
 
       case 'redesustentabilidade.net':
