@@ -223,7 +223,7 @@ function conheca_post_type() {
 		'menu_icon'             => 'dashicons-welcome-view-site',
 		'show_in_admin_bar'     => false,
 		'show_in_nav_menus'     => false,
-		'can_export'            => false,
+		'can_export'            => true,
 		'has_archive'           => false,
 		'exclude_from_search'   => true,
 		'publicly_queryable'    => true,
