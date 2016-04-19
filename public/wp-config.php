@@ -14,6 +14,8 @@
  * @package WordPress
  */
 
+define( 'WP_ALLOW_MULTISITE', true );
+
 // Disable filesystem level changes from WP
 define('DISALLOW_FILE_EDIT',true);
 define('DISALLOW_FILE_MODS',true);
