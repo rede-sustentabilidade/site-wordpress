@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "41ea31ba5b20fe2083c47649c3d3c529",
-    "content-hash": "08c377be12a0e1e761ad606121a6aa52",
+    "hash": "d2e89995726cf573b3c56428de69ffd5",
+    "content-hash": "cab5b62248f0409787b744c48726a640",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -48,16 +48,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.24",
+            "version": "v1.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988"
+                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988",
-                "reference": "1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988",
+                "url": "https://api.github.com/repos/composer/installers/zipball/36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
+                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +144,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-04-05 11:42:46"
+            "time": "2016-04-13 19:46:30"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -261,16 +261,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.2.3",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "2e89629ff057ebb49492ba08e6995d3a6a80021b"
+                "reference": "31382fef2889136415751badebbd1cb022a4ed72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/2e89629ff057ebb49492ba08e6995d3a6a80021b",
-                "reference": "2e89629ff057ebb49492ba08e6995d3a6a80021b",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/31382fef2889136415751badebbd1cb022a4ed72",
+                "reference": "31382fef2889136415751badebbd1cb022a4ed72",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +315,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2016-02-18 21:54:00"
+            "time": "2016-04-13 19:56:01"
         },
         {
             "name": "ircmaxell/random-lib",
@@ -648,6 +648,27 @@
             "time": "2012-08-16 23:57:10"
         },
         {
+            "name": "wpackagist-plugin/options-importer",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/options-importer/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/options-importer.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/options-importer/",
+            "time": "2014-05-24 19:21:04"
+        },
+        {
             "name": "wpackagist-plugin/query-monitor",
             "version": "dev-trunk",
             "source": {
@@ -774,6 +795,27 @@
             "time": "2013-03-31 23:33:59"
         },
         {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/",
+            "time": "2015-06-01 23:26:00"
+        },
+        {
             "name": "wpackagist-plugin/wp-permastructure",
             "version": "1.3",
             "source": {
@@ -827,7 +869,9 @@
         "wpackagist-plugin/amazon-ses-and-dkim-mailer": 20,
         "wpackagist-plugin/rest-api-enabler": 20,
         "wpackagist-plugin/rest-api": 20,
-        "wpackagist-plugin/svg-support": 20
+        "wpackagist-plugin/svg-support": 20,
+        "wpackagist-plugin/options-importer": 20,
+        "wpackagist-plugin/wordpress-importer": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
