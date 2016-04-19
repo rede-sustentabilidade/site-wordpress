@@ -200,7 +200,7 @@ if (!defined('WP_ENV')) {
     		define('OAUTH_URL_RESOURCE',     'https://passaporte.redesustentabilidade.org.br/oauth/resource');
 
         define('MULTISITE', true);
-        define('SUBDOMAIN_INSTALL', true);
+        define('SUBDOMAIN_INSTALL', false);
         define('DOMAIN_CURRENT_SITE', 'redesustentabilidade.org.br');
         define('PATH_CURRENT_SITE', '/');
         define('SITE_ID_CURRENT_SITE', 1);
