@@ -1,5 +1,5 @@
 build:
-    image: brunoric/hhvm:deb
+    image: php:7-cli
     commands:
         - apt-get update && apt-get install -fy
         - apt-get install -y git subversion s3cmd
