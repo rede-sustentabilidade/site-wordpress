@@ -35,7 +35,9 @@
 		"wpackagist-plugin/rest-api": "dev-trunk",
 		"wpackagist-plugin/svg-support": "dev-trunk",
 		"wpackagist-plugin/options-importer": "dev-trunk",
-		"wpackagist-plugin/wordpress-importer": "dev-trunk"
+		"wpackagist-plugin/wordpress-importer": "dev-trunk",
+		"wp-cli/wp-cli" : "~0.22",
+		"psy/psysh" : "~0.6"
 	},
 	"repositories": [
 		{
