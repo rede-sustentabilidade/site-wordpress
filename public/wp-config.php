@@ -213,12 +213,12 @@ switch (WP_ENV) {
   define('OAUTH_URL_ACCESS_TOKEN', 'http://passaporte.redesustentabilidade.net/oauth/token');
   define('OAUTH_URL_RESOURCE',     'http://passaporte.redesustentabilidade.net/oauth/resource');
 
-  define('MULTISITE', true);
-  define('SUBDOMAIN_INSTALL', true);
-  define('DOMAIN_CURRENT_SITE', 'redesustentabilidade.net');
-  define('PATH_CURRENT_SITE', '/');
-  define('SITE_ID_CURRENT_SITE', 1);
-  define('BLOG_ID_CURRENT_SITE', 1);
+  // define('MULTISITE', true);
+  // define('SUBDOMAIN_INSTALL', true);
+  // define('DOMAIN_CURRENT_SITE', 'redesustentabilidade.net');
+  // define('PATH_CURRENT_SITE', '/');
+  // define('SITE_ID_CURRENT_SITE', 1);
+  // define('BLOG_ID_CURRENT_SITE', 1);
 
   break;
   default:
@@ -233,12 +233,12 @@ switch (WP_ENV) {
   define('OAUTH_URL_ACCESS_TOKEN', 'http://rede.passaporte:3000/oauth/token');
   define('OAUTH_URL_RESOURCE',     'http://rede.passaporte:3000/oauth/resource');
 
-  define('MULTISITE', true);
-  define('SUBDOMAIN_INSTALL', true);
-  define('DOMAIN_CURRENT_SITE', 'rede.site');
-  define('PATH_CURRENT_SITE', '/');
-  define('SITE_ID_CURRENT_SITE', 1);
-  define('BLOG_ID_CURRENT_SITE', 1);
+  // define('MULTISITE', true);
+  // define('SUBDOMAIN_INSTALL', true);
+  // define('DOMAIN_CURRENT_SITE', 'rede.site');
+  // define('PATH_CURRENT_SITE', '/');
+  // define('SITE_ID_CURRENT_SITE', 1);
+  // define('BLOG_ID_CURRENT_SITE', 1);
 }
 
 /** Absolute path to the WordPress directory. */
