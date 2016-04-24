@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e223fee8f9666cb800db5b3ecdc30a42",
-    "content-hash": "342e16f0c5cf6b5f6de4aed0e885219f",
+    "hash": "46d9f98582144fa8ca3bb621b02002e3",
+    "content-hash": "d77e010f8e4851704471517b1fd1d8e8",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -410,6 +410,50 @@
                 "uri"
             ],
             "time": "2016-04-13 19:56:01"
+        },
+        {
+            "name": "heroku/heroku-buildpack-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heroku/heroku-buildpack-php.git",
+                "reference": "efca12bb59ccdebec79cabddd94e7c1ef51de908"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/efca12bb59ccdebec79cabddd94e7c1ef51de908",
+                "reference": "efca12bb59ccdebec79cabddd94e7c1ef51de908",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/heroku-hhvm-apache2",
+                "bin/heroku-hhvm-nginx",
+                "bin/heroku-php-apache2",
+                "bin/heroku-php-nginx"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Zuelke",
+                    "email": "dz@heroku.com"
+                }
+            ],
+            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
+            "homepage": "http://github.com/heroku/heroku-buildpack-php",
+            "keywords": [
+                "apache",
+                "apache2",
+                "foreman",
+                "heroku",
+                "hhvm",
+                "nginx",
+                "php"
+            ],
+            "time": "2016-04-12 02:41:29"
         },
         {
             "name": "ircmaxell/random-lib",
@@ -2073,6 +2117,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "alfreddatakillen/wpro": 20,
+        "heroku/heroku-buildpack-php": 20,
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
         "wpackagist-plugin/query-monitor": 20,
