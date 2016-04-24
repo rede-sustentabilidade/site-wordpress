@@ -3,7 +3,7 @@
 	"type": "project",
 	"license": "GPL-v3",
 	"description": "O site principal do partido Rede Sustentabilidade",
-	"homepage": "http://redesustentabilidade.org.br",
+	"homepage": "https://redesustentabilidade.org.br",
 	"authors": [
 		{
 			"name": "Lucas Pirola",
@@ -14,12 +14,12 @@
 	"keywords": [
 		"politica", "governo", "partido", "rede", "sustentabilidade", "wp"
 	],
-   "require": {
-		"hhvm": "~3.5",
-    "WordPress/WordPress": "*",
-    "wpackagist-plugin/jetpack": "~3",
-    "alfreddatakillen/wpro": "dev-trunk",
-    "wpackagist-plugin/authy-two-factor-authentication": "~2",
+	"require": {
+		"php": "~7",
+		"WordPress/WordPress": "*",
+		"wpackagist-plugin/jetpack": "~3",
+		"alfreddatakillen/wpro": "dev-trunk",
+		"wpackagist-plugin/authy-two-factor-authentication": "~2",
 
 		"wpackagist-theme/pinbin": "1.4.*",
 		"wpackagist-plugin/contact-form-7": "4.0.2",
@@ -28,7 +28,7 @@
 		"wpackagist-plugin/simple-share-buttons-adder": "dev-trunk",
 		"wpackagist-plugin/query-monitor": "dev-trunk",
 		"wpackagist-plugin/diagnosis": "dev-trunk",
-    "wpackagist-plugin/wordpress-https": "dev-trunk",
+		"wpackagist-plugin/wordpress-https": "dev-trunk",
 		"league/oauth2-client": "^1.0",
 		"wpackagist-plugin/amazon-ses-and-dkim-mailer": "dev-trunk",
 		"wpackagist-plugin/rest-api-enabler": "dev-trunk",
@@ -36,44 +36,44 @@
 		"wpackagist-plugin/svg-support": "dev-trunk",
 		"wpackagist-plugin/options-importer": "dev-trunk",
 		"wpackagist-plugin/wordpress-importer": "dev-trunk"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "git@github.com:alfreddatakillen/wpro.git"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "WordPress/WordPress",
-                "version": "4.4.2",
-                "dist": {
-                    "type": "zip",
-                    "url": "https://br.wordpress.org/wordpress-4.4.2-pt_BR.zip"
-                }
-            }
-        },
-        {
-            "type":"composer",
-            "url":"http://wpackagist.org"
-        }
-    ],
-    "extra": {
-        "installer-paths": {
-            "vendor/WordPress/WordPress/wp-content/mu-plugins/{$name}/": [ "type:wordpress-muplugin" ],
-            "vendor/WordPress/WordPress/wp-content/plugins/{$name}/": [ "type:wordpress-plugin" ],
-            "vendor/WordPress/WordPress/wp-content/themes/{$name}/": [ "type:wordpress-theme" ]
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "rm -rf tmp/public.building tmp/public.old",
-            "mkdir -p tmp/public.building",
-            "cp -R vendor/WordPress/WordPress/* tmp/public.building",
-            "cp -R public/* tmp/public.building",
-            "touch public.built",
-            "mv public.built tmp/public.old && mv tmp/public.building public.built",
-            "rm -rf tmp/public.old"
-        ]
-    }
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url":  "git@github.com:alfreddatakillen/wpro.git"
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "WordPress/WordPress",
+				"version": "4.4.2",
+				"dist": {
+					"type": "zip",
+					"url": "https://br.wordpress.org/wordpress-4.4.2-pt_BR.zip"
+				}
+			}
+		},
+		{
+			"type":"composer",
+			"url":"https://wpackagist.org"
+		}
+	],
+	"extra": {
+		"installer-paths": {
+			"vendor/WordPress/WordPress/wp-content/mu-plugins/{$name}/": [ "type:wordpress-muplugin" ],
+			"vendor/WordPress/WordPress/wp-content/plugins/{$name}/": [ "type:wordpress-plugin" ],
+			"vendor/WordPress/WordPress/wp-content/themes/{$name}/": [ "type:wordpress-theme" ]
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"rm -rf tmp/public.building tmp/public.old",
+			"mkdir -p tmp/public.building",
+			"cp -R vendor/WordPress/WordPress/* tmp/public.building",
+			"cp -R public/* tmp/public.building",
+			"touch public.built",
+			"mv public.built tmp/public.old && mv tmp/public.building public.built",
+			"rm -rf tmp/public.old"
+		]
+	}
 }
