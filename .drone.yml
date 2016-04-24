@@ -2,8 +2,9 @@ build:
     image: php:7-cli
     commands:
         - apt-get update && apt-get install -fy
-        - apt-get install -y git subversion s3cmd
+        - apt-get install -y git subversion s3cmd unzip
         - php -r "readfile('https://getcomposer.org/installer');" | php
+        - docker-php-ext-install iconv mcrypt zip
         - php composer.phar install --no-dev --no-interaction
 cache:
     mount:
