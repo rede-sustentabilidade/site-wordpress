@@ -66,6 +66,9 @@ if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
 if ( !empty( $_ENV["SSL_DOMAIN"] ) ) {
   define( 'FORCE_SSL_LOGIN', true );
   define( 'FORCE_SSL_ADMIN', true );
+} else {
+  define( 'FORCE_SSL_LOGIN', false );
+  define( 'FORCE_SSL_ADMIN', false );
 }
 
 // HTTPS port is always 80 because SSL is terminated at Heroku router / CloudFlare
@@ -101,7 +104,7 @@ if ( !empty( $_ENV["MEMCACHIER_SERVERS"] ) ) {
 if ( isset( $_ENV["DATABASE_URL"] ) ) {
   $_dbsettings = parse_url($_ENV["DATABASE_URL"]);
 } else {
-  $_dbsettings = parse_url("mysql://herokuwp:password@127.0.0.1/herokuwp");
+  $_dbsettings = parse_url("mysql://root:@127.0.0.1/rs_dev");
 }
 
 define('DB_NAME',     trim($_dbsettings["path"],"/"));

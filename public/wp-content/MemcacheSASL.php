@@ -29,14 +29,14 @@ class MemcacheSASL
             $valuelength = strlen($data['value']);
         }
         $bodylength = $extralength + $keylength + $valuelength;
-        $ret = pack($this->_request_format, 
-                0x80, 
-                $data['opcode'], 
+        $ret = pack($this->_request_format,
+                0x80,
+                $data['opcode'],
                 $keylength,
                 $extralength,
                 array_key_exists('datatype', $data) ? $data['datatype'] : null,
                 array_key_exists('status', $data) ? $data['status'] : null,
-                $bodylength, 
+                $bodylength,
                 array_key_exists('Opaque', $data) ? $data['Opaque'] : null,
                 array_key_exists('CAS1', $data) ? $data['CAS1'] : null,
                 array_key_exists('CAS2', $data) ? $data['CAS2'] : null
@@ -76,7 +76,7 @@ class MemcacheSASL
     {
         $data = fread($this->_fp, 24);
         $array = $this->_show_request($data);
-	if (!empty($array['bodylength'])) {
+	if ($array['bodylength']) {
 	    $bodylength = $array['bodylength'];
 	    $data = '';
 	    while ($bodylength > 0) {
@@ -131,7 +131,7 @@ class MemcacheSASL
     }
 
     public function get($key)
-    {   
+    {
         $sent = $this->_send(array(
                     'opcode' => 0x00,
                     'key' => $key,
@@ -175,9 +175,9 @@ class MemcacheSASL
 
     /**
      * process value and get flag
-     * 
+     *
      * @param int $flag
-     * @param mixed $value 
+     * @param mixed $value
      * @access protected
      * @return array($flag, $processed_value)
      */
@@ -270,17 +270,15 @@ class MemcacheSASL
 
     public function quit()
     {
-	if ( NULL !== $this->_fp ) {
-		$sent = $this->_send(array(
-			    'opcode' => 0x07
-			    ));
-		$data = $this->_recv();
+        $sent = $this->_send(array(
+                    'opcode' => 0x07
+                    ));
+        $data = $this->_recv();
+        if ($data['status'] == 0) {
+            return TRUE;
+        }
 
-		fclose($this->_fp);
-		$this->_fp = NULL;
-	}
-
-        return TRUE;
+        return FALSE;
     }
 
     public function replace($key, $value, $expiration = 0)
@@ -315,7 +313,7 @@ class MemcacheSASL
     public function increment($key, $offset = 1)
     {
         $initial_value = 0;
-        $extra = pack('N2N2N', $this->_upper($offset), $this->_lower($offset), $this->_upper($initial_value), $this->_lower($initial_value), 0);
+        $extra = pack('N2N2N', $this->_upper($offset), $this->_lower($offset), $this->_upper($initial_value), $this->_lower($initial_value), $expiration);
         $sent = $this->_send(array(
                     'opcode' => 0x05,
                     'key' => $key,
@@ -332,7 +330,7 @@ class MemcacheSASL
     public function decrement($key, $offset = 1)
     {
         $initial_value = 0;
-        $extra = pack('N2N2N', $this->_upper($offset), $this->_lower($offset), $this->_upper($initial_value), $this->_lower($initial_value), 0);
+        $extra = pack('N2N2N', $this->_upper($offset), $this->_lower($offset), $this->_upper($initial_value), $this->_lower($initial_value), $expiration);
         $sent = $this->_send(array(
                     'opcode' => 0x06,
                     'key' => $key,
@@ -349,7 +347,7 @@ class MemcacheSASL
     /**
      * Get statistics of the server
      *
-     * @param string $type The type of statistics to fetch. Valid values are 
+     * @param string $type The type of statistics to fetch. Valid values are
      *                     {reset, malloc, maps, cachedump, slabs, items,
      *                     sizes}. According to the memcached protocol spec
      *                     these additional arguments "are subject to change
@@ -358,7 +356,7 @@ class MemcacheSASL
      * @link http://code.google.com/p/memcached/wiki/BinaryProtocolRevamped#Stat
      * @access public
      * @return array  Returns an associative array of server statistics or
-     *                FALSE on failure. 
+     *                FALSE on failure.
      */
     public function getStats($type = null)
     {

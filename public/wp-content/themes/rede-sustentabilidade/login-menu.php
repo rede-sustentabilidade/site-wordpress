@@ -45,6 +45,7 @@ if (isset($_COOKIE['access_token'])) {
 	}
 ?>
 
+
 <script>API_USER_STATUS = 0;</script>
 <?php if ((is_array($filiado)) && ($filiado['httpCode'] == 404)) { ?>
 	<div class="filie">
@@ -81,7 +82,7 @@ if (isset($_COOKIE['access_token'])) {
 				<p> Ainda estamos em construção! Logo menos, por este link você irá poder editar seus dados pessoais. </p>
 				<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
 			</div>
-<?php if ($filiado->status == 99) { ?>
+			<?php if ($filiado->status == 99) { ?>
 			<div class="item">
 				<p class="title">Status: Super Admin</p>
 			</div>
@@ -105,7 +106,7 @@ if (isset($_COOKIE['access_token'])) {
 			<div class="item">
 				<p class="title"><a class="link-master" href="/listas/#/admin/1/50/nome/asc">Filiados para admin</a></p>
 			</div>
-<?php } ?>
+			<?php } ?>
 		<script>API_USER_STATUS = '<?php echo $filiado->status ?>';</script>
 		<?php if ($filiado->status == 1) { ?>
 			<div class="item">
@@ -153,60 +154,8 @@ if (isset($_COOKIE['access_token'])) {
 			</div>
 		</div>
 	</div>
-<?php } ?>
-<?php } else if (isset($_GET['code'])) {
-	try {
-		$provider = new RsProvider([
-			'clientId'                => OAUTH_CLIENT_ID,
-			'clientSecret'            => OAUTH_CLIENT_SECRET,
-			'redirectUri'             => OAUTH_REDIRECT_URI,
-			'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
-			'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
-			'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
-		], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
-        // Try to get an access token using the authorization code grant.
-        $accessToken = $provider->getAccessToken('authorization_code', [
-            'code' => $_GET['code']
-        ]);
-		setcookie('access_token', $accessToken);
-		header('Location: /');
-    } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
-		// Failed to get the access token or user details.
-		/* var_dump($e); */
-        exit($e->getMessage());
-
-    }
-
-} else if (isset($_GET['login'])) {
-	$provider = new RsProvider([
-		'clientId'                => OAUTH_CLIENT_ID,
-		'clientSecret'            => OAUTH_CLIENT_SECRET,
-		'redirectUri'             => OAUTH_REDIRECT_URI,
-		'urlAuthorize'            => OAUTH_URL_AUTHORIZE,
-		'urlAccessToken'          => OAUTH_URL_ACCESS_TOKEN,
-		'urlResourceOwnerDetails' => OAUTH_URL_RESOURCE
-	], ['httpClient' => new \GuzzleHttp\Client(array('verify'=>false))]);
-
-    // Fetch the authorization URL from the provider; this returns the
-    // urlAuthorize option and generates and applies any necessary parameters
-    // (e.g. state).
-    $authorizationUrl = $provider->getAuthorizationUrl();
-
-    // Get the state generated for you and store it to the session.
-    $_SESSION['oauth2state'] = $provider->getState();
-
-	// Redirect the user to the authorization URL.
-		echo '<meta http-equiv="Location" content="'.$authorizationUrl.'">';
-		exit;
-
-// Check given state against previously stored one to mitigate CSRF attack
-/* } elseif (empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) { */
-
-/*     unset($_SESSION['oauth2state']); */
-/*     exit('Invalid state'); */
-
-/* } */
-} else { ?>
+	<?php } ?>
+<?php }else { ?>
     <script>API_USER_STATUS = 0;</script>
     <div class="fazer-conexao">
 		<a href="<?php echo WP_PASSPORT_PATH . '/registration' ?>" class="label borderd">registre-se</a>
