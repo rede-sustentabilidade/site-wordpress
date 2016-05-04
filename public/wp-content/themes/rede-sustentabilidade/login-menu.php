@@ -2,11 +2,6 @@
 //$wp_session = WP_Session::get_instance();
 global $usuario;
 
-// you don't want to display errors on a prod environment
-display_errors(false);
-// you definitely wanna log any occurring
-log_errors(true);
-
 if ($_GET['logout']) {
 	unset($_COOKIE['access_token']);
 	setcookie('access_token', null, -1);
