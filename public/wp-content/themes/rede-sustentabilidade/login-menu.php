@@ -1,5 +1,6 @@
 <?php
 //$wp_session = WP_Session::get_instance();
+
 global $usuario;
 
 if ($_GET['logout']) {
@@ -195,8 +196,8 @@ if (isset($_COOKIE['access_token'])) {
     $_SESSION['oauth2state'] = $provider->getState();
 
 	// Redirect the user to the authorization URL.
-    header('Location: ' . $authorizationUrl);
-    exit;
+		echo '<meta http-equiv="Location" content="'.$authorizationUrl.'">';
+		exit;
 
 // Check given state against previously stored one to mitigate CSRF attack
 /* } elseif (empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) { */
