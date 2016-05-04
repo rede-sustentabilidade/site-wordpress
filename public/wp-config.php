@@ -183,6 +183,7 @@ switch (WP_ENV) {
   case 'production':
   define('WP_DEBUG', false);
   define('WP_CACHE', false);
+  define( 'WP_DEBUG_DISPLAY', false );
   define('WP_API_PATH', 'https://api-v1.redesustentabilidade.org.br/');
   define('WP_PASSPORT_PATH',       'https://passaporte.redesustentabilidade.org.br');
   define('OAUTH_REDIRECT_URI',     'https://redesustentabilidade.org.br/');
