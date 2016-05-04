@@ -1216,12 +1216,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rede-sustentabilidade/amazon-ses-and-dkim-mailer.git",
-                "reference": "8d258e823777ce4ea6e532330da5f2d0a7b10545"
+                "reference": "01e0b60c2f2c119893527b42d67d47ab24750255"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rede-sustentabilidade/amazon-ses-and-dkim-mailer/zipball/8d258e823777ce4ea6e532330da5f2d0a7b10545",
-                "reference": "8d258e823777ce4ea6e532330da5f2d0a7b10545",
+                "url": "https://api.github.com/repos/rede-sustentabilidade/amazon-ses-and-dkim-mailer/zipball/01e0b60c2f2c119893527b42d67d47ab24750255",
+                "reference": "01e0b60c2f2c119893527b42d67d47ab24750255",
                 "shasum": ""
             },
             "type": "wordpress-plugin",
@@ -1238,7 +1238,7 @@
             "support": {
                 "source": "https://github.com/rede-sustentabilidade/amazon-ses-and-dkim-mailer/tree/master"
             },
-            "time": "2016-05-04 18:01:06"
+            "time": "2016-05-04 18:21:43"
         },
         {
             "name": "rmccue/requests",
