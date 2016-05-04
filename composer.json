@@ -29,7 +29,7 @@
 		"wpackagist-plugin/diagnosis": "dev-trunk",
 		"wpackagist-plugin/wordpress-https": "dev-trunk",
 		"league/oauth2-client": "^1.0",
-		"wpackagist-plugin/amazon-ses-and-dkim-mailer": "dev-trunk",
+		"rede-sustentabilidade/amazon-ses-and-dkim-mailer": "dev-trunk",
 		"wpackagist-plugin/rest-api-enabler": "dev-trunk",
 		"wpackagist-plugin/rest-api": "dev-trunk",
 		"wpackagist-plugin/svg-support": "dev-trunk",
@@ -42,6 +42,10 @@
 		"heroku/heroku-buildpack-php": "dev-trunk"
 	},
 	"repositories": [
+		{
+			"type": "vcs",
+			"url":  "git@github.com:rede-sustentabilidade/amazon-ses-and-dkim-mailer.git"
+		},
 		{
 			"type": "vcs",
 			"url":  "git@github.com:alfreddatakillen/wpro.git"
