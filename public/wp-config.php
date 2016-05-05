@@ -230,7 +230,7 @@ switch (WP_ENV) {
   define('WP_CACHE', false);
   define('WP_API_PATH',            'http://rede.api:9000');
   define('WP_PASSPORT_PATH',       'http://rede.passaporte:3000');
-  define('OAUTH_REDIRECT_URI',     'http://rede.site/');
+  define('OAUTH_REDIRECT_URI',     'http://rede.site:8080/');
   define('OAUTH_CLIENT_ID',        'LiwFKQ0b');
   define('OAUTH_CLIENT_SECRET',    'vEdVSdklM6Y1Vo5HFWkz');
   define('OAUTH_URL_AUTHORIZE',    'http://rede.passaporte:3000/oauth/authorization');

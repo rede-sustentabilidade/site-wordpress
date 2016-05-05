@@ -46,11 +46,14 @@
         <?php endif; ?>
         <?php global $usuario; ?>
         <script>
-		var
-		API_PATH = <?php echo json_encode(WP_API_PATH); ?>,
-        SERVER_DOMAIN = <?php echo json_encode($_SERVER['SERVER_NAME']); ?>,
-        THEME_URL = <?php echo json_encode(get_stylesheet_directory_uri()); ?>,
-        WP_USER_ID = '<?php echo $usuario->id; ?>';
+				var API_PATH = <?php echo json_encode(WP_API_PATH); ?>;
+        var SERVER_DOMAIN = <?php echo json_encode($_SERVER['SERVER_NAME']); ?>;
+        var THEME_URL = <?php echo json_encode(get_stylesheet_directory_uri()); ?>;
+				<?php
+				if (count($usuario) > 0) {
+					echo "var WP_USER_ID = '".$usuario->id."';";
+				}
+        ?>
         </script>
         <?php wp_head(); ?>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
@@ -127,7 +130,7 @@ xml:space="preserve" fill="#26C4F1">
                                                         c-0.537,0.55-1.438,0.948-2.295,0.951V11.951z M10.302,25.609c-3.621,0-5.957-1.732-5.957-4.142c0-2.408,2.165-3.223,2.911-3.492
                                                         c1.421-0.479,3.25-0.545,3.555-0.545c0.338,0,0.52,0,0.766,0.034c2.574,1.838,3.706,2.757,3.706,4.479
                                                         c-0.002,2.073-1.736,3.665-4.982,3.649L10.302,25.609z" fill="#E93F2E" />
-                                                    <polygon points="23.254,11.89 23.254,8.521 21.569,8.521 21.569,11.89 18.202,11.89 18.202,13.604 21.569,13.604 21.569,17.004 
+                                                    <polygon points="23.254,11.89 23.254,8.521 21.569,8.521 21.569,11.89 18.202,11.89 18.202,13.604 21.569,13.604 21.569,17.004
                                                         23.254,17.004 23.254,13.604 26.653,13.604 26.653,11.89 		" fill="#E93F2E" />
 
                                                 </g>
@@ -258,4 +261,3 @@ xml:space="preserve" fill="#26C4F1">
 	<?php } /* === BANNER, FIM === */ ?>
 	<div class="clear"></div>
 	<div id="wrap">
-
