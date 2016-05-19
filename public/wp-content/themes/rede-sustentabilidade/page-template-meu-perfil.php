@@ -50,15 +50,15 @@ function doUserUpdate()
         $response = ApiRede::getInstance()->updateProfile($profile);
         error_log(print_r($response,true));
         if (!empty($response->errors)) {
-            $apiErrors = 'Os seguintes campos contém dados inválidos ou estão vazios: ' . implode(', ', array_keys((array) $response->errors));
+            $apiErrors = '<div class="pure-alert pure-alert-error">Os seguintes campos contém dados inválidos ou estão vazios: ' . implode(', ', array_keys((array) $response->errors)) . '</div>';
         } else if ((is_array($response)) && (!empty($response['httpCode']))) {
-            $apiErrors = 'Os dados não foram salvos. Por favor, verifique os dados informados e tente novamente.';
+            $apiErrors = '<div class="pure-alert pure-alert-error">Os dados não foram salvos. Por favor, verifique os dados informados e tente novamente.</div>';
         }
     }
     if (null !== $apiErrors) {
         return $apiErrors;
     }
-    return 'Perfil atualizado com sucesso';
+    return '<div class="pure-alert pure-alert-success">Perfil atualizado com sucesso. Caso tenha atualizado os dados de contribuição, eles não aparecem posteriormente por questões de segurança.</div>';
 }
 
 $message = null;
