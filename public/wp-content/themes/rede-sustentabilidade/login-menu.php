@@ -54,7 +54,7 @@ if (isset($_COOKIE['access_token'])) {
 			<!--<div class="seta"></div>-->
 			<div class="item">
 				<p class="title">Meu perfil</p>
-				<p> Ainda estamos em construção! Logo menos, por este link você irá poder editar seus dados pessoais. </p>
+				<p> Nesta seção você pode editar seus dados pessoais e dados de contribuição. </p>
 				<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
 			</div>
 			<div class="item">
@@ -76,7 +76,7 @@ if (isset($_COOKIE['access_token'])) {
 			<!--<div class="seta"></div>-->
 			<div class="item">
 				<p class="title">Meu perfil</p>
-				<p> Ainda estamos em construção! Logo menos, por este link você irá poder editar seus dados pessoais. </p>
+				<p> Nesta seção você pode editar seus dados pessoais e dados de contribuição. </p>
 				<a href="<?php echo site_url(); ?>/meu-perfil/">editar</a>
 			</div>
 			<?php if ($filiado->status == 99) { ?>
