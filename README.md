@@ -1,6 +1,17 @@
 Site Rede
 =========
 
+
+To setup initial project
+
+```
+git clone https://github.com/rede-sustentabilidade/site-wordpress.git
+cd site-wordpress
+composer install
+wp server --docroot=public.built --host=rede.site
+```
+
+
 [![Stories in Ready](https://badge.waffle.io/rede-sustentabilidade/site-wordpress.svg?label=ready&title=Ready)](http://waffle.io/rede-sustentabilidade/site-wordpress)
 
 [![Build Status](http://ci.redesustentabilidade.org.br/api/badges/rede-sustentabilidade/site-wordpress/status.svg)](http://ci.redesustentabilidade.org.br/rede-sustentabilidade/site-wordpress)
