@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e359878a3f09319002b61dca12b1af3e",
-    "content-hash": "f81c7ecaa0fa82cf25b25e18fbb0ab72",
+    "hash": "bfdfab6c3c32505d506bf0233298dbee",
+    "content-hash": "688ae52cbcef4bd3c7995ce2708583ad",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -17,34 +17,6 @@
                 "shasum": null
             },
             "type": "library"
-        },
-        {
-            "name": "alfreddatakillen/wpro",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/alfreddatakillen/wpro.git",
-                "reference": "1ce135defbbadc0882a057786c420c82cc98472a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/alfreddatakillen/wpro/zipball/1ce135defbbadc0882a057786c420c82cc98472a",
-                "reference": "1ce135defbbadc0882a057786c420c82cc98472a",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*",
-                "wp-cli/wp-cli": "*",
-                "wpreadme2markdown/wpreadme2markdown": "*"
-            },
-            "type": "wordpress-plugin",
-            "description": "Wordpress Read-Only",
-            "homepage": "http://github.com/alfreddatakillen/wpro",
-            "support": {
-                "source": "https://github.com/alfreddatakillen/wpro/tree/master",
-                "issues": "https://github.com/alfreddatakillen/wpro/issues"
-            },
-            "time": "2015-02-10 07:37:29"
         },
         {
             "name": "composer/composer",
@@ -2221,15 +2193,15 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "3.9.6",
+            "version": "3.9.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/3.9.6"
+                "reference": "tags/3.9.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.3.9.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.3.9.7.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -2518,7 +2490,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "alfreddatakillen/wpro": 20,
         "wpackagist-plugin/link-manager": 20,
         "wpackagist-plugin/simple-share-buttons-adder": 20,
         "wpackagist-plugin/query-monitor": 20,

@@ -18,7 +18,6 @@
 		"php": "~7",
 		"WordPress/WordPress": "*",
 		"wpackagist-plugin/jetpack": "~3",
-		"alfreddatakillen/wpro": "dev-trunk",
 		"wpackagist-plugin/authy-two-factor-authentication": "~2",
 		"wpackagist-theme/pinbin": "1.4.*",
 		"wpackagist-plugin/contact-form-7": "4.0.2",
@@ -45,10 +44,6 @@
 		{
 			"type": "vcs",
 			"url":  "git@github.com:rede-sustentabilidade/amazon-ses-and-dkim-mailer.git"
-		},
-		{
-			"type": "vcs",
-			"url":  "git@github.com:alfreddatakillen/wpro.git"
 		},
 		{
 			"type": "package",
