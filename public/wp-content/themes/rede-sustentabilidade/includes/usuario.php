@@ -61,6 +61,7 @@ if (isset($_GET['logout'])) {
          $accessToken = $provider->getAccessToken('authorization_code', [
              'code' => $_GET['code'],
          ]);
+
         setcookie('access_token', $accessToken);
         header('Location: /');
         exit;
@@ -111,10 +112,10 @@ if (isset($_GET['logout'])) {
 		$accessToken = $_COOKIE['access_token'];
 		$request = $provider->getAuthenticatedRequest(
 			'GET',
-			WP_PASSPORT_PATH . '/user',
+			WP_PASSPORT_PATH . '/api/userinfo',
 			$accessToken
 		);
-		$client = new \GuzzleHttp\Client(['base_uri' => WP_PASSPORT_PATH]);
+		$client = new \GuzzleHttp\Client(['base_uri' => WP_PASSPORT_PATH, 'verify'=>false]);
 		$response = $client->send($request);
 		$usuario = $response->getBody()->getContents();
 

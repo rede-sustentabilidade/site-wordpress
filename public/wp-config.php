@@ -229,13 +229,13 @@ switch (WP_ENV) {
   define('WP_DEBUG', true);
   define('WP_CACHE', false);
   define('WP_API_PATH',            'http://rede.api:9000');
-  define('WP_PASSPORT_PATH',       'http://rede.passaporte:3000');
+  define('WP_PASSPORT_PATH',       'https://rede.passaporte:3003');
   define('OAUTH_REDIRECT_URI',     'http://rede.site:8080/');
   define('OAUTH_CLIENT_ID',        'LiwFKQ0b');
   define('OAUTH_CLIENT_SECRET',    'vEdVSdklM6Y1Vo5HFWkz');
-  define('OAUTH_URL_AUTHORIZE',    'http://rede.passaporte:3000/oauth/authorization');
-  define('OAUTH_URL_ACCESS_TOKEN', 'http://rede.passaporte:3000/oauth/token');
-  define('OAUTH_URL_RESOURCE',     'http://rede.passaporte:3000/oauth/resource');
+  define('OAUTH_URL_AUTHORIZE',    'https://rede.passaporte:3003/dialog/authorize');
+  define('OAUTH_URL_ACCESS_TOKEN', 'https://rede.passaporte:3003/oauth/token');
+  define('OAUTH_URL_RESOURCE',     'https://rede.passaporte:3003/api/userinfo');
 
   // define('MULTISITE', true);
   // define('SUBDOMAIN_INSTALL', true);
