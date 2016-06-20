@@ -192,9 +192,9 @@ switch (WP_ENV) {
   define('OAUTH_REDIRECT_URI',     'https://redesustentabilidade.org.br/');
   define('OAUTH_CLIENT_ID',        getenv('OAUTH_CLIENT_ID'));
   define('OAUTH_CLIENT_SECRET',    getenv('OAUTH_CLIENT_SECRET'));
-  define('OAUTH_URL_AUTHORIZE',    'https://passaporte.redesustentabilidade.org.br/oauth/authorization');
+  define('OAUTH_URL_AUTHORIZE',    'https://passaporte.redesustentabilidade.org.br/dialog/authorize');
   define('OAUTH_URL_ACCESS_TOKEN', 'https://passaporte.redesustentabilidade.org.br/oauth/token');
-  define('OAUTH_URL_RESOURCE',     'https://passaporte.redesustentabilidade.org.br/oauth/resource');
+  define('OAUTH_URL_RESOURCE',     'https://passaporte.redesustentabilidade.org.br/api/userinfo');
 
   define('MULTISITE', true);
   define('SUBDOMAIN_INSTALL', true);
@@ -213,9 +213,9 @@ switch (WP_ENV) {
   define('OAUTH_REDIRECT_URI',     'http://redesustentabilidade.net/');
   define('OAUTH_CLIENT_ID',        'XnvqtV7U');
   define('OAUTH_CLIENT_SECRET',    '00UlvMJicqoY8y3qtFoY');
-  define('OAUTH_URL_AUTHORIZE',    'http://passaporte.redesustentabilidade.net/oauth/authorization');
-  define('OAUTH_URL_ACCESS_TOKEN', 'http://passaporte.redesustentabilidade.net/oauth/token');
-  define('OAUTH_URL_RESOURCE',     'http://passaporte.redesustentabilidade.net/oauth/resource');
+  define('OAUTH_URL_AUTHORIZE',    'http://passaporte.redesustentabilidade.org/dialog/authorize');
+  define('OAUTH_URL_ACCESS_TOKEN', 'http://passaporte.redesustentabilidade.org/oauth/token');
+  define('OAUTH_URL_RESOURCE',     'http://passaporte.redesustentabilidade.org/api/userinfo');
 
   // define('MULTISITE', true);
   // define('SUBDOMAIN_INSTALL', true);
