@@ -47,6 +47,7 @@ if (isset($_GET['logout'])) {
 	unset($_COOKIE['access_token']);
 	setcookie('access_token', null, -1);
 	setcookie('usuario', null, -1);
+	header('Location: ' . WP_PASSPORT_PATH + '/logout');
 } else if (isset($_GET['code'])) {
     try {
         $provider = new RsProvider([
