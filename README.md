@@ -1,6 +1,18 @@
 Site Rede
 =========
 
+Dependencies
+
+* memcache
+* mysql
+
+* php-cli
+* wp-cli
+* composer
+
+* nodejs
+* gulp-cli
+
 
 To setup initial project
 
@@ -8,7 +20,8 @@ To setup initial project
 git clone https://github.com/rede-sustentabilidade/site-wordpress.git
 cd site-wordpress
 composer install
-wp server --docroot=public.built --host=rede.site
+wp server --docroot=public.built --host=rede.site&
+gulp
 ```
 
 
