@@ -16,25 +16,14 @@ add_action('after_setup_theme', 'rs_setup');
  * Custom post type
  */
 
+
 function rs_custom_type()
 {
   $gte_3_8 = version_compare(get_bloginfo('version'), '3.8.0', '>=');
 
 	$args = array(
 		'public' => true,
-		'label' => __('Post (regional.)', 'rede-sustentabilidade'),
-		'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
-		'capability_type' => 'post_region',
-		'map_meta_cap' => true,
-	);
-	if ($gte_3_8) {
-	  $args['menu_icon'] = 'dashicons-location-alt';
-	}
-	register_post_type('post_region', $args);
-
-	$args = array(
-		'public' => true,
-		'label' => __('Evento', 'rede-sustentabilidade'),
+		'label' => __('Eventos', 'rede-sustentabilidade'),
 		'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
 		'capability_type' => 'event',
 		'map_meta_cap' => true,
@@ -47,10 +36,11 @@ function rs_custom_type()
 
 add_action('init', 'rs_custom_type');
 
+
 function rs_post_class($classes)
 {
   global $post;
-  if (in_array($post->post_type, array('post_region', 'event'))) {
+  if (in_array($post->post_type, array('event'))) {
     $classes[] = 'type-post';
     $classes[] = 'post';
   }

@@ -48,139 +48,6 @@ function frontend_scripts_method() {
 add_action( 'wp_enqueue_scripts', 'frontend_scripts_method' ); // wp_enqueue_scripts action hook to link only on the front-end
 
 // Register Custom Post Type
-function custom_post_type() {
-
-	$labels = array(
-		'name'                => _x( 'Participações', 'Post Type General Name', 'rede-sustentabilidade' ),
-		'singular_name'       => _x( 'Participação', 'Post Type Singular Name', 'rede-sustentabilidade' ),
-		'menu_name'           => __( 'Participação', 'rede-sustentabilidade' ),
-		'parent_item_colon'   => __( 'Participação filha', 'rede-sustentabilidade' ),
-		'all_items'           => __( 'Todas Participações', 'rede-sustentabilidade' ),
-		'view_item'           => __( 'Ver Participações', 'rede-sustentabilidade' ),
-		'add_new_item'        => __( 'Adicionar nova Participação', 'rede-sustentabilidade' ),
-		'add_new'             => __( 'Nova Participação', 'rede-sustentabilidade' ),
-		'edit_item'           => __( 'Editar Participação', 'rede-sustentabilidade' ),
-		'update_item'         => __( 'Atualizar Participação', 'rede-sustentabilidade' ),
-		'search_items'        => __( 'Procurar Participações', 'rede-sustentabilidade' ),
-		'not_found'           => __( 'Nenhuma Participação encontrada', 'rede-sustentabilidade' ),
-		'not_found_in_trash'  => __( 'Nenhuma Participação encontrada no lixo', 'rede-sustentabilidade' )
-	);
-	$args = array(
-		'label'               => __( 'participacao', 'rede-sustentabilidade' ),
-		'description'         => __( 'Participação popular sobre os temas ', 'rede-sustentabilidade' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'comments', ),
-		// 'taxonomies'          => array( 'category'),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => false,
-		'show_in_admin_bar'   => false,
-		'menu_position'       => 5,
-		'menu_icon'           => '',
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'post',
-		'rewrite' 			  => array(
-			'slug'			=>	'mudando-o-brasil/desafio',
-			'with_front'	=>	true
-		)
-	);
-	register_post_type( 'participacao', $args );
-
-}
-
-// Hook into the 'init' action
-add_action( 'init', 'custom_post_type', 0 );
-
-// Categorias para Participação
-function my_taxonomies_participacao() {
-	$labels = array(
-		'name'              => _x( 'Categorias', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Categoria', 'taxonomy singular name' ),
-		'search_items'      => __( 'Procurar categoria' ),
-		'all_items'         => __( 'Todas as categorias' ),
-		'parent_item'       => __( 'Parent Categoria' ),
-		'parent_item_colon' => __( 'Parent Categoria:' ),
-		'edit_item'         => __( 'Editar Categoria' ),
-		'update_item'       => __( 'Atualizar Categoria' ),
-		'add_new_item'      => __( 'Adicionar nova Categoria' ),
-		'new_item_name'     => __( 'Nova Categoria' ),
-		'menu_name'         => __( 'Categorias' ),
-	);
-	$args = array(
-		'labels' => $labels,
-		'hierarchical' => true,
-		'query_var' => true,
-		'rewrite' => array(
-			'slug' => 'mudando-o-brasil/desafios',
-			'with_front' => true
-        ),
-        'capabilities' => array (
-            'manage_terms' => 'manage_options', //by default only admin
-            'edit_terms' => 'manage_options',
-            'delete_terms' => 'manage_options',
-            'assign_terms' => 'edit_posts'  // means administrator', 'editor', 'author', 'contributor'
-        )
-	);
-	register_taxonomy( 'participacao_category', 'participacao', $args );
-
-}
-add_action( 'init', 'my_taxonomies_participacao', 0 );
-
-
-// Sugestão da sideTabs
-
-// Register Custom Post Type
-function custom_post_type_sugestao() {
-
-	$labels = array(
-		'name'                => _x( 'Sugestões', 'Post Type General Name', 'rede-sustentabilidade' ),
-		'singular_name'       => _x( 'Sugestão', 'Post Type Singular Name', 'rede-sustentabilidade' ),
-		'menu_name'           => __( 'Sugestão', 'rede-sustentabilidade' ),
-		'parent_item_colon'   => __( 'Sugestão filha', 'rede-sustentabilidade' ),
-		'all_items'           => __( 'Todas Sugestões', 'rede-sustentabilidade' ),
-		'view_item'           => __( 'Ver Sugestões', 'rede-sustentabilidade' ),
-		'add_new_item'        => __( 'Adicionar nova Sugestão', 'rede-sustentabilidade' ),
-		'add_new'             => __( 'Nova Sugestão', 'rede-sustentabilidade' ),
-		'edit_item'           => __( 'Editar Sugestão', 'rede-sustentabilidade' ),
-		'update_item'         => __( 'Atualizar Sugestão', 'rede-sustentabilidade' ),
-		'search_items'        => __( 'Procurar Sugestões', 'rede-sustentabilidade' ),
-		'not_found'           => __( 'Nenhuma Sugestão encontrada', 'rede-sustentabilidade' ),
-		'not_found_in_trash'  => __( 'Nenhuma Sugestão encontrada no lixo', 'rede-sustentabilidade' ),
-	);
-	$args = array(
-		'label'               => __( 'sugestao', 'rede-sustentabilidade' ),
-		'description'         => __( 'Sugestão popular sobre os temas ', 'rede-sustentabilidade' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'comments', ),
-		//'taxonomies'          => array( 'category' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => false,
-		'show_in_admin_bar'   => false,
-		'menu_position'       => 5,
-		'menu_icon'           => '',
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'post',
-		//'rewrite' => array( 'slug' => 'participe')
-	);
-	register_post_type( 'sugestao', $args );
-
-}
-
-// Hook into the 'init' action
-add_action( 'init', 'custom_post_type_sugestao', 0 );
-
-// Register Custom Post Type
 function conheca_post_type() {
 
 	$labels = array(
@@ -190,9 +57,9 @@ function conheca_post_type() {
 		'name_admin_bar'        => __( 'Conheça', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-		'all_items'             => __( 'All Items', 'text_domain' ),
+		'all_items'             => __( 'Listar todos', 'text_domain' ),
 		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-		'add_new'               => __( 'Add New', 'text_domain' ),
+		'add_new'               => __( 'Adicionar novo', 'text_domain' ),
 		'new_item'              => __( 'New Item', 'text_domain' ),
 		'edit_item'             => __( 'Edit Item', 'text_domain' ),
 		'update_item'           => __( 'Update Item', 'text_domain' ),
