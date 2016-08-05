@@ -252,6 +252,9 @@ xml:space="preserve" fill="#26C4F1">
         <?php endif; ?>
 	<?php date_default_timezone_set('America/Sao_Paulo'); if (is_home()) { ?>
 	<div id="slider">
+    <?php echo do_shortcode('[sp_responsiveslider design="design-1" cat_id="1408" width="1024" first_slide="1" height="300" effect="fade" pagination="true" navigation="true" speed="3000" autoplay="true" autoplay_interval="3000"]');
+    ?>
+
 		<?php
 			if (function_exists('putRevSlider')) {
 				putRevSlider("home");
