@@ -57,6 +57,9 @@
         </script>
         <?php wp_head(); ?>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+<?php bwpy_customizer_head_styles(); ?>
+
     </head>
     <body <?php body_class(); ?>>
         <nav id="site-navigation" class="main-nav" role="navigation">
@@ -73,16 +76,20 @@
                 <?php else : ?>
                 <ul><?php wp_list_pages(array('depth' => 3, 'title_li' => '')); ?></ul>
                 <?php endif; ?>
-                <h1 id="logo">
-                    <?php
-                        $h1_link = esc_url(home_url('/'));
 
-                        if (get_post_type() == 'post_region') $h1_link .= 'regional/' . wp_get_post_terms( $post->ID , 'state')[0]->slug;
-                     ?>
+    <div id="logo" style="background:none; overflow:visible; text-indent:0%;">
+
+<?php $h1_link = esc_url(home_url('/'));
+if (get_post_type() == 'post_region') 
+    $h1_link .= 'regional/' . wp_get_post_terms( $post->ID , 'state')[0]->slug;
+?>
                     <a href="<?php echo $h1_link; ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
-                        <?php echo get_option('blogname'); ?>
+
+<?php if (get_theme_mod( 'themeslug_logo' )) : $logo_image = get_theme_mod( 'themeslug_logo'); else: $logo_image = dirname( get_bloginfo('stylesheet_url') ). '/assets/images/redesign/header_logo.png'; endif; ?>
+
+                        <img src='<?php echo $logo_image; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
                     </a>
-                </h1>
+    </div>
                 <?php $title = get_the_title(); ?>
                 <?php $short_url = $url = get_home_url(); ?>
                 <div class="extra-content">
