@@ -308,3 +308,77 @@ function disable_emojis_tinymce( $plugins ) {
 		return array();
 	}
 }
+
+function bwpy_customizer( $wp_customize ) {
+
+// nova seção de cores
+$wp_customize->add_section( 'bwpy_theme_colors', array(
+	'title' => __( 'Cores do tema', 'bwpy' ),
+	'priority' => 100,
+) );
+
+// valor default
+$wp_customize->add_setting( 'fundo_do_menu', array(
+	'default' => '#4d5051'
+) );
+
+// colorpicker
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'fundo_do_menu', array(
+	'label' => 'Fundo do menu',
+	'section' => 'bwpy_theme_colors',
+	'settings' => 'fundo_do_menu',
+) ) );
+
+/*
+$wp_customize->add_setting( 'fundo_do_menu_hover', array(
+	'default' => '#4d5051'
+) );
+
+
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'fundo_do_menu_hover', array(
+	'label' => 'Fundo do menu hover',
+	'section' => 'bwpy_theme_colors',
+	'settings' => 'fundo_do_menu_hover',
+) ) );
+*/
+
+}
+
+add_action( 'customize_register', 'bwpy_customizer' );
+
+function logo_customizer($wp_customize) {
+	$wp_customize->add_section( 'themeslug_logo_section' , array(
+    'title'       => __( 'Logo', 'themeslug' ),
+    'priority'    => 30,
+    'description' => 'Envia a logo para substituir a atual.',
+) );
+
+	$wp_customize->add_setting( 'themeslug_logo',
+		array(
+	'default' => dirname( get_bloginfo('stylesheet_url') ). '/assets/images/redesign/header_logo.png'));
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
+    'label'    => __( 'Logo', 'themeslug' ),
+    'section'  => 'themeslug_logo_section',
+    'settings' => 'themeslug_logo',
+    'default' => 'assets/images/redesign/header_logo.png',
+) ) );
+}
+
+add_action( 'customize_register', 'logo_customizer' );
+
+function bwpy_customizer_head_styles() {
+	$fundo_do_menu = get_theme_mod( 'fundo_do_menu' );
+	$fundo_do_menu_hover = get_theme_mod( 'fundo_do_menu_hover' ); 
+			?>
+		<style type="text/css">
+			.menu-menu-1-container { background: <?php echo $fundo_do_menu; ?>; }
+			/*.main-nav .menu-menu-1-container ul li:hover { background: <?php echo $fundo_do_menu_hover; ?>; }
+			#menu-item-
+			.main-nav ul .sub-menu li:hover { background-color: <?php echo $fundo_do_menu_hover; ?>; }
+			.main-nav ul .children li:hover { background-color: <?php echo $fundo_do_menu_hover; ?>; }
+			*/
+		</style>
+		<?php 
+}
+add_action( 'wp_head', 'bwpy_customizer_head_styles' );
