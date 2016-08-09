@@ -24,6 +24,7 @@
 		"wpackagist-plugin/wp-permastructure": "1.3",
 		"wpackagist-plugin/link-manager": "dev-trunk",
 		"wpackagist-plugin/simple-share-buttons-adder": "dev-trunk",
+		"wpackagist-plugin/the-social-links": "dev-trunk",
 		"wpackagist-plugin/query-monitor": "dev-trunk",
 		"wpackagist-plugin/diagnosis": "dev-trunk",
 		"wpackagist-plugin/wordpress-https": "dev-trunk",
