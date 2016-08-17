@@ -49,7 +49,7 @@ if (isset($_COOKIE['access_token'])) {
 		<a href="<?php echo site_url(); ?>/entenda-a-filiacao/" class="label">filie-se</a>
 	</div>
 	<div class="fazer-conexao">
-    <a href="javascript:void(0);" class="welcome-message label"><?php echo $usuario->username; ?></a>
+    <a href="javascript:void(0);" class="welcome-message label"><?php echo $usuario->email; ?></a>
 		<div class="dropdown">
 			<!--<div class="seta"></div>-->
 			<div class="item">

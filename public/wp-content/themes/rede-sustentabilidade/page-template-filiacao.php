@@ -15,7 +15,7 @@ global $usuario;
 ?>
 
 <script type="text/javascript">
-	var WP_EMAIL = "<?php echo $usuario->username;?>";
+	var WP_EMAIL = "<?php echo $usuario->email;?>";
 </script>
 
 
