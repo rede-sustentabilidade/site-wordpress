@@ -36,6 +36,8 @@
 		"wpackagist-plugin/options-importer": "dev-trunk",
 		"wpackagist-plugin/wordpress-importer": "dev-trunk",
 		"wp-cli/wp-cli" : "~0.22",
+		"wpackagist-plugin/elementor": "dev-trunk",
+		"wpackagist-plugin/shortcodes-ultimate": "dev-trunk",
 		"psy/psysh" : "~0.6"
 	},
 	"require-dev": {
