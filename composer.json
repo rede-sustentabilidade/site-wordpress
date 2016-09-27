@@ -38,7 +38,8 @@
 		"wp-cli/wp-cli" : "~0.22",
 		"wpackagist-plugin/elementor": "dev-trunk",
 		"wpackagist-plugin/shortcodes-ultimate": "dev-trunk",
-		"psy/psysh" : "~0.6"
+		"psy/psysh" : "~0.6",
+		"wpackagist-plugin/advanced-post-slider": "2.5.0"
 	},
 	"require-dev": {
 		"heroku/heroku-buildpack-php": "dev-trunk"
