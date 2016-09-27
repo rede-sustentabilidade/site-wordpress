@@ -217,12 +217,12 @@ switch (WP_ENV) {
   define('OAUTH_URL_ACCESS_TOKEN', 'http://passaporte.redesustentabilidade.org/oauth/token');
   define('OAUTH_URL_RESOURCE',     'http://passaporte.redesustentabilidade.org/api/userinfo');
 
-  // define('MULTISITE', true);
-  // define('SUBDOMAIN_INSTALL', true);
-  // define('DOMAIN_CURRENT_SITE', 'redesustentabilidade.net');
-  // define('PATH_CURRENT_SITE', '/');
-  // define('SITE_ID_CURRENT_SITE', 1);
-  // define('BLOG_ID_CURRENT_SITE', 1);
+  define('MULTISITE', true);
+  define('SUBDOMAIN_INSTALL', true);
+  define('DOMAIN_CURRENT_SITE', 'redesustentabilidade.net');
+  define('PATH_CURRENT_SITE', '/');
+  define('SITE_ID_CURRENT_SITE', 1);
+  define('BLOG_ID_CURRENT_SITE', 1);
 
   break;
   default:
