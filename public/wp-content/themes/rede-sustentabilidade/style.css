@@ -1,5 +1,5 @@
 
-/* line 250 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
+/* line 286 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/node_modules/gulp-stylus/node_modules/stylus/lib/functions/index.styl */
 
@@ -17,7 +17,7 @@
   Tags: pin, board, noticias, desafios, minuta, likes, filiacao, doacao, sugestao, duvidas
   Text Domain: redesustentabilidade*/
 
-/* line 286 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/node_modules/gulp-stylus/node_modules/stylus/lib/functions/index.styl */
+/* line 1475 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/node_modules/gulp-stylus/node_modules/stylus/lib/functions/index.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_pure.styl */
 /*
@@ -376,7 +376,7 @@ td,th{padding:0}
 .pure-table-horizontal td,.pure-table-horizontal th{border-width:0 0 1px 0;border-bottom:1px solid #cbcbcb}
 /* line 1473 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_pure.styl */
 .pure-table-horizontal tbody > tr:last-child > td{border-bottom-width:0}
-/* line 1475 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_pure.styl */
+/* line 802 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_pure.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_pinbin.styl */
 
@@ -708,11 +708,11 @@ h2{font-size:22px;line-height:25px}
 #main-nav-wrapper{height:42px;display:inline;float:none}
 /* line 801 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_pinbin.styl */
 .main-nav{background:#fff}}
-/* line 802 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_pinbin.styl */
+/* line 62 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_pinbin.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/fonts/_stylesheet.styl */
 @font-face{font-family:'PT Sans';src:url("assets/fonts/PT-Sans-fontfacekit/ptsans_regular_macroman/PTS55F-webfont.eot");src:url("assets/fonts/PT-Sans-fontfacekit/ptsans_regular_macroman/PTS55F-webfont.eot?#iefix") format('embedded-opentype'),url("assets/fonts/PT-Sans-fontfacekit/ptsans_regular_macroman/PTS55F-webfont.woff") format('woff'),url("assets/fonts/PT-Sans-fontfacekit/ptsans_regular_macroman/PTS55F-webfont.ttf") format('truetype'),url("assets/fonts/PT-Sans-fontfacekit/ptsans_regular_macroman/PTS55F-webfont.svg#pt_sansregular") format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'League Gothic';src:url("assets/fonts/leaguegothic-italic-webfont.eot");src:url("assets/fonts/leaguegothic-italic-webfont.eot?#iefix") format('embedded-opentype'),url("assets/fonts/leaguegothic-italic-webfont.woff") format('woff'),url("assets/fonts/leaguegothic-italic-webfont.ttf") format('truetype'),url("assets/fonts/leaguegothic-italic-webfont.svg#league_gothic_italicregular") format('svg');font-weight:normal;font-style:italic}@font-face{font-family:'League Gothic';src:url("assets/fonts/leaguegothic-regular-webfont.eot");src:url("assets/fonts/leaguegothic-regular-webfont.eot?#iefix") format('embedded-opentype'),url("assets/fonts/leaguegothic-regular-webfont.woff") format('woff'),url("assets/fonts/leaguegothic-regular-webfont.ttf") format('truetype'),url("assets/fonts/leaguegothic-regular-webfont.svg#league_gothicregular") format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'League Gothic Condensed';src:url("assets/fonts/leaguegothic-condensed-regular-webfont.eot");src:url("assets/fonts/leaguegothic-condensed-regular-webfont.eot?#iefix") format('embedded-opentype'),url("assets/fonts/leaguegothic-condensed-regular-webfont.woff") format('woff'),url("assets/fonts/leaguegothic-condensed-regular-webfont.ttf") format('truetype'),url("assets/fonts/leaguegothic-condensed-regular-webfont.svg#league_gothic_condensed-Rg") format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'League Gothic Condensed';src:url("assets/fonts/leaguegothic-condensed-italic-webfont.eot");src:url("assets/fonts/leaguegothic-condensed-italic-webfont.eot?#iefix") format('embedded-opentype'),url("assets/fonts/leaguegothic-condensed-italic-webfont.woff") format('woff'),url("assets/fonts/leaguegothic-condensed-italic-webfont.ttf") format('truetype'),url("assets/fonts/leaguegothic-condensed-italic-webfont.svg#league_gothic_condensed_itaRg") format('svg');font-weight:normal;font-style:italic}
-/* line 62 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/fonts/_stylesheet.styl */
+/* line 196 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/fonts/_stylesheet.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/fonts/icones/_style.styl */
 @font-face{font-family:'icomoon';src:url("assets/fonts/icones/fonts/icomoon.eot");src:url("assets/fonts/icones/fonts/icomoon.eot?#iefix") format('embedded-opentype'),url("assets/fonts/icones/fonts/icomoon.woff") format('woff'),url("assets/fonts/icones/fonts/icomoon.ttf") format('truetype'),url("assets/fonts/icones/fonts/icomoon.svg#icomoon") format('svg');font-weight:normal;font-style:normal}
@@ -832,11 +832,11 @@ h2{font-size:22px;line-height:25px}
 .icon-seta-para-cima:before{content:"\e00f"}
 /* line 194 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/fonts/icones/_style.styl */
 .icon-download:before{content:"\e602"}
-/* line 196 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/fonts/icones/_style.styl */
+/* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/fonts/icones/_style.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_animation.styl */
 
-/* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_animation.styl */
+/* line 380 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_animation.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_magnific-popup.styl */
 
@@ -1062,7 +1062,7 @@ p{font-family:'Open Sans',sans-serif}
 .ie-warning p{color:#fff;margin:.2em;font-size:1.3em;}
 /* line 131 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
 .ie-warning p a{color:#fff}
-/* line 380 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_magnific-popup.styl */
+/* line 293 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_magnific-popup.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
 
@@ -1188,7 +1188,7 @@ nav.main-nav{box-shadow:none;-webkit-box-shadow:none;position:relative}
 #logo a.logo-animado .second{-webkit-animation-duration:4s}
 /* line 292 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
 #logo a.logo-animado .third{-webkit-animation-duration:8s}
-/* line 293 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
+/* line 102 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_menu.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_posts-and-timeline.styl */
 
@@ -1234,7 +1234,7 @@ h2.title-timeline{font-family:League Gothic;font-size:68px;line-height:45px;marg
 .timeline .registro{display:inline-block;margin:25px 15px 0 0;}
 /* line 99 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_posts-and-timeline.styl */
 .timeline .registro img{max-width:100% !important;max-height:100% !important;display:block}
-/* line 102 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_posts-and-timeline.styl */
+/* line 158 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_posts-and-timeline.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_footer.styl */
 
@@ -1312,7 +1312,7 @@ h2.title-timeline{font-family:League Gothic;font-size:68px;line-height:45px;marg
 .site-footer li{margin-top:5px;}
 /* line 153 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_footer.styl */
 .site-footer li a{display:block;color:#fff;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-/* line 158 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_footer.styl */
+/* line 58 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_footer.styl */
 
 /* line 158 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_viralizacao.styl */
 
@@ -1348,7 +1348,7 @@ h2.title-timeline{font-family:League Gothic;font-size:68px;line-height:45px;marg
 #sidebar-viral .social-box.facebook .invite-facebook{background-color:#3b5999;color:#fff;margin:.3em;font-size:3.5em;line-height:1em;font-family:'League Gothic';display:inline-block;padding:.5em;border-radius:.5em;text-align:center;text-decoration:none;}
 /* line 56 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_viralizacao.styl */
 #sidebar-viral .social-box.facebook .invite-facebook i{font-size:1em;display:block}
-/* line 58 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_viralizacao.styl */
+/* line 101 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_viralizacao.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_comments.styl */
 
@@ -1392,11 +1392,11 @@ h2.title-timeline{font-family:League Gothic;font-size:68px;line-height:45px;marg
 #comment-form h4{color:#dadad5;font-family:'League Gothic';font-size:4em;line-height:1em}
 /* line 99 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_comments.styl */
 .comments-area{margin-left:0;padding:0 3.5em}
-/* line 101 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_comments.styl */
+/* line 40 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_comments.styl */
 
-/* line 40 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_meu-perfil.styl */
+/* line 276 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_meu-perfil.styl */
 
-/* line 40 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_meu-perfil.styl */
+/* line 4 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_meu-perfil.styl */
 
 /* line 2 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_variables.styl */
 
@@ -1414,7 +1414,7 @@ h2.title-timeline{font-family:League Gothic;font-size:68px;line-height:45px;marg
 .pure-alert-warning{background-color:#fabf67;color:#97600d}
 /* line 38 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_meu-perfil.styl */
 .pure-alert-success{background-color:#53b44f;color:#fff}
-/* line 4 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_variables.styl */
+/* line 37 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_variables.styl */
 
 /* line 4 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_busca.styl */
 
@@ -1434,7 +1434,7 @@ h2.title-timeline{font-family:League Gothic;font-size:68px;line-height:45px;marg
 #search .post .read-more,#search .participacao .read-more,#search .page .read-more{background:#444;text-decoration:none;color:#fff;padding:10px;font-size:1.5em;font-wieght:bold;float:right;margin-bottom:5px;line-height:7px;border-radius:10px 0 0 10px;}
 /* line 36 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_busca.styl */
 #search .post .read-more:hover,#search .participacao .read-more:hover,#search .page .read-more:hover{background:#dc6b48}
-/* line 37 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_busca.styl */
+/* line 159 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_busca.styl */
 
 /* line 37 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_side-tabs.styl */
 
@@ -1504,7 +1504,7 @@ h2.title-timeline{font-family:League Gothic;font-size:68px;line-height:45px;marg
 .side-tabs .content .sugestions form input[type=text].error,.side-tabs .content .sugestions form textarea.error{border:1px solid #f00}
 /* line 148 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_side-tabs.styl */
 .side-tabs .btn-side-tabs{position:absolute;right:-7px;top:10px;display:block;vertical-align:middle;width:30px;height:30px;z-index:5;line-height:30px;text-align:center;cursor:pointer}
-/* line 159 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_side-tabs.styl */
+/* line 331 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_side-tabs.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_redesign.styl */
 
@@ -1586,7 +1586,7 @@ h2.title-timeline{font-family:League Gothic;font-size:68px;line-height:45px;marg
 .single .post .wp-caption .wp-caption-text{background-color:rgba(0,0,0,0.6);bottom:0;color:#fff;font-size:12px;margin-left:15px;padding:3px 5px;position:absolute;right:0;font-style:normal}
 /* line 172 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_redesign.styl */
 .single .post .wp-caption img{margin:0;max-width:100%}
-/* line 331 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_redesign.styl */
+/* line 121 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_redesign.styl */
 
 /* line 3 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_noticia-chapeu.styl */
 
@@ -2044,7 +2044,7 @@ h2.title-timeline{font-family:League Gothic;font-size:68px;line-height:45px;marg
 
 /* line 329 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_redesign.styl */
 .home > #wrap,.archive > #wrap,.single > #wrap{margin-left:auto;margin-right:auto}}
-/* line 121 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_noticia-chapeu.styl */
+/* line 6 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_noticia-chapeu.styl */
 
 /* line 1 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/_slider.styl */
 
@@ -2112,3 +2112,17 @@ aside{display:none}
 
 /* line 245 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
 .site-footer .notes.social-network a{height:0}}
+/* line 249 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
+.slide-posts-featured{background-color:#bfbfbe;padding:1.5em 0;}
+/* line 252 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
+.slide-posts-featured .advps-slide-field-three{height:375px;overflow:hidden;}
+/* line 255 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
+.slide-posts-featured .advps-slide-field-three img{margin:0}
+/* line 257 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
+.slide-posts-featured .advps-slide-container{margin:0 auto;height:490px}
+/* line 260 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
+.slide-posts-featured .advps-excerpt-three{background-color:#fff;height:375px;padding:2em 4em}
+/* line 264 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
+.slide-posts-featured #advps_container3 #bx-pager a img,.slide-posts-featured #advps_container3 #bx-pager a.active img,.slide-posts-featured #advps_container3 #bx-pager a:hover img{margin:0;padding:0;border:5px solid transparent}
+/* line 270 : /Users/lpirola/Documents/rede-sustentabilidade/site-wordpress/public/wp-content/themes/rede-sustentabilidade/assets/styles/style.styl */
+.slide-posts-featured #advps_container3 #bx-pager a.active img,.slide-posts-featured #advps_container3 #bx-pager a:hover img{border-color:#fff}

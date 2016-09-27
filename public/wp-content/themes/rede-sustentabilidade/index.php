@@ -2,9 +2,12 @@
 /**
  * Theme index file
  */
-get_header(); ?>
-<?php get_sidebar(); ?>
-<?php if (have_posts()) : ?>
+get_header();
+echo "</div><div class='slide-posts-featured'>";
+echo do_shortcode('[advps-slideshow optset="3"]');
+echo "</div><div id='wrap'>";
+get_sidebar();
+if (have_posts()) : ?>
 <div id="post-area">
     <?php while (have_posts()) : the_post(); ?>
     <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
