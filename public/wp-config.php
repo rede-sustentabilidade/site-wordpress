@@ -184,6 +184,7 @@ define('WPLANG', 'pt_BR');
 // Set environment based on hostname
 switch (WP_ENV) {
   case 'production':
+  define('FORCE_SSL_ADMIN', true);
   define('WP_DEBUG', false);
   define('WP_CACHE', false);
   define( 'WP_DEBUG_DISPLAY', false );
