@@ -39,7 +39,8 @@
 		"wpackagist-plugin/elementor": "dev-trunk",
 		"wpackagist-plugin/shortcodes-ultimate": "dev-trunk",
 		"psy/psysh" : "~0.6",
-		"wpackagist-plugin/advanced-post-slider": "2.5.0"
+		"wpackagist-plugin/advanced-post-slider": "2.5.0",
+		"wpackagist-plugin/really-simple-ssl": "2.3.14"
 	},
 	"require-dev": {
 		"heroku/heroku-buildpack-php": "dev-trunk"
