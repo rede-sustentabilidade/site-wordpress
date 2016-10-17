@@ -82,6 +82,8 @@ if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
 
+define('OAUTH_URL_AUTHORIZE', env('OAUTH_URL_AUTHORIZE'));
+
 // define('WP_ALLOW_MULTISITE', true);
 // define('MULTISITE', true);
 // define('SUBDOMAIN_INSTALL', true); // Set to false if using subdirectories
