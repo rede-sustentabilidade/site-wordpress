@@ -1,0 +1,109 @@
+.comment-pp
+    margin: 0 0 10px 0
+    &.active .comment-text
+        background-color: #f1e1c8
+    p.comment-text
+        display: inline
+        &:hover
+            background-color: #f1e1c8
+            cursor: pointer
+        a
+            padding: 0 0 .5em 0
+            i
+                margin: 0 5px
+            margin: 0 0 0 5px
+            font-size: 120%
+            background-color: #fff
+            color: $primary-color
+            text-decoration: none
+
+.comment-form
+    display: none
+    background-color: $secondary-color
+    border-radius: 5px
+    margin: 15px 0
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.5)
+
+    input
+        border: none
+    h6
+        position: relative
+        background: $primary-color
+        color: #fff
+        padding: 10px
+        margin: 0
+        border-radius: 5px 5px 0 0
+        font-family: 'League Gothic', sans-serif
+        text-transform: uppercase
+        font-weight: normal
+        font-size: 2em
+        i
+            margin: 0 10px 0 0
+    h6:after
+        bottom: 100%
+        border: solid transparent
+        content: " "
+        height: 0
+        width: 0
+        position: absolute
+        pointer-events: none
+    h6:after
+        border-color: rgba(215, 50, 47, 0)
+        border-bottom-color: $primary-color
+        border-width: 8px
+        left: 5%
+        margin-left: -8px
+    .message,
+    .loading
+        display: none
+    form > ol
+        margin: 0
+        padding: 25px 25px 0
+        & > li
+            list-style: none
+            padding: 0 0 25px 0
+            &.contribContainer,
+            &.agreed
+                display: none
+            &.agreed
+                ol li label
+                    color: #666
+            label
+                display: block
+                margin: 0 0 10px 0
+            .minict_wrapper
+                width: 350px
+                input,
+                ul li
+                    font-size: 90%
+                    margin-bottom: 0
+            textarea
+                width: 100%
+                height: 100px
+                border: 0
+                &.new_text
+                    display: none
+            ol
+                margin: 0
+                padding: 0
+                li
+                    list-style: none
+            .send-comment,
+            .cancel-comment
+                display: inline-block
+                overflow: hidden
+                text-indent: 100%
+                white-space: nowrap
+            .send-comment
+                width: 238px
+                height: 48px
+                float: right
+                background: url('../assets/images/comment.png') no-repeat
+                &:hover
+                    background-image: url('../assets/images/comment-hover.png')
+            .cancel-comment
+                width: 93px
+                height: 28px
+                background: url('../assets/images/cancel.png') no-repeat
+                &:hover
+                    background-image: url('../assets/images/cancel-hover.png')

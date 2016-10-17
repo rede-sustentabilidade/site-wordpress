@@ -1,0 +1,293 @@
+/********** MENU *************/
+
+.main-nav ul li
+  padding: 9px 0 9px 20px
+  float: left
+  line-height: 14px
+  a
+    font-size: 12px
+    color: #444
+  &:hover ul
+    padding: 0
+    margin-top: -1px
+    width: 200px
+    li
+      padding: 0
+      margin: 0
+      width: 100%
+
+.main-nav ul .sub-menu li,
+.main-nav ul .children li
+  //border-bottom: 1px dotted #e8e8e8;
+  border: 0
+  &:hover
+    background-color: $secondary-color
+    a
+      color: #000 !important
+  a
+    text-transform: none
+    margin: 0 10px
+    padding: 5px 0 4px
+    border-bottom: 1px dotted #e8e8e8
+
+.extra-content
+  float: right
+  margin-top: 25px
+
+#logo
+  position: relative
+  float: left
+  padding: 0
+  margin: 0
+  width: 250px
+  height: 120px
+  a.nome
+    width: 100px
+    height: 100px
+  img
+    float: none
+    position: absolute
+    max-height: 115px
+    padding: 0
+
+.menu-menu-1-container
+  float: left
+  padding: 0
+  width: 100%
+  background: #4d5051
+  ul li a,ul li a:hover,ul li a:active,
+  ul li:hover a,  li.current-menu-item a,  li.current-post-parent a
+    color: #fff
+  border-bottom: 1px dotted #bebebe
+  .menu
+    width: auto
+    padding: 0
+    margin: 0
+
+nav.main-nav
+  box-shadow: none
+  -webkit-box-shadow: none
+  position: relative
+
+#main-nav-wrapper
+  border-bottom: 1px dotted #bebebe
+  min-height: initial
+  max-height: 300px
+
+/********** BOTOES TOPO E COMPARTILHAR *************/
+
+.compartilhar-na-rede
+  //width: 350px;
+  padding: 0 15px 10px 0
+  float: right
+  //background-color: #f7f7f6;
+  //border: 1px dotted #bebebe;
+  //border-width: 0 1px;
+  p
+    margin: 0
+    font-size: 15px
+    line-height: 15px
+.fazer
+  height: 47px
+  clear: both
+  display: block
+  //width: 515px;
+
+
+.fazer-participacao,
+.fazer-doacao,
+.fazer-conexao,
+.filie
+  float: left
+
+  a
+    text-decoration: none
+    display: inline-block
+
+.fazer-participacao,
+.fazer-doacao
+  margin: 0
+  padding: 7px 20px 5px 0
+  float: left
+
+  a
+    color: #4C5051
+    font-family: 'League Gothic'
+    font-size: 30px
+    text-transform: uppercase
+    text-decoration: none
+    display: block
+    &:hover
+      color: #de5b34
+    span
+      vertical-align: top
+      display: inline-block
+      line-height: 36px
+      &.label
+        margin: 0 0 0 5px
+    i
+      font-size: 38px
+      line-height: 32px
+
+.fazer-participacao
+  i.icon-group
+    font-size: 24px
+    line-height: 34px
+
+
+.fazer-conexao, .filie
+  margin-top: 8px
+  color: #349E8A
+  border-radius: 8px
+  float: right
+
+  a
+    &:hover
+      color: #309D89
+    &.label
+      font-size: 14px
+      margin: 0 2px
+
+
+.filie
+  background-color: #ECECEA
+  margin-right: 15px
+  padding: 5px 15px
+
+.fazer-conexao
+  background: url('assets/images/conexao_before.jpg') no-repeat #ECECEA
+  margin-right: 15px
+  padding: 5px 15px 5px 50px
+  @media (max-width: 480px)
+    position: relative
+    display: block
+
+  .dropdown
+    display: none
+    background: white
+    margin-top: 10px
+    right: 15px
+    position: absolute
+    min-width: 320px
+    border-radius : 0 0 10px 10px
+    border-top: 4px solid #349E8A
+    @media (max-width: 480px)
+      right: -85px
+
+    .seta
+      width: 0
+      height: 0
+      border-left: 10px solid transparent
+      border-right: 10px solid transparent
+      border-bottom: 10px solid #349E8A
+      margin: -10px 0 0 150px
+
+    .item
+      border-bottom: 1px solid #ECECEA
+      text-align: left
+      padding: 10px 20px
+      max-width: 400px
+
+      &:last-child
+        border: 0
+        text-align: right
+        line-height: 30pt
+
+      a,i,p
+        display: inline-block
+
+      a
+        float: right
+        line-height: 30pt
+
+      .title + a
+          line-height: 1
+
+      a.link-master
+        float: none
+        line-height: 24px
+
+      i
+        color: #CCCCCC
+        font-size: 14px
+        margin: 0 10px 0 0
+
+      p
+        text-align: left
+        margin: 0
+        padding: 0
+        line-height: 1.2
+        width: 75%
+        display: inline-block
+        font-size: 12px
+        color: gray
+        letter-spacing: .1px
+        &.title
+          font-weight: bold
+          color: black
+
+  .borderd
+    border-right: 2px solid white
+    padding: 0 5px
+
+/********* BOX LOGO ************/
+.logo-explain
+  visibility: hidden
+  width: 250px
+  //height: 250px;
+  padding: 25px
+  border-radius: 10px
+  position: absolute
+  top: 140px
+  background: #ffffff
+  //float:left;
+  z-index: 9
+  box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.33)
+  margin: 0px 0 0 20px
+  p
+    padding: 0
+    margin: 0 0 10px 0
+    font-size: 12px
+    line-height: 14px
+    a
+      color: $primary-color
+      font-weight: bold
+
+.logo-explain:after
+  bottom: 100%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+
+.logo-explain:after
+  border-color: rgba(255, 255, 255, 0)
+  border-bottom-color: #ffffff
+  border-width: 10px
+  left: 20%
+  margin-left: -10px
+
+/*********   LOGO ANIMADO *******/
+
+#logo a.logo-animado
+  position: relative
+  float: left
+  width: 138px
+  height: 80px
+  margin: 20px 20px 0
+  img
+    position: absolute
+    left: 0
+    padding: 0
+  img
+    -webkit-animation-name: "cf4FadInOut"
+    -webkit-animation-timing-function: ease-in-out
+    -webkit-animation-iteration-count: infinite
+  .first
+    -webkit-animation-duration: 0
+  .second
+    -webkit-animation-duration: 4s
+  .third
+    -webkit-animation-duration: 8s

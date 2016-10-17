@@ -1,0 +1,276 @@
+/*!
+  Theme Name: Conexao Rede
+  Theme URI: https://bitbucket.org/redesustentabilidade/portal-wp
+  Author: Erica Artuso, Aimee Ferreira, Vinicius Russo, Lucas Pirola, Guilherme Guerra, Leonardo Lima
+  Author URI:
+  Description: Template com foco no engajamento do usuario para se conectar a #Rede
+  Version: 1.0
+  License: Creative Commons (CC BY-SA 3.0)
+  Template: pinbin
+  License URI: http://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR
+  Tags: pin, board, noticias, desafios, minuta, likes, filiacao, doacao, sugestao, duvidas
+  Text Domain: redesustentabilidade*/
+
+@import _pure
+
+@import _pinbin
+
+@import "../fonts/_stylesheet"
+
+@import "../fonts/icones/_style"
+
+@import _animation
+
+@import _magnific-popup
+
+html
+  box-sizing: border-box
+  *, *:before, *:after
+    box-sizing: inherit
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"]
+  font-family: 'Open sans', sans-serif
+  font-size: 14px
+
+primary-color = #d55626
+//#fc6500;
+secondary-color = #f3a642
+
+body
+  font-family: 'Open sans', sans-serif
+  background: 50% 70% url("assets/images/bg-timeline.png") no-repeat #d8d8d4
+  overflow-x: hidden
+
+h1,h2,h3,h4,h5,h6
+  font-family: 'League Gothic'
+  font-weight: normal
+
+
+h2.title
+  color: white
+  font-size: 3.7em
+  line-height: 1em
+  margin: 0 0 0 0.8em
+
+body #wrap
+  margin-left: 0
+  #header
+    padding-bottom: 3em
+  &.pagina-sem-header
+    #header
+      padding-bottom: 30px
+    .box-call-to-action
+      padding-top: 1.5em
+
+p
+  font-family: 'Open Sans', sans-serif
+
+.page h1,
+.post h1
+  font-family: 'League Gothic'
+  font-size: 38px
+  line-height: 38px
+
+.results-page
+  margin-left: 3%
+
+.warning-migration
+  p
+    background-color: #f0a630
+    text-align: center
+    font-weight: bold
+    color: #4d5051
+
+#comment-form h2
+  font-size: 18px
+  line-height: 18px
+  margin: 0
+
+.participacao,
+.type-post
+  width: 56em
+  background: #fff
+  margin-right: 0
+  margin-top: 0
+  margin-left: 3em
+  float: left
+  box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.33)
+  overflow: hidden
+
+.home #post-area .post
+  margin-left: 0
+  margin-top: 0
+  margin-right: 1.5em
+  p
+    font-size: 12px
+    line-height: 20px
+
+#post-area
+  margin-left: 2.5em
+
+.white-popup-block
+  background: #FFF
+  padding: 20px 30px
+  text-align: left
+  max-width: 650px
+  margin: 40px auto
+  position: relative
+  p
+    margin: 0
+
+.ie-warning
+  background: #d56337
+  text-align: center
+  width: 100%
+  float: left
+  p
+    color: #fff
+    margin: .2em
+    font-size: 1.3em
+    a
+      color: #fff
+
+@import _menu
+
+//@import banner-featured
+
+@import _posts-and-timeline
+
+@import _footer
+
+@import _viralizacao
+
+//@import page-doacao
+
+@import _comments
+
+@import _meu-perfil
+
+@import _busca
+
+@import _side-tabs
+
+@import _redesign
+
+@import _slider
+
+// .single
+//   .pinbin-image
+//     background-repeat: no-repeat
+//     background-size: cover
+//     background-position: 50% 50%
+//     width: 100%
+//     height: 100%
+
+#rrssb-buttons
+  width: 100%
+  padding: 0
+  margin: 0
+  height: auto
+  li
+    padding: 0 0 0 5px
+    width: 22px
+    height: 22px
+  svg
+    width: 100%
+    height: auto
+
+.tsl-32
+  	background: none !important
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 480px)
+  .single #meta-area+#post-area,
+  .single #meta-area+#post-area+#nav-below,
+  .single #meta-area+.post
+    margin: 0
+
+  #logo
+    margin: 0 14px
+  .extra-content
+    margin-top: 0
+  .fazer .fazer-doacao
+    display: none
+
+  .compartilhar-na-rede
+    display: none
+
+
+  aside
+    display: none
+
+  .container-meu-perfil
+    width: auto
+
+  #meta-area
+    & + #post-area
+      margin: 25px
+
+    & + .post
+      margin-right: 0
+
+  .side-tabs
+    display: none
+
+  .type-page
+    margin: 25px
+    overflow: hidden
+
+  .single #wrap
+    margin-top: 0
+    margin-bottom: 0
+
+  .fazer
+    margin: 0 25px
+
+  .filie, .fazer-conexao
+    margin: 0 0 10px 15px
+
+  .site-footer .col
+    height: auto
+
+  .site-footer .col:first-child
+    padding-left: 32px
+    .social-network
+      a
+        margin: 0 25px 0 0
+        i
+          padding: 0
+  .site-footer
+    .notes
+      i.icon-creative-commons
+        margin-left: 1px
+  .site-footer .notes.social-network
+    a
+      height:0px
+
+.slide-posts-featured
+  background-color: #bfbfbe
+  padding: 1.5em 0
+  .advps-slide-field-three
+    height: 375px
+    overflow: hidden
+    img
+      margin: 0
+  .advps-slide-container
+    margin: 0 auto
+    height: 490px
+  .advps-excerpt-three
+    background-color: #fff
+    height: 375px
+    padding: 2em 4em
+  #advps_container3 #bx-pager a img,
+  #advps_container3 #bx-pager a.active img,
+  #advps_container3 #bx-pager a:hover img
+    margin: 0
+    padding: 0
+    border: 5px solid transparent
+  #advps_container3 #bx-pager a.active img,
+  #advps_container3 #bx-pager a:hover img
+    border-color: #fff
+
+// esse deve ser o ultimo import por causa de um bug com safari e @-webkit-key-frames
+//@import page-participe
+//@import page-desafios
+//@import landding

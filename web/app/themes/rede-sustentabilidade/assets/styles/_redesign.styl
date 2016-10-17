@@ -1,0 +1,331 @@
+/*
+ * Redesign
+ *
+ * @author: Gustavo Straube, gustavo@creativeduo.com.br
+ * @version: 2014-05-20
+ */
+
+// Post list
+
+base-color = #666666
+
+#post-area
+    margin-top: 2.5em
+    margin-right: 2.5em
+    .post
+        position: relative
+        margin-top: 0
+        margin-right: 1.5em
+        margin-bottom: 1.5em
+        margin-left: 0
+        border-width: 0
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, .25)
+        &:hover
+            box-shadow: 2px 2px 6px 3px rgba(0,0,0,0.33)
+        h2
+            margin-top: 50px
+            margin-bottom: 0
+            line-height: 32px
+            a
+                color: $base-color
+                line-height: 1em
+                font-size: 30px
+        .image + .copy h2
+            margin-top: 15px
+        .image
+            a
+                position: relative
+                display: block
+                p
+                    background-color: rgba(0, 0, 0, 0.6)
+                    bottom: 0
+                    color: #fff
+                    font-size: 12px
+                    margin-left: 15px
+                    padding: 3px 5px
+                    position: absolute
+                    right: 0
+                    opacity: 0
+                    transition: opacity .25s ease-in-out
+                    -moz-transition: opacity .25s ease-in-out
+                    -webkit-transition: opacity .25s ease-in-out
+                img
+                    display: block
+
+            &:hover
+                p
+                    opacity: 1
+        .category
+            position: absolute
+            top: 0
+            left: 0
+            margin: 0
+            a
+                padding: 5px 20px
+                background-color: $base-color
+                background-position: 15px center
+                background-repeat: no-repeat
+                color: #ffffff
+                line-height: 1em
+                font-size: 20px
+                font-family: 'League Gothic', sans-serif
+                text-indent: 25px
+                text-transform: uppercase
+        .author,
+        .date
+            margin-right: 20px
+            text-align: right
+        .author
+            display: none
+            margin-top: 0
+            color: lighten(base-color, 20%)
+            font-size: 22px
+            font-family: 'League Gothic', sans-serif
+        .excerpt
+            margin-bottom: 20px
+        &.focus
+            width: 619px
+            width: calc(600px + 1.5em)
+            h2
+                padding-bottom: .5em
+                border-bottom: 1px solid base-color
+                a
+                    font-size: 38px
+            .image
+                float: left
+                margin-right: 20px
+        &.cat-artigo
+            .author
+                display: block
+
+// Single
+
+.single
+    #wrap
+        margin-top: 2.5em
+        margin-bottom: 2.5em
+    .post
+        float: none
+        width: auto
+        margin-left: 30px
+        border-width: 0
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, .25)
+        .post-header
+            background-color: base-color
+        .pinbin-image,
+        .pinbin-category,
+        .pinbin-copy
+            //width: 750px
+            margin-left: auto
+            margin-right: auto
+        .pinbin-image
+            //width: 100%
+            //height: 400px
+            img
+                display: block
+        .pinbin-category
+            display: block
+            height: auto
+            padding: 10px 40px
+            opacity: 1
+            background: transparent
+            p
+                padding-right: 0
+                padding-left: 0
+            a
+                display: block
+                background-position: 0 center
+                background-repeat: no-repeat
+                color: #ffffff
+                line-height: 1em
+                font-size: 24px
+                font-family: 'League Gothic', sans-serif
+                font-style: normal
+                text-indent: 35px
+                text-transform: uppercase
+        h1
+            line-height: 48px
+            font-size: 44px
+            border-bottom: 1px solid base-color
+        .pinbin-meta
+            display: block
+            border: 0 none
+            text-align: right
+            strong
+                display: block
+                color: lighten(base-color, 20%)
+                font-size: 22px
+                font-family: 'League Gothic', sans-serif
+        .wp-caption
+            position: relative
+            border: 0px none
+            .wp-caption-text
+                background-color: rgba(0, 0, 0, 0.6)
+                bottom: 0
+                color: #fff
+                font-size: 12px
+                margin-left: 15px
+                padding: 3px 5px
+                position: absolute
+                right: 0
+                font-style: normal
+            img
+                margin: 0
+                max-width: 100%
+
+@import "_noticia-chapeu"
+
+
+// Sidebar
+#meta-area
+    float: right
+    width: 260px
+    & + #post-area,
+    & + #post-area + #nav-below,
+    & + .post
+        margin-right: 260px
+    .sidebar-widget
+        margin-bottom: 20px
+        background-color: #cdcdc9
+        h3
+            padding: 5px 10px
+            background-color: #444444
+            color: #ffffff
+            font-size: 20px
+            text-transform: uppercase
+        & > div
+            padding: 10px
+        #youtube-player
+            margin-right: -10px
+            margin-left: -10px
+    .widget_search
+        padding: 10px
+        h3,
+        label
+            display: none
+        form
+            background: #ffffff
+            border-radius: 5px
+        #s
+            width: 195px
+            background: transparent
+            border: 0 none
+            &:focus
+                outline: 0 none
+        #searchsubmit
+            display: inline-block
+            width: 20px
+            height: 20px
+            vertical-align: middle
+            background: transparent url(assets/images/redesign/search.png) no-repeat
+            color: transparent
+            font-size: 0
+    .widget_rs_widget_agenda
+        ul,
+        li
+            margin: 0
+            padding: 0
+            list-style: none
+        ul
+            padding: 10px 10px 5px
+        li
+            margin-bottom: 5px
+            a
+                display: block
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+
+.single #meta-area
+    & + #post-area,
+    & + #post-area + #nav-below,
+    & + .post
+        margin-right: 300px
+
+// Page nav
+
+#nav-below
+    margin-right: 2.5em
+    margin-bottom: 100px
+    margin-left: 2.5em
+    .view-previous,
+    .view-next
+        a
+            padding: 7px 20px
+            border-radius: 5px
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, .25)
+            background: #444444
+            color: #ffffff
+    .view-previous a:before,
+    .view-next a:after
+        display: inline-block
+        content: ''
+        width: 8px
+        height: 12px
+        background-repeat: no-repeat
+    .view-previous a:before
+        margin-right: 5px
+        background-image: url(assets/images/redesign/nav-prev.png)
+    .view-next a:after
+        margin-left: 5px
+        background-image: url(assets/images/redesign/nav-next.png)
+
+
+// Header
+#logo
+    width: 330px
+    overflow: hidden
+    background: url(assets/images/redesign/header_logo.png) no-repeat
+    text-indent: 100%
+    white-space: nowrap
+    a
+        display: block
+        height: 100%
+
+.main-nav
+    .fazer-conexao
+        padding: 5px 10px 5px 5px
+        background: #ececea
+
+    .menu-menu-1-container
+        ul
+            padding-left: 20px
+            li
+                padding: 0
+                a
+                    display: block
+                    padding: 9px 10px
+
+                    &:hover
+                        background: #319d8b
+                &:hover
+                    ul
+                        left: -18px
+                .sub-menu
+                    width: 208px
+                    li
+                        border: 0 none
+                        a
+                            border: 0 none
+                            margin: 0
+                            color: #319d8b !important
+
+                            &:hover
+                                color: #fff !important
+
+
+// Responsive
+
+.home,
+.archive,
+.single
+    & > #wrap
+        max-width: 1290px
+
+@media screen and (min-width: 1290px)
+    .home,
+    .archive,
+    .single
+        & > #wrap
+            margin-left: auto
+            margin-right: auto

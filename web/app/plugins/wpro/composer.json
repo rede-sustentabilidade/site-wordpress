@@ -1,0 +1,13 @@
+{
+    "name": "alfreddatakillen/wpro",
+    "description": "Wordpress Read-Only",
+    "homepage": "http://github.com/alfreddatakillen/wpro",
+    "type": "wordpress-plugin",
+    "extra": {
+    },
+	"require-dev": {
+		"phpunit/phpunit": "*",
+		"wp-cli/wp-cli": "*",
+		"wpreadme2markdown/wpreadme2markdown": "*"
+	}
+}
