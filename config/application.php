@@ -82,12 +82,19 @@ if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
 
-define('OAUTH_URL_AUTHORIZE', env('OAUTH_URL_AUTHORIZE'));
+define('WP_API_PATH',            env('WP_API_PATH'));
+define('WP_PASSPORT_PATH',       env('WP_PASSPORT_PATH'));
+define('OAUTH_REDIRECT_URI',     env('OAUTH_REDIRECT_URI'));
+define('OAUTH_CLIENT_ID',        env('OAUTH_CLIENT_ID'));
+define('OAUTH_CLIENT_SECRET',    env('OAUTH_CLIENT_SECRET'));
+define('OAUTH_URL_AUTHORIZE',    env('OAUTH_URL_AUTHORIZE'));
+define('OAUTH_URL_ACCESS_TOKEN', env('OAUTH_URL_ACCESS_TOKEN'));
+define('OAUTH_URL_RESOURCE',     env('OAUTH_URL_RESOURCE'));
 
-// define('WP_ALLOW_MULTISITE', true);
-// define('MULTISITE', true);
-// define('SUBDOMAIN_INSTALL', true); // Set to false if using subdirectories
-// define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE'));
-// define('PATH_CURRENT_SITE', '/');
-// define('SITE_ID_CURRENT_SITE', 1);
-// define('BLOG_ID_CURRENT_SITE', 1);
+//define('WP_ALLOW_MULTISITE', true);
+define('MULTISITE',              env('MULTISITE'));
+define('SUBDOMAIN_INSTALL',      env('SUBDOMAIN_INSTALL')); // Set to false if using subdirectories
+define('DOMAIN_CURRENT_SITE',    env('DOMAIN_CURRENT_SITE'));
+define('PATH_CURRENT_SITE', '/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
