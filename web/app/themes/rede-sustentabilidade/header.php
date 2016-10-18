@@ -80,7 +80,7 @@
     <div id="logo" style="background:none; overflow:visible; text-indent:0%;">
 
 <?php $h1_link = esc_url(home_url('/'));
-if (get_post_type() == 'post_region') 
+if (get_post_type() == 'post_region')
     $h1_link .= 'regional/' . wp_get_post_terms( $post->ID , 'state')[0]->slug;
 ?>
                     <a href="<?php echo $h1_link; ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
@@ -105,6 +105,8 @@ xml:space="preserve" fill="#306199">
                     c-0.408,0-0.884,0.492-0.884,1.236v1.836h4.609v4.608h-4.609v10.446h4.916c2.422,0,4.608-2.188,4.608-4.608V4.783z"/>
                                             </svg>
                                         </span>
+                                    </a>
+                                </li>
                                 <li class="twitter small">
                                     <a href="http://twitter.com/home?status=<?php echo urlencode($title); ?> - <?php echo urlencode($short_url); ?>" target="_blank">
                                         <span class="icon">

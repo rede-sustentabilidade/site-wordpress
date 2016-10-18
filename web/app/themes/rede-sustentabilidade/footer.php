@@ -46,7 +46,7 @@
 var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-40405673-1']);
   <?php if ( is_user_logged_in() ) { ?>
-  <?php global $current_user; get_currentuserinfo(); ?>
+  <?php global $current_user; wp_get_current_user(); ?>
   _gaq.push(['_setCustomVar',1,'UserEmail','<?php echo $current_user->user_email; ?>',1]);
   <?php } ?>
   _gaq.push(['_trackPageview']);

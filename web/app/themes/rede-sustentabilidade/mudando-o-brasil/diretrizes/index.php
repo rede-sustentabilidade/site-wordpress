@@ -41,11 +41,11 @@ wp_enqueue_style( 'consulta', get_stylesheet_directory_uri() . '/css/minuta.css'
                 </div>
 
             </div>
-            
+
             <?php if ( (preg_match('/mudando/', $_SERVER['HTTP_HOST'])) || (defined('MUDANDOBRASIL') && MUDANDOBRASIL)){  ?>
             <div class="login">
               <?php if ( is_user_logged_in() ) { ?>
-                  <?php global $current_user; get_currentuserinfo(); ?>
+                  <?php global $current_user; wp_get_current_user(); ?>
                     <a class="welcome-message label"><?php echo $current_user->user_nicename; ?></a>
                     <a href="<?php echo wp_logout_url(); ?>">Sair</a>
               <?php } else { ?>
