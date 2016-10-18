@@ -34,7 +34,7 @@ server {
   }
 
   # Set index
-  index index.php;
+  #index index.php;
 
   # Global restrictions configuration file.
   # Designed to be included in any server {} block.
