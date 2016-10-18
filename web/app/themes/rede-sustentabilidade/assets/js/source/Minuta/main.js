@@ -1,6 +1,6 @@
 require.config({
 
-    baseUrl: '/wp-content/themes/rede-sustentabilidade/assets/js/source/',
+    baseUrl: '/app/themes/rede-sustentabilidade/assets/js/source/',
 
     paths: {
         jquery:     '../../bower_components/jquery/dist/jquery',
