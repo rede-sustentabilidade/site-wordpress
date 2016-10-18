@@ -33,9 +33,9 @@ server {
     proxy_set_header X-Request-Start $msec;
   }
 
-  location /wp {
-    try_files $uri $uri/ /wp/index.php?$args;
-  }
+  #location /wp {
+  #  try_files $uri $uri/ /wp/index.php?$args;
+  #}
 
   include {{ .DOKKU_ROOT }}/{{ .APP }}/nginx.conf.d/*.conf;
 }
