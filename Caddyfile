@@ -1,0 +1,10 @@
+rede.site:8080
+root web
+errors visible
+gzip
+tls self_signed
+fastcgi / 127.0.0.1:9000 php
+rewrite {
+    if {path} not_match ^\/wp/wp-admin
+    to {path} {path}/ /index.php?_url={uri}
+}
