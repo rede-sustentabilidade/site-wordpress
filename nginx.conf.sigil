@@ -37,6 +37,12 @@ server {
   #  try_files $uri $uri/ /wp/index.php?$args;
   #}
 
+  if (!-e $request_filename) {
+    rewrite /wp-admin$ $scheme://$host$uri/ permanent;
+    rewrite ^(/[^/]+)?(/wp-.*) /wp$2 last;
+    rewrite ^(/[^/]+)?(/.*\.php) /wp$2 last;
+  }
+
   include {{ .DOKKU_ROOT }}/{{ .APP }}/nginx.conf.d/*.conf;
 }
 
