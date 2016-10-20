@@ -91,7 +91,7 @@ define('OAUTH_URL_AUTHORIZE',    env('OAUTH_URL_AUTHORIZE'));
 define('OAUTH_URL_ACCESS_TOKEN', env('OAUTH_URL_ACCESS_TOKEN'));
 define('OAUTH_URL_RESOURCE',     env('OAUTH_URL_RESOURCE'));
 
-//define('WP_ALLOW_MULTISITE', true);
+define('WP_ALLOW_MULTISITE', true);
 define('MULTISITE',              env('MULTISITE'));
 define('SUBDOMAIN_INSTALL',      env('SUBDOMAIN_INSTALL')); // Set to false if using subdirectories
 define('DOMAIN_CURRENT_SITE',    env('DOMAIN_CURRENT_SITE'));
