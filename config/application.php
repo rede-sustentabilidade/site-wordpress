@@ -91,10 +91,18 @@ define('OAUTH_URL_AUTHORIZE',    env('OAUTH_URL_AUTHORIZE'));
 define('OAUTH_URL_ACCESS_TOKEN', env('OAUTH_URL_ACCESS_TOKEN'));
 define('OAUTH_URL_RESOURCE',     env('OAUTH_URL_RESOURCE'));
 
-define('WP_ALLOW_MULTISITE', true);
+//define('WP_ALLOW_MULTISITE', true);
 define('MULTISITE',              env('MULTISITE'));
 define('SUBDOMAIN_INSTALL',      env('SUBDOMAIN_INSTALL')); // Set to false if using subdirectories
 define('DOMAIN_CURRENT_SITE',    env('DOMAIN_CURRENT_SITE'));
 define('PATH_CURRENT_SITE', '/');
 define('SITE_ID_CURRENT_SITE', 1);
 define('BLOG_ID_CURRENT_SITE', 1);
+
+if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+$list = explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']);
+$_SERVER['REMOTE_ADDR'] = $list[0];
+}
+$_SERVER[ 'SERVER_ADDR' ] = DOMAIN_CURRENT_SITE;
+$_SERVER[ 'REMOTE_ADDR' ] = DOMAIN_CURRENT_SITE;
+$_SERVER[ 'HTTP_HOST' ]   = DOMAIN_CURRENT_SITE;
