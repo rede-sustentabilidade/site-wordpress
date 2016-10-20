@@ -34,7 +34,7 @@ server {
   }
 
   location /wp {
-    try_files $uri $uri/ /wp/index.php?$args;
+    try_files $uri $uri/ /index.php?$args;
   }
 
   #if (!-e $request_filename) {
