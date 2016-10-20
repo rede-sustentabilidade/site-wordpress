@@ -1,4 +1,4 @@
-rede.site:8080
+rede.site:443
 root web
 errors visible
 gzip
