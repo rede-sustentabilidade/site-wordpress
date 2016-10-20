@@ -33,9 +33,9 @@ server {
     proxy_set_header X-Request-Start $msec;
   }
 
-  location /wp {
-    try_files $uri $uri/ /index.php?$args;
-  }
+#  location /wp {
+#    try_files $uri $uri/ /index.php?$args;
+#  }
 
   #if (!-e $request_filename) {
   #  rewrite /wp-admin$ $scheme://$host$uri/ permanent;
