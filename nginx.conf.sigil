@@ -3,7 +3,7 @@ server {
   listen      80;
   server_name www.{{ .NOSSL_SERVER_NAME }};
 
-  return 301 https://{{ .SSL_SERVER_NAME }}$request_uri;
+  return 301 https://{{ .NOSSL_SERVER_NAME }}:443$request_uri;
 }
 
 server {
@@ -11,7 +11,7 @@ server {
   listen      443 ssl spdy;
   {{ if .SSL_SERVER_NAME }}server_name www.{{ .SSL_SERVER_NAME }}; {{ end }}
 
-  return 301 https://{{ .SSL_SERVER_NAME }}$request_uri;
+  return 301 https://{{ .NOSSL_SERVER_NAME }}:443$request_uri;
 }
 
 server {
