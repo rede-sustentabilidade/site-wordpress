@@ -1,18 +1,18 @@
-server {
-  listen      [::]:80;
-  listen      80;
-  server_name www.{{ .NOSSL_SERVER_NAME }};
+#  server {
+#  listen      [::]:80;
+#  listen      80;
+#  server_name www.{{ .NOSSL_SERVER_NAME }};
 
-  return 301 https://{{ .SSL_SERVER_NAME }}$request_uri;
-}
+#  return 301 https://{{ .NOSSL_SERVER_NAME }}$request_uri;
+#}
 
-server {
-  listen      [::]:443 ssl spdy;
-  listen      443 ssl spdy;
-  {{ if .SSL_SERVER_NAME }}server_name www.{{ .SSL_SERVER_NAME }}; {{ end }}
+#server {
+#  listen      [::]:443 ssl spdy;
+#  listen      443 ssl spdy;
+#  {{ if .SSL_SERVER_NAME }}server_name www.{{ .SSL_SERVER_NAME }}; {{ end }}
 
-  return 301 https://{{ .SSL_SERVER_NAME }}$request_uri;
-}
+#  return 301 https://{{ .SSL_SERVER_NAME }}$request_uri;
+#}
 
 server {
   listen      [::]:80;
