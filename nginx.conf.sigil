@@ -1,10 +1,3 @@
-server {
-  listen      [::]:80;
-  listen      80;
-  server_name www.redesustentabilidade.org.br;
-
-  return 301 https://redesustentabilidade.org.br:443$request_uri;
-}
 
 server {
   listen      [::]:80;
@@ -16,6 +9,7 @@ server {
 
   return 301 https://$host:443$request_uri;
 }
+
 server {
   listen      [::]:443 ssl spdy;
   listen      443 ssl spdy;
@@ -47,9 +41,17 @@ server {
 server {
   listen      [::]:443 ssl spdy;
   listen      443 ssl spdy;
-  server_name www.redesustentabilidade.org;
+  server_name www.redesustentabilidade.org.br;
 
-  return 301 https://redesustentabilidade.org:443$request_uri;
+  return 301 https://redesustentabilidade.org.br:443$request_uri;
+}
+
+server {
+  listen      [::]:80;
+  listen      80;
+  server_name www.redesustentabilidade.org.br;
+
+  return 301 https://redesustentabilidade.org.br:443$request_uri;
 }
 
 upstream {{ .APP }} {
