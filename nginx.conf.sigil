@@ -1,9 +1,9 @@
 server {
   listen      [::]:80;
   listen      80;
-  server_name www.{{ .NOSSL_SERVER_NAME }};
+  server_name www.redesustentabilidade.org.br;
 
-  return 301 https://{{ .NOSSL_SERVER_NAME }}:443$request_uri;
+  return 301 https://redesustentabilidade.org.br:443$request_uri;
 }
 
 server {
@@ -47,9 +47,9 @@ server {
 server {
   listen      [::]:443 ssl spdy;
   listen      443 ssl spdy;
-  server_name www.{{ .NOSSL_SERVER_NAME }};
+  server_name www.redesustentabilidade.org;
 
-  return 301 https://{{ .NOSSL_SERVER_NAME }}:443$request_uri;
+  return 301 https://redesustentabilidade.org:443$request_uri;
 }
 
 upstream {{ .APP }} {
