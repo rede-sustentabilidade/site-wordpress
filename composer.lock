@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "005a405dc9867efdcb2771d625a442c7",
-    "content-hash": "4e6af7e93f1fd209dc5c2ad1cde91b36",
+    "hash": "195e17a1785217869e18b72ec9eb2606",
+    "content-hash": "de47bc864e9ccc326a5a43884ce8b335",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -400,16 +400,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.2.1",
+            "version": "6.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "3f808fba627f2c5b69e2501217bf31af349c1427"
+                "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/3f808fba627f2c5b69e2501217bf31af349c1427",
-                "reference": "3f808fba627f2c5b69e2501217bf31af349c1427",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
+                "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
                 "shasum": ""
             },
             "require": {
@@ -458,7 +458,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-07-15 17:22:37"
+            "time": "2016-10-08 15:01:37"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1019,20 +1019,23 @@
         },
         {
             "name": "mustangostang/spyc",
-            "version": "0.5.1",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mustangostang/spyc.git",
-                "reference": "dc4785b4d7227fd9905e086d499fb8abfadf9977"
+                "reference": "022532641d61d383fd3ae666982bd46e61e5915e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mustangostang/spyc/zipball/dc4785b4d7227fd9905e086d499fb8abfadf9977",
-                "reference": "dc4785b4d7227fd9905e086d499fb8abfadf9977",
+                "url": "https://api.github.com/repos/mustangostang/spyc/zipball/022532641d61d383fd3ae666982bd46e61e5915e",
+                "reference": "022532641d61d383fd3ae666982bd46e61e5915e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.3.*@dev"
             },
             "type": "library",
             "extra": {
@@ -1047,7 +1050,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT License"
+                "MIT"
             ],
             "authors": [
                 {
@@ -1062,7 +1065,7 @@
                 "yaml",
                 "yml"
             ],
-            "time": "2013-02-21 10:52:01"
+            "time": "2016-10-21 00:03:34"
         },
         {
             "name": "nb/oxymel",
@@ -1250,16 +1253,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0"
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/5277094ed527a1c4477177d102fe4c53551953e0",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
                 "shasum": ""
             },
             "require": {
@@ -1293,7 +1296,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-09-19 16:02:08"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "psy/psysh",
@@ -1414,23 +1417,23 @@
         },
         {
             "name": "rmccue/requests",
-            "version": "v1.6.1",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmccue/Requests.git",
-                "reference": "6aac485666c2955077d77b796bbdd25f0013a4ea"
+                "reference": "87932f52ffad70504d93f04f15690cf16a089546"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmccue/Requests/zipball/6aac485666c2955077d77b796bbdd25f0013a4ea",
-                "reference": "6aac485666c2955077d77b796bbdd25f0013a4ea",
+                "url": "https://api.github.com/repos/rmccue/Requests/zipball/87932f52ffad70504d93f04f15690cf16a089546",
+                "reference": "87932f52ffad70504d93f04f15690cf16a089546",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2"
             },
             "require-dev": {
-                "satooshi/php-coveralls": "dev-master"
+                "requests/test-server": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -1459,7 +1462,7 @@
                 "iri",
                 "sockets"
             ],
-            "time": "2014-05-18 04:59:02"
+            "time": "2016-10-13 00:11:37"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -1772,33 +1775,33 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.0.9",
+            "version": "v2.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "697c527acd9ea1b2d3efac34d9806bf255278b0a"
+                "reference": "8c29235936a47473af16fb91c7c4b7b193c5693c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/697c527acd9ea1b2d3efac34d9806bf255278b0a",
-                "reference": "697c527acd9ea1b2d3efac34d9806bf255278b0a",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/8c29235936a47473af16fb91c7c4b7b193c5693c",
+                "reference": "8c29235936a47473af16fb91c7c4b7b193c5693c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": ">=5.3.9",
                 "psr/log": "~1.0"
             },
             "conflict": {
                 "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
             },
             "require-dev": {
-                "symfony/class-loader": "~2.8|~3.0",
-                "symfony/http-kernel": "~2.8|~3.0"
+                "symfony/class-loader": "~2.2|~3.0.0",
+                "symfony/http-kernel": "~2.3.24|~2.5.9|~2.6,>=2.6.2|~3.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
@@ -1825,7 +1828,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2016-07-30 07:22:48"
+            "time": "2016-09-06 10:55:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -2434,16 +2437,16 @@
         },
         {
             "name": "wp-cli/wp-cli",
-            "version": "v0.24.1",
+            "version": "v0.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/wp-cli.git",
-                "reference": "97424dc18431a2d4d10e590157b57b9ea4a88da4"
+                "reference": "248b18b512491fe479affdbdfc24f6ee77a8fc57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/97424dc18431a2d4d10e590157b57b9ea4a88da4",
-                "reference": "97424dc18431a2d4d10e590157b57b9ea4a88da4",
+                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/248b18b512491fe479affdbdfc24f6ee77a8fc57",
+                "reference": "248b18b512491fe479affdbdfc24f6ee77a8fc57",
                 "shasum": ""
             },
             "require": {
@@ -2457,6 +2460,7 @@
                 "rmccue/requests": "~1.6",
                 "symfony/config": "~2.7",
                 "symfony/console": "~2.7",
+                "symfony/debug": "~2.7",
                 "symfony/dependency-injection": "~2.7",
                 "symfony/event-dispatcher": "~2.7",
                 "symfony/filesystem": "~2.7",
@@ -2496,7 +2500,7 @@
                 "cli",
                 "wordpress"
             ],
-            "time": "2016-08-09 13:25:56"
+            "time": "2016-10-25 15:14:00"
         },
         {
             "name": "wpackagist-plugin/advanced-post-slider",
@@ -2892,6 +2896,26 @@
             "time": "2016-08-19 14:31:38"
         },
         {
+            "name": "wpackagist-plugin/wordpress-mu-domain-mapping",
+            "version": "0.5.5.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-mu-domain-mapping/",
+                "reference": "tags/0.5.5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-mu-domain-mapping.0.5.5.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-mu-domain-mapping/"
+        },
+        {
             "name": "wpackagist-plugin/wp-permastructure",
             "version": "1.3",
             "source": {
@@ -2959,12 +2983,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "5de1d2796304f74568901c88fed16885af179e93"
+                "reference": "af7089595b889690df2594044c8626068178f739"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/5de1d2796304f74568901c88fed16885af179e93",
-                "reference": "5de1d2796304f74568901c88fed16885af179e93",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/af7089595b889690df2594044c8626068178f739",
+                "reference": "af7089595b889690df2594044c8626068178f739",
                 "shasum": ""
             },
             "bin": [
@@ -2995,7 +3019,7 @@
                 "nginx",
                 "php"
             ],
-            "time": "2016-09-20 20:47:04"
+            "time": "2016-10-19 23:42:40"
         },
         {
             "name": "squizlabs/php_codesniffer",
