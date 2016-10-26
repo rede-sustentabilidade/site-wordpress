@@ -27,12 +27,6 @@ server {
   ssl_certificate     {{ .APP_SSL_PATH }}/server.crt;
   ssl_certificate_key {{ .APP_SSL_PATH }}/server.key;
 
-  if (!-e $request_filename) {
-    rewrite /wp-admin$ $scheme://$host$uri/ permanent;
-    rewrite ^/[_0-9a-zA-Z-]+(/wp-.*) $1 last;
-    rewrite ^/[_0-9a-zA-Z-]+(/.*\.php)$ $1 last;
-  }
-
   keepalive_timeout   70;
   add_header          Alternate-Protocol  443:npn-spdy/2;
   location    / {
