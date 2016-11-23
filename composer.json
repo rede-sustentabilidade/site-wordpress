@@ -65,7 +65,8 @@
 		"wpackagist-plugin/really-simple-ssl": "2.3.14",
     "wpackagist-plugin/wp-ses": "0.4.8",
   	"wpackagist-plugin/sendpress": "1.7.8.11",
-    "wpackagist-plugin/wordpress-mu-domain-mapping": "0.5.5.1"
+    "wpackagist-plugin/wordpress-mu-domain-mapping": "0.5.5.1",
+    "wpackagist-plugin/user-switching": "1.0.9"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1",
