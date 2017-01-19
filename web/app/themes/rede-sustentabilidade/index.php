@@ -1,7 +1,9 @@
+ <!-- LMB 20170119 -->
 <?php
 /**
  * Theme index file
  */
+
 get_header();
 echo "</div><div class='slide-posts-featured'>";
 echo do_shortcode('[advps-slideshow optset="3"]');
