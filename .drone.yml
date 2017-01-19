@@ -1,0 +1,24 @@
+build:
+    image: php:7-cli
+    commands:
+        - apt-get update && apt-get install -fy
+        - apt-get install -y git subversion s3cmd unzip libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng12-dev
+        - php -r "readfile('https://getcomposer.org/installer');" | php
+        - docker-php-ext-install iconv mcrypt zip
+        - php composer.phar install --no-dev --no-interaction
+cache:
+    mount:
+        - vendor
+deploy:
+    git_push:
+        branch: master
+        remote: dokku@redesustentabilidade.org.br:000-default
+        force: false
+        when:
+            branch: master
+    git_push:
+        branch: master
+        remote: dokku@redesustentabilidade.net:site-wordpress
+        force: false
+        when:
+            branch: develop
