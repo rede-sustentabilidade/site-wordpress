@@ -12,7 +12,7 @@ cache:
 deploy:
     git_push:
         branch: master
-        remote: dokku@redesustentabilidade.org.br:000-default
+        remote: dokku@redesustentabilidade.org.br:0-site
         force: false
         when:
             branch: master
