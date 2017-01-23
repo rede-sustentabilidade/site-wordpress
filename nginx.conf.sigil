@@ -35,15 +35,10 @@ server {
     proxy_set_header X-Request-Start $msec;
   }
 
-  if (!-e $request_filename) {
-      rewrite /wp-admin$ $scheme://$host$uri/ permanent;
-      rewrite ^(/[^/]+)?(/wp-.*) $2 last;
-      rewrite ^(/[^/]+)?(/.*\.php) $2 last;
-  }
+  rewrite ^/wp/([_0-9a-zA-Z-]+)/(xmlrpc\.php|wp-[0-9a-z-]+\.php) /wp/$2;
+  rewrite ^/wp/([_0-9a-zA-Z-]+)/(wp-(admin|content|includes).*) /wp/$2;
 
-  location / {
-      try_files $uri $uri/ /index.php?$args ;
-  }
+  rewrite /wp-admin$ $scheme://$host$uri/ permanent;
 
   include {{ .DOKKU_ROOT }}/{{ .APP }}/nginx.conf.d/*.conf;
 }
