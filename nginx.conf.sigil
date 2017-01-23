@@ -39,7 +39,7 @@ server {
     rewrite ^/wp-admin$ /wp/wp-admin/ redirect;
   }
 
-  rewrite ^/(wp-(content|admin|includes).*) /wp/$1 break;
+  rewrite ^/(wp-(content|admin|includes|login).*) /wp/$1 break;
 
   include {{ .DOKKU_ROOT }}/{{ .APP }}/nginx.conf.d/*.conf;
 }
