@@ -35,8 +35,10 @@ server {
     proxy_set_header X-Request-Start $msec;
   }
 
-  location /wp_admin {
-    try_files $uri $uri/ /wp/$uri;
+  if (!-e $request_filename) {
+    rewrite /wp-admin$ $scheme://$host$uri/ permanent; 
+    rewrite ^(/[^/]+)?(/wp-.*) $2 last; 
+    rewrite ^(/[^/]+)?(/.*\.php) $2 last;
   }
 
   include {{ .DOKKU_ROOT }}/{{ .APP }}/nginx.conf.d/*.conf;
