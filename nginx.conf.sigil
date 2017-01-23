@@ -35,11 +35,9 @@ server {
     proxy_set_header X-Request-Start $msec;
   }
 
-  if (!-e $request_filename) {
-    rewrite /wp-admin$ $scheme://$host$uri/ permanent;         
-    rewrite ^/wp(/[^/]+)?(/wp-.*) /wp$2 last;      
-    rewrite ^/wp(/[^/]+)?(/.*\.php)$ /wp$2 last;
-  }
+  rewrite /wp-admin$ $scheme://$host$uri/ permanent;         
+  rewrite ^/wp(/[^/]+)?(/wp-.*) /wp$2 last;      
+  rewrite ^/wp(/[^/]+)?(/.*\.php)$ /wp$2 last;
 
   location / {
     try_files $uri $uri/ /wp/index.php?$args ;
