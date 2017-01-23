@@ -35,11 +35,6 @@ server {
     proxy_set_header X-Request-Start $msec;
   }
 
-	rewrite ^/wp-admin$ /wp-admin/ permanent;
-	rewrite ^/(wp-(content|admin|includes).*) /$1 last;
-	rewrite ^/(.*.php)$ /$1 last;
-	rewrite /. /index.php last;
-
   include {{ .DOKKU_ROOT }}/{{ .APP }}/nginx.conf.d/*.conf;
 }
 
