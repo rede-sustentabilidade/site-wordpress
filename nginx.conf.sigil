@@ -35,16 +35,10 @@ server {
     proxy_set_header X-Request-Start $msec;
   }
 
-  location /wp/wp-admin {
-  rewrite ^/wp/wp-admin$ /wp/wp-admin/ redirect;
-  }
-  location /wp/ {
-  if (-e $request_filename){
-  rewrite ^/wp/(wp-(content|admin|includes).*) /wp/$1 break;
-  }
-  rewrite ^/wp/(.*\.php)$ /wp/$1 break;
-  rewrite ^/wp/(.*)$ /wp/index.php break;
-  }
+	rewrite ^/wp-admin$ /wp-admin/ permanent;
+	rewrite ^/(wp-(content|admin|includes).*) /$1 last;
+	rewrite ^/(.*.php)$ /$1 last;
+	rewrite /. /index.php last;
 
   include {{ .DOKKU_ROOT }}/{{ .APP }}/nginx.conf.d/*.conf;
 }
