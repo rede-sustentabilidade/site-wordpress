@@ -59,3 +59,15 @@ upstream {{ .APP }} {
   server {{ . }};
 {{ end }}
 }
+
+# nginx configuration
+location /wp/wp-admin {
+rewrite ^/wp/wp-admin$ /wp/wp-admin/ redirect;
+}
+location /wp/ {
+if (-e $request_filename){
+rewrite ^/wp/(wp-(content|admin|includes).*) /wp/$1 break;
+}
+rewrite ^/wp/(.*\.php)$ /wp/$1 break;
+rewrite ^/wp/(.*)$ /wp/index.php break;
+}
