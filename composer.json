@@ -62,9 +62,9 @@
 		"wpackagist-plugin/shortcodes-ultimate": "dev-trunk",
 		"psy/psysh" : "~0.6",
 		"wpackagist-plugin/advanced-post-slider": "2.5.0",
-		"wpackagist-plugin/really-simple-ssl": "2.3.14",
-    "wpackagist-plugin/wp-ses": "0.4.8",
-  	"wpackagist-plugin/sendpress": "1.7.8.11",
+		"wpackagist-plugin/really-simple-ssl": "2.4.3",
+    "wpackagist-plugin/wp-ses": "0.4.9",
+  	"wpackagist-plugin/sendpress": "1.8.1.24",
     "wpackagist-plugin/wordpress-mu-domain-mapping": "0.5.5.1",
     "wpackagist-plugin/user-switching": "1.0.9"
   },
