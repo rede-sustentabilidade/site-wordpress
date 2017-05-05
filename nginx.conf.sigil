@@ -44,20 +44,24 @@ server {
   include {{ .DOKKU_ROOT }}/{{ .APP }}/nginx.conf.d/*.conf;
 }
 
+{{ $domains := .SSL_SERVER_NAME | split " " }}
+{{ $ssldomain := index $domains 0 }}
+
+
 server {
   listen      [::]:443 ssl spdy;
   listen      443 ssl spdy;
-  {{ if .SSL_SERVER_NAME }}server_name {{ .SSL_SERVER_NAME }}; {{ end }}
+  {{ if $ssldomain }}server_name {{ $ssldomain }}; {{ end }}
   
-  {{ if .SSL_SERVER_NAME }}return 301 https://{{ .SSL_SERVER_NAME }}:443$request_uri; {{ end }}
+  {{ if $ssldomain }}return 301 https://{{ $ssldomain }}:443$request_uri; {{ end }}
 }
 
 server {
   listen      [::]:80;
   listen      80;
-  {{ if .SSL_SERVER_NAME }}server_name {{ .SSL_SERVER_NAME }}; {{ end }}
+  {{ if $ssldomain }}server_name {{ $ssldomain }}; {{ end }}
   
-  {{ if .SSL_SERVER_NAME }}return 301 https://{{ .SSL_SERVER_NAME }}:443$request_uri; {{ end }}
+  {{ if $ssldomain }}return 301 https://{{ $ssldomain }}:443$request_uri; {{ end }}
 }
 
 upstream {{ .APP }} {
