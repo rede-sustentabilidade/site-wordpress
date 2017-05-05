@@ -51,7 +51,7 @@ server {
 server {
   listen      [::]:443 ssl spdy;
   listen      443 ssl spdy;
-  {{ if $ssldomain }}server_name {{ $ssldomain }}; {{ end }}
+  {{ if $ssldomain }}server_name www.{{ $ssldomain }}; {{ end }}
   
   {{ if $ssldomain }}return 301 https://{{ $ssldomain }}:443$request_uri; {{ end }}
 }
@@ -59,7 +59,7 @@ server {
 server {
   listen      [::]:80;
   listen      80;
-  {{ if $ssldomain }}server_name {{ $ssldomain }}; {{ end }}
+  {{ if $ssldomain }}server_name www.{{ $ssldomain }}; {{ end }}
   
   {{ if $ssldomain }}return 301 https://{{ $ssldomain }}:443$request_uri; {{ end }}
 }
