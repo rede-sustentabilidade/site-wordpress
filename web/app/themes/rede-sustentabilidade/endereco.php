@@ -6,7 +6,7 @@ $ch = curl_init("http://cep.correiocontrol.com.br/".$cep.".json");
 
 curl_setopt($ch, CURLOPT_HEADER, 0);
 
-// use output buffering instead of returntransfer -itmaybebuggy 
+// Use output buffering instead of returntransfer -itmaybebuggy 
 ob_start(); 
 curl_exec($ch); 
 curl_close($ch); 
