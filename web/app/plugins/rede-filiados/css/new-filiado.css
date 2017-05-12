@@ -1,0 +1,50 @@
+fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+fieldset legend {
+  font-size: 22px;
+}
+
+.input {
+  float:left;
+  clear:left;
+}
+
+
+.input label {
+  float:left;
+  clear:both;
+  width: 100%;
+}
+
+.input.text.alignleft {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+
+.questionario {
+  clear:both;
+  width:100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+.questionario label:first-child {
+  display: inherit;
+}
+
+.break {
+  display: inherit;
+}
+
+form {
+    clear: both;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+}
+

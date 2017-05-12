@@ -1,16 +1,18 @@
 <?php
 
 namespace Rede;
-
 class Api
 {
     protected static $instances;
 
     protected $apiPath;
 
+    protected $passaportePath;
+
     protected function __construct()
     {
         $this->apiPath = WP_API_PATH;
+        $this->passaportePath = WP_PASSPORT_PATH;
     }
 
     public function filiadoFormWasFilled($user_id)
@@ -92,6 +94,11 @@ class Api
         }
     }
 
+    public function registration(array $registration)
+    {
+        return $this->callPassport('/registration', 'POST', $registration);
+    }
+    
     public function getProfile($id)
     {
         return $this->call('/profile/'.$id);
@@ -100,6 +107,11 @@ class Api
     public function updateProfile(array $profile)
     {
         return $this->call('/profile/'.$profile['user_id'], 'POST', $profile);
+    }
+
+    public function saveFiliado(array $filiado)
+    {
+        return $this->call('/usuario/filiado', 'POST', $filiado);
     }
 
     public function getPayments()
@@ -171,5 +183,39 @@ class Api
         }
 
         return json_decode($response);
+    }
+
+    private function callPassport($route, $method = 'GET', array $data = null)
+    {
+        $url = $this->passaportePath.$route;
+
+        switch ($method) {
+            case 'GET':
+                
+            case 'POST':
+                $json = json_encode($data);
+
+                $response = wp_remote_post( $url, array(
+                    'method'      => 'POST',
+                    'timeout'     => 45,
+                    'redirection' => 5,
+                    'httpversion' => '1.0',
+                    'blocking'    => true,
+                    'headers'     => array(
+                        'Accept' => 'application/json',
+                    ),
+                    'body'        => $data,
+                    'cookies'     => array(),
+                    'sslverify'   => false,
+
+                    )
+                );
+                
+            
+                error_log('data:'. print_r($data, true));
+                break;
+        }
+        $httpCode = (int) $response.response.code;
+        return $response;
     }
 }
