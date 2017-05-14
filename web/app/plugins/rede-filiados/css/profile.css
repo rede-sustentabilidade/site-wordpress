@@ -17,6 +17,34 @@ fieldset legend {
 .input label {
   float:left;
   clear:both;
-  width: 150px;
+  width: 100%;
+}
+
+.input.text.alignleft {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+
+.questionario {
+  clear:both;
+  width:100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+.questionario label:first-child {
+  display: inherit;
+}
+
+.break {
+  display: inherit;
+}
+
+form {
+    clear: both;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
 }
 

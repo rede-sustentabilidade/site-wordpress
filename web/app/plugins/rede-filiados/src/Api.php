@@ -111,7 +111,8 @@ class Api
 
     public function saveFiliado(array $filiado)
     {
-        return $this->call('/usuario/filiado', 'POST', $filiado);
+
+        return $this->callWPWrapper('/usuario/filiado', 'POST', $filiado);
     }
 
     public function getPayments()
@@ -185,6 +186,39 @@ class Api
         return json_decode($response);
     }
 
+    private function callWPWrapper($route, $method = 'GET', array $data = null)
+    {
+        $url = $this->apiPath.$route;
+
+        switch ($method) {
+            case 'GET':
+                
+            case 'POST':
+                $json = json_encode($data);
+
+                $response = wp_remote_post( $url, array(
+                    'method'      => 'POST',
+                    'timeout'     => 45,
+                    'redirection' => 5,
+                    'httpversion' => '1.0',
+                    'blocking'    => true,
+                    'headers'     => array(
+                        'Accept' => 'application/json',
+                    ),
+                    'body'        => $data,
+                    'cookies'     => array(),
+                    'sslverify'   => false,
+
+                    )
+                );
+                
+            
+                break;
+        }
+        $httpCode = (int) $response.response.code;
+        return $response;
+    }
+
     private function callPassport($route, $method = 'GET', array $data = null)
     {
         $url = $this->passaportePath.$route;
@@ -212,7 +246,6 @@ class Api
                 );
                 
             
-                error_log('data:'. print_r($data, true));
                 break;
         }
         $httpCode = (int) $response.response.code;

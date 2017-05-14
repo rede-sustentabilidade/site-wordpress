@@ -1,6 +1,25 @@
 <div class="wrap">
   <h2>Filiados (<span id="total_contribuicoes">0</span>) <!-- <a href="http://rede.local/wp/wp-admin/post-new.php?post_type=page" class="add-new-h2">Adicionar Nova</a> --></h2>
-
+  
+  <?php 
+  if ( (isset($aviso)) && (!empty($aviso))) { 
+    $aviso_type = "updated";
+    if($error == true) $aviso_type = "error";
+    
+    if($aviso=='created') {
+  ?>
+    <div class="updated">
+        <p>Filiação criada com sucesso!</p>
+    </div>    
+    <?php 
+    } else { 
+    ?>
+    <div class="<?php echo $aviso_type ?>">
+          <p><?php _e( $aviso, 'my-text-domain' ); ?></p>
+    </div>
+    <?php } ?>
+  <?php } ?>
+  
   <form method="GET" id="filtrosContribuicao">
     <input type="hidden" value="rs_filiados" name="page">
     <fieldset>

@@ -129,7 +129,8 @@ class Filiados
         // Set data needed in the template
         $viewData = array(
             'url' => $data['url'],
-            'filters' => $data['filters']
+            'filters' => $data['filters'],
+            'aviso' => $_GET['aviso'],
             // 'answers' => json_encode($json),
             // 'correct' => json_encode(get_post_meta($post->ID, 'correct_answer'))
         );
@@ -142,13 +143,40 @@ class Filiados
 
       $api = Api::getInstance();
       $aviso = '';
+      $data = null;
 
       if ( (isset($_SESSION)) && (!empty($_SESSION['aviso'])) ) {
         $aviso = $_SESSION['aviso'];
         $_SESSION['aviso'] = '';
       }
 
-      $data = $api->getProfile($_GET['user_id']);
+      if(isset($_SESSION) && (!empty($_SESSION['updatedProfile']))) {
+        $data = $_SESSION['updatedProfile'];
+        $_SESSION['updatedProfile'] = null;
+      } else {
+        $data = $api->getProfile($_GET['user_id']);
+        
+        //deixa plana a lista de areas de interesse
+        $areasInteresse = array();
+        foreach ($data->areas_interesse as $key => $value) {
+            array_push($areasInteresse, $value->id);
+        }
+        $data->areasInteresse = $areasInteresse;
+        unset($data->areas_interesse);
+
+        //deixa plana a lista atuacoes profissionais
+        $atuacoes_profissionais = array();
+        foreach ($data->atuacoes_profissionais as $key => $value) {
+            array_push($atuacoes_profissionais, $value->id);
+        }
+        $data->atuacoesProfissionais = $atuacoes_profissionais;
+        unset($data->atuacoes_profissionais);
+
+      }
+
+      
+
+      
       $viewData = array('profile'=>$data, 'aviso'=>$aviso);
       echo $this->getTemplatePart($this->profileTemplate, $viewData);
     }
@@ -158,23 +186,43 @@ class Filiados
       $api = Api::getInstance();
       $aviso = '';
 
+
       if ( (isset($_SESSION)) && (!empty($_SESSION['aviso'])) ) {
         $aviso = $_SESSION['aviso'];
         $_SESSION['aviso'] = '';
+
+        $error = $_SESSION['error'];
+        $_SESSION['error'] = '';
       }
 
-      if ( (isset($_SESSION)) && (!empty($_SESSION['passaporte'])) ) {
-        $passaporte = $_SESSION['passaporte'];
-        $_SESSION['passaporte'] = '';
+      if ( (isset($_SESSION)) && (!empty($_SESSION['isPassaporte'])) ) {
+        $isPassaporte = $_SESSION['isPassaporte'];
+        $_SESSION['isPassaporte'] = '';
       }
 
-      if ( (isset($_SESSION)) && (!empty($_SESSION['afiliado'])) ) {
-        $filiado = $_SESSION['afiliado'];
-        $_SESSION['afiliado'] = '';
+      if ( (isset($_SESSION)) && (!empty($_SESSION['isAfiliado'])) ) {
+        $isAfiliado = $_SESSION['isAfiliado'];
+        $_SESSION['isAfiliado'] = '';
       }
 
-      $data = $api->getProfile($_GET['user_id']);
-      $viewData = array('profile'=>$data, 'aviso'=>$aviso, 'passaporte'=>$passaporte, 'afiliado' => $afiliado);
+      if ( (isset($_POST)) && (!empty($_POST['isPassaporte'])) ) {
+        $isPassaporte = $_POST['isPassaporte'];
+      }
+
+      if ( (isset($_POST)) && (!empty($_POST['isAfiliado'])) ) {
+        $isAfiliado = $_POST['isAfiliado'];
+      }
+
+      if ( (isset($_SESSION)) && (!empty($_SESSION['idUser'])) ) {
+        $idUser = $_SESSION['idUser'];
+        $_SESSION['idUser'] = '';
+      }
+
+      if ( (isset($_POST)) && (!empty($_POST['user_id'])) ) {
+        $idUser = $_POST['user_id'];
+      }
+
+      $viewData = array('aviso'=>$aviso, 'isPassaporte'=>$isPassaporte, 'isAfiliado' => $isAfiliado, 'idUser' => $idUser, 'error' => $error);
       echo $this->getTemplatePart($this->newFiliadoTemplate, $viewData);
     }
 
@@ -183,47 +231,83 @@ class Filiados
       $api = Api::getInstance();
       $data = "";
       if ( (isset($_POST)) && (count($_POST)>0) ) {
-
         $updatedProfile = array(
-          'user_id'                   => $_POST['user_id'],
-          'tipo'                      => $_POST['tipo'],
-          'bandeira'                  => $_POST['bandeira'],
-          'cartao_nome'               => $_POST['cartao_nome'],
-          'cartao_numero'             => $_POST['cartao_numero'],
-          'cartao_validade_mes'       => $_POST['cartao_validade_mes'],
-          'cartao_validade_ano'       => $_POST['cartao_validade_ano'],
-          'cartao_codigo_verificacao' => $_POST['cartao_codigo_verificacao'],
-          // 'nome_titular'              => $_POST['nome_titular'],
-          // 'agencia'                   => $_POST['agencia'],
-          // 'banco'                     => $_POST['banco'],
-          // 'numero_conta'              => $_POST['numero_conta'],
-          'contribuicao'              => str_replace(',', '.', $_POST['contribuicao']),
-          'telefone_residencial'      => $_POST['telefone_residencial'],
-          'telefone_celular'          => $_POST['telefone_celular'],
-          // 'telefone_comercial'        => $_POST['telefone_comercial'],
-          'cep'                       => $_POST['cep'],
-          'endereco'                  => $_POST['endereco'],
-          'numero'                    => $_POST['numero'],
-          'complemento'               => $_POST['complemento'],
-          'bairro'                    => $_POST['bairro'],
-          'cidade'                    => $_POST['cidade'],
-          'uf'                        => $_POST['uf'],
-          'cpf'                       => $_POST['cpf'],
-          'fullname'                      => $_POST['fullname'],
-          'titulo_eleitoral'          => $_POST['titulo_eleitoral'],
-          'zona_eleitoral'            => $_POST['zona_eleitoral'],
-          'secao_eleitoral'           => $_POST['secao_eleitoral'],
+            //Dados de Acesso
+            'user_id'                       => $_POST['user_id'],
+            'email'                         => $_POST['email'],
 
-          'nome_mae'           => $_POST['nome_mae'],
-          'birthday'           => $_POST['birthday'],
-          'sexo'           => $_POST['sexo'],
-          'status'           => $_POST['status'],
+            //Dados básicos
+            'fullname'                      => $_POST['fullname'],
+            'nome_mae'                      => $_POST['nome_mae'],
+            'birthday'                      => $_POST['birthday'],
+            'sexo'                          => $_POST['sexo'],
+            'status'                        => $_POST['status'],
+            'telefone_residencial'          => $_POST['telefone_residencial'],
+            'telefone_celular'              => $_POST['telefone_celular'],
+            'telefone_comercial'            => $_POST['telefone_comercial'],
+            'nacionalidade'                 => $_POST['nacionalidade'],
 
+            //Dados eleitorais
+            'cpf'                           => $_POST['cpf'],
+            'titulo_eleitoral'              => $_POST['titulo_eleitoral'],
+            'zona_eleitoral'                => $_POST['zona_eleitoral'],
+            'secao_eleitoral'               => $_POST['secao_eleitoral'],
+            'tipo_Filiacao'                 => $_POST['tipo_Filiacao'],
+            'quer_ser_candidato'            => $_POST['quer_ser_candidato'],
+            'candidato_cargo'               => $_POST['candidato_cargo'],
+            'candidato_base'               => $_POST['candidato_base'],
+            'candidato_motivo'              => $_POST['candidato_motivo'],
+            'candidato_estatuto'            => $_POST['candidato_estatuto'],
+            'candidato_antecedentes'        => $_POST['candidato_antecedentes'],
+            'filiado_partido'               => $_POST['filiado_partido'],
+            'filiado_partido_quais'         => $_POST['filiado_partido_quais'],
+            'foi_candidato'                 => $_POST['foi_candidato'],
+            'foi_candidato_quais'           => $_POST['foi_candidato_quais'],
+            'atual_anterior_eleito'         => $_POST['atual_anterior_eleito'],
+            'atual_anterior_eleito_quais'   => $_POST['atual_anterior_eleito_quais'],
+            'cargo_confianca'               => $_POST['cargo_confianca'],
+            'cargo_confianca_quais'         => $_POST['cargo_confianca_quais'],
 
-          'contribupdate' => ((!empty($_POST['tipo'])) ? 1 : 0)
+            //Localização
+            'cep'                       => preg_replace('/\D/', '', $_POST['cep']),
+            'uf'                        => $_POST['uf'],
+            'cidade'                    => $_POST['cidade'],
+            'bairro'                    => $_POST['bairro'],
+            'endereco'                  => $_POST['endereco'],
+            'numero'                    => $_POST['numero'],
+            'complemento'               => $_POST['complemento'],
+
+            //Contribuição
+            'contribupdate'             => ((!empty($_POST['tipo'])) ? 1 : 0),
+            'contribuicao'              => str_replace(',', '.', $_POST['contribuicao']),
+            'dados_contribuicao'           => array(
+                'tipo'                      => $_POST['tipo'],
+                'bandeira'                  => $_POST['bandeira'],
+                'cartao_nome'               => $_POST['cartao_nome'],
+                'cartao_numero'             => $_POST['cartao_numero'],
+                'cartao_codigo_verificacao' => $_POST['cartao_codigo_verificacao'],
+                'cartao_validade_mes'       => $_POST['cartao_validade_mes'],
+                'cartao_validade_ano'       => $_POST['cartao_validade_ano'],
+            ),
+
+            
+            //Interesses
+            'ativista'                  => $_POST['ativista'],
+            'ativista_quais'            => $_POST['ativista_quais'],
+            'escolaridade'              => $_POST['escolaridade'],
+            'atuacoesProfissionais'     => $_POST['atuacoesProfissionais'],
+            'areasInteresse'            => $_POST['areasInteresse'],
+            'local_trabalho'            => $_POST['local_trabalho'],
+            'voluntario'                => $_POST['voluntario'],
+
+            //Hardcoded infos
+            'leu_estatuto'              => true,
+            'leu_manifesto'             => true,
         );
 
         $data = $api->updateProfile($updatedProfile);
+        $_SESSION['updatedProfile'] = (object) $updatedProfile;
+
       }
 
       if ( (isset($data->status)) && ($data->status == 'ok')) {
@@ -246,8 +330,6 @@ class Filiados
                 );
 
                 $data = $api->registration($newRegister);
-                // error_log('response code:'. $data['response']['code']);
-                // error_log('response dump:'. var_dump($data));
                 if ( !$data->errors && $data['response']['code'] && $data['response']['code'] == 200 ) {
                     $res = json_decode($data['body']);
                     //var_dump($res);
@@ -255,27 +337,31 @@ class Filiados
                         $_SESSION['aviso'] = $res->message[0]->msg;
                         $_SESSION['erro'] = false;
                     } else if ($res->passaporte == false){
-                        $_SESSION['passaporte'] = false;
-                        $_SESSION['afiliado'] = false;
+                        $_SESSION['isPassaporte'] = false;
+                        $_SESSION['isAfiliado'] = false;
+                        $_SESSION['idUser'] = $res->idUser;
                         $_SESSION['aviso'] = 'Passaporte registrado com sucesso! Prossiga com o cadastramento.';
                     } else if($res->passaporte == true && $res->afiliado == false) {
-                        $_SESSION['passaporte'] = true;
-                        $_SESSION['afiliado'] = false;
+                        $_SESSION['isPassaporte'] = true;
+                        $_SESSION['isAfiliado'] = false;
+                        $_SESSION['idUser'] = $res->idUser;
                         $_SESSION['aviso'] = 'Este e-mail já possui um passaporte associado, mas ainda não é um AFILIADO, prossiga com o cadastramento!';
                     } else if ($res->passaporte == true && $res->afiliado == true) {
-                        $_SESSION['passaporte'] = true;
-                        $_SESSION['afiliado'] = true;
+                        $_SESSION['isPassaporte'] = true;
+                        $_SESSION['isAfiliado'] = true;
+                        $_SESSION['idUser'] = $res->idUser;
                         $_SESSION['aviso'] = 'Este e-mail já está vinculado a um usuário afiliado, informe outro e-mail para prosseguir!';
                     }
                 } else {
                     $_SESSION['aviso'] = 'Atualizações não foram realizadas, algo está errado, tente novamente mais tarde.';
                     $_SESSION['erro'] = true;
-                    $_SESSION['passaporte'] = false;
-                    $_SESSION['afiliado'] = false;
+                    $_SESSION['isPassaporte'] = false;
+                    $_SESSION['isAfiliado'] = false;
                 }
             } else if ($_POST['action'] == 'createFiliacao') {
                 $filiado = array(
                     //Dados de Acesso
+                    'user_id'                       => $_POST['user_id'],
                     'email'                         => $_POST['email'],
 
                     //Dados básicos
@@ -294,8 +380,10 @@ class Filiados
                     'titulo_eleitoral'              => $_POST['titulo_eleitoral'],
                     'zona_eleitoral'                => $_POST['zona_eleitoral'],
                     'secao_eleitoral'               => $_POST['secao_eleitoral'],
+                    'tipo_Filiacao'                 => $_POST['tipo_Filiacao'],
                     'quer_ser_candidato'            => $_POST['quer_ser_candidato'],
                     'candidato_cargo'               => $_POST['candidato_cargo'],
+                    'candidato_base'               => $_POST['candidato_base'],
                     'candidato_motivo'              => $_POST['candidato_motivo'],
                     'candidato_estatuto'            => $_POST['candidato_estatuto'],
                     'candidato_antecedentes'        => $_POST['candidato_antecedentes'],
@@ -309,7 +397,7 @@ class Filiados
                     'cargo_confianca_quais'         => $_POST['cargo_confianca_quais'],
 
                     //Localização
-                    'cep'                       => $_POST['cep'],
+                    'cep'                       => preg_replace('/\D/', '', $_POST['cep']),
                     'uf'                        => $_POST['uf'],
                     'cidade'                    => $_POST['cidade'],
                     'bairro'                    => $_POST['bairro'],
@@ -318,89 +406,45 @@ class Filiados
                     'complemento'               => $_POST['complemento'],
 
                     //Contribuição
-                    'tipo'                      => $_POST['tipo'],
                     'contribuicao'              => str_replace(',', '.', $_POST['contribuicao']),
-                    'bandeira'                  => $_POST['bandeira'],
-                    'cartao_nome'               => $_POST['cartao_nome'],
-                    'cartao_numero'             => $_POST['cartao_numero'],
-                    'cartao_codigo_verificacao' => $_POST['cartao_codigo_verificacao'],
-                    'cartao_validade_mes'       => $_POST['cartao_validade_mes'],
-                    'cartao_validade_ano'       => $_POST['cartao_validade_ano'],
+                    'forma_pagamento'           => array(
+                        'tipo'                      => $_POST['tipo'],
+                        'bandeira'                  => $_POST['bandeira'],
+                        'cartao_nome'               => $_POST['cartao_nome'],
+                        'cartao_numero'             => $_POST['cartao_numero'],
+                        'cartao_codigo_verificacao' => $_POST['cartao_codigo_verificacao'],
+                        'cartao_validade_mes'       => $_POST['cartao_validade_mes'],
+                        'cartao_validade_ano'       => $_POST['cartao_validade_ano'],
+                    ),
+
                     
                     //Interesses
                     'ativista'                  => $_POST['ativista'],
+                    'ativista_quais'            => $_POST['ativista_quais'],
                     'escolaridade'              => $_POST['escolaridade'],
-                    'atuacoesProfissionais'     => $_POST['atuacoesProfissionais'],
-                    'areasInteresse'            => $_POST['areasInteresse'],
+                    'atuacoesProfissionais'     => explode("\n", str_replace("\r", "", $_POST['atuacoesProfissionais'])),
+                    'areasInteresse'            => explode("\n", str_replace("\r", "", $_POST['areasInteresse'])),
                     'local_trabalho'            => $_POST['local_trabalho'],
                     'voluntario'                => $_POST['voluntario'],
 
-                    'contribupdate'             => ((!empty($_POST['tipo'])) ? 1 : 0)
+                    //Hardcoded infos
+                    'leu_estatuto'              => true,
+                    'leu_manifesto'             => true,
+
+
                 );
 
                 $data = $api->saveFiliado($filiado);
+
+                if ( $data['response']['code'] != 500 ) {
+                    $_SESSION['aviso'] = 'O cadastro da filiação não foi realizado, algo está errado, tente novamente mais tarde.';
+                    $_SESSION['error'] = true;
+                } else {
+                    wp_redirect( admin_url( 'admin.php?page=rs_filiados&aviso=created'));
+                }
             }
         }
     }
-
-
-    public function rs_filiado_new_filiado_admin_action() {
-      $api = Api::getInstance();
-      if ( (isset($_POST)) && (count($_POST)>0) ) {
-
-        $updatedProfile = array(
-          'user_id'                   => $_POST['user_id'],
-          'tipo'                      => $_POST['tipo'],
-          'bandeira'                  => $_POST['bandeira'],
-          'cartao_nome'               => $_POST['cartao_nome'],
-          'cartao_numero'             => $_POST['cartao_numero'],
-          'cartao_validade_mes'       => $_POST['cartao_validade_mes'],
-          'cartao_validade_ano'       => $_POST['cartao_validade_ano'],
-          'cartao_codigo_verificacao' => $_POST['cartao_codigo_verificacao'],
-          // 'nome_titular'              => $_POST['nome_titular'],
-          // 'agencia'                   => $_POST['agencia'],
-          // 'banco'                     => $_POST['banco'],
-          // 'numero_conta'              => $_POST['numero_conta'],
-          'contribuicao'              => str_replace(',', '.', $_POST['contribuicao']),
-          'telefone_residencial'      => $_POST['telefone_residencial'],
-          'telefone_celular'          => $_POST['telefone_celular'],
-          // 'telefone_comercial'        => $_POST['telefone_comercial'],
-          'cep'                       => $_POST['cep'],
-          'endereco'                  => $_POST['endereco'],
-          'numero'                    => $_POST['numero'],
-          'complemento'               => $_POST['complemento'],
-          'bairro'                    => $_POST['bairro'],
-          'cidade'                    => $_POST['cidade'],
-          'uf'                        => $_POST['uf'],
-          'cpf'                       => $_POST['cpf'],
-          'fullname'                      => $_POST['fullname'],
-          'titulo_eleitoral'          => $_POST['titulo_eleitoral'],
-          'zona_eleitoral'            => $_POST['zona_eleitoral'],
-          'secao_eleitoral'           => $_POST['secao_eleitoral'],
-
-          'nome_mae'           => $_POST['nome_mae'],
-          'birthday'           => $_POST['birthday'],
-          'sexo'           => $_POST['sexo'],
-          'status'           => $_POST['status'],
-
-
-          'contribupdate' => ((!empty($_POST['tipo'])) ? 1 : 0)
-        );
-
-        $data = $api->updateProfile($updatedProfile);
-      }
-
-      if ( (isset($data->status)) && ($data->status == 'ok')) {
-        $_SESSION['aviso'] = 'Atualizações salvas com sucesso!';
-      }else {
-        $_SESSION['aviso'] = 'Atualizações não foram realizada, algo está errado, tente novamente mais tarde.';
-      }
-
-      wp_redirect( $_SERVER['HTTP_REFERER'] );
-      exit();
-    }
-    
-
 
     public function addScripts($hook)
     {
@@ -418,6 +462,8 @@ class Filiados
       } else if ( (isset($hook)) && ($hook == 'filiados_page_rs_filiado_profile') ) {
         wp_register_style('profile_f', ppf() . 'css/profile.css');
         wp_enqueue_style(array('profile_f'));
+        wp_register_script('rede_filiados_filiado_new_js', ppf() . 'js/new-filiado.js', null, null, true);
+        wp_enqueue_script('rede_filiados_filiado_new_js');
       } else if ( (isset($hook)) && ($hook == 'filiados_page_rs_filiado_new') ) {
         wp_register_style('filiado_new_f', ppf() . 'css/new-filiado.css');
         wp_register_script('rede_filiados_filiado_new_js', ppf() . 'js/new-filiado.js', null, null, true);

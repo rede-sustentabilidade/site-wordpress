@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
     // Show hide from QUER_SER_CANDIDATO
-    jQuery('input[type=radio][name=quer_ser_candidato]').change(function() {
-        if (this.value == 'S') {
+    jQuery('input[type=radio][name=quer_ser_candidato]').on('change', function() {
+        if (this.value == 'S' && this.checked) {
             jQuery('.quer_ser_candidato_child').show();
             jQuery('.quer_ser_candidato_child input').prop('required', true);
         }
@@ -9,10 +9,10 @@ jQuery(document).ready(function() {
             jQuery('.quer_ser_candidato_child').hide();
             jQuery('.quer_ser_candidato_child input').prop('required', false);
         }
-    });
+    }).trigger('change');
 
     // Show hide from QUER_SER_CANDIDATO
-    jQuery('input[type=radio][name=filiado_partido]').change(function() {
+    jQuery('input[type=radio][name=filiado_partido]').on('change', function() {
         if (this.value == 'S') {
             jQuery('.filiado_partido_quais').show();
             jQuery('.filiado_partido_quais input').prop('required', true);
@@ -21,11 +21,11 @@ jQuery(document).ready(function() {
             jQuery('.filiado_partido_quais').hide();
             jQuery('.filiado_partido_quais input').prop('required', false);
         }
-    });
+    }).trigger('change');
 
     // Show hide from FOI_CANDIDATO
-    jQuery('input[type=radio][name=foi_candidato]').change(function() {
-        if (this.value == 'S') {
+    jQuery('input[type=radio][name=foi_candidato]').on('change', function() {
+        if (this.value == 'S' && this.checked) {
             jQuery('.foi_candidato_quais').show();
             jQuery('.foi_candidato_quais input').prop('required', true);
         }
@@ -33,11 +33,11 @@ jQuery(document).ready(function() {
             jQuery('.foi_candidato_quais').hide();
             jQuery('.foi_candidato_quais input').prop('required', false);
         }
-    });
+    }).trigger('change');
     
     // Show hide from ATUAL_ANTERIOR_ELEITO
-    jQuery('input[type=radio][name=atual_anterior_eleito]').change(function() {
-        if (this.value == 'S') {
+    jQuery('input[type=radio][name=atual_anterior_eleito]').on('change', function() {
+        if (this.value == 'S' && this.checked) {
             jQuery('.atual_anterior_eleito_quais').show();
             jQuery('.atual_anterior_eleito_quais input').prop('required', true);
         }
@@ -45,11 +45,11 @@ jQuery(document).ready(function() {
             jQuery('.atual_anterior_eleito_quais').hide();
             jQuery('.atual_anterior_eleito_quais input').prop('required', false);
         }
-    });
+    }).trigger('change');
     
     // Show hide from CARGO_CONFIANCA
-    jQuery('input[type=radio][name=cargo_confianca]').change(function() {
-        if (this.value == 'S') {
+    jQuery('input[type=radio][name=cargo_confianca]').on('change', function() {
+        if (this.value == 'S' && this.checked) {
             jQuery('.cargo_confianca_quais').show();
             jQuery('.cargo_confianca_quais input').prop('required', true);
         }
@@ -57,12 +57,12 @@ jQuery(document).ready(function() {
             jQuery('.cargo_confianca_quais').hide();
             jQuery('.cargo_confianca_quais input').prop('required', false);
         }
-    });
+    }).trigger('change');
 
 
     // Show hide from CARGO_CONFIANCA
-    jQuery('input[type=radio][name=ativista]').change(function() {
-        if (this.value == 'S') {
+    jQuery('input[type=radio][name=ativista]').on('change', function() {
+        if (this.value == 'S' && this.checked) {
             jQuery('.ativista_quais').show();
             jQuery('.ativista_quais input').prop('required', true);
         }
@@ -70,5 +70,33 @@ jQuery(document).ready(function() {
             jQuery('.ativista_quais').hide();
             jQuery('.ativista_quais input').prop('required', false);
         }
-    });
+    }).trigger('change');
+
+    // Show hide from TIPO (COBRANÇA)
+    jQuery('input[type=radio][name=tipo]').on('change', function() {
+        if (this.value == 'cartao-credito' && this.checked) {
+            jQuery('#tipo-cartao-credito').show();
+        }
+        else if (this.value == 'boleto' && this.checked) {
+            jQuery('#tipo-cartao-credito').hide();
+        }
+    }).trigger('change');
+
+
+
+    //Birthday MASK
+    jQuery("input[name='birthday-formatted']").on("keyup change", function(){
+        jQuery("input[name='birthday']").val(destroyMask(this.value));
+        this.value = createMask(jQuery("input[name='birthday']").val());
+    }).trigger('change');
+
+    function createMask(string){
+        return string.replace(/(\d{2})(\d{2})(\d{4})/,"$1/$2/$3");
+    }
+
+    function destroyMask(string){
+        return string.replace(/\D/g,'').substring(0,8);
+    }
+
+
 });
