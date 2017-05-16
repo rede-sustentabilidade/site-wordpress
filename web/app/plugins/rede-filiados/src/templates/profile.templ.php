@@ -455,11 +455,11 @@
         </div>
         <div class="input text alignleft">
           <label for="cartao_numero">Número do cartão</label>
-          <input id="cartao_numero" name="cartao_numero" type="text" class="pure-input-1" value="<?php echo $profile->dados_contribuicao->cartao_numero; ?>" pattern=".{16,16}" title="Número do cartão deve contém 16 dígitos" maxlength="19">
+          <input id="cartao_numero" name="cartao_numero" type="text" class="pure-input-1" value="<?php echo $profile->dados_contribuicao->cartao_numero; ?>" title="Número do cartão deve contém 16 dígitos" maxlength="19">
         </div>
         <div class="input text alignleft">
           <label for="cartao_codigo_verificacao">Código de verificação</label>
-          <input id="cartao_codigo_verificacao" name="cartao_codigo_verificacao" type="text" class="pure-input-1-4" value="<?php echo $profile->dados_contribuicao->cartao_codigo_verificacao; ?>" pattern=".{3,4}" title="Código de verificação deve conter entre 3 e 4 dígitos"  maxlength="4">
+          <input id="cartao_codigo_verificacao" name="cartao_codigo_verificacao" type="text" class="pure-input-1-4" value="<?php echo $profile->dados_contribuicao->cartao_codigo_verificacao; ?>" title="Código de verificação deve conter entre 3 e 4 dígitos"  maxlength="4">
         </div>
         <div class="input text alignleft">
           <label for="cartao_validade_mes">Validade</label>
