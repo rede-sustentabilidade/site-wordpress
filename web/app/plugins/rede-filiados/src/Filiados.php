@@ -423,8 +423,8 @@ class Filiados
                     'ativista'                  => $_POST['ativista'],
                     'ativista_quais'            => $_POST['ativista_quais'],
                     'escolaridade'              => $_POST['escolaridade'],
-                    'atuacoesProfissionais'     => explode("\n", str_replace("\r", "", $_POST['atuacoesProfissionais'])),
-                    'areasInteresse'            => explode("\n", str_replace("\r", "", $_POST['areasInteresse'])),
+                    'atuacoesProfissionais'     => $_POST['atuacoesProfissionais'],
+                    'areasInteresse'            => $_POST['areasInteresse'],
                     'local_trabalho'            => $_POST['local_trabalho'],
                     'voluntario'                => $_POST['voluntario'],
 
