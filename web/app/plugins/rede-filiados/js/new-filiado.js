@@ -86,17 +86,51 @@ jQuery(document).ready(function() {
 
     //Birthday MASK
     jQuery("input[name='birthday-formatted']").on("keyup change", function(){
-        jQuery("input[name='birthday']").val(destroyMask(this.value));
-        this.value = createMask(jQuery("input[name='birthday']").val());
+        var slices = this.value.split("-");
+        if(this.value.length == 10 && slices.length == 3 ) {
+            jQuery("input[name='birthday']").val(slices[2]+slices[1]+slices[0]);
+            console.log(slices[2]+slices[1]+slices[0]);
+        }
     }).trigger('change');
 
     function createMask(string){
         return string.replace(/(\d{2})(\d{2})(\d{4})/,"$1/$2/$3");
     }
 
-    function destroyMask(string){
+    function destroyMask(string) {
         return string.replace(/\D/g,'').substring(0,8);
     }
+
+
+    jQuery.mask.definitions['~']='[+-]';
+
+	//Inicio Mascara Telefone
+	jQuery('input[type=tel]').on("focusout", function(){
+		var phone, element;
+		element = jQuery(this);
+		element.unmask();
+		phone = element.val().replace(/\D/g, '');
+		if(phone.length > 10) {
+			element.mask("(99) 99999-999?9");
+		} else {
+			element.mask("(99) 9999-9999?9");
+		}
+	}).trigger('focusout');
+	//Fim Mascara Telefone
+	jQuery("input[name=cpf]").mask("999.999.999-99");
+	jQuery("input[name=cartao_numero]").mask("9999 9999 9999 9999");
+
+    jQuery("#contribuicao-formatted").maskMoney({
+         prefix: "R$:",
+         decimal: ",",
+         thousands: ""
+     });
+
+     jQuery("#contribuicao-formatted").on("keyup change", function(){
+        var withoutf = this.value.replace(/[^\d,]+/g,"").replace(",",".");
+        jQuery('#contribuicao').val(withoutf);
+     });
+    
 
 
 });

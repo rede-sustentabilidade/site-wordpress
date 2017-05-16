@@ -1,3 +1,8 @@
+<script  src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+<script  src="https://rawgit.com/digitalBush/jquery.maskedinput/master/dist/jquery.maskedinput.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+
+
 <div class="wrap">
   <h2>Novo Filiado</h2>
   <p>Ao registrar, será enviada uma mensagem para o e-mail inserido, contendo uma senha de acesso.</p>
@@ -14,7 +19,7 @@
 <?php } ?>
 
 <?php 
-  if ( $isPassaporte && !$isAfiliado ) { 
+  if ( ($isPassaporte && !$isAfiliado) || ( !empty($aviso) && !$isPassaporte && !$isAfiliado) ) { 
     $display_filiado_form = 'block';
     $display_passaporte_button = 'none';
     $readonly_email_field = 'readonly';
@@ -32,7 +37,7 @@
 
       <div class="input text alignleft">
         <label for="">E-mail</label>
-        <input type="text" name="email" value="<?php echo $_POST['email'] ?>" <?php echo $readonly_email_field; ?>> 
+        <input type="email" name="email" value="<?php echo $_POST['email'] ?>" <?php echo $readonly_email_field; ?> required> 
       </div>
     </fieldset>
     <input name="registrar" style="display:<?php echo $display_passaporte_button; ?>;" class="button alignright" value="Registrar" type="submit">
@@ -50,17 +55,17 @@
 
       <div class="input text alignleft">
         <label for="">Nome</label>
-        <input type="text" name="fullname" required value="<?php echo $_POST['fullname'] ?>">
+        <input type="text" name="fullname" required value="<?php echo $_POST['fullname'] ?>" maxlength="255">
       </div>
 
       <div class="input text alignleft">
         <label for="">Nome da mãe</label>
-        <input type="text" name="nome_mae" value="<?php echo $_POST['nome_mae'] ?>">
+        <input type="text" name="nome_mae" value="<?php echo $_POST['nome_mae'] ?>" maxlength="255">
       </div>
 
       <div class="input text alignleft">
         <label for="birthday">Data de nascimento (DD/MM/AAAA)</label>
-        <input type="text" name="birthday-formatted" required value="<?php echo $_POST['birthday'] ?>">
+        <input type="date" name="birthday-formatted" required value="<?php echo $_POST['birthday'] ?>">
         <input type="hidden" name="birthday" required value="<?php echo $_POST['birthday'] ?>">
       </div>
 
@@ -91,17 +96,17 @@
 
       <div class="input text alignleft">
         <label for="">Telefone Residencial</label>
-        <input type="text" name="telefone_residencial" required value="<?php echo $_POST['telefone_residencial'] ?>">
+        <input type="tel" name="telefone_residencial" required value="<?php echo $_POST['telefone_residencial'] ?>" maxlength="15">
       </div>
 
       <div class="input text alignleft">
         <label for="">Telefone Celular</label>
-        <input type="text" name="telefone_celular" value="<?php echo $_POST['telefone_celular'] ?>">
+        <input type="tel" name="telefone_celular" value="<?php echo $_POST['telefone_celular'] ?>" maxlength="15">
       </div>
 
       <div class="input text alignleft">
         <label for="">Telefone Comercial</label>
-        <input type="text" name="telefone_comercial" value="<?php echo $_POST['telefone_comercial'] ?>">
+        <input type="tel" name="telefone_comercial" value="<?php echo $_POST['telefone_comercial'] ?>" maxlength="15">
       </div>
 
       <div class="input text alignleft">
@@ -273,7 +278,7 @@
       <div class="questionario quer_ser_candidato_child text alignleft" style="display: none">
           <p class="mensagem ajuda">A omissão de qualquer informação solicitada neste cadastro pode resultar em rejeição e anulação da filiação.</p>
           <label for="candidato_cargo">A que cargo pretende candidatar-se pela #Rede?</label>
-          <input ng-required="$parent.filiado.quer_ser_candidato=='S'" name="candidato_cargo" placeholder="Coloque o nome do cargo" id="candidato_cargo" type="text" class="pure-input-1" value="<?php echo $_POST['candidato_cargo'] ?>">
+          <input ng-required="$parent.filiado.quer_ser_candidato=='S'" name="candidato_cargo" placeholder="Coloque o nome do cargo" id="candidato_cargo" type="text" class="pure-input-1" value="<?php echo $_POST['candidato_cargo'] ?>" maxlength="255">
       </div>
       <div class="questionario quer_ser_candidato_child text alignleft" style="display: none">
           <label for="candidato_motivo">Em poucas palavras, diga por que você quer ser candidato? Qual é a sua motivação pela vida política?</label>
@@ -304,7 +309,7 @@
       </div>
       <div class="questionario text alignleft filiado_partido_quais" style="display: none" >
           <label for="filiado_partido_quais">Quais Partidos?</label>
-          <input ng-required="$parent.filiado.filiado_partido=='S'" name="filiado_partido_quais" placeholder="Ex. Fui filiado durante X anos no partido XX." id="filiado_partido_quais" type="text" class="pure-input-1" value="<?php echo $_POST['filiado_partido_quais'] ?>">
+          <input ng-required="$parent.filiado.filiado_partido=='S'" name="filiado_partido_quais" placeholder="Ex. Fui filiado durante X anos no partido XX." id="filiado_partido_quais" type="text" class="pure-input-1" value="<?php echo $_POST['filiado_partido_quais'] ?>" maxlength="255">
       </div>
 
       <div class="questionario text alignleft">
@@ -320,7 +325,7 @@
       </div>
       <div class="questionario text alignleft foi_candidato_quais" style="display: none">
           <label for="foi_candidato_quais">Quais você tentou?</label>
-          <input ng-required="$parent.filiado.foi_candidato=='S'" name="foi_candidato_quais" placeholder="Ex. Fui candidato a Deputado Estadual no estado XX nas eleições de XXXX." id="foi_candidato_quais" type="text" class="pure-input-1" value="<?php echo $_POST['foi_candidato_quais'] ?>">
+          <input ng-required="$parent.filiado.foi_candidato=='S'" name="foi_candidato_quais" placeholder="Ex. Fui candidato a Deputado Estadual no estado XX nas eleições de XXXX." id="foi_candidato_quais" type="text" class="pure-input-1" value="<?php echo $_POST['foi_candidato_quais'] ?>"  maxlength="255">
       </div>
 
       <div class="questionario text alignleft">
@@ -336,7 +341,7 @@
       </div>
       <div class="questionario text alignleft atual_anterior_eleito_quais" style="display: none">
           <label for="atual_anterior_eleito_quais">Quais você exerceu ou exerce?</label>
-          <input ng-required="$parent.filiado.atual_anterior_eleito=='S'" name="atual_anterior_eleito_quais" placeholder="Ex. Sou vereador na cidade X e já fui vereador no ano XXXX na cidade X." id="atual_anterior_eleito_quais" type="text" class="pure-input-1" value="<?php echo $_POST['atual_anterior_eleito_quais'] ?>">
+          <input ng-required="$parent.filiado.atual_anterior_eleito=='S'" name="atual_anterior_eleito_quais" placeholder="Ex. Sou vereador na cidade X e já fui vereador no ano XXXX na cidade X." id="atual_anterior_eleito_quais" type="text" class="pure-input-1" value="<?php echo $_POST['atual_anterior_eleito_quais'] ?>" maxlength="255">
       </div>
 
       <div class="questionario text alignleft">
@@ -352,7 +357,7 @@
       </div>
       <div class="questionario text alignleft cargo_confianca_quais" style="display: none">
           <label for="cargo_confianca_quais">Quais você já foi nomeado?</label>
-          <input ng-required="$parent.filiado.cargo_confianca=='S'" name="cargo_confianca_quais" placeholder="Ex. Atualmente sou prefeito do município X." id="cargo_confianca_quais" type="text" class="pure-input-1" value="<?php echo $_POST['cargo_confianca_quais'] ?>">
+          <input ng-required="$parent.filiado.cargo_confianca=='S'" name="cargo_confianca_quais" placeholder="Ex. Atualmente sou prefeito do município X." id="cargo_confianca_quais" type="text" class="pure-input-1" value="<?php echo $_POST['cargo_confianca_quais'] ?>" maxlength="255">
       </div>
     </fieldset>
 
@@ -400,27 +405,27 @@
 
       <div class="input text alignleft">
         <label for="">Cidade</label>
-        <input type="text" required name="cidade" value="<?php echo $_POST['cidade'] ?>">
+        <input type="text" required name="cidade" value="<?php echo $_POST['cidade'] ?>" maxlength="255">
       </div>
 
       <div class="input text alignleft">
         <label for="">Bairro</label>
-        <input type="text" required name="bairro" value="<?php echo $_POST['bairro'] ?>">
+        <input type="text" required name="bairro" value="<?php echo $_POST['bairro'] ?>" maxlength="255">
       </div>
 
       <div class="input text alignleft">
         <label for="">Endereço</label>
-        <textarea name="endereco" required><?php echo $_POST['endereco']; ?></textarea>
+        <textarea name="endereco" required maxlength="255"><?php echo $_POST['endereco']; ?></textarea>
       </div>
 
       <div class="input text alignleft">
         <label for="">Número</label>
-        <input type="text" name="numero" required value="<?php echo $_POST['numero']; ?>">
+        <input type="text" name="numero" required value="<?php echo $_POST['numero']; ?>" maxlength="255">
       </div>
 
       <div class="input text alignleft">
         <label for="">Complemento</label>
-        <textarea name="complemento"><?php echo $_POST['complemento']; ?></textarea>
+        <textarea name="complemento" maxlength="255"><?php echo $_POST['complemento']; ?></textarea>
       </div>
     </fieldset>
 
@@ -439,7 +444,8 @@
       </div>
       <div class="input text alignleft">
           <label for="contribuicao">Valor (R$) - use "," para separação</label>
-          <input id="contribuicao" required name="contribuicao" type="text" class="pure-input-1-2" value="<?php echo number_format($_POST['contribuicao'], 2, ',', ''); ?>">
+          <input id="contribuicao" type="hidden" name="contribuicao" value="<?php echo $_POST['contribuicao'] ?>">
+          <input id="contribuicao-formatted" name="contribuicao-formatted" required  type="text" class="pure-input-1-2" value="<?php echo $_POST['contribuicao'] ?>" maxlength="14">
       </div>
 
       <div id="tipo-cartao-credito" style="display:none;">
@@ -460,15 +466,15 @@
         </div>
         <div class="input text alignleft">
           <label for="cartao_nome">Nome no cartão</label>
-          <input id="cartao_nome" name="cartao_nome" type="text" class="pure-input-1" value="<?php echo $_POST['cartao_nome']; ?>">
+          <input id="cartao_nome" name="cartao_nome" type="text" class="pure-input-1" value="<?php echo $_POST['cartao_nome']; ?>" maxlength="255">
         </div>
         <div class="input text alignleft">
           <label for="cartao_numero">Número do cartão</label>
-          <input id="cartao_numero" name="cartao_numero" type="text" class="pure-input-1" value="<?php echo $_POST['cartao_numero']; ?>">
+          <input id="cartao_numero" name="cartao_numero" type="text" class="pure-input-1" value="<?php echo $_POST['cartao_numero']; ?>" maxlength="19">
         </div>
         <div class="input text alignleft">
           <label for="cartao_codigo_verificacao">Código de verificação</label>
-          <input id="cartao_codigo_verificacao" name="cartao_codigo_verificacao" type="text" class="pure-input-1-4" value="<?php echo $_POST['cartao_codigo_verificacao']; ?>">
+          <input id="cartao_codigo_verificacao" name="cartao_codigo_verificacao" type="text" class="pure-input-1-4" value="<?php echo $_POST['cartao_codigo_verificacao']; ?>" maxlength="4">
         </div>
         <div class="input text alignleft">
           <label for="cartao_validade_mes">Validade</label>
@@ -517,7 +523,7 @@
 
       <div class="input text alignleft ativista_quais" style="display:none">
           <label for="ativista_quais">Descreva como é seu ativismo e onde geralmente atua?</label>
-          <input ng-model="$parent.filiado.ativista_quais" ng-required="$parent.filiado.ativista=='S'" name="ativista_quais" placeholder="Ex. Atualmente faço ativismo social." id="ativista_quais" type="text" class="pure-input-1" value="<?php echo $_POST['ativista_quais'] ?>">
+          <input ng-model="$parent.filiado.ativista_quais" ng-required="$parent.filiado.ativista=='S'" name="ativista_quais" placeholder="Ex. Atualmente faço ativismo social." id="ativista_quais" type="text" class="pure-input-1" value="<?php echo $_POST['ativista_quais'] ?>" maxlength="255">
       </div>
 
       <div class="input text alignleft">
@@ -561,7 +567,7 @@ Pressione e segure a tecla Control no Windows, ou Command no Mac, para seleciona
 
       <div class="input text alignleft">
           <label for="areasInteresse">Áreas de interesse</label>
-          <select multiple="multiple" id="areasInteresse" name="areasInteresse" required ng-model="$parent.filiado.areasInteresse" type="text" class="pure-input-1-3" data-placeholder="Diga-nos suas áreas de interesse">
+          <select multiple="multiple" id="areasInteresse" name="areasInteresse[]" required ng-model="$parent.filiado.areasInteresse" type="text" class="pure-input-1-3" data-placeholder="Diga-nos suas áreas de interesse">
                 <option value="1" <?php echo ($_POST['areasInteresse'] == '1' ? 'selected=selected' : ''); ?>>Meio Ambiente</option>
                 <option value="2" <?php echo ($_POST['areasInteresse'] == '2' ? 'selected=selected' : ''); ?>>Educação</option>
                 <option value="3" <?php echo ($_POST['areasInteresse'] == '3' ? 'selected=selected' : ''); ?>>Saúde</option>
@@ -585,7 +591,7 @@ Pressione e segure a tecla Control no Windows, ou Command no Mac, para seleciona
 
       <div class="input text alignleft">
           <label for="local_trabalho">Qual seu local de trabalho?</label>
-          <input id="local_trabalho" required ng-model="$parent.filiado.local_trabalho" name="local_trabalho" type="text"  class="pure-input-2-3" placeholder="Nome da empresa ou organização onde trabalha." / value="<?php echo $_POST['local_trabalho'] ?>">
+          <input id="local_trabalho" required ng-model="$parent.filiado.local_trabalho" name="local_trabalho" type="text"  class="pure-input-2-3" placeholder="Nome da empresa ou organização onde trabalha." / value="<?php echo $_POST['local_trabalho'] ?>" maxlength="255">
       </div>
 
       <div class="questionario text alignleft">

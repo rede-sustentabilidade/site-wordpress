@@ -248,7 +248,7 @@ class Filiados
             'nacionalidade'                 => $_POST['nacionalidade'],
 
             //Dados eleitorais
-            'cpf'                           => $_POST['cpf'],
+            'cpf'                           => preg_replace('/\D/', '', $_POST['cpf']),
             'titulo_eleitoral'              => $_POST['titulo_eleitoral'],
             'zona_eleitoral'                => $_POST['zona_eleitoral'],
             'secao_eleitoral'               => $_POST['secao_eleitoral'],
@@ -314,6 +314,7 @@ class Filiados
         $_SESSION['aviso'] = 'Atualizações salvas com sucesso!';
       }else {
         $_SESSION['aviso'] = 'Atualizações não foram realizada, algo está errado, tente novamente mais tarde.';
+        error_log('Ocorreu o erro 500 ao executar cadastramento da filiação:'. print_r($data, true));
       }
 
       wp_redirect( $_SERVER['HTTP_REFERER'] );
@@ -332,7 +333,7 @@ class Filiados
                 $data = $api->registration($newRegister);
                 if ( !$data->errors && $data['response']['code'] && $data['response']['code'] == 200 ) {
                     $res = json_decode($data['body']);
-                    //var_dump($res);
+
                     if($data->error == true) {
                         $_SESSION['aviso'] = $res->message[0]->msg;
                         $_SESSION['erro'] = false;
@@ -376,14 +377,14 @@ class Filiados
                     'nacionalidade'                 => $_POST['nacionalidade'],
 
                     //Dados eleitorais
-                    'cpf'                           => $_POST['cpf'],
+                    'cpf'                           => preg_replace('/\D/', '', $_POST['cpf']),
                     'titulo_eleitoral'              => $_POST['titulo_eleitoral'],
                     'zona_eleitoral'                => $_POST['zona_eleitoral'],
                     'secao_eleitoral'               => $_POST['secao_eleitoral'],
                     'tipo_Filiacao'                 => $_POST['tipo_Filiacao'],
                     'quer_ser_candidato'            => $_POST['quer_ser_candidato'],
                     'candidato_cargo'               => $_POST['candidato_cargo'],
-                    'candidato_base'               => $_POST['candidato_base'],
+                    'candidato_base'                => $_POST['candidato_base'],
                     'candidato_motivo'              => $_POST['candidato_motivo'],
                     'candidato_estatuto'            => $_POST['candidato_estatuto'],
                     'candidato_antecedentes'        => $_POST['candidato_antecedentes'],
@@ -439,7 +440,9 @@ class Filiados
                 if ( $data['response']['code'] != 500 ) {
                     $_SESSION['aviso'] = 'O cadastro da filiação não foi realizado, algo está errado, tente novamente mais tarde.';
                     $_SESSION['error'] = true;
+                    error_log('Ocorreu um erro ao executar cadastramento da filiação:'. print_r($data, true));
                 } else {
+                    error_log('Ocorreu o erro 500 ao executar cadastramento da filiação:'. print_r($data, true));
                     wp_redirect( admin_url( 'admin.php?page=rs_filiados&aviso=created'));
                 }
             }
