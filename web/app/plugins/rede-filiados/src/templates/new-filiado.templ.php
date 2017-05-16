@@ -548,7 +548,7 @@
 
       <div class="input text alignleft">
           <label for="atuacoesProfissionais">Em qual área você atua?</label>
-          <select multiple="multiple" id="atuacoesProfissionais" name="atuacoesProfissionais" required ng-model="$parent.filiado.atuacoesProfissionais" type="text" class="pure-input-1-3" data-placeholder="Diga-nos onde atua profissionalmente">
+          <select multiple="multiple" id="atuacoesProfissionais" name="atuacoesProfissionais[]" required ng-model="$parent.filiado.atuacoesProfissionais" type="text" class="pure-input-1-3" data-placeholder="Diga-nos onde atua profissionalmente">
               <option value="1" <?php echo ($_POST['atuacoesProfissionais'] == '1' ? 'selected=selected' : ''); ?>>Administração e Negócios</option>
               <option value="2" <?php echo ($_POST['atuacoesProfissionais'] == '2' ? 'selected=selected' : ''); ?>>Artes e Design</option>
               <option value="3" <?php echo ($_POST['atuacoesProfissionais'] == '3' ? 'selected=selected' : ''); ?>>Campo de Públicas</option>
