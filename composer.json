@@ -63,7 +63,7 @@
 		"psy/psysh" : "~0.6",
 		"wpackagist-plugin/advanced-post-slider": "2.5.0",
 		"wpackagist-plugin/really-simple-ssl": "2.5.13",
-    "wpackagist-plugin/wp-ses": "0.4.9",
+    "wpackagist-plugin/wp-ses": "0.7.0",
   	"wpackagist-plugin/sendpress": "1.8.1.24",
     "wpackagist-plugin/wordpress-mu-domain-mapping": "0.5.5.1",
     "wpackagist-plugin/user-switching": "1.0.9"
