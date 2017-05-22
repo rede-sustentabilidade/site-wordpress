@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
 
     // Show hide from QUER_SER_CANDIDATO
     jQuery('input[type=radio][name=filiado_partido]').on('change', function() {
-        if (this.value == 'S') {
+        if (this.value == 'S' && this.checked) {
             jQuery('.filiado_partido_quais').show();
             jQuery('.filiado_partido_quais input').prop('required', true);
         }

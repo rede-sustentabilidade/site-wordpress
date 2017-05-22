@@ -313,7 +313,7 @@ class Filiados
       if ( (isset($data->status)) && ($data->status == 'ok')) {
         $_SESSION['aviso'] = 'Atualizações salvas com sucesso!';
       }else {
-        $_SESSION['aviso'] = 'Atualizações não foram realizada, algo está errado, tente novamente mais tarde.';
+        $_SESSION['aviso'] = 'Atualizações não foram realizadas, algo está errado, tente novamente mais tarde.';
         error_log('Ocorreu o erro 500 ao executar cadastramento da filiação:'. print_r($data, true));
       }
 
@@ -354,6 +354,7 @@ class Filiados
                         $_SESSION['aviso'] = 'Este e-mail já está vinculado a um usuário afiliado, informe outro e-mail para prosseguir!';
                     }
                 } else {
+                    error_log('Ocorreu o erro 500 ao executar cadastramento da filiação:'. print_r($data, true));
                     $_SESSION['aviso'] = 'Atualizações não foram realizadas, algo está errado, tente novamente mais tarde.';
                     $_SESSION['erro'] = true;
                     $_SESSION['isPassaporte'] = false;

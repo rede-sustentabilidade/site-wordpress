@@ -282,7 +282,7 @@
           <textarea ng-required="$parent.filiado.quer_ser_candidato=='S'" name="candidato_antecedentes" id="candidato_antecedentes" rows="3" class="pure-input-1"><?php echo $profile->candidato_antecedentes; ?></textarea>
       </div>
       <div class="questionario text alignleft">
-          <label for="filiado_partido">É ou já foi filiado a partido político??</label>
+          <label for="filiado_partido">É ou já foi filiado a partido político?</label>
           <label class="inner-label" for="filiado_partido_N">
               <input type="radio" required name="filiado_partido" id="filiado_partido_N" value="N" <?php echo ($profile->filiado_partido == 'N' ? 'checked=checked' : ''); ?> />
               Não
