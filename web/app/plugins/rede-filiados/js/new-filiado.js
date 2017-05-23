@@ -86,11 +86,7 @@ jQuery(document).ready(function() {
 
     //Birthday MASK
     jQuery("input[name='birthday-formatted']").on("keyup change", function(){
-        var slices = this.value.split("-");
-        if(this.value.length == 10 && slices.length == 3 ) {
-            jQuery("input[name='birthday']").val(slices[2]+slices[1]+slices[0]);
-            console.log(slices[2]+slices[1]+slices[0]);
-        }
+        jQuery("input[name='birthday']").val(this.value);
     }).trigger('change');
 
     function createMask(string){
