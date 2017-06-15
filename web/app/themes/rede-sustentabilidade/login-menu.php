@@ -155,7 +155,8 @@ if (isset($_COOKIE['access_token'])) {
 <?php }else { ?>
     <script>API_USER_STATUS = 0;</script>
     <div class="fazer-conexao">
-		<a href="<?php echo WP_PASSPORT_PATH . '/registration' ?>" class="label borderd">registre-se</a>
+		<a href="<?php echo site_url() . '/seja-um-conectado' ?>" class="label borderd">seja um conectado</a>
+		<a href="<?php echo site_url() . '/filie-se' ?>" class="label borderd">filie-se</a>
 		<a href="<?php echo site_url() . '/?login=1'; ?>" class="label"><strong>login</strong></a>
     </div>
 <?php } ?>

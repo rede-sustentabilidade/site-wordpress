@@ -10,7 +10,6 @@ get_header();
 the_content();
 
 
-if ( isset($_COOKIE['usuario']) ) {
 global $usuario;
 ?>
 
@@ -54,9 +53,13 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                 <fieldset>
                      <div class="pure-g">
                          <div class="pure-u-1">
-                     <p class="mensagem duvida">Dúvidas? Escreva para o email <a href="mailto:filiacao@redesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a></p>
+                            <p class="mensagem duvida">Dúvidas? Escreva para o email <a href="mailto:filiacao@redesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a></p>
                              <label for="birthday">Nome Completo</label>
                              <input id="fullname" name="fullname" required ng-model="$parent.filiado.fullname" type="text" class="pure-input-1-3">
+                         </div>
+                         <div class="pure-u-1" ng-if="logged == false">
+                            <label for="email">E-mail</label>
+                            <input id="email" name="email" required ng-model="$parent.filiado.email" type="text" class="pure-input-1-3">
                          </div>
                          <div class="pure-u-1">
                              <label for="birthday">Data de nascimento</label>
@@ -406,7 +409,7 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                 <button ng-click="handleNext(dismiss)" ng-disabled="form_4.$invalid" class="proximo"><span class="hmo">{{getNextLabel()}}</span> <i class="icon-seta-em-frente"></i></button>
             </form>
             <form ng-switch-when="Interesses" novalidate class="pure-form pure-form-stacked form-5" name="form_5">
-                <fieldset ng-show="!$parent.enviado_sucesso">
+                <fieldset ng-show="!$parent.enviado_sucesso && !$parent.registro_ja_afiliado && !$parent.registro_ja_passaporte && !enviado_falha">
                     <legend>Acreditamos no Ativismo Autoral, e por isso queremos conhecer as áreas e temas que te interessam, se exerce alguma militância, e também se você tem disponibilidade para colaborar voluntariamente com a #Rede.</legend>
                     <div class="pure-u-1">
                     <p class="mensagem duvida">Dúvidas? Escreva para o email <a href="mailto:filiacao@redesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a></p>
@@ -482,33 +485,24 @@ Qualquer dúvida, entre em contato através do <a href="mailto:filiacao@redesust
 
                 </div>
                 <div class="pure-u-1 box-aviso-resultado" ng-show="$parent.enviado_falha">
-                    <h2>Algo deu errado!</h2><p class="mensagem">Tente novamente ou envie um email para <a href="mailto:filiacao@redesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a> se o problema persistir.</p>
+                    <h2>Algo deu errado!</h2><p class="mensagem">Tente novamente ou envie um email para <a href="mailto:filiacao@reFdesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a> se o problema persistir.</p>
                 </div>
-                <button ng-show="!$parent.enviado_sucesso" ng-click="handleNext(saveFiliado)" ng-disabled="form_5.$invalid" class="proximo"><span class="hmo">{{getNextLabel()}}</span> <i class="icon-seta-em-frente"></i></button>
+                <div class="pure-u-1 box-aviso-resultado" ng-show="$parent.registro_ja_afiliado">
+                    <h2>E-mail já filiado!</h2><p class="mensagem">Tente outro e-mail ou entre com suas credenciais na página de login.</p>
+                </div>
+                <div class="pure-u-1 box-aviso-resultado" ng-show="$parent.registro_ja_passaporte">
+                    <h2>E-mail já possui passaporte!</h2><p class="mensagem">Tente outro e-mail ou entre com suas credenciais na página de login e inicie a filiação.</p>
+                </div>
+                <button ng-show="!$parent.enviado_sucesso && !registro_ja_afiliado && !registro_ja_passaporte && !enviado_falha" ng-click="handleNext(saveFiliado)" ng-disabled="form_5.$invalid" class="proximo"><span class="hmo">{{getNextLabel()}}</span> <i class="icon-seta-em-frente"></i></button>
             </form>
         </div>
 
-        <button ng-show="!isFirstStep() && !enviado_sucesso" ng-click="handlePrevious()" ><i class="icon-seta-para-tras"></i> <span class="hmo">Anterior</span></button>
+        <button ng-show="!isFirstStep() && !enviado_sucesso && !registro_ja_afiliado && !registro_ja_passaporte && !enviado_falha" ng-click="handlePrevious()" ><i class="icon-seta-para-tras"></i> <span class="hmo">Anterior</span></button>
+
+        <button ng-show="registro_ja_passaporte || registro_ja_afiliado || enviado_falha" ng-click="handleBack()" ><i class="icon-seta-para-tras"></i> <span class="hmo">Voltar</span></button>
 
         <!--pre>form = {{user | json}}</pre>
         <pre>master = {{master | json}}</pre-->
     </div>
 </div>
-<?php } else { ?>
-
-<div class="box-aviso">
-    <p>Antes de filiar, faça login ou crie sua conta!</p>
-    <a class="button" href="<?php echo site_url() . '/?login=1'; ?>">Login</a>
-    <a class="button" href="<?php echo WP_PASSPORT_PATH . '/registration' ?>">Cadastre-se</a>
-</div>
-
-<h2 class="title">Filiação</h2>
-
-<div class="container-filiacao" ng-app="conexaoRedeApp">
-    <div ng-controller="FiliacaoForm">
-      <span class="hmo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/formulario-filiacao-desabilitado.png" /></span>
-      <span class="vmo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/formulario-mobile-filiacao-desabilitado.png" /></span>
-    </div>
-</div>
-<?php } ?>
 <?php get_footer(); ?>

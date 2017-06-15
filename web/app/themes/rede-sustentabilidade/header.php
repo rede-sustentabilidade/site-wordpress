@@ -46,14 +46,15 @@
         <?php endif; ?>
         <?php global $usuario; ?>
         <script>
-				var API_PATH = <?php echo json_encode(WP_API_PATH); ?>;
-        var SERVER_DOMAIN = <?php echo json_encode($_SERVER['SERVER_NAME']); ?>;
-        var THEME_URL = <?php echo json_encode(get_stylesheet_directory_uri()); ?>;
-				<?php
-				if (count($usuario) > 0) {
+			var API_PATH = <?php echo json_encode(WP_API_PATH); ?>;
+			var PASSPORT_PATH = <?php echo json_encode(WP_PASSPORT_PATH); ?>;
+            var SERVER_DOMAIN = <?php echo json_encode($_SERVER['SERVER_NAME']); ?>;
+            var THEME_URL = <?php echo json_encode(get_stylesheet_directory_uri()); ?>;
+			<?php
+			    if (count($usuario) > 0) {
 					echo "var WP_USER_ID = '".$usuario->id."';";
 				}
-        ?>
+            ?>
         </script>
         <?php wp_head(); ?>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
