@@ -472,16 +472,20 @@ Pressione e segure a tecla Control no Windows, ou Command no Mac, para seleciona
 
                 </fieldset>
                 <div class="pure-u-1 box-aviso-resultado pronto" ng-show="$parent.enviado_sucesso">
-                    <h2>Pronto!</h2><p class="mensagem">Obrigado! Suas informações para a filiação foram enviadas à comissão de validação e estão em análise.
+                    <h2>Olá,</h2>
+                    <p class="mensagem">você finalizou seu cadastro e o pedido de filiação foi enviado para a direção regional.<br/>
+                    A confirmação de sua filiação ocorrerá pela direção estadual, depois de você passar pelo processo de formação. <br/><br/><br/>
 
-Em breve você receberá informações de como está o seu processo.
-Qualquer dúvida, entre em contato através do <a href="mailto:filiacao@redesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a>
+                    Atenciosamente,<br/>
+                    Comissão Executiva Nacional<br/>
+                    Rede Sustentabilidade</p>
+                    
 
-<br /><br /><br />
+                    <br /><br /><br />
 
-<a href="/">Clique aqui para voltar para a página inicial</a>
+                    <a href="/">Clique aqui para voltar para a página inicial</a>
 
-</p>
+                    </p>
 
                 </div>
                 <div class="pure-u-1 box-aviso-resultado" ng-show="$parent.enviado_falha">
