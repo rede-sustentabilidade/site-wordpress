@@ -46,12 +46,17 @@ if (!function_exists('ppf')) {
 
 function add_roles_on_afiliados_activation() {
    add_role( 'filiados', 'Gerenciar Filiados', array( 'manage_filiados'=>true ) );
+   add_role( 'organizador_estadual', 'Organizador Estadual', array( 'manage_filiados'=>true ) );
+
+   $role = get_role( 'administrator' );
+   $role->add_cap( 'manage_filiados' );
 }
 
 register_activation_hook( __FILE__, 'add_roles_on_afiliados_activation' );
 
 function remove_roles_on_afiliados_deactivation() {
   remove_role( 'filiados' );
+  remove_role( 'organizador_estadual' );
 }
 
 register_deactivation_hook( __FILE__, 'remove_roles_on_afiliados_deactivation' );

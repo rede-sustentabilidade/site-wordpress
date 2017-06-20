@@ -389,6 +389,7 @@ function rs_user_fields($user)
 	$can_edit = current_user_can('promote_users', $user_id);
 	?>
 	<h3><?php _e('Região', 'rede-sustentabilidade'); ?></h3>
+  <span class="description"><?php _e('Se este usuário for um Editor Regional, selecione um estado. O usuário terá acesso apenas aos posts regionais relacionados aos estados especificados.', 'rede-sustentabilidade'); ?></span>
 	<table class="form-table">
 		<tr>
 			<th scope="row"><?php _e('Estados', 'rede-sustentabilidade'); ?></th>
@@ -399,7 +400,6 @@ function rs_user_fields($user)
 					<label for="rs_user_state_<?php echo $state->term_id; ?>"><input type="checkbox" name="user_state[]" id="rs_user_state_<?php echo $state->term_id; ?>" value="<?php echo $state->term_id; ?>" <?php if (in_array($state->term_id, $user_states)) echo 'checked="checked"'; ?> <?php if (!$can_edit) echo 'disabled="disabled"'; ?> /> <span><?php echo $state->name; ?> (<?php echo strtoupper($state->slug); ?>)</span></label><br />
 					<?php $i++; endforeach; ?>
 					<?php if ($can_edit) : ?>
-					<span class="description"><?php _e('O usuário terá acesso apenas aos posts regionais relacionados aos estados especificados.', 'rede-sustentabilidade'); ?></span>
 					<?php endif; ?>
 				</fieldset>
 			</td>

@@ -81,6 +81,8 @@
 
       <br class="clear">
 
+      <?php $current_user = wp_get_current_user(); ?>
+      <?php if(!$current_user->get('uf')) { ?>
       <div class="input text alignleft">
         <label for="">UF</label>
         <select name="afiliados.uf">
@@ -114,6 +116,7 @@
             <option class="level-0" value="TO" <?php echo (urldecode($filters['afiliados.uf']) == 'TO' ? 'selected=selected' : ''); ?>>Tocantins</option>
           </select>
       </div>
+      <?php } ?>
 
       <div class="input text alignleft">
         <label for="">Cidade</label>

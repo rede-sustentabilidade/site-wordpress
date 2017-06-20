@@ -44,6 +44,11 @@ class Filiados
               
               add_action( 'admin_action_rs_filiado_new_filiado', array($this, 'rs_filiado_new_filiado_admin_action') );
 
+              add_action( 'show_user_profile', array($this, 'rs_personal_options_custom_user_profile_fields') );
+              add_action( 'edit_user_profile', array($this, 'rs_add_custom_user_profile_fields') );
+
+              add_action( 'edit_user_profile_update', array($this, 'rs_save_custom_user_profile_fields')  );
+
               // Register the Post Type
               // $this->registerPostType(
               //     $this->postTypeNameSingle,
@@ -74,10 +79,91 @@ class Filiados
 
     public function registerMenuOptions()
     {
-        add_menu_page('Filiados', 'Filiados', 'filiados', 'rs_filiados', array($this, 'getFiliados'), 'dashicons-businessman');
-        add_submenu_page( 'rs_filiados', 'Adicionar novo', 'Adicionar novo', 'filiados', 'rs_filiado_new', array($this, 'newFiliado'));
-        add_submenu_page( 'rs_filiados', 'Detalhes do filiado', 'Detalhes do filiado', 'filiados', 'rs_filiado_profile', array($this, 'getProfile'));
+        add_menu_page('Filiados', 'Filiados', 'manage_filiados', 'rs_filiados', array($this, 'getFiliados'), 'dashicons-businessman');
+        add_submenu_page( 'rs_filiados', 'Adicionar novo', 'Adicionar novo', 'manage_filiados', 'rs_filiado_new', array($this, 'newFiliado'));
+        add_submenu_page( 'rs_filiados', 'Detalhes do filiado', 'Detalhes do filiado', 'manage_filiados', 'rs_filiado_profile', array($this, 'getProfile'));
     }
+
+
+
+    function rs_add_custom_user_profile_fields( $user ) {
+    ?>
+      <h3><?php _e('Organizador Estadual', 'your_textdomain'); ?></h3>
+      <span class="description">Se este usuário for um Organizador Estadual, selecione uma UF.</span>
+      
+      <table class="form-table">
+        <tr>
+          <th>
+            <label for="address">UF</label></th>
+          <td>
+            <select name="uf" id="uf">
+              <option value="">Selecione</option>
+              <option value="AC" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "AC" ? print "selected=selected" : ""); ?>>AC</option>
+              <option value="AL" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "AL" ? print "selected=selected" : ""); ?>>AL</option>
+              <option value="AM" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "AM" ? print "selected=selected" : ""); ?>>AM</option>
+              <option value="AP" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "AP" ? print "selected=selected" : ""); ?>>AP</option>
+              <option value="BA" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "BA" ? print "selected=selected" : ""); ?>>BA</option>
+              <option value="CE" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "CE" ? print "selected=selected" : ""); ?>>CE</option>
+              <option value="DF" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "DF" ? print "selected=selected" : ""); ?>>DF</option>
+              <option value="ES" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "ES" ? print "selected=selected" : ""); ?>>ES</option>
+              <option value="GO" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "GO" ? print "selected=selected" : ""); ?>>GO</option>
+              <option value="MA" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "MA" ? print "selected=selected" : ""); ?>>MA</option>
+              <option value="MG" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "MG" ? print "selected=selected" : ""); ?>>MG</option>
+              <option value="MS" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "MS" ? print "selected=selected" : ""); ?>>MS</option>
+              <option value="MT" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "MT" ? print "selected=selected" : ""); ?>>MT</option>
+              <option value="PA" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "PA" ? print "selected=selected" : ""); ?>>PA</option>
+              <option value="PB" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "PB" ? print "selected=selected" : ""); ?>>PB</option>
+              <option value="PE" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "PE" ? print "selected=selected" : ""); ?>>PE</option>
+              <option value="PI" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "PI" ? print "selected=selected" : ""); ?>>PI</option>
+              <option value="PR" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "PR" ? print "selected=selected" : ""); ?>>PR</option>
+              <option value="RJ" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "RJ" ? print "selected=selected" : ""); ?>>RJ</option>
+              <option value="RN" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "RN" ? print "selected=selected" : ""); ?>>RN</option>
+              <option value="RS" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "RS" ? print "selected=selected" : ""); ?>>RS</option>
+              <option value="RO" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "RO" ? print "selected=selected" : ""); ?>>RO</option>
+              <option value="RR" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "RR" ? print "selected=selected" : ""); ?>>RR</option>
+              <option value="SC" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "SC" ? print "selected=selected" : ""); ?>>SC</option>
+              <option value="SE" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "SE" ? print "selected=selected" : ""); ?>>SE</option>
+              <option value="SP" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "SP" ? print "selected=selected" : ""); ?>>SP</option>
+              <option value="TO" <?php (esc_attr( get_the_author_meta( 'uf', $user->ID ) ) == "TO" ? print "selected=selected" : ""); ?>>TO</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    <?php }
+
+    function rs_personal_options_custom_user_profile_fields( $user ) {
+    ?>
+      <h3><?php _e('Organizador Estadual', 'your_textdomain'); ?></h3>
+      <span class="description">Se este usuário for um Organizador Estadual, consulte abaixo seu estado. Lembre-se, somente o Administrador Geral poderá alterar a uf do organizador.</span>
+      
+      <table class="form-table">
+        <tr>
+          <th>
+            <label for="address">UF</label></th>
+          <td>
+            <?php print esc_attr( get_the_author_meta( 'uf', $user->ID ) ); ?>
+          </td>
+        </tr>
+      </table>
+    <?php }
+
+    function rs_save_custom_user_profile_fields( $user_id ) {
+      if ( !current_user_can( 'edit_user', $user_id ) )
+        return FALSE;
+
+      update_usermeta( $user_id, 'uf', $_POST['uf'] );
+    }
+
+    
+
+
+
+
+
+
+
+
+
 
     public function buildUrlFilters() {
       $filters = array(
@@ -98,17 +184,28 @@ class Filiados
       );
 
       $url_params = '';
+      $params = explode('&',$_SERVER['QUERY_STRING']);
 
-      foreach (explode('&',$_SERVER['QUERY_STRING']) as $query) {
+      $current_user = wp_get_current_user();
+      
+      foreach ($params as $query) {
         $filter_field = substr($query, 0,strpos($query, '='));
 
         if (strpos($query, '=') < (strlen($query) - 1)) {
           $filter_value = substr($query, strpos($query, '=')+1);
+          if($filter_field == 'afiliados.uf' && $current_user->get('uf')) {
+              $filter_value = $current_user->get('uf');
+          }
           $filters[$filter_field] = $filter_value;
           if ( ($filter_value !== '') && ($filter_field !== 'page') ) {
             $url_params .= $filter_field.'='.$filter_value.'&';
           }
         }
+      }
+
+      if($current_user->get('uf') && $filters['afiliados.uf'] == '') {
+        $filters['afiliados.uf'] = $current_user->get('uf');
+        $url_params .= 'afiliados.uf='.$current_user->get('uf').'&';
       }
 
       // $url_filters = str_replace('page=rs_contribuicoes&', '', $_SERVER['QUERY_STRING']);
