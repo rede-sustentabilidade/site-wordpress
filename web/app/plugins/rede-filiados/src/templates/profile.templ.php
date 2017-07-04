@@ -66,7 +66,7 @@
       <div class="input text alignleft">
         <label for="">Status</label>
         <select name="status" required>
-            <option value="">Todos</option>
+            <option value="">Selecione</option>
             <option class="level-0" value="3" <?php echo  ($profile->status == '3' ? 'selected=selected' : ''); ?>>Filiado</option>
             <option class="level-0" value="7" <?php echo  ($profile->status == '7' ? 'selected=selected' : ''); ?>>Desfiliado</option>
             <option class="level-0" value="8" <?php echo  ($profile->status == '8' ? 'selected=selected' : ''); ?>>Aguardando Confirmação</option>
