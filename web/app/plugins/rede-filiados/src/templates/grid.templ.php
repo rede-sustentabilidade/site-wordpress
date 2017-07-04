@@ -68,12 +68,7 @@
         <label for="">Status</label>
         <select name="afiliados.status">
             <option value="">Todos</option>
-            <option class="level-0" value="1" <?php echo (urldecode($filters['afiliados.status']) == '1' ? 'selected=selected' : ''); ?>>Aguardando Abono</option>
-            <option class="level-0" value="2" <?php echo (urldecode($filters['afiliados.status']) == '2' ? 'selected=selected' : ''); ?>>Aguardando Impugnação</option>
             <option class="level-0" value="3" <?php echo (urldecode($filters['afiliados.status']) == '3' ? 'selected=selected' : ''); ?>>Filiado</option>
-            <option class="level-0" value="4" <?php echo (urldecode($filters['afiliados.status']) == '4' ? 'selected=selected' : ''); ?>>Não abonado</option>
-            <option class="level-0" value="5" <?php echo (urldecode($filters['afiliados.status']) == '5' ? 'selected=selected' : ''); ?>>Em Impugnação</option>
-            <option class="level-0" value="6" <?php echo (urldecode($filters['afiliados.status']) == '6' ? 'selected=selected' : ''); ?>>Impugnado</option>
             <option class="level-0" value="7" <?php echo (urldecode($filters['afiliados.status']) == '7' ? 'selected=selected' : ''); ?>>Desfiliado</option>
             <option class="level-0" value="8" <?php echo (urldecode($filters['afiliados.status']) == '8' ? 'selected=selected' : ''); ?>>À Confirmar</option>
         </select>

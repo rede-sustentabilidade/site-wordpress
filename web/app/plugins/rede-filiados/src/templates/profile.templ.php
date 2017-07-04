@@ -67,15 +67,9 @@
         <label for="">Status</label>
         <select name="status" required>
             <option value="">Todos</option>
-            <option class="level-0" value="1" <?php echo  ($profile->status == '1' ? 'selected=selected' : ''); ?>>Aguardando Abono</option>
-            <option class="level-0" value="2" <?php echo  ($profile->status == '2' ? 'selected=selected' : ''); ?>>Aguardando Impugnação</option>
             <option class="level-0" value="3" <?php echo  ($profile->status == '3' ? 'selected=selected' : ''); ?>>Filiado</option>
-            <option class="level-0" value="4" <?php echo  ($profile->status == '4' ? 'selected=selected' : ''); ?>>Não abonado</option>
-            <option class="level-0" value="5" <?php echo  ($profile->status == '5' ? 'selected=selected' : ''); ?>>Em Impugnação</option>
-            <option class="level-0" value="6" <?php echo  ($profile->status == '6' ? 'selected=selected' : ''); ?>>Impugnado</option>
             <option class="level-0" value="7" <?php echo  ($profile->status == '7' ? 'selected=selected' : ''); ?>>Desfiliado</option>
             <option class="level-0" value="8" <?php echo  ($profile->status == '8' ? 'selected=selected' : ''); ?>>Aguardando Confirmação</option>
-            <option class="level-0" value="99" <?php echo ($profile->status == '99' ? 'selected=selected' : ''); ?>>Super Admin</option>
         </select>
       </div>
 
