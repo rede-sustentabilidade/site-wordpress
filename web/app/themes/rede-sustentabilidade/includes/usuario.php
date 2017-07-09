@@ -44,10 +44,11 @@ function is_filiado()
 }
 
 if (isset($_GET['logout'])) {
-	unset($_COOKIE['access_token']);
-	setcookie('access_token', null, -1);
-	setcookie('usuario', null, -1);
-	header('Location: ' . WP_PASSPORT_PATH + '/logout');
+	setcookie("access_token", "", time()-3600,"/");
+	setcookie("usuario", "", time()-3600,"/");
+    
+	header('Location: ' . WP_PASSPORT_PATH . '/logout');
+    exit;
 } else if (isset($_GET['code'])) {
     try {
         $provider = new RsProvider([
