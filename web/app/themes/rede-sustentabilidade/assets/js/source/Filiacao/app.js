@@ -56,8 +56,7 @@ define([
                 {'name': 'Introdução',       'id': '1', 'status': 'doing'},
                 {'name': 'Dados Pessoais',   'id': '2', 'status': 'todo'},
                 {'name': 'Dados Eleitorais', 'id': '3', 'status': 'todo'},
-                {'name': 'Doação',           'id': '4', 'status': 'todo'},
-                {'name': 'Interesses',       'id': '5', 'status': 'todo'}
+                {'name': 'Interesses',       'id': '4', 'status': 'todo'}
             ];
 
             // $http.get(API_PATH+'/area-interesse').success(function(data) {

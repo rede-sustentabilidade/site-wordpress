@@ -375,17 +375,17 @@ class Filiados
             'complemento'               => $_POST['complemento'],
 
             //Contribuição
-            'contribupdate'             => ((!empty($_POST['tipo'])) ? 1 : 0),
-            'contribuicao'              => str_replace(',', '.', $_POST['contribuicao']),
-            'dados_contribuicao'           => array(
-                'tipo'                      => $_POST['tipo'],
-                'bandeira'                  => $_POST['bandeira'],
-                'cartao_nome'               => $_POST['cartao_nome'],
-                'cartao_numero'             => $_POST['cartao_numero'],
-                'cartao_codigo_verificacao' => $_POST['cartao_codigo_verificacao'],
-                'cartao_validade_mes'       => $_POST['cartao_validade_mes'],
-                'cartao_validade_ano'       => $_POST['cartao_validade_ano'],
-            ),
+            // 'contribupdate'             => ((!empty($_POST['tipo'])) ? 1 : 0),
+            // 'contribuicao'              => str_replace(',', '.', $_POST['contribuicao']),
+            // 'dados_contribuicao'           => array(
+            //     'tipo'                      => $_POST['tipo'],
+            //     'bandeira'                  => $_POST['bandeira'],
+            //     'cartao_nome'               => $_POST['cartao_nome'],
+            //     'cartao_numero'             => $_POST['cartao_numero'],
+            //     'cartao_codigo_verificacao' => $_POST['cartao_codigo_verificacao'],
+            //     'cartao_validade_mes'       => $_POST['cartao_validade_mes'],
+            //     'cartao_validade_ano'       => $_POST['cartao_validade_ano'],
+            // ),
 
             
             //Interesses

@@ -408,7 +408,7 @@
       </div>
     </fieldset>
 
-    <fieldset>
+    <!--fieldset>
       <legend>Contribuição</legend>
       <div class="input text alignleft">
         <p>Para alterar informações de contribuição é necessário escolher o tipo e preencher os dados novamente. <strong>Os dados antigos de contribuição serão substituídos</strong>.</p>
@@ -481,7 +481,7 @@
           </select>
         </div>
       </div>
-    </fieldset>
+    </fieldset-->
 
 
 

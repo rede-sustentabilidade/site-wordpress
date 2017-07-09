@@ -309,7 +309,7 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                 </fieldset>
                 <button ng-click="handleNext(dismiss)" ng-disabled="form_3.$invalid" class="proximo"><span class="hmo">{{getNextLabel()}}</span> <i class="icon-seta-em-frente"></i></button>
             </form>
-            <form ng-switch-when="Doação" novalidate class="pure-form pure-form-stacked form-4" name="form_4">
+            <!--<form ng-switch-when="Doação" novalidate class="pure-form pure-form-stacked form-4" name="form_4">
                 <fieldset>
                     <legend>Visando garantir a sua autonomia e independência política, a #Rede propõe o financiamento de sua estrutura e ações através da contribuição direta de seus filiados. Com qual valor pretende colaborar mensalmente?</legend>
                     <div class="pure-g">
@@ -407,7 +407,7 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                     </div>
                 </fieldset>
                 <button ng-click="handleNext(dismiss)" ng-disabled="form_4.$invalid" class="proximo"><span class="hmo">{{getNextLabel()}}</span> <i class="icon-seta-em-frente"></i></button>
-            </form>
+            </form>-->
             <form ng-switch-when="Interesses" novalidate class="pure-form pure-form-stacked form-5" name="form_5">
                 <fieldset ng-show="!$parent.enviado_sucesso && !$parent.registro_ja_afiliado && !$parent.registro_ja_passaporte && !enviado_falha">
                     <legend>Acreditamos no Ativismo Autoral, e por isso queremos conhecer as áreas e temas que te interessam, se exerce alguma militância, e também se você tem disponibilidade para colaborar voluntariamente com a #Rede.</legend>
