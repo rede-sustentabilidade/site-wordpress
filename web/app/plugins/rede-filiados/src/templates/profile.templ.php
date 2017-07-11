@@ -2,7 +2,7 @@
 <script  src="https://rawgit.com/digitalBush/jquery.maskedinput/master/dist/jquery.maskedinput.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
 <div class="wrap">
-  <h2>Filiado: <?php echo $profile->fullname; ?> <!-- <a href="http://rede.local/wp/wp-admin/post-new.php?post_type=page" class="add-new-h2">Adicionar Nova</a> --></h2>
+  <h2>Cadastrado: <?php echo $profile->fullname; ?> <!-- <a href="http://rede.local/wp/wp-admin/post-new.php?post_type=page" class="add-new-h2">Adicionar Nova</a> --></h2>
   <p>Tenha cuidado ao editar o filiado, os dados apresentados estão exatamente como são salvos no banco de dados.</p>
   <p>É muito importante só alterar o necessário e incluir apenas informações reais.</p>
 

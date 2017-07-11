@@ -60,3 +60,17 @@ function remove_roles_on_afiliados_deactivation() {
 }
 
 register_deactivation_hook( __FILE__, 'remove_roles_on_afiliados_deactivation' );
+
+
+add_action( 'admin_head', 'menu_highlight' );
+
+function menu_highlight() {
+	global $parent_file, $submenu_file, $post_type, $plugin_page;
+    remove_submenu_page( 'rs_filiados', 'rs_filiado_profile' );
+	if ( 'rs_filiado_profile' == $plugin_page ) :
+		$parent_file = 'rs_filiados';
+		$submenu_file = 'rs_filiados';
+
+        
+	endif;
+}

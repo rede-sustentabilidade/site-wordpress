@@ -79,9 +79,9 @@ class Filiados
 
     public function registerMenuOptions()
     {
-        add_menu_page('Filiados', 'Filiados', 'manage_filiados', 'rs_filiados', array($this, 'getFiliados'), 'dashicons-businessman');
+        add_menu_page('Cadastrados', 'Cadastrados', 'manage_filiados', 'rs_filiados', array($this, 'getFiliados'), 'dashicons-businessman');
         add_submenu_page( 'rs_filiados', 'Adicionar novo', 'Adicionar novo', 'manage_filiados', 'rs_filiado_new', array($this, 'newFiliado'));
-        add_submenu_page( 'rs_filiados', 'Detalhes do filiado', 'Detalhes do filiado', 'manage_filiados', 'rs_filiado_profile', array($this, 'getProfile'));
+        add_submenu_page( 'rs_filiados', 'Detalhes do cadastrado', 'Detalhes do cadastrado', 'manage_filiados', 'rs_filiado_profile', array($this, 'getProfile'));
     }
 
 
@@ -560,12 +560,12 @@ class Filiados
         wp_register_script('backgrid-paginator_f', ppf() . 'js/backgrid-paginator.js', array('backgrid_f'), null, true);
         wp_register_script('rede_filiados_main_js', ppf() . 'js/main.js', array('backgrid-paginator_f', 'backbone-paginator_f'), null, true);
         wp_enqueue_script('rede_filiados_main_js');
-      } else if ( (isset($hook)) && ($hook == 'filiados_page_rs_filiado_profile') ) {
+      } else if ( (isset($hook)) && ($hook == 'cadastrados_page_rs_filiado_profile') ) {
         wp_register_style('profile_f', ppf() . 'css/profile.css');
         wp_enqueue_style(array('profile_f'));
         wp_register_script('rede_filiados_filiado_new_js', ppf() . 'js/new-filiado.js', null, null, true);
         wp_enqueue_script('rede_filiados_filiado_new_js');
-      } else if ( (isset($hook)) && ($hook == 'filiados_page_rs_filiado_new') ) {
+      } else if ( (isset($hook)) && ($hook == 'cadastrados_page_rs_filiado_new') ) {
         wp_register_style('filiado_new_f', ppf() . 'css/new-filiado.css');
         wp_register_script('rede_filiados_filiado_new_js', ppf() . 'js/new-filiado.js', null, null, true);
         wp_enqueue_style(array('filiado_new_f'));

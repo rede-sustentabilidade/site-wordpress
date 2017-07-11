@@ -4,7 +4,7 @@
 
 
 <div class="wrap">
-  <h2>Novo Filiado</h2>
+  <h2>Novo Cadastrado</h2>
   <p>Ao registrar, será enviada uma mensagem para o e-mail inserido, contendo uma senha de acesso.</p>
   <p>Insira o e-mail do novo filiado:</p>
 

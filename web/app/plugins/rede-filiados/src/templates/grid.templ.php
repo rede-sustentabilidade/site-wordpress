@@ -1,5 +1,5 @@
 <div class="wrap">
-  <h2>Filiados (<span id="total_contribuicoes">0</span>) <!-- <a href="http://rede.local/wp/wp-admin/post-new.php?post_type=page" class="add-new-h2">Adicionar Nova</a> --></h2>
+  <h2>Cadastrados (<span id="total_contribuicoes">0</span>) <!-- <a href="http://rede.local/wp/wp-admin/post-new.php?post_type=page" class="add-new-h2">Adicionar Nova</a> --></h2>
   
   <?php 
   if ( (isset($aviso)) && (!empty($aviso))) { 
@@ -65,7 +65,7 @@
       </div>
 
       <div class="input text alignleft">
-        <label for="">Status</label>
+        <label for="" style="font-weight: bold">Status</label>
         <select name="afiliados.status">
             <option value="">Todos</option>
             <option class="level-0" value="3" <?php echo (urldecode($filters['afiliados.status']) == '3' ? 'selected=selected' : ''); ?>>Filiado</option>
