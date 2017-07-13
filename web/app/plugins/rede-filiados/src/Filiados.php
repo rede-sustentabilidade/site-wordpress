@@ -352,7 +352,7 @@ class Filiados
             'tipo_Filiacao'                 => $_POST['tipo_Filiacao'],
             'quer_ser_candidato'            => $_POST['quer_ser_candidato'],
             'candidato_cargo'               => $_POST['candidato_cargo'],
-            'candidato_base'               => $_POST['candidato_base'],
+            'candidato_base'                => $_POST['candidato_base'],
             'candidato_motivo'              => $_POST['candidato_motivo'],
             'candidato_estatuto'            => $_POST['candidato_estatuto'],
             'candidato_antecedentes'        => $_POST['candidato_antecedentes'],
@@ -375,17 +375,7 @@ class Filiados
             'complemento'               => $_POST['complemento'],
 
             //Contribuição
-            // 'contribupdate'             => ((!empty($_POST['tipo'])) ? 1 : 0),
-            // 'contribuicao'              => str_replace(',', '.', $_POST['contribuicao']),
-            // 'dados_contribuicao'           => array(
-            //     'tipo'                      => $_POST['tipo'],
-            //     'bandeira'                  => $_POST['bandeira'],
-            //     'cartao_nome'               => $_POST['cartao_nome'],
-            //     'cartao_numero'             => $_POST['cartao_numero'],
-            //     'cartao_codigo_verificacao' => $_POST['cartao_codigo_verificacao'],
-            //     'cartao_validade_mes'       => $_POST['cartao_validade_mes'],
-            //     'cartao_validade_ano'       => $_POST['cartao_validade_ano'],
-            // ),
+            'contribuicao'              => 0,
 
             
             //Interesses
@@ -466,7 +456,7 @@ class Filiados
                     //Dados básicos
                     'fullname'                      => $_POST['fullname'],
                     'nome_mae'                      => $_POST['nome_mae'],
-                    'birthday'                      => $_POST['birthday'],
+                    'birthday'                      => preg_replace("/(\d{4})-(\d{2})-(\d{2})/", "$3$2$1", $_POST['birthday']),
                     'sexo'                          => $_POST['sexo'],
                     'status'                        => $_POST['status'],
                     'telefone_residencial'          => $_POST['telefone_residencial'],
@@ -505,16 +495,7 @@ class Filiados
                     'complemento'               => $_POST['complemento'],
 
                     //Contribuição
-                    'contribuicao'              => str_replace(',', '.', $_POST['contribuicao']),
-                    'forma_pagamento'           => array(
-                        'tipo'                      => $_POST['tipo'],
-                        'bandeira'                  => $_POST['bandeira'],
-                        'cartao_nome'               => $_POST['cartao_nome'],
-                        'cartao_numero'             => $_POST['cartao_numero'],
-                        'cartao_codigo_verificacao' => $_POST['cartao_codigo_verificacao'],
-                        'cartao_validade_mes'       => $_POST['cartao_validade_mes'],
-                        'cartao_validade_ano'       => $_POST['cartao_validade_ano'],
-                    ),
+                    'contribuicao'              => 0,
 
                     
                     //Interesses
@@ -535,7 +516,7 @@ class Filiados
 
                 $data = $api->saveFiliado($filiado);
 
-                if ( $data['response']['code'] != 500 ) {
+                if ( $data['response']['code'] != 200) {
                     $_SESSION['aviso'] = 'O cadastro da filiação não foi realizado, algo está errado, tente novamente mais tarde.';
                     $_SESSION['error'] = true;
                     error_log('Ocorreu um erro ao executar cadastramento da filiação:'. print_r($data, true));

@@ -1,7 +1,8 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css"/ >
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.js"></script>
 <script  src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
 <script  src="https://rawgit.com/digitalBush/jquery.maskedinput/master/dist/jquery.maskedinput.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
-
 
 <div class="wrap">
   <h2>Novo Cadastrado</h2>
@@ -65,7 +66,7 @@
 
       <div class="input text alignleft">
         <label for="birthday">Data de nascimento (DD/MM/AAAA)</label>
-        <input type="date" name="birthday-formatted" required value="<?php echo $_POST['birthday'] ?>">
+        <input type="text" name="birthday-formatted" required value="<?php echo $_POST['birthday'] ?>">
         <input type="hidden" name="birthday" required value="<?php echo $_POST['birthday'] ?>">
       </div>
 
@@ -422,83 +423,6 @@
         <textarea name="complemento" maxlength="255"><?php echo $_POST['complemento']; ?></textarea>
       </div>
     </fieldset>
-
-    <fieldset>
-      <legend>Contribuição</legend>
-      <div class="input text alignleft">
-        <p>Para alterar informações de contribuição é necessário escolher o tipo e preencher os dados novamente. <strong>Os dados antigos de contribuição serão substituídos</strong>.</p>
-        <label class="inner-label" for="forma_pagamento_tipo_CC">
-            <input type="radio" name="tipo" id="forma_pagamento_tipo_CC" value="cartao-credito" <?php if (!empty($_POST['tipo']) && $_POST['tipo'] == 'cartao-credito') echo 'checked="checked"'; ?> />
-            Cartão de crédito
-        </label>
-        <label class="inner-label" for="forma_pagamento_tipo_BOLETO">
-            <input type="radio" name="tipo" id="forma_pagamento_tipo_BOLETO" value="boleto" <?php if (!empty($_POST['tipo']) && $_POST['tipo'] == 'boleto') echo 'checked="checked"'; ?> />
-            Boleto
-        </label>
-      </div>
-      <div class="input text alignleft">
-          <label for="contribuicao">Valor (R$) - use "," para separação</label>
-          <input id="contribuicao" type="hidden" name="contribuicao" value="<?php echo $_POST['contribuicao'] ?>">
-          <input id="contribuicao-formatted" name="contribuicao-formatted" required  type="text" class="pure-input-1-2" value="<?php echo $_POST['contribuicao'] ?>" maxlength="14">
-      </div>
-
-      <div id="tipo-cartao-credito" style="display:none;">
-        <div class="input text alignleft">
-          <label for="forma_pagamento_bandeira">Bandeira</label>
-        </div>
-        <div class="input text alignleft">
-          <label class="inner-label" for="forma_pagamento_bandeira_mastercard">
-            <input type="radio" name="bandeira" id="forma_pagamento_bandeira_mastercard" value="mastercard" style="vertical-align:middle;" <?php if ($_POST['bandeira'] == 'mastercard') echo 'checked="checked"'; ?> />
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cartao/mastercard.png" style="vertical-align:middle;" />
-          </label>
-        </div>
-        <div class="input text alignleft">
-          <label class="inner-label" for="forma_pagamento_bandeira_visa">
-              <input type="radio" name="bandeira" id="forma_pagamento_bandeira_visa" value="visa" style="vertical-align:middle;" <?php if ($_POST['bandeira'] == 'visa') echo 'checked="checked"'; ?> />
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cartao/visa.png" style="vertical-align:middle;" />
-          </label>
-        </div>
-        <div class="input text alignleft">
-          <label for="cartao_nome">Nome no cartão</label>
-          <input id="cartao_nome" name="cartao_nome" type="text" class="pure-input-1" value="<?php echo $_POST['cartao_nome']; ?>" maxlength="255">
-        </div>
-        <div class="input text alignleft">
-          <label for="cartao_numero">Número do cartão</label>
-          <input id="cartao_numero" name="cartao_numero" type="text" class="pure-input-1" value="<?php echo $_POST['cartao_numero']; ?>" maxlength="19">
-        </div>
-        <div class="input text alignleft">
-          <label for="cartao_codigo_verificacao">Código de verificação</label>
-          <input id="cartao_codigo_verificacao" name="cartao_codigo_verificacao" type="text" class="pure-input-1-4" value="<?php echo $_POST['cartao_codigo_verificacao']; ?>" maxlength="4">
-        </div>
-        <div class="input text alignleft">
-          <label for="cartao_validade_mes">Validade</label>
-          <select id="cartao_validade_mes" name="cartao_validade_mes" class="pure-input-1">
-              <option value="">Mês</option>
-              <?php // Preenche com 12 meses do ano
-              for ($x=1; $x<=12; $x++ ){
-                  $selected = $x == $_POST['cartao_validade_mes'] ? 'selected="selected"' : '';
-                  printf("<option value=\"%d\" %s>%d</option>", $x, $selected, $x);
-              }
-              ?>
-          </select>
-        </div>
-        <div class="input text alignleft">
-          <label for="cartao_validade_ano">&nbsp;</label>
-          <select id="cartao_validade_ano" name="cartao_validade_ano" class="pure-input-1-3">
-              <option value="">Ano</option>
-              <?php
-              $ano_atual = date("Y");
-              for ($x=$ano_atual; $x<=$ano_atual+10; $x++ ){
-                  $selected = $x == $_POST['cartao_validade_ano'] ? 'selected="selected"' : '';
-                  printf("<option value=\"%d\" %s>%d</option>", $x, $selected, $x);
-              }
-              ?>
-          </select>
-        </div>
-      </div>
-    </fieldset>
-
-
 
     <fieldset>
       <legend>Interesses</legend>

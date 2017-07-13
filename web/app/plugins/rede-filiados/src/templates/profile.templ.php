@@ -1,6 +1,9 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css"/ >
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.js"></script>
 <script  src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
 <script  src="https://rawgit.com/digitalBush/jquery.maskedinput/master/dist/jquery.maskedinput.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+
 <div class="wrap">
   <h2>Cadastrado: <?php echo $profile->fullname; ?> <!-- <a href="http://rede.local/wp/wp-admin/post-new.php?post_type=page" class="add-new-h2">Adicionar Nova</a> --></h2>
   <p>Tenha cuidado ao editar o filiado, os dados apresentados estão exatamente como são salvos no banco de dados.</p>
@@ -50,7 +53,7 @@
 
       <div class="input text alignleft">
         <label for="birthday">Data de nascimento (DD/MM/AAAA)</label>
-        <input type="date" name="birthday-formatted" required value="<?php echo $profile->birthday ?>">
+        <input type="text" name="birthday-formatted" required value="<?php echo $profile->birthday ?>">
         <input type="hidden" name="birthday" required value="<?php echo $profile->birthday ?>">
       </div>
 
@@ -85,7 +88,7 @@
 
       <div class="input text alignleft">
         <label for="">Telefone Comercial</label>
-        <input type="text" name="telefone_comercial" value="<?php echo $profile->telefone_comercial ?>"  maxlength="15">
+        <input type="tel" name="telefone_comercial" value="<?php echo $profile->telefone_comercial ?>"  maxlength="15">
       </div>
 
       <div class="input text alignleft">

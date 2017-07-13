@@ -85,8 +85,17 @@ jQuery(document).ready(function() {
 
 
     //Birthday MASK
+    jQuery.datetimepicker.setLocale('pt-BR');
+    if(jQuery("input[name='birthday-formatted']").val().indexOf('-') > -1) {
+        jQuery("input[name='birthday-formatted']").val(destroyMaskUS(jQuery("input[name='birthday-formatted']").val())).trigger('change');
+    }
+    jQuery("input[name='birthday-formatted']").datetimepicker({
+        format:'d/m/Y',
+        timepicker:false,
+        mask: true
+    });
     jQuery("input[name='birthday-formatted']").on("keyup change", function(){
-        jQuery("input[name='birthday']").val(this.value);
+        jQuery("input[name='birthday']").val(destroyMask(this.value));
     }).trigger('change');
 
     function createMask(string){
@@ -94,7 +103,11 @@ jQuery(document).ready(function() {
     }
 
     function destroyMask(string) {
-        return string.replace(/\D/g,'').substring(0,8);
+        return string.replace(/(\d{2})\/(\d{2})\/(\d{4})/,"$3-$2-$1");
+    }
+
+    function destroyMaskUS(string) {
+        return string.replace(/(\d{4})-(\d{2})-(\d{2})/,"$3/$2/$1");
     }
 
 
