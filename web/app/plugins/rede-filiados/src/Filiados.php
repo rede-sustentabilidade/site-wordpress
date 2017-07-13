@@ -40,7 +40,7 @@ class Filiados
 
               add_action( 'admin_action_rs_filiado_profile', array($this, 'rs_filiado_profile_admin_action') );
 
-              add_action( 'load-filiados_page_rs_filiado_new', array($this, 'rs_filiado_new_passaporte') );
+              add_action( 'load-cadastrados_page_rs_filiado_new', array($this, 'rs_filiado_new_passaporte') );
               
               add_action( 'admin_action_rs_filiado_new_filiado', array($this, 'rs_filiado_new_filiado_admin_action') );
 
