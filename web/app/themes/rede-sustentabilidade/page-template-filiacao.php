@@ -28,10 +28,7 @@ global $usuario;
         <div ng-switch="getCurrentStep()" class="slide-frame">
             <form ng-switch-when="Introdução" novalidate class="pure-form pure-form-stacked form-1" name="form_1" onsubmit="$">
                 <fieldset ng-show="!$parent.ja_preencheu">
-                    <legend>Seja mais um elo da #Rede e ajude a criar uma nova cultura política no Brasil!<br />
-Esse é o cadastro de filiação à #Rede. Essa filiação é apenas política, ou seja, não tem efeitos legais, pois a Rede Sustentabilidade ainda não está registrada frente ao TSE.<br />
-Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da Rede Sustentabilidade. É através dele que você saberá o posicionamento da #Rede, e a que viemos.</legend>
-                    <p class="mensagem duvida">Dúvidas? Escreva para o email <a href="mailto:filiacao@redesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a></p>
+                    <?php print get_post_meta( get_the_ID(), 'texto_1', true ); ?>
                     <label for="leu_manifesto">
                         <input type="checkbox" iCheck ng-model="$parent.filiado.leu_manifesto" required name="leu_manifesto" id="leu_manifesto" value="sim" />
                         li o <a class="simple-ajax-popup" gallery href="<?php echo get_stylesheet_directory_uri(); ?>/utilidades/page-content-by-slug.php?pagename=manifesto">Manifesto da Rede Sustentabilidade</a>
@@ -42,7 +39,7 @@ Antes de solicitar a filiação, leia o Manifesto e o Estatuto de fundação da 
                         li o <a class="simple-ajax-popup" gallery href="<?php echo get_stylesheet_directory_uri(); ?>/utilidades/page-content-by-slug.php?pagename=estatuto">Estatuto de fundação da Rede Sustentabilidade</a>
                     </label>
                     <p class="mensagem erro" ng-show="form_1.leu_estatuto.$dirty && form_1.leu_estatuto.$invalid">É obrigatória a leitura do Estatuto.</p>
-                    <p class="mensagem">Analise com atenção a ficha de cadastro nas próximas páginas, composta por 5 passos, para considerar as diferentes formas de engajamento e suas respectivas responsabilidades. Acreditamos que para dar esse passo, é vital ter a disposição generosa para conviver na diversidade e crescer na busca de convergências, compreendendo que ter voz significa também se dispor a ouvir.</p>
+                    <p class="mensagem"><?php print get_post_meta( get_the_ID(), 'texto_2', true ); ?></p>
                 </fieldset>
                 <button ng-show="!$parent.ja_preencheu" ng-click="handleNext(dismiss)" ng-disabled="form_1.$invalid" class="proximo"><span class="hmo">{{getNextLabel()}}</span> <i class="icon-seta-em-frente"></i></button>
                 <div class="box-aviso-resultado pure-u-1" ng-show="$parent.ja_preencheu">
