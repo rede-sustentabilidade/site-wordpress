@@ -81,8 +81,15 @@ if (have_posts()) : ?>
       z-index: 10;
       border-bottom-left-radius: 10px;
     }
+
+    @media (max-width: 640px) {
+      #bannerAmazonia {
+        top: 220px;
+        right: 10px;
+      }
+    }
   </style>
-  <div id="bannerAmazonia">
+<div id="bannerAmazonia">
     <a href="https://redesustentabilidade.org.br/2017/08/31/rede-participa-do-ato-mundial-em-defesa-da-amazonia-neste-sabado-em-macapa/"
       target="_self">
       <img src="https://rede-sustentabilidade-org.s3-sa-east-1.amazonaws.com/2017/09/rede-amazonia.jpg" alt="Ato em defesa da Amazônia - 2 set - 16h" />
