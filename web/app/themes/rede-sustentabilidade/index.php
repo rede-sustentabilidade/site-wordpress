@@ -50,4 +50,51 @@ if (have_posts()) : ?>
     <div class="view-previous button-pagination"><?php next_posts_link(__('Anterior', 'pinbin')); ?></div>
     <div class="view-next button-pagination"><?php previous_posts_link(__('Próximo', 'pinbin')); ?></div>
 </nav>
+<style>
+    #bannerAmazonia {
+      display: block;
+      position: fixed;
+      top: 200px;
+      right: 200px;
+      width: 350px;
+      height: 350px;
+      background: white;
+      border: 1px solid #24603C;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, .5);
+    }
+
+    #bannerAmazonia a:nth-child(2) {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: sans-serif;
+      font-weight: lighter;
+      font-style: normal;
+      font-size: 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      background-color: #24603C;
+      padding: 5px 10px;
+      z-index: 10;
+      border-bottom-left-radius: 10px;
+    }
+  </style>
+  <div id="bannerAmazonia">
+    <a href="https://redesustentabilidade.org.br/2017/08/31/rede-participa-do-ato-mundial-em-defesa-da-amazonia-neste-sabado-em-macapa/"
+      target="_self">
+      <img src="./rede-amazonia.jpg" alt="Ato em defesa da Amazônia - 2 set - 16h" />
+    </a>
+    <a href="javascript: bannerAmazoniaFechar();">fechar</a>
+  </div>
+  <script>
+    function bannerAmazoniaFechar() {
+      var banner = document.getElementById('bannerAmazonia');
+
+      if (banner) {
+        banner.parentElement.removeChild(banner);
+      }
+    }
+    </script>
 <?php get_footer(); ?>
