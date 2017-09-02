@@ -84,7 +84,7 @@ if (have_posts()) : ?>
   <div id="bannerAmazonia">
     <a href="https://redesustentabilidade.org.br/2017/08/31/rede-participa-do-ato-mundial-em-defesa-da-amazonia-neste-sabado-em-macapa/"
       target="_self">
-      <img src="./rede-amazonia.jpg" alt="Ato em defesa da Amazônia - 2 set - 16h" />
+      <img src="https://rede-sustentabilidade-org.s3-sa-east-1.amazonaws.com/2017/09/rede-amazonia.jpg" alt="Ato em defesa da Amazônia - 2 set - 16h" />
     </a>
     <a href="javascript: bannerAmazoniaFechar();">fechar</a>
   </div>
