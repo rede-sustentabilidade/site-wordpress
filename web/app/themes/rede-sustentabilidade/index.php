@@ -61,7 +61,7 @@ if (have_posts()) : ?>
       background: white;
       border: 1px solid #24603C;
       box-shadow: 0 20px 30px rgba(0, 0, 0, .5);
-      z-index: 1;
+      z-index: 99999;
     }
 
     #bannerAmazonia a:nth-child(2) {
@@ -97,5 +97,5 @@ if (have_posts()) : ?>
         banner.parentElement.removeChild(banner);
       }
     }
-    </script>
+  </script>
 <?php get_footer(); ?>
