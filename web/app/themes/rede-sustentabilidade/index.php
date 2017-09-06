@@ -56,8 +56,8 @@ if (have_posts()) : ?>
       position: fixed;
       top: 200px;
       right: 200px;
-      width: 350px;
-      height: 350px;
+      width: 300px;
+      height: 300px;
       background: white;
       border: 1px solid #24603C;
       box-shadow: 0 20px 30px rgba(0, 0, 0, .5);
@@ -84,15 +84,17 @@ if (have_posts()) : ?>
 
     @media (max-width: 640px) {
       #bannerAmazonia {
-        top: 220px;
-        right: 10px;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        margin-left: -150px;
       }
     }
   </style>
 <div id="bannerAmazonia">
-    <a href="https://redesustentabilidade.org.br/2017/08/31/rede-participa-do-ato-mundial-em-defesa-da-amazonia-neste-sabado-em-macapa/"
+    <a href="https://redesustentabilidade.org.br/2017/09/05/a-amazonia-corre-perigo-precisamos-dizer-basta-a-exploracao-desenfreada/"
       target="_self">
-      <img src="https://rede-sustentabilidade-org.s3-sa-east-1.amazonaws.com/2017/09/rede-amazonia.jpg" alt="Ato em defesa da Amazônia - 2 set - 16h" />
+      <img src="https://rede-sustentabilidade-org.s3-sa-east-1.amazonaws.com/2017/09/rede-amazonia.gif" alt="Dia da Amazônia" />
     </a>
     <a href="javascript: bannerAmazoniaFechar();">fechar</a>
   </div>
