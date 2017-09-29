@@ -31,12 +31,12 @@ global $usuario;
                     <?php print get_post_meta( get_the_ID(), 'texto_1', true ); ?>
                     <label for="leu_manifesto">
                         <input type="checkbox" iCheck ng-model="$parent.filiado.leu_manifesto" required name="leu_manifesto" id="leu_manifesto" value="sim" />
-                        li o <a class="simple-ajax-popup" gallery href="<?php echo get_stylesheet_directory_uri(); ?>/utilidades/page-content-by-slug.php?pagename=manifesto">Manifesto da Rede Sustentabilidade</a>
+                        li o <a class="simple-ajax-popup" gallery href="https://redesustentabilidade.org.br/manifesto/">Manifesto da Rede Sustentabilidade</a>
                     </label>
                     <p class="mensagem erro" ng-show="form_1.leu_manifesto.$dirty && form_1.leu_manifesto.$invalid">É obrigatória a leitura do manifesto.</p>
                     <label for="leu_estatuto">
                         <input type="checkbox" iCheck ng-model="$parent.filiado.leu_estatuto" required name="leu_estatuto" id="leu_estatuto" value="sim" />
-                        li o <a class="simple-ajax-popup" gallery href="<?php echo get_stylesheet_directory_uri(); ?>/utilidades/page-content-by-slug.php?pagename=estatuto">Estatuto de fundação da Rede Sustentabilidade</a>
+                        li o <a class="simple-ajax-popup" gallery href="https://redesustentabilidade.org.br/estatuto/">Estatuto de fundação da Rede Sustentabilidade</a>
                     </label>
                     <p class="mensagem erro" ng-show="form_1.leu_estatuto.$dirty && form_1.leu_estatuto.$invalid">É obrigatória a leitura do Estatuto.</p>
                     <p class="mensagem"><?php print get_post_meta( get_the_ID(), 'texto_2', true ); ?></p>
