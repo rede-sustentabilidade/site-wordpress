@@ -103,7 +103,7 @@ global $usuario;
                         </div>
                         <div class="pure-u-1-5">
                             <label for="complemento">&nbsp;</label>
-                            <input name="complemento" placeholder="Complemento" required ng-model="$parent.filiado.complemento" id="complemento" type="text" class="pure-input-1">
+                            <input name="complemento" placeholder="Complemento" ng-model="$parent.filiado.complemento" id="complemento" type="text" class="pure-input-1">
                         </div>
                     </div>
                     <div class="pure-g">
