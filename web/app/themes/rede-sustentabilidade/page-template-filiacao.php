@@ -154,7 +154,7 @@ global $usuario;
                     <div class="pure-g">
                         <div class="pure-u-1-3">
                             <label for="telefone_residencial">Telefone Residencial</label>
-                            <input placeholder="Residencial" required ng-model="$parent.filiado.telefone_residencial" name="telefone_residencial" id="telefone_residencial" type="text"  class="pure-input-1">
+                            <input placeholder="Residencial" ng-model="$parent.filiado.telefone_residencial" name="telefone_residencial" id="telefone_residencial" type="text"  class="pure-input-1">
                         </div>
                         <div class="pure-u-1-3">
                             <label for="telefone_celular">Celular</label>
