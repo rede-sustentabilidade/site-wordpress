@@ -95,30 +95,30 @@ global $usuario;
                     <div class="pure-g">
                         <div class="pure-u-3-5">
                             <label for="endereco">Seu Endereço <!-- span>(Se você mora fora do Brasil, informe o país em "complemento")</span--> </label>
-                            <input name="endereco" placeholder="Logradouro" ng-model="$parent.filiado.endereco" id="endereco" type="text" class="pure-input-1">
+                            <input name="endereco" placeholder="Logradouro" required ng-model="$parent.filiado.endereco" id="endereco" type="text" class="pure-input-1">
                         </div>
                         <div class="pure-u-1-5">
                             <label for="numero">&nbsp;</label>
-                            <input name="numero" placeholder="Número" ng-model="$parent.filiado.numero" id="numero" type="text" class="pure-input-1">
+                            <input name="numero" placeholder="Número" required ng-model="$parent.filiado.numero" id="numero" type="text" class="pure-input-1">
                         </div>
                         <div class="pure-u-1-5">
                             <label for="complemento">&nbsp;</label>
-                            <input name="complemento" placeholder="Complemento" ng-model="$parent.filiado.complemento" id="complemento" type="text" class="pure-input-1">
+                            <input name="complemento" placeholder="Complemento" required ng-model="$parent.filiado.complemento" id="complemento" type="text" class="pure-input-1">
                         </div>
                     </div>
                     <div class="pure-g">
                         <div class="pure-u-1-3">
                             <!--label for="bairro">Bairro</label-->
-                            <input name="bairro" placeholder="Bairro" ng-model="$parent.filiado.bairro" id="bairro" type="text" class="pure-input-1">
+                            <input name="bairro" placeholder="Bairro" required ng-model="$parent.filiado.bairro" id="bairro" type="text" class="pure-input-1">
                         </div>
                         <div class="pure-u-1-3">
                             <!--label for="cidade">Cidade</label-->
-                            <input name="cidade" placeholder="Cidade" ng-model="$parent.filiado.cidade" id="cidade" type="text" class="pure-input-1">
+                            <input name="cidade" placeholder="Cidade" required ng-model="$parent.filiado.cidade" id="cidade" type="text" class="pure-input-1">
                         </div>
                         <div class="pure-u-1-3">
                             <!--label for="uf">Estado</label-->
                             <!--<input name="uf" placeholder="Estado" required ng-model="$parent.filiado.uf" id="uf" type="text" class="pure-input-1">-->
-                            <select name="uf" ng-model="$parent.filiado.uf" id="uf" class="pure-select">
+                            <select name="uf" required ng-model="$parent.filiado.uf" id="uf" class="pure-select">
                                 <option value="">Estado</option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
