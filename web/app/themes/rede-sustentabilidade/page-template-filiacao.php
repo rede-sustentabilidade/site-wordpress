@@ -49,10 +49,14 @@ global $usuario;
             <form ng-switch-when="Dados Pessoais" novalidate class="pure-form pure-form-stacked form-2" name="form_2">
                 <fieldset>
                      <div class="pure-g">
-                         <div class="pure-u-1">
+                        <div class="pure-u-1">
                             <p class="mensagem duvida">Dúvidas? Escreva para o email <a href="mailto:filiacao@redesustentabilidade.org.br">filiacao@redesustentabilidade.org.br</a></p>
                              <label for="birthday">Nome Completo</label>
                              <input id="fullname" name="fullname" required ng-model="$parent.filiado.fullname" type="text" class="pure-input-1-3">
+                         </div>
+                         <div class="pure-u-1">
+                             <label for="nome_social">Nome Social</label>
+                             <input id="nome_social" name="nome_social" ng-model="$parent.filiado.nome_social" type="text" class="pure-input-1-3">
                          </div>
                          <div class="pure-u-1" ng-if="logged == false">
                             <label for="email">E-mail</label>

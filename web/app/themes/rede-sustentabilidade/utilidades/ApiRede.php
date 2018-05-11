@@ -32,7 +32,7 @@ class ApiRede
         $curl = curl_init();
         // Set some options - we are passing in a useragent too here
         curl_setopt_array($curl, array(
-              CURLOPT_URL            => $service_url,
+            CURLOPT_URL            => $service_url,
             CURLOPT_RETURNTRANSFER => true,
             //CURLOPT_HEADER         => true,
             CURLOPT_FOLLOWLOCATION => true,

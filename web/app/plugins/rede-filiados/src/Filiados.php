@@ -335,6 +335,7 @@ class Filiados
 
             //Dados básicos
             'fullname'                      => $_POST['fullname'],
+            'nome_social'                   => $_POST['nome_social'],
             'nome_mae'                      => $_POST['nome_mae'],
             'birthday'                      => $_POST['birthday'],
             'sexo'                          => $_POST['sexo'],

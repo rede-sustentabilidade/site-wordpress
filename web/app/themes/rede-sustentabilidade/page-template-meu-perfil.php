@@ -86,6 +86,10 @@ get_header();
               <input id="display_name" name="display_name" type="text" class="pure-input-1" value="<?php echo $filiado->fullname; ?>">
           </div>
           <div class="pure-u-1">
+              <label for="nome_social">Nome Social</label>
+              <input id="nome_social" name="nome_social" type="text" class="pure-input-1" value="<?php echo $filiado->nome_social; ?>">
+          </div>
+          <div class="pure-u-1">
               <label for="user_email">Meu e-mail</label>
               <input id="user_email" readonly name="user_email" required  type="text" class="pure-input-1" value="<?php echo $filiado->email; ?>">
               <span>Não é possível alterar email</span>
