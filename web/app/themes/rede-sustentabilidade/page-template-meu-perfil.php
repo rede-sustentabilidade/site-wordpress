@@ -86,7 +86,7 @@ get_header();
               <input id="display_name" name="display_name" type="text" class="pure-input-1" value="<?php echo $filiado->fullname; ?>">
           </div>
           <div class="pure-u-1">
-              <label for="nome_social">Nome Social</label>
+          <label for="">Nome Social (de acordo com <a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/D8727.htm" target="_black">decreto 8.727</a>)</label>
               <input id="nome_social" name="nome_social" type="text" class="pure-input-1" value="<?php echo $filiado->nome_social; ?>">
           </div>
           <div class="pure-u-1">
