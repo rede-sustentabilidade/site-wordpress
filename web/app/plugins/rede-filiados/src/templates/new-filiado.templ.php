@@ -60,6 +60,11 @@
       </div>
 
       <div class="input text alignleft">
+        <label for="">Nome Social (de acordo com <a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/D8727.htm" target="_black">decreto 8.727</a>)</label>
+        <input type="text" name="nome_social" required value="<?php echo $_POST['nome_social'] ?>" maxlength="255">
+      </div>
+
+      <div class="input text alignleft">
         <label for="">Nome da mãe</label>
         <input type="text" name="nome_mae" value="<?php echo $_POST['nome_mae'] ?>" maxlength="255">
       </div>
@@ -91,7 +96,7 @@
 
       <div class="input text alignleft">
         <label for="">Telefone Residencial</label>
-        <input type="tel" name="telefone_residencial" required value="<?php echo $_POST['telefone_residencial'] ?>" maxlength="15">
+        <input type="tel" name="telefone_residencial" value="<?php echo $_POST['telefone_residencial'] ?>" maxlength="15">
       </div>
 
       <div class="input text alignleft">

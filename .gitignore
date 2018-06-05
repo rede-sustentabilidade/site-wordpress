@@ -36,3 +36,8 @@ bin
 !web/app/plugins/dialogue/
 !web/app/plugins/rede-filiados/
 !web/app/plugins/wpro/
+
+
+
+# Docker
+.db_data

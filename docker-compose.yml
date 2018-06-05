@@ -1,0 +1,30 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.5
+    volumes:
+      - ./.db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+  wordpress:
+    depends_on:
+      - db
+    build: .
+    volumes:
+      - .:/var/www/html
+      - ./docker/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./docker/php.ini:/usr/local/etc/php/php.ini
+    ports:
+      - "8080:443"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: 12345678
